@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>https://rocketturtlewqt.github.io/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Blogs on My New Hugo Site</title>
+    <link>https://rocketturtlewqt.github.io/blog/</link>
+    <description>Recent content in Blogs on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 May 2021 16:57:04 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 May 2021 16:57:04 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hugo搭建静态技术博客教程</title>
       <link>https://rocketturtlewqt.github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</link>
