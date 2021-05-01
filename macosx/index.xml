@@ -13,7 +13,7 @@
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
       <guid>https://rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-      <description>目录操作 | :&amp;mdash;: | :&amp;mdash;: | :&amp;mdash;: | | 命令 | 描述 ｜ 示例 | | mkdir | 创建目录a | mkdir a | | rmdir | 删除空目录b | rmdir b | | mvdir | 移动目录a到目录b | mkdir a b | | cd | 进入到当前目录下的public子目录(返回上级目录则是cd ..) | cd public/ | | pwd | 显示当前目录的绝对路径(/Users/wangqintao/Desktop) | pwd | | ls | 显示当前目录的内容 | ls |</description>
+      <description>目录操作    命令 描述 ｜ 示例      mkdir 创建目录a mkdir a   rmdir 删除空目录b rmdir b   mvdir 移动目录a到目录b mkdir a b   cd 进入到当前目录下的public子目录(返回上级目录则是cd ..) cd public/   pwd 显示当前目录的绝对路径(/Users/wangqintao/Desktop) pwd   ls 显示当前目录的内容 ls    </description>
     </item>
     
   </channel>
