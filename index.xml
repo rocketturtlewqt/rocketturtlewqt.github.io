@@ -6,7 +6,16 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 May 2021 16:57:04 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 May 2021 11:48:18 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git结构</title>
+      <link>https://rocketturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Mon, 03 May 2021 11:48:18 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</guid>
+      <description>git本地结构  工作区 =&amp;gt; 暂存区=&amp;gt; 本地库 工作区：编写代码 暂存区：临时存储 本地库：历史版本 工作区 =&amp;gt; 暂存区：git add，暂存区 =&amp;gt; 本地库：git commit  </description>
+    </item>
+    
     <item>
       <title>hugo搭建静态技术博客教程</title>
       <link>https://rocketturtlewqt.github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</link>

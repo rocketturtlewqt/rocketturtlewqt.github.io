@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gits on RocketTurtle</title>
+    <link>https://rocketturtlewqt.github.io/git/</link>
+    <description>Recent content in Gits on RocketTurtle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 May 2021 11:48:18 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git结构</title>
+      <link>https://rocketturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Mon, 03 May 2021 11:48:18 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</guid>
+      <description>git本地结构  工作区 =&amp;gt; 暂存区=&amp;gt; 本地库 工作区：编写代码 暂存区：临时存储 本地库：历史版本 工作区 =&amp;gt; 暂存区：git add，暂存区 =&amp;gt; 本地库：git commit  </description>
+    </item>
+    
+  </channel>
+</rss>
