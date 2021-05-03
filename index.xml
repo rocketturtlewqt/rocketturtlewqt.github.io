@@ -6,7 +6,17 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 May 2021 12:12:17 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 May 2021 19:26:34 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git基本原理</title>
+      <link>https://rocketturtlewqt.github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Mon, 03 May 2021 19:26:34 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</guid>
+      <description>哈希算法 各类哈希算法的共同点
+ 输入数据被加密后的hash值长度是相同的。 输入数据相同，加密形成的hash值相同。 输入数据不同，加密形成的hash值不同。 hash算法不可逆。 Git底层采用的是SHA-1算法保证数据完整性。 hash算法被用来检验文件完整性。   </description>
+    </item>
+    
     <item>
       <title>本地库和远程库</title>
       <link>https://rocketturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</link>
