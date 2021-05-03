@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>本地库和远程库 // RocketTurtle</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.82.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="RocketTurtle" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://rocketturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="本地库和远程库"/>
+<meta name="twitter:description" content="代码托管中心  代码托管中心用来维护远程库 局域网下搭建的服务器：GitLab 外网下的服务器：GitHub，码云  团队协作与跨团队协作 团队协作 本地库初始化 git init  可以通过 ls -lA 查看.git/下的子目录与文件  设置签名  用来区分不同开发人员身份，与登陆到远程库的用户名和密码作用不同 项目级别：git config user.name=tom_xm user.email=1600639146@qq.com，查看使用cat .git 系统级别：git config &ndash;global user.name=tom_global user.email=1600639146@qq.com，查看步骤：定位到用户夹 cd ~ =&gt; 查看.gitconfig文件 cat .gitconfig  基本操作  查看  //查看当前的状态，没有被追踪的文件颜色为红色，即表明目前在工作区中；在暂存区中的文件显示为绿色 git status 添加  //将文件添加到暂存区中，此时使用git status文件显示为绿色 git add &lt;filename&gt; 撤销  //撤销add操作，将文件状态回退到工作区 git rm --cache &lt;filename&gt; 提交  //将文件从暂存区提交到本地仓库 git commit -m &#34;&lt;提交说明&gt;&#34; &lt;filename&gt; 查看历史记录 git log：详细查看提交的历史记录  git log &ndash;pretty=oneline：简略查看提交的历史记录，hash值很长，每条记录一行  git log &ndash;oneline：与git log &ndash;pretty=oneline的区别是其hash值比较短  git reflog：最理想的方式，HEAD@{&lt;回退步数&gt;}   "/>
+
+    <meta property="og:title" content="本地库和远程库" />
+<meta property="og:description" content="代码托管中心  代码托管中心用来维护远程库 局域网下搭建的服务器：GitLab 外网下的服务器：GitHub，码云  团队协作与跨团队协作 团队协作 本地库初始化 git init  可以通过 ls -lA 查看.git/下的子目录与文件  设置签名  用来区分不同开发人员身份，与登陆到远程库的用户名和密码作用不同 项目级别：git config user.name=tom_xm user.email=1600639146@qq.com，查看使用cat .git 系统级别：git config &ndash;global user.name=tom_global user.email=1600639146@qq.com，查看步骤：定位到用户夹 cd ~ =&gt; 查看.gitconfig文件 cat .gitconfig  基本操作  查看  //查看当前的状态，没有被追踪的文件颜色为红色，即表明目前在工作区中；在暂存区中的文件显示为绿色 git status 添加  //将文件添加到暂存区中，此时使用git status文件显示为绿色 git add &lt;filename&gt; 撤销  //撤销add操作，将文件状态回退到工作区 git rm --cache &lt;filename&gt; 提交  //将文件从暂存区提交到本地仓库 git commit -m &#34;&lt;提交说明&gt;&#34; &lt;filename&gt; 查看历史记录 git log：详细查看提交的历史记录  git log &ndash;pretty=oneline：简略查看提交的历史记录，hash值很长，每条记录一行  git log &ndash;oneline：与git log &ndash;pretty=oneline的区别是其hash值比较短  git reflog：最理想的方式，HEAD@{&lt;回退步数&gt;}   " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rocketturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/" /><meta property="article:section" content="git" />
+<meta property="article:published_time" content="2021-05-03T12:12:17&#43;08:00" />
+<meta property="article:modified_time" content="2021-05-03T12:12:17&#43;08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://rocketturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
+      <h1>RocketTurtle</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/">blog</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/macosx/">MacOsX</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vue%E6%BA%90%E7%A0%81/">vscode</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/git/">git</a>
+      </nav>
+      <p>使自己变得更优秀！</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/rocketturtlewqt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">本地库和远程库</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          May 3, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="代码托管中心">代码托管中心</h2>
+<ul>
+<li>代码托管中心用来维护远程库</li>
+<li>局域网下搭建的服务器：GitLab</li>
+<li>外网下的服务器：GitHub，码云</li>
+</ul>
+<h2 id="团队协作与跨团队协作">团队协作与跨团队协作</h2>
+<h2 id="团队协作">团队协作</h2>
+<h3 id="本地库初始化">本地库初始化</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git init
+</code></pre></div><ul>
+<li>可以通过 ls -lA 查看.git/下的子目录与文件</li>
+</ul>
+<h3 id="设置签名">设置签名</h3>
+<ul>
+<li>用来区分不同开发人员身份，与登陆到远程库的用户名和密码作用不同</li>
+<li>项目级别：git config user.name=tom_xm <a href="mailto:user.email=1600639146@qq.com">user.email=1600639146@qq.com</a>，查看使用cat .git</li>
+<li>系统级别：git config &ndash;global user.name=tom_global <a href="mailto:user.email=1600639146@qq.com">user.email=1600639146@qq.com</a>，查看步骤：定位到用户夹 cd ~ =&gt; 查看.gitconfig文件 cat .gitconfig</li>
+</ul>
+<h3 id="基本操作">基本操作</h3>
+<ol>
+<li>查看</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">//查看当前的状态，没有被追踪的文件颜色为红色，即表明目前在工作区中；在暂存区中的文件显示为绿色
+git status
+</code></pre></div><ol start="2">
+<li>添加</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">//将文件添加到暂存区中，此时使用git status文件显示为绿色
+git add &lt;filename&gt;
+</code></pre></div><ol start="3">
+<li>撤销</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">//撤销add操作，将文件状态回退到工作区
+git rm --cache &lt;filename&gt;
+</code></pre></div><ol start="4">
+<li>提交</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">//将文件从暂存区提交到本地仓库
+git commit -m <span style="color:#e6db74">&#34;&lt;提交说明&gt;&#34;</span> &lt;filename&gt;
+</code></pre></div><ol start="5">
+<li>查看历史记录</li>
+<li>git log：详细查看提交的历史记录
+<img src="https://rocketturtlewqt.github.io/2021050313555aft.png" alt="git log"></li>
+<li>git log &ndash;pretty=oneline：简略查看提交的历史记录，hash值很长，每条记录一行
+<img src="https://rocketturtlewqt.github.io/2021050313916aft.png" alt="git log &ndash;pretty=oneline"></li>
+<li>git log &ndash;oneline：与git log &ndash;pretty=oneline的区别是其hash值比较短
+<img src="https://rocketturtlewqt.github.io/2021050314133aft.png" alt="git log &ndash;oneline"></li>
+<li>git reflog：最理想的方式，HEAD@{&lt;回退步数&gt;}
+<img src="https://rocketturtlewqt.github.io/2021050314324aft.png" alt="git reflog"></li>
+</ol>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

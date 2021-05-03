@@ -6,7 +6,16 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 May 2021 11:48:18 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 May 2021 12:12:17 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>本地库和远程库</title>
+      <link>https://rocketturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</link>
+      <pubDate>Mon, 03 May 2021 12:12:17 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</guid>
+      <description>代码托管中心  代码托管中心用来维护远程库 局域网下搭建的服务器：GitLab 外网下的服务器：GitHub，码云  团队协作与跨团队协作 团队协作 本地库初始化 git init  可以通过 ls -lA 查看.git/下的子目录与文件  设置签名  用来区分不同开发人员身份，与登陆到远程库的用户名和密码作用不同 项目级别：git config user.name=tom_xm user.email=1600639146@qq.com，查看使用cat .git 系统级别：git config &amp;ndash;global user.name=tom_global user.email=1600639146@qq.com，查看步骤：定位到用户夹 cd ~ =&amp;gt; 查看.gitconfig文件 cat .gitconfig  基本操作  查看  //查看当前的状态，没有被追踪的文件颜色为红色，即表明目前在工作区中；在暂存区中的文件显示为绿色 git status 添加  //将文件添加到暂存区中，此时使用git status文件显示为绿色 git add &amp;lt;filename&amp;gt; 撤销  //撤销add操作，将文件状态回退到工作区 git rm --cache &amp;lt;filename&amp;gt; 提交  //将文件从暂存区提交到本地仓库 git commit -m &amp;#34;&amp;lt;提交说明&amp;gt;&amp;#34; &amp;lt;filename&amp;gt; 查看历史记录 git log：详细查看提交的历史记录  git log &amp;ndash;pretty=oneline：简略查看提交的历史记录，hash值很长，每条记录一行  git log &amp;ndash;oneline：与git log &amp;ndash;pretty=oneline的区别是其hash值比较短  git reflog：最理想的方式，HEAD@{&amp;lt;回退步数&amp;gt;}   </description>
+    </item>
+    
     <item>
       <title>Git结构</title>
       <link>https://rocketturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</link>
