@@ -256,7 +256,9 @@ git push
 </code></pre></div><ul>
 <li>合并远程分支</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git fetch origin &lt;分支名&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git add .
+git commit -m <span style="color:#e6db74">&#34;提交说明&#34;</span>
+git fetch origin &lt;分支名&gt;
 git merge origin/&lt;分支名&gt;
 //以上两种操作等价于git pull origin &lt;分支名&gt;
 </code></pre></div><ul>
@@ -266,7 +268,34 @@ git merge origin/&lt;分支名&gt;
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git add .
 git commit -m <span style="color:#e6db74">&#34;提交说明&#34;</span>
 git push
-</code></pre></div>
+</code></pre></div><h2 id="跨团队协作">跨团队协作</h2>
+<ul>
+<li>以合伙人身份点击fork
+<img src="https://rocketturtlewqt.github.io/2021050411950aft.png" alt="以合伙人身份点击fork"></li>
+<li>将fork后的项目克隆到本地</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone &lt;克隆后的远程仓库地址&gt;
+</code></pre></div><ul>
+<li>提交操作</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git add .
+git commit -m <span style="color:#e6db74">&#34;提交说明&#34;</span>
+git push
+</code></pre></div><ul>
+<li>点击Pull request，new pull request
+<img src="https://rocketturtlewqt.github.io/2021050413812aft.png" alt="点击Pull request、new pull request"></li>
+<li>点击create pull request
+<img src="https://rocketturtlewqt.github.io/2021050414139aft.png" alt="点击create pull request"></li>
+<li>填写标题及内容
+<img src="https://rocketturtlewqt.github.io/2021050414232aft.png" alt="填写标题及内容"></li>
+<li>提交成功后的状态
+<img src="https://rocketturtlewqt.github.io/2021050414351aft.png" alt="提交成功后的状态"></li>
+<li>主管查看提交
+<img src="https://rocketturtlewqt.github.io/2021050414544aft.png" alt="主管查看提交"></li>
+<li>主管在这个界面可以聊天、点击Files changes查看团队外成员提交内容并可以选是否合并
+<img src="https://rocketturtlewqt.github.io/2021050414653aft.png" alt="主管在这个界面可以聊天及是够选择合并"></li>
+</ul>
+
     </div>
     <div class="post-footer">
       
