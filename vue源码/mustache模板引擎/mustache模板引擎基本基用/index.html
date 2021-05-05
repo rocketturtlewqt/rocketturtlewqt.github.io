@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Mustache模板引擎基本基用 // RocketTurtle</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.82.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="RocketTurtle" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://rocketturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mustache模板引擎基本基用"/>
+<meta name="twitter:description" content="不循环数组 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;不循环数组&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#34;container&#34;&gt;&lt;/div&gt; &lt;script type=&#34;module&#34;&gt; import mustache from &#39;./lib/mustache.js&#39;; const mustacheStr=` &lt;h2&gt;我买了一部{{phone}}手机，好{{mood}}呀！&lt;/h2&gt; `; const data={ phone:&#39;苹果&#39;, mood:&#39;开心&#39; }; const domStr=mustache.render(mustacheStr,data); document.getElementById(&#39;container&#39;).innerHTML=domStr; &lt;/script&gt; &lt;/body&gt; &lt;/html&gt; 显示隐藏 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;显示或隐藏&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#34;container&#34;&gt;&lt;/div&gt; &lt;script type=&#34;module&#34;&gt; import mustache from &#39;./lib/mustache.js&#39;; const mustacheStr=` {{#flag}} &lt;span&gt;hello&lt;/span&gt; {{/flag}} `; const data={ flag:false }; const domStr=mustache."/>
+
+    <meta property="og:title" content="Mustache模板引擎基本基用" />
+<meta property="og:description" content="不循环数组 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;不循环数组&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#34;container&#34;&gt;&lt;/div&gt; &lt;script type=&#34;module&#34;&gt; import mustache from &#39;./lib/mustache.js&#39;; const mustacheStr=` &lt;h2&gt;我买了一部{{phone}}手机，好{{mood}}呀！&lt;/h2&gt; `; const data={ phone:&#39;苹果&#39;, mood:&#39;开心&#39; }; const domStr=mustache.render(mustacheStr,data); document.getElementById(&#39;container&#39;).innerHTML=domStr; &lt;/script&gt; &lt;/body&gt; &lt;/html&gt; 显示隐藏 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;显示或隐藏&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#34;container&#34;&gt;&lt;/div&gt; &lt;script type=&#34;module&#34;&gt; import mustache from &#39;./lib/mustache.js&#39;; const mustacheStr=` {{#flag}} &lt;span&gt;hello&lt;/span&gt; {{/flag}} `; const data={ flag:false }; const domStr=mustache." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/" /><meta property="article:section" content="vue源码" />
+<meta property="article:published_time" content="2021-05-04T19:23:16&#43;08:00" />
+<meta property="article:modified_time" content="2021-05-04T19:23:16&#43;08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://rocketturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
+      <h1>RocketTurtle</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/">blog</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/macosx/">MacOsX</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vue%E6%BA%90%E7%A0%81/">vscode</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/git/">git</a>
+      </nav>
+      <p>使自己变得更优秀！</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/rocketturtlewqt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Mustache模板引擎基本基用</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          May 4, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h3 id="不循环数组">不循环数组</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;不循环数组&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span>&gt;
+    <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">mustache</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./lib/mustache.js&#39;</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mustacheStr</span><span style="color:#f92672">=</span><span style="color:#e6db74">`
+</span><span style="color:#e6db74">      &lt;h2&gt;我买了一部{{phone}}手机，好{{mood}}呀！&lt;/h2&gt;
+</span><span style="color:#e6db74">    `</span>;
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span>{
+      <span style="color:#a6e22e">phone</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;苹果&#39;</span>,
+      <span style="color:#a6e22e">mood</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;开心&#39;</span>
+    };
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">domStr</span><span style="color:#f92672">=</span><span style="color:#a6e22e">mustache</span>.<span style="color:#a6e22e">render</span>(<span style="color:#a6e22e">mustacheStr</span>,<span style="color:#a6e22e">data</span>);
+    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;container&#39;</span>).<span style="color:#a6e22e">innerHTML</span><span style="color:#f92672">=</span><span style="color:#a6e22e">domStr</span>;
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h3 id="显示隐藏">显示隐藏</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;显示或隐藏&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span>&gt;
+    <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">mustache</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./lib/mustache.js&#39;</span>;
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mustacheStr</span><span style="color:#f92672">=</span><span style="color:#e6db74">`
+</span><span style="color:#e6db74">      {{#flag}}
+</span><span style="color:#e6db74">        &lt;span&gt;hello&lt;/span&gt;
+</span><span style="color:#e6db74">      {{/flag}}
+</span><span style="color:#e6db74">    `</span>;
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span>{
+      <span style="color:#a6e22e">flag</span><span style="color:#f92672">:</span><span style="color:#66d9ef">false</span>
+    };
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">domStr</span><span style="color:#f92672">=</span><span style="color:#a6e22e">mustache</span>.<span style="color:#a6e22e">render</span>(<span style="color:#a6e22e">mustacheStr</span>,<span style="color:#a6e22e">data</span>);
+    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;container&#39;</span>).<span style="color:#a6e22e">innerHTML</span><span style="color:#f92672">=</span><span style="color:#a6e22e">domStr</span>;
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h3 id="循环对象数组">循环对象数组</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;使用mustache&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span>&gt;
+    <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">mustache</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./lib/mustache.js&#39;</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mustacheStr</span><span style="color:#f92672">=</span><span style="color:#e6db74">`
+</span><span style="color:#e6db74">      &lt;ul&gt;
+</span><span style="color:#e6db74">        {{#arr}}
+</span><span style="color:#e6db74">          &lt;li&gt;
+</span><span style="color:#e6db74">            &lt;h3&gt;{{name}}的信息&lt;/h3&gt;
+</span><span style="color:#e6db74">            &lt;span&gt;名字：{{name}}&lt;/span&gt;
+</span><span style="color:#e6db74">            &lt;span&gt;年龄：{{age}}&lt;/span&gt;
+</span><span style="color:#e6db74">            &lt;span&gt;性别：{{sex}}&lt;/span&gt;
+</span><span style="color:#e6db74">          &lt;/li&gt;
+</span><span style="color:#e6db74">        {{/arr}}
+</span><span style="color:#e6db74">      &lt;/ul&gt;
+</span><span style="color:#e6db74">    `</span>;
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span>{
+      <span style="color:#a6e22e">arr</span><span style="color:#f92672">:</span>[
+        {
+          <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;小红&#39;</span>,
+          <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span><span style="color:#ae81ff">21</span>,
+          <span style="color:#a6e22e">sex</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;男&#39;</span>
+        },
+        {
+          <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;小李&#39;</span>,
+          <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span><span style="color:#ae81ff">22</span>,
+          <span style="color:#a6e22e">sex</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;男&#39;</span>
+        },
+        {
+          <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;小王&#39;</span>,
+          <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span><span style="color:#ae81ff">21</span>,
+          <span style="color:#a6e22e">sex</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;男&#39;</span>
+        }
+      ]
+    };
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">domStr</span><span style="color:#f92672">=</span><span style="color:#a6e22e">mustache</span>.<span style="color:#a6e22e">render</span>(<span style="color:#a6e22e">mustacheStr</span>,<span style="color:#a6e22e">data</span>);
+    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;container&#39;</span>).<span style="color:#a6e22e">innerHTML</span><span style="color:#f92672">=</span><span style="color:#a6e22e">domStr</span>;
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h3 id="循环简单数组">循环简单数组</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;循环简单数组&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span>&gt;
+    <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">mustache</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./lib/mustache.js&#39;</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mustacheStr</span><span style="color:#f92672">=</span><span style="color:#e6db74">`
+</span><span style="color:#e6db74">      &lt;ul&gt;
+</span><span style="color:#e6db74">        {{#arr}}
+</span><span style="color:#e6db74">          &lt;li&gt;{{.}}&lt;/li&gt;
+</span><span style="color:#e6db74">        {{/arr}}  
+</span><span style="color:#e6db74">      &lt;/ul&gt;
+</span><span style="color:#e6db74">    `</span>;
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span>{
+      <span style="color:#a6e22e">arr</span><span style="color:#f92672">:</span>[<span style="color:#e6db74">&#39;a&#39;</span>,<span style="color:#e6db74">&#39;b&#39;</span>,<span style="color:#e6db74">&#39;c&#39;</span>]
+    }
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">domStr</span><span style="color:#f92672">=</span><span style="color:#a6e22e">mustache</span>.<span style="color:#a6e22e">render</span>(<span style="color:#a6e22e">mustacheStr</span>,<span style="color:#a6e22e">data</span>);
+    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;container&#39;</span>).<span style="color:#a6e22e">innerHTML</span><span style="color:#f92672">=</span><span style="color:#a6e22e">domStr</span>;
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h3 id="循环嵌套数组">循环嵌套数组</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;循环嵌套数组&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span>&gt;
+    <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">mustache</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./lib/mustache.js&#39;</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mustacheStr</span><span style="color:#f92672">=</span><span style="color:#e6db74">`
+</span><span style="color:#e6db74">      &lt;ul&gt;
+</span><span style="color:#e6db74">        {{#arr}}
+</span><span style="color:#e6db74">          &lt;li&gt;{{name}}&lt;/li&gt;
+</span><span style="color:#e6db74">          &lt;li&gt;{{age}}&lt;/li&gt;
+</span><span style="color:#e6db74">          &lt;li&gt;
+</span><span style="color:#e6db74">            &lt;h2&gt;爱好&lt;/h2&gt;
+</span><span style="color:#e6db74">            &lt;ol&gt;
+</span><span style="color:#e6db74">              {{#hobbies}}
+</span><span style="color:#e6db74">                &lt;li&gt;{{.}}&lt;/li&gt;
+</span><span style="color:#e6db74">              {{/hobbies}}
+</span><span style="color:#e6db74">            &lt;/ol&gt;
+</span><span style="color:#e6db74">          &lt;/li&gt;
+</span><span style="color:#e6db74">        {{/arr}}
+</span><span style="color:#e6db74">      &lt;/ul&gt;
+</span><span style="color:#e6db74">    `</span>;
+    
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span>{
+      <span style="color:#a6e22e">arr</span><span style="color:#f92672">:</span>[
+        {
+          <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;小王&#39;</span>,
+          <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span><span style="color:#ae81ff">21</span>,
+          <span style="color:#a6e22e">hobbies</span><span style="color:#f92672">:</span>[<span style="color:#e6db74">&#39;游泳&#39;</span>,<span style="color:#e6db74">&#39;篮球&#39;</span>]
+        },
+        {
+          <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;小红&#39;</span>,
+          <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span><span style="color:#ae81ff">22</span>,
+          <span style="color:#a6e22e">hobbies</span><span style="color:#f92672">:</span>[<span style="color:#e6db74">&#39;乒乓球&#39;</span>,<span style="color:#e6db74">&#39;电竞&#39;</span>]
+        }
+      ]
+    }
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">domStr</span><span style="color:#f92672">=</span><span style="color:#a6e22e">mustache</span>.<span style="color:#a6e22e">render</span>(<span style="color:#a6e22e">mustacheStr</span>,<span style="color:#a6e22e">data</span>);
+    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;container&#39;</span>).<span style="color:#a6e22e">innerHTML</span><span style="color:#f92672">=</span><span style="color:#a6e22e">domStr</span>;
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h3 id="es5模板写法">ES5模板写法</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;循环嵌套数组&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/template&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;template&#34;</span>&gt;
+    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">ul</span><span style="color:#f92672">&gt;</span>
+      {{<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">arr</span>}}
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">li</span><span style="color:#f92672">&gt;</span>{{<span style="color:#a6e22e">name</span>}}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/li&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">li</span><span style="color:#f92672">&gt;</span>{{<span style="color:#a6e22e">age</span>}}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/li&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">li</span><span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h2</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">爱好</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h2&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">ol</span><span style="color:#f92672">&gt;</span>
+            {{<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">hobbies</span>}}
+              <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">li</span><span style="color:#f92672">&gt;</span>{{.}}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/li&gt;</span>
+            {{<span style="color:#960050;background-color:#1e0010">/hobbies}}</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/ol&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/li&gt;</span>
+      {{<span style="color:#960050;background-color:#1e0010">/arr}}</span>
+    <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/ul&gt;</span>
+  &lt;/<span style="color:#f92672">script</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span>&gt;
+    <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">mustache</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./lib/mustache.js&#39;</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mustacheStr</span><span style="color:#f92672">=</span>document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;template&#39;</span>).<span style="color:#a6e22e">innerHTML</span>;
+    
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span>{
+      <span style="color:#a6e22e">arr</span><span style="color:#f92672">:</span>[
+        {
+          <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;小王&#39;</span>,
+          <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span><span style="color:#ae81ff">21</span>,
+          <span style="color:#a6e22e">hobbies</span><span style="color:#f92672">:</span>[<span style="color:#e6db74">&#39;游泳&#39;</span>,<span style="color:#e6db74">&#39;篮球&#39;</span>]
+        },
+        {
+          <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;小红&#39;</span>,
+          <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span><span style="color:#ae81ff">22</span>,
+          <span style="color:#a6e22e">hobbies</span><span style="color:#f92672">:</span>[<span style="color:#e6db74">&#39;乒乓球&#39;</span>,<span style="color:#e6db74">&#39;电竞&#39;</span>]
+        }
+      ]
+    }
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">domStr</span><span style="color:#f92672">=</span><span style="color:#a6e22e">mustache</span>.<span style="color:#a6e22e">render</span>(<span style="color:#a6e22e">mustacheStr</span>,<span style="color:#a6e22e">data</span>);
+    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;container&#39;</span>).<span style="color:#a6e22e">innerHTML</span><span style="color:#f92672">=</span><span style="color:#a6e22e">domStr</span>;
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

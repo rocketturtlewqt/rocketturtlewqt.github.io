@@ -6,7 +6,25 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 May 2021 19:26:34 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 May 2021 19:53:06 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>简单实现mustache模板引擎</title>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</link>
+      <pubDate>Tue, 04 May 2021 19:53:06 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</guid>
+      <description>mustache模板引擎简单情况下用js正则表达式实现 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;实现简单模板替换&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; const mustacheStr=` &amp;lt;h2&amp;gt;我叫{{name}}，我的年龄是{{age}}，性别{{sex}}，我想要改变世界&amp;lt;/h2&amp;gt; `; const data={ name:&amp;#39;小红&amp;#39;, age:21, sex:&amp;#39;女&amp;#39; }; function render(mustacheStr,data){ return mustacheStr.replace(/\{\{(\w+)\}\}/g,function(template,$1){ return data[$1]; }); } const domStr=render(mustacheStr,data); console.log(domStr); &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; </description>
+    </item>
+    
+    <item>
+      <title>Mustache模板引擎基本基用</title>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/</link>
+      <pubDate>Tue, 04 May 2021 19:23:16 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/</guid>
+      <description>不循环数组 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;不循环数组&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34;&amp;gt; import mustache from &amp;#39;./lib/mustache.js&amp;#39;; const mustacheStr=` &amp;lt;h2&amp;gt;我买了一部{{phone}}手机，好{{mood}}呀！&amp;lt;/h2&amp;gt; `; const data={ phone:&amp;#39;苹果&amp;#39;, mood:&amp;#39;开心&amp;#39; }; const domStr=mustache.render(mustacheStr,data); document.getElementById(&amp;#39;container&amp;#39;).innerHTML=domStr; &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 显示隐藏 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;显示或隐藏&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34;&amp;gt; import mustache from &amp;#39;./lib/mustache.js&amp;#39;; const mustacheStr=` {{#flag}} &amp;lt;span&amp;gt;hello&amp;lt;/span&amp;gt; {{/flag}} `; const data={ flag:false }; const domStr=mustache.</description>
+    </item>
+    
     <item>
       <title>Git基本原理</title>
       <link>https://rocketturtlewqt.github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</link>
@@ -62,7 +80,7 @@
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
       <guid>https://rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-      <description>目录操作    命令 描述 示例     mkdir 创建目录a mkdir a   rmdir 删除空目录b rmdir b   mvdir 移动目录a到目录b mkdir a b   cd 进入到当前目录下的public子目录(返回上级目录则是cd ..) cd public/   pwd 显示当前目录的绝对路径(/Users/wangqintao/Desktop) pwd   ls 显示当前目录的内容 ls    </description>
+      <description>目录操作    命令 描述 示例     mkdir 创建目录a mkdir a   rmdir 删除空目录b rmdir b   mvdir 移动目录a到目录b mkdir a b   cd 进入到当前目录下的public子目录(返回上级目录则是cd ..) cd public/   pwd 显示当前目录的绝对路径(/Users/wangqintao/Desktop) pwd   ls 显示当前目录的内容 ls    文件操作    命令 描述 示例     cat 终端下打开当前目录下的demo.txt文件 cat demo.txt   more 分页显示文件内容(按空格键切换到下一页，按ctrl+B返回上一页) more demo.txt   cp 复制文件(复制a.</description>
     </item>
     
     <item>
@@ -72,7 +90,9 @@
       
       <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
       <description>mustache模板引擎  它是将数据转换为视图的一种解决方案
-&amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt; &amp;lt;div v-for=&amp;quot;item in per&amp;quot; :key=&amp;quot;item.id&amp;quot;&amp;gt; &amp;lt;span&amp;gt;名字：{{item.name}}&amp;lt;/span&amp;gt; &amp;lt;span&amp;gt;年龄：{{item.age}}&amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;  vue源码中v-for指令底层使用的其实就是mustache模板引擎，以上代码通过v-for指令映射成以下视图</description>
+&amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt; &amp;lt;div v-for=&amp;quot;item in per&amp;quot; :key=&amp;quot;item.id&amp;quot;&amp;gt; &amp;lt;span&amp;gt;名字：{{item.name}}&amp;lt;/span&amp;gt; &amp;lt;span&amp;gt;年龄：{{item.age}}&amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;  vue源码中v-for指令底层使用的其实就是mustache模板引擎，以上代码通过v-for指令映射成以下视图
+常见的将数据转换为视图的方案
+ DOM法 ES6的模板字符串 模板引擎  </description>
     </item>
     
   </channel>
