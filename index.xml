@@ -6,7 +6,61 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 May 2021 19:53:06 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 May 2021 19:47:01 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>转义</title>
+      <link>https://rocketturtlewqt.github.io/javascript/js%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E8%BD%AC%E4%B9%89/</link>
+      <pubDate>Thu, 06 May 2021 19:47:01 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/javascript/js%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E8%BD%AC%E4%B9%89/</guid>
+      <description>const str = &amp;#39;https://rocketturtlewqt.github.io&amp;#39;; //使用对象创建正则表达式 const expstr = &amp;#39;https?\\:\\/\\/\\w+\\.\\w+\\.\\w+&amp;#39;; console.log(expstr); const exp1 = new RegExp(expstr); console.log(exp1.test(str)); //使用字面量创建正则表达式 console.log(/https?\:\/\/\w+\.\w+\.\w+/.test(str)); </description>
+    </item>
+    
+    <item>
+      <title>原子表和原子组</title>
+      <link>https://rocketturtlewqt.github.io/javascript/js%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E5%8E%9F%E5%AD%90%E8%A1%A8%E5%92%8C%E5%8E%9F%E5%AD%90%E7%BB%84/</link>
+      <pubDate>Thu, 06 May 2021 19:46:08 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/javascript/js%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E5%8E%9F%E5%AD%90%E8%A1%A8%E5%92%8C%E5%8E%9F%E5%AD%90%E7%BB%84/</guid>
+      <description>const str = &amp;#39;12345797987234&amp;#39;; //原子表：[]表示或关系，即1或2或3或4 const exp1 = /[1234]/g; console.log(str.match(exp1)); //原子组：表示12或13 const exp2 = /(12|13)/g; console.log(str.match(exp2)); </description>
+    </item>
+    
+    <item>
+      <title>选择符的使用</title>
+      <link>https://rocketturtlewqt.github.io/javascript/js%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E9%80%89%E6%8B%A9%E7%AC%A6%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 06 May 2021 19:44:14 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/javascript/js%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E9%80%89%E6%8B%A9%E7%AC%A6%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>const str = &amp;#39;010-8888888&amp;#39;; console.log(/^(010|020)\-\d{7,8}$/.test(str)); </description>
+    </item>
+    
+    <item>
+      <title>体验正则表达式的魅力</title>
+      <link>https://rocketturtlewqt.github.io/javascript/js%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E4%BD%93%E9%AA%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E9%AD%85%E5%8A%9B/</link>
+      <pubDate>Thu, 06 May 2021 19:43:25 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/javascript/js%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E4%BD%93%E9%AA%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E9%AD%85%E5%8A%9B/</guid>
+      <description>let str = &amp;#39;asjdhka17821sdjashdkj23324&amp;#39;; //将数字拼接成字符串返回 //不用正则表达式 function parseNumber(s) { let result = &amp;#39;&amp;#39;; for (let i = 0; i &amp;lt; s.length; i++){ if (!Number.isNaN(parseInt(s[i]))) result += s[i]; } return result; } //用正则表达式 console.log(str.match(/\d/g).join(&amp;#39;&amp;#39;)); </description>
+    </item>
+    
+    <item>
+      <title>使用字面量创建正则表达式</title>
+      <link>https://rocketturtlewqt.github.io/javascript/js%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E4%BD%BF%E7%94%A8%E5%AD%97%E9%9D%A2%E9%87%8F%E5%88%9B%E5%BB%BA%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <pubDate>Thu, 06 May 2021 19:42:33 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/javascript/js%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E4%BD%BF%E7%94%A8%E5%AD%97%E9%9D%A2%E9%87%8F%E5%88%9B%E5%BB%BA%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <description>const str = &amp;#39;Abctds&amp;#39;; // RegExp参数 // - 正则表达式 // - 模式匹配 i表示忽略大小写，g表示全局匹配 let exp = new RegExp(&amp;#39;a&amp;#39;, &amp;#39;i&amp;#39;); console.log(exp.test(str)); //使用字面量创建正则表达式 console.log(/a/i.test(str)); </description>
+    </item>
+    
+    <item>
+      <title>使用对象创建正则表达式</title>
+      <link>https://rocketturtlewqt.github.io/javascript/js%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E4%BD%BF%E7%94%A8%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <pubDate>Thu, 06 May 2021 19:40:58 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/javascript/js%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E4%BD%BF%E7%94%A8%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <description>根据用户输入，高亮显示匹配到的内容 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;使用对象创建正则表达式&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;p id=&amp;#34;container&amp;#34;&amp;gt; wangqintao &amp;lt;/p&amp;gt; &amp;lt;script&amp;gt; const node=document.getElementById(&amp;#39;container&amp;#39;); let str=node.innerHTML; const con=prompt(&amp;#39;请输字符串&amp;#39;); const reg=new RegExp(con,&amp;#39;g&amp;#39;); node.innerHTML=str.replace(reg,(template, index)=&amp;gt;{ return `&amp;lt;span style=&amp;#34;color:red&amp;#34;&amp;gt;${con}&amp;lt;/span&amp;gt;`; }); &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; </description>
+    </item>
+    
     <item>
       <title>简单实现mustache模板引擎</title>
       <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</link>
