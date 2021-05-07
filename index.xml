@@ -2,72 +2,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>RocketTurtle</title>
-    <link>https:rocketturtlewqt/github.io/</link>
+    <link>https://rocketturtlewqt.github.io/</link>
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 May 2021 12:04:26 +0800</lastBuildDate><atom:link href="https:rocketturtlewqt/github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 May 2021 12:04:26 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>正则表达式</title>
-      <link>https:rocketturtlewqt/github.io/javascript/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <link>https://rocketturtlewqt.github.io/javascript/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
       <pubDate>Fri, 07 May 2021 12:04:26 +0800</pubDate>
       
-      <guid>https:rocketturtlewqt/github.io/javascript/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <guid>https://rocketturtlewqt.github.io/javascript/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
       <description>体验正则表达式的魅力 let str = &amp;#39;asjdhka17821sdjashdkj23324&amp;#39;; //将数字拼接成字符串返回 //不用正则表达式 function parseNumber(s) { let result = &amp;#39;&amp;#39;; for (let i = 0; i &amp;lt; s.length; i++){ if (!Number.isNaN(parseInt(s[i]))) result += s[i]; } return result; } //用正则表达式 console.log(str.match(/\d/g).join(&amp;#39;&amp;#39;)); 字面量创建正则表达式 const str = &amp;#39;Abctds&amp;#39;; // RegExp参数 // - 正则表达式 // - 模式匹配 i表示忽略大小写，g表示全局匹配 let exp = new RegExp(&amp;#39;a&amp;#39;, &amp;#39;i&amp;#39;); console.log(exp.test(str)); //使用字面量创建正则表达式 console.log(/a/i.test(str)); 使用对象创建正则表达式 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.</description>
     </item>
     
     <item>
       <title>简单实现mustache模板引擎</title>
-      <link>https:rocketturtlewqt/github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</link>
       <pubDate>Tue, 04 May 2021 19:53:06 +0800</pubDate>
       
-      <guid>https:rocketturtlewqt/github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</guid>
       <description>mustache模板引擎简单情况下用js正则表达式实现 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;实现简单模板替换&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; const mustacheStr=` &amp;lt;h2&amp;gt;我叫{{name}}，我的年龄是{{age}}，性别{{sex}}，我想要改变世界&amp;lt;/h2&amp;gt; `; const data={ name:&amp;#39;小红&amp;#39;, age:21, sex:&amp;#39;女&amp;#39; }; function render(mustacheStr,data){ return mustacheStr.replace(/\{\{(\w+)\}\}/g,function(template,$1){ return data[$1]; }); } const domStr=render(mustacheStr,data); console.log(domStr); &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; </description>
     </item>
     
     <item>
       <title>Mustache模板引擎基本基用</title>
-      <link>https:rocketturtlewqt/github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/</link>
       <pubDate>Tue, 04 May 2021 19:23:16 +0800</pubDate>
       
-      <guid>https:rocketturtlewqt/github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/</guid>
       <description>不循环数组 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;不循环数组&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34;&amp;gt; import mustache from &amp;#39;./lib/mustache.js&amp;#39;; const mustacheStr=` &amp;lt;h2&amp;gt;我买了一部{{phone}}手机，好{{mood}}呀！&amp;lt;/h2&amp;gt; `; const data={ phone:&amp;#39;苹果&amp;#39;, mood:&amp;#39;开心&amp;#39; }; const domStr=mustache.render(mustacheStr,data); document.getElementById(&amp;#39;container&amp;#39;).innerHTML=domStr; &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 显示隐藏 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;显示或隐藏&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34;&amp;gt; import mustache from &amp;#39;./lib/mustache.js&amp;#39;; const mustacheStr=` {{#flag}} &amp;lt;span&amp;gt;hello&amp;lt;/span&amp;gt; {{/flag}} `; const data={ flag:false }; const domStr=mustache.</description>
     </item>
     
     <item>
       <title>Git基本原理</title>
-      <link>https:rocketturtlewqt/github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</link>
+      <link>https://rocketturtlewqt.github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</link>
       <pubDate>Mon, 03 May 2021 19:26:34 +0800</pubDate>
       
-      <guid>https:rocketturtlewqt/github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</guid>
+      <guid>https://rocketturtlewqt.github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</guid>
       <description>哈希算法 各类哈希算法的共同点
  输入数据被加密后的hash值长度是相同的。 输入数据相同，加密形成的hash值相同。 输入数据不同，加密形成的hash值不同。 hash算法不可逆。 Git底层采用的是SHA-1算法保证数据完整性。 hash算法被用来检验文件完整性。   Git版本数据管理机制  构建树对象，维护父子节点关系 提交对象与树对象是一一映射关系，多个提交对象形成一个链条，也就是历史版本  Git分支管理  初始化本地仓库，并创建分支hot_fix  切换当前指针指向hot_fix指针，修改内容并提交  切换当前指针指向master，修改内容并提交  之后合并时若产生冲突问题，可以参考合并分支时的冲突问题  </description>
     </item>
     
     <item>
       <title>本地库和远程库</title>
-      <link>https:rocketturtlewqt/github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</link>
+      <link>https://rocketturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</link>
       <pubDate>Mon, 03 May 2021 12:12:17 +0800</pubDate>
       
-      <guid>https:rocketturtlewqt/github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</guid>
+      <guid>https://rocketturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</guid>
       <description>代码托管中心  代码托管中心用来维护远程库 局域网下搭建的服务器：GitLab 外网下的服务器：GitHub，码云  本地库基本操作 本地库初始化 git init  可以通过 ls -lA 查看.git/下的子目录与文件  设置签名  用来区分不同开发人员身份，与登陆到远程库的用户名和密码作用不同 项目级别：git config user.name=tom_xm user.email=1600639146@qq.com，查看使用cat .git 系统级别：git config &amp;ndash;global user.name=tom_global user.email=1600639146@qq.com，查看步骤：定位到用户夹 cd ~ =&amp;gt; 查看.gitconfig文件 cat .gitconfig  基本操作  查看  //查看当前的状态，没有被追踪的文件颜色为红色，即表明目前在工作区中；在暂存区中的文件显示为绿色 git status 添加  //将文件添加到暂存区中，此时使用git status文件显示为绿色 git add &amp;lt;filename&amp;gt; 撤销  //撤销add操作，将文件状态回退到工作区 git rm --cache &amp;lt;filename&amp;gt; 提交  //将文件从暂存区提交到本地仓库 git commit -m &amp;#34;&amp;lt;提交说明&amp;gt;&amp;#34; &amp;lt;filename&amp;gt; 查看历史记录   git log：详细查看提交的历史记录  git log &amp;ndash;pretty=oneline：简略查看提交的历史记录，hash值很长，每条记录一行  git log &amp;ndash;oneline：与git log &amp;ndash;pretty=oneline的区别是其hash值比较短  git reflog：最理想的方式，HEAD@{&amp;lt;回退步数&amp;gt;}   回退/前进历史版本   基于索引值操作  git reset --hard &amp;lt;局部索引值&amp;gt;  使用^符号：只能后退  //几个^表示后退几步 git reset --hard HEAD^  使用~符号：只能后退  //n表示后退几步 git reset --hard HEAD~n   hard、mixed、soft对比  //本地库向前移动了一个单位，此时 git status 颜色为绿色，看起来是暂存区向后移动了一个单位 git reset --soft &amp;lt;局部索引值&amp;gt; //本地库以及暂存区向前移动了一个单位，此时 git status 颜色为红色，看起来是工作区向后移动了一个单位 git reset --mixed &amp;lt;局部索引值&amp;gt; //本地库、暂存区以及工作区向前移动了一个单位 git reset --hard &amp;lt;局部索引值&amp;gt; //使用mixed或soft移动后回到当前指针指向的位置 git reset --hard HEAD   永久删除文件并回退  rm &amp;lt;filename&amp;gt; 使用上述命令删除后，也可以通过 git reset &amp;ndash;hard &amp;lt;局部索引值&amp;gt; 找回</description>
     </item>
     
     <item>
       <title>Git结构</title>
-      <link>https:rocketturtlewqt/github.io/git/git%E7%BB%93%E6%9E%84/</link>
+      <link>https://rocketturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</link>
       <pubDate>Mon, 03 May 2021 11:48:18 +0800</pubDate>
       
-      <guid>https:rocketturtlewqt/github.io/git/git%E7%BB%93%E6%9E%84/</guid>
+      <guid>https://rocketturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</guid>
       <description>git本地结构  工作区 =&amp;gt; 暂存区=&amp;gt; 本地库 工作区：编写代码 暂存区：临时存储 本地库：历史版本 工作区 =&amp;gt; 暂存区：git add，暂存区 =&amp;gt; 本地库：git commit  </description>
     </item>
     
     <item>
       <title>hugo搭建静态技术博客教程</title>
-      <link>https:rocketturtlewqt/github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</link>
+      <link>https://rocketturtlewqt.github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</link>
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
-      <guid>https:rocketturtlewqt/github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</guid>
+      <guid>https://rocketturtlewqt.github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</guid>
       <description>注意  创建的github其命名要符合规范：&amp;lt;用户名&amp;gt;.github.io &amp;lt;用户名&amp;gt;.github.io  使用hugo生成项目基本结构 hugo new site &amp;lt;项目根目录名称&amp;gt; 进入当前项目根目录 cd &amp;lt;项目根目录名称&amp;gt;/ 选定主题，并拉取到本地 git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c 尝试本地运行项目 hugo serve -t m10c --buildDrafts 运行以上命令后，打开地址看看是否成功
 同步到远程 hugo --theme=m10c --baseUrl=&amp;#34;https://rocketturtlewqt.github.io&amp;#34; --buildDrafts 运行以上命令，项目根目录会出现public子目录
 进入到public子目录 cd public/ 执行git操作 从工作区添加所有文件到暂存区 git add . 从暂存区提交到本地仓库 git commit -m &amp;#34;附加内容&amp;#34; 添加远程仓库地址 git remote origin &amp;lt;仓库地址&amp;gt; 往远程仓库推送 git push -u origin master </description>
@@ -75,29 +75,29 @@
     
     <item>
       <title>MacOs X vscode使用教程/常用快捷键</title>
-      <link>https:rocketturtlewqt/github.io/vscode/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>https://rocketturtlewqt.github.io/vscode/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
-      <guid>https:rocketturtlewqt/github.io/vscode/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://rocketturtlewqt.github.io/vscode/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>知乎大佬总结vscode
 配置vscode语言  使用快捷键shift+command+p打开搜索框 键入configure language设置语言为zh-cn 设置完后ide会提示需要重启，重启后就会更换语言了  setting.json常用配置选项  editor.fontSize：用来设置字体大小，默认为12 files.autoSave：设置文件保存相关内容，一般建议设为onFocuschange，即切换文件时自动保存  </description>
     </item>
     
     <item>
       <title>MacOs X常用终端命令</title>
-      <link>https:rocketturtlewqt/github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>https://rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
-      <guid>https:rocketturtlewqt/github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>目录操作    命令 描述 示例     mkdir 创建目录a mkdir a   rmdir 删除空目录b rmdir b   mvdir 移动目录a到目录b mkdir a b   cd 进入到当前目录下的public子目录(返回上级目录则是cd ..) cd public/   pwd 显示当前目录的绝对路径(/Users/wangqintao/Desktop) pwd   ls 显示当前目录的内容 ls    文件操作    命令 描述 示例     cat 终端下打开当前目录下的demo.txt文件 cat demo.txt   more 分页显示文件内容(按空格键切换到下一页，按ctrl+B返回上一页) more demo.txt   cp 复制文件(复制a.</description>
     </item>
     
     <item>
       <title>mustache模板引擎是什么</title>
-      <link>https:rocketturtlewqt/github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E6%98%AF%E4%BB%80%E4%B9%88/</link>
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
-      <guid>https:rocketturtlewqt/github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
       <description>mustache模板引擎  它是将数据转换为视图的一种解决方案
 &amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt; &amp;lt;div v-for=&amp;quot;item in per&amp;quot; :key=&amp;quot;item.id&amp;quot;&amp;gt; &amp;lt;span&amp;gt;名字：{{item.name}}&amp;lt;/span&amp;gt; &amp;lt;span&amp;gt;年龄：{{item.age}}&amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;  vue源码中v-for指令底层使用的其实就是mustache模板引擎，以上代码通过v-for指令映射成以下视图
 常见的将数据转换为视图的方案

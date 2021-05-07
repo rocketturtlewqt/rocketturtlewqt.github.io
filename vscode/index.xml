@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vscodes on RocketTurtle</title>
-    <link>https:rocketturtlewqt/github.io/vscode/</link>
+    <link>https://rocketturtlewqt.github.io/vscode/</link>
     <description>Recent content in Vscodes on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 May 2021 16:57:04 +0800</lastBuildDate><atom:link href="https:rocketturtlewqt/github.io/vscode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 May 2021 16:57:04 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/vscode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MacOs X vscode使用教程/常用快捷键</title>
-      <link>https:rocketturtlewqt/github.io/vscode/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>https://rocketturtlewqt.github.io/vscode/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
-      <guid>https:rocketturtlewqt/github.io/vscode/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://rocketturtlewqt.github.io/vscode/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>知乎大佬总结vscode
 配置vscode语言  使用快捷键shift+command+p打开搜索框 键入configure language设置语言为zh-cn 设置完后ide会提示需要重启，重启后就会更换语言了  setting.json常用配置选项  editor.fontSize：用来设置字体大小，默认为12 files.autoSave：设置文件保存相关内容，一般建议设为onFocuschange，即切换文件时自动保存  </description>
     </item>
