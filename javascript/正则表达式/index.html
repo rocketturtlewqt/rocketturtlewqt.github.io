@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>正则表达式 // RocketTurtle</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.82.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="RocketTurtle" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https:rocketturtlewqt/github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="正则表达式"/>
+<meta name="twitter:description" content="体验正则表达式的魅力 let str = &#39;asjdhka17821sdjashdkj23324&#39;; //将数字拼接成字符串返回 //不用正则表达式 function parseNumber(s) { let result = &#39;&#39;; for (let i = 0; i &lt; s.length; i&#43;&#43;){ if (!Number.isNaN(parseInt(s[i]))) result &#43;= s[i]; } return result; } //用正则表达式 console.log(str.match(/\d/g).join(&#39;&#39;)); 字面量创建正则表达式 const str = &#39;Abctds&#39;; // RegExp参数 // - 正则表达式 // - 模式匹配 i表示忽略大小写，g表示全局匹配 let exp = new RegExp(&#39;a&#39;, &#39;i&#39;); console.log(exp.test(str)); //使用字面量创建正则表达式 console.log(/a/i.test(str)); 使用对象创建正则表达式 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1."/>
+
+    <meta property="og:title" content="正则表达式" />
+<meta property="og:description" content="体验正则表达式的魅力 let str = &#39;asjdhka17821sdjashdkj23324&#39;; //将数字拼接成字符串返回 //不用正则表达式 function parseNumber(s) { let result = &#39;&#39;; for (let i = 0; i &lt; s.length; i&#43;&#43;){ if (!Number.isNaN(parseInt(s[i]))) result &#43;= s[i]; } return result; } //用正则表达式 console.log(str.match(/\d/g).join(&#39;&#39;)); 字面量创建正则表达式 const str = &#39;Abctds&#39;; // RegExp参数 // - 正则表达式 // - 模式匹配 i表示忽略大小写，g表示全局匹配 let exp = new RegExp(&#39;a&#39;, &#39;i&#39;); console.log(exp.test(str)); //使用字面量创建正则表达式 console.log(/a/i.test(str)); 使用对象创建正则表达式 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https:rocketturtlewqt/github.io/javascript/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" /><meta property="article:section" content="javascript" />
+<meta property="article:published_time" content="2021-05-07T12:04:26&#43;08:00" />
+<meta property="article:modified_time" content="2021-05-07T12:04:26&#43;08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https:rocketturtlewqt/github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
+      <h1>RocketTurtle</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/">blog</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/macosx/">MacOsX</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vscode/">vscode</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/git/">git</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vue%E6%BA%90%E7%A0%81/">vue源码</a>
+      </nav>
+      <p>使自己变得更优秀！</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/rocketturtlewqt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">正则表达式</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          May 7, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          4 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h3 id="体验正则表达式的魅力">体验正则表达式的魅力</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;asjdhka17821sdjashdkj23324&#39;</span>;
+<span style="color:#75715e">//将数字拼接成字符串返回
+</span><span style="color:#75715e">//不用正则表达式
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">parseNumber</span>(<span style="color:#a6e22e">s</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>Number.isNaN(parseInt(<span style="color:#a6e22e">s</span>[<span style="color:#a6e22e">i</span>]))) <span style="color:#a6e22e">result</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">s</span>[<span style="color:#a6e22e">i</span>];
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span>;
+}
+
+<span style="color:#75715e">//用正则表达式
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\d/g</span>).<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;&#39;</span>));
+</code></pre></div><h3 id="字面量创建正则表达式">字面量创建正则表达式</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Abctds&#39;</span>;
+
+<span style="color:#75715e">// RegExp参数
+</span><span style="color:#75715e">//   - 正则表达式
+</span><span style="color:#75715e">//   - 模式匹配 i表示忽略大小写，g表示全局匹配
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">exp</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> RegExp(<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;i&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">exp</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">str</span>));
+
+<span style="color:#75715e">//使用字面量创建正则表达式
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">/a/i</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">str</span>));
+</code></pre></div><h3 id="使用对象创建正则表达式">使用对象创建正则表达式</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;使用对象创建正则表达式&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+    wangqintao
+  &lt;/<span style="color:#f92672">p</span>&gt;
+  &lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">node</span><span style="color:#f92672">=</span>document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;container&#39;</span>);
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">str</span><span style="color:#f92672">=</span><span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">innerHTML</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">con</span><span style="color:#f92672">=</span><span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#39;请输字符串&#39;</span>);
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reg</span><span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> RegExp(<span style="color:#a6e22e">con</span>,<span style="color:#e6db74">&#39;g&#39;</span>);
+    <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">innerHTML</span><span style="color:#f92672">=</span><span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">reg</span>,(<span style="color:#a6e22e">template</span>, <span style="color:#a6e22e">index</span>)=&gt;{
+      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`&lt;span style=&#34;color:red&#34;&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">con</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/span&gt;`</span>;
+    });
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h3 id="选择符的使用">选择符的使用</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;010-8888888&#39;</span>;
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">/^(010|020)\-\d{7,8}$/</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">str</span>));
+</code></pre></div><h3 id="原子表和原子组中的选择符">原子表和原子组中的选择符</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;12345797987234&#39;</span>;
+
+<span style="color:#75715e">//原子表：[]表示或关系，即1或2或3或4
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">exp1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/[1234]/g</span>;
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#a6e22e">exp1</span>));
+
+<span style="color:#75715e">//原子组：表示12或13
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">exp2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/(12|13)/g</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#a6e22e">exp2</span>));
+</code></pre></div><h3 id="转义">转义</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://rocketturtlewqt.github.io&#39;</span>;
+
+<span style="color:#75715e">//使用对象创建正则表达式
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">expstr</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https?\\:\\/\\/\\w+\\.\\w+\\.\\w+&#39;</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">expstr</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">exp1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> RegExp(<span style="color:#a6e22e">expstr</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">exp1</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">str</span>));
+
+<span style="color:#75715e">//使用字面量创建正则表达式
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">/https?\:\/\/\w+\.\w+\.\w+/</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">str</span>));
+</code></pre></div><h3 id="字符边界约束">字符边界约束</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;字符边界约束&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  <span style="color:#75715e">&lt;!-- 根据输入的内容，判断是否满足是3-6个英文字母 --&gt;</span>
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inp&#34;</span>&gt;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;show&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;
+  &lt;<span style="color:#f92672">script</span>&gt;
+    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;inp&#39;</span>).<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;keyup&#39;</span>,<span style="color:#66d9ef">function</span>(){
+      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">/^\w{3,6}$/</span>.<span style="color:#a6e22e">test</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span>);
+      document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;show&#39;</span>).<span style="color:#a6e22e">innerText</span><span style="color:#f92672">=</span><span style="color:#a6e22e">rel</span><span style="color:#f92672">?</span><span style="color:#e6db74">&#39;正确&#39;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;错误&#39;</span>;
+    });
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h3 id="数值与空白元字符">数值与空白元字符</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;张三:010-99999999，李四:0571-88888888&#39;</span>;
+
+<span style="color:#75715e">//g表示全局匹配
+</span><span style="color:#75715e">//\d表示数字
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\d{3,}-\d{7,8}/g</span>));
+<span style="color:#75715e">//\D表示除了数字
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\D/g</span>));
+<span style="color:#75715e">//原子表中使用^表示除了
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/[^:-\d，]+/g</span>));
+<span style="color:#75715e">//\s表示空白，包含tab，空格以及换行符
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">/\s/</span>.<span style="color:#a6e22e">test</span>(<span style="color:#e6db74">&#39; nb&#39;</span>));
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">/\s/</span>.<span style="color:#a6e22e">test</span>(<span style="color:#e6db74">&#39;\nnb&#39;</span>));
+<span style="color:#75715e">//\S表示非空白
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">/\S/</span>.<span style="color:#a6e22e">test</span>(<span style="color:#e6db74">&#39; \nnb&#39;</span>));
+</code></pre></div><h3 id="w与w元字符">w与W元字符</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//\w表示字母、数字和下划线
+</span><span style="color:#75715e">//\W表示非（字母、数字和下划线）
+</span><span style="color:#75715e">//以字母开头，后跟4-8位字母数字和下划线
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a123v343&#39;</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">/^[A-z]\w{4,8}$/</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">str</span>));
+</code></pre></div><h3 id="点元字符的使用">点元字符的使用</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://www.baidu.com&#39;</span>;
+
+<span style="color:#75715e">//.表示除了换行符以外的任何字符所以需要转义
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">/https?:\/\/\w+\.\w+\.\w+/</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">url</span>));
+
+<span style="color:#75715e">//s表示将字符串视为单行来匹配(也可以理解为忽略换行符)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`
+</span><span style="color:#e6db74">hello world
+</span><span style="color:#e6db74">hi
+</span><span style="color:#e6db74">`</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#960050;background-color:#1e0010">/.+/s));</span>
+</code></pre></div><h3 id="精确匹配所有字符">精确匹配所有字符</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//匹配所有字符
+</span><span style="color:#75715e">//可以使用原子表+正反相或的方式
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`
+</span><span style="color:#e6db74">&lt;span&gt;
+</span><span style="color:#e6db74">  hello
+</span><span style="color:#e6db74">  world
+</span><span style="color:#e6db74">&lt;/span&gt;
+</span><span style="color:#e6db74">`</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/[\s\S]+/</span>));
+</code></pre></div><h3 id="i与g模式修正符">i与g模式修正符</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//i表示不区分大小写
+</span><span style="color:#75715e">//g表示全局匹配
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;abcuuu@uuUaasdhdjd@&#39;</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/u/ig</span>, <span style="color:#e6db74">&#39;@&#39;</span>));
+</code></pre></div><h3 id="m多行匹配修正符实例">m多行匹配修正符实例</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`
+</span><span style="color:#e6db74">  #1 js,200元 #
+</span><span style="color:#e6db74">  #2 java,300元 #
+</span><span style="color:#e6db74">  #3 python,400元 # hello world
+</span><span style="color:#e6db74">  #4 go,330元 #
+</span><span style="color:#e6db74">`</span>;
+
+<span style="color:#75715e">// [
+</span><span style="color:#75715e">//   {
+</span><span style="color:#75715e">//     name: &#39;js&#39;,
+</span><span style="color:#75715e">//     price:&#39;200元&#39;
+</span><span style="color:#75715e">//   },
+</span><span style="color:#75715e">//   {
+</span><span style="color:#75715e">//     name: &#39;java&#39;,
+</span><span style="color:#75715e">//     price:&#39;300元&#39;
+</span><span style="color:#75715e">//   },
+</span><span style="color:#75715e">//   {
+</span><span style="color:#75715e">//     name: &#39;go&#39;,
+</span><span style="color:#75715e">//     price:330元
+</span><span style="color:#75715e">//   }
+</span><span style="color:#75715e">// ]
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//m表示多行匹配
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">rel</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/^\s*#\d+\s+.+\s+#$/gm</span>);
+<span style="color:#a6e22e">rel</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">rel</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">x</span> =&gt; {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/\s*#\d*\s*/g</span>, <span style="color:#e6db74">&#39;&#39;</span>);
+});
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [];
+<span style="color:#a6e22e">rel</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">x</span> =&gt; {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;,&#39;</span>);
+  <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">push</span>({
+    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">a</span>[<span style="color:#ae81ff">0</span>],
+    <span style="color:#a6e22e">price</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">a</span>[<span style="color:#ae81ff">1</span>]
+  });
+});
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">arr</span>);
+
+</code></pre></div><h3 id="汉字与字符属性">汉字与字符属性</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//\p{&lt;字符属性&gt;}
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;asdhasdhka1a3.撒娇快点哈接口，加油&#39;</span>;
+<span style="color:#75715e">//匹配所有字母，汉字
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\p{L}/gu</span>));
+<span style="color:#75715e">//匹配所有标点
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\p{P}/gu</span>));
+<span style="color:#75715e">//匹配所有数字
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\p{N}/gu</span>));
+<span style="color:#75715e">//匹配所有非字母，汉字
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\P{L}/gu</span>));
+<span style="color:#75715e">//匹配所有非标点
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\P{P}/gu</span>));
+<span style="color:#75715e">//匹配所有非数字
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\P{N}/gu</span>));
+</code></pre></div><h3 id="lastindex属性的作用">lastIndex属性的作用</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0ahsdjkashd&#39;</span>;
+<span style="color:#75715e">//字符串的match方法如果匹配到多个符合条件的字符，匹配到的字符属消失
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\w/g</span>));
+
+<span style="color:#75715e">//使用RegExp的exec方法并且使用正则的模式修正符的全局匹配，则会依次匹配下去，并且匹配的每个字符都会有详细信息
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reg</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/\w/g</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">res</span>;
+<span style="color:#75715e">//lastIndex指定开始匹配的位置，默认为1
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">reg</span>.<span style="color:#a6e22e">lastIndex</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">res</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">reg</span>.<span style="color:#a6e22e">exec</span>(<span style="color:#a6e22e">str</span>)) {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">res</span>);
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">reg</span>.<span style="color:#a6e22e">lastIndex</span>);
+}
+</code></pre></div><h3 id="有效率的y模式">有效率的y模式</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//y模式与g模式的区别
+</span><span style="color:#75715e">//y模式匹配到不符合正则的字符时，停止继续向下匹配
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;abc1abc&#39;</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/[A-z]+/y</span>));<span style="color:#75715e">//[ &#39;abc&#39;, index: 0, input: &#39;abc1abc&#39;, groups: undefined ]
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/[A-z]+/g</span>));<span style="color:#75715e">//[ &#39;abc&#39;, &#39;abc&#39; ]
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//应用场景
+</span><span style="color:#75715e">//qq号大全：1111111111,2222222222,3333333333请问巨额经济垃圾袋
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;qq号大全：1111111111,2222222222,3333333333请问巨额经济垃圾袋&#39;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">reg</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/(\d+),?/y</span>;
+<span style="color:#a6e22e">reg</span>.<span style="color:#a6e22e">lastIndex</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">rel</span> <span style="color:#f92672">=</span> [], <span style="color:#a6e22e">res</span>;
+<span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">res</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">reg</span>.<span style="color:#a6e22e">exec</span>(<span style="color:#a6e22e">s</span>)) {
+  <span style="color:#a6e22e">rel</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">res</span>);
+}
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">rel</span>);
+</code></pre></div><h3 id="原子表的基本使用">原子表的基本使用</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">da</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2020/09/01&#39;</span>;
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">da</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/^\d{4}[-\/]\d{2}[-\/]\d{2}$/</span>));
+
+<span style="color:#75715e">//使用原子组+原子表严格匹配
+</span><span style="color:#75715e">//2020/09-01
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">da</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/^\d{4}[-\/]\d{2}\1\d{2}$/</span>));
+</code></pre></div><h3 id="区间匹配">区间匹配</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;区间匹配&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  <span style="color:#75715e">&lt;!-- 根据用户输入的用户名，判断用户名是否合法，用户名必须以字母开头，选择性包含字母、数字、下划线，总长度4-7位 --&gt;</span>
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inp&#34;</span>&gt;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rel&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;
+  &lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">inp</span><span style="color:#f92672">=</span>document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;inp&#39;</span>);
+    <span style="color:#a6e22e">inp</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;keyup&#39;</span>,<span style="color:#66d9ef">function</span>(){
+      <span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/^[a-z]\w{3,6}$/i</span>)){
+        document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;rel&#39;</span>).<span style="color:#a6e22e">innerText</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;正确&#39;</span>;
+      }<span style="color:#66d9ef">else</span>{
+        document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;rel&#39;</span>).<span style="color:#a6e22e">innerText</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;错误&#39;</span>;
+      }
+    })
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h3 id="排除匹配">排除匹配</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;张三:010-99999999,李四:010-88888828&#39;</span>;
+<span style="color:#75715e">//匹配所有汉字
+</span><span style="color:#75715e">//1：排除法
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/[^\d:\-,]+/g</span>));
+<span style="color:#75715e">//2：\p{sc=Han}
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\p{sc=Han}+/gu</span>));
+</code></pre></div><h3 id="原子表字符不解析">原子表字符不解析</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;(wangqintao).+&#39;</span>;
+
+<span style="color:#75715e">//将.、+、(、)仍到原子表里表示单纯的字符
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/[.+()]/g</span>));
+</code></pre></div><h3 id="使用原子表匹配所有字符">使用原子表匹配所有字符</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`
+</span><span style="color:#e6db74">  hello world
+</span><span style="color:#e6db74">  how are you
+</span><span style="color:#e6db74">`</span>;
+
+<span style="color:#75715e">//1：使用\s忽略换行符
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#960050;background-color:#1e0010">/.+/s));</span>
+
+<span style="color:#75715e">//2：使用例如[\s\S]
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/[\s\S]+/g</span>));
+</code></pre></div><h3 id="正则表达式操作dom元素">正则表达式操作dom元素</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;正则操作dom元素&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  <span style="color:#75715e">&lt;!-- 删除除了第一条内容的所有其它内容 --&gt;</span>
+  &lt;<span style="color:#f92672">p</span>&gt;王五&lt;/<span style="color:#f92672">p</span>&gt;
+  &lt;<span style="color:#f92672">h2</span>&gt;&lt;/<span style="color:#f92672">h2</span>&gt;
+  &lt;<span style="color:#f92672">h1</span>&gt;hello
+    world
+  &lt;/<span style="color:#f92672">h1</span>&gt;
+  &lt;<span style="color:#f92672">h2</span>&gt;阿技术的空间啊好受点&lt;/<span style="color:#f92672">h2</span>&gt;
+  &lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reg</span><span style="color:#f92672">=</span><span style="color:#e6db74">/&lt;(h[1-6])&gt;[\s\S]*&lt;\/\1&gt;/g</span>;
+    document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">innerHTML</span><span style="color:#f92672">=</span>document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">innerHTML</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">reg</span>,<span style="color:#e6db74">&#39;&#39;</span>);
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h3 id="认识原子组">认识原子组</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;正则操作dom元素&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  <span style="color:#75715e">&lt;!-- 删除除了第一条内容的所有其它内容 --&gt;</span>
+  &lt;<span style="color:#f92672">p</span>&gt;王五&lt;/<span style="color:#f92672">p</span>&gt;
+  &lt;<span style="color:#f92672">h1</span>&gt;helloworld&lt;/<span style="color:#f92672">h1</span>&gt;
+  &lt;<span style="color:#f92672">h2</span>&gt;阿技术的空间啊好受点&lt;/<span style="color:#f92672">h2</span>&gt;
+  &lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reg</span><span style="color:#f92672">=</span><span style="color:#e6db74">/&lt;(h[1-6])&gt;([\s\S]*)&lt;\/\1&gt;/</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span><span style="color:#f92672">=</span>document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">innerHTML</span>;
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">match</span>(<span style="color:#a6e22e">reg</span>));
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p><img src="https://rocketturtlewqt.github.io/20210507124011aft.png" alt="认识原子组"></p>
+<ul>
+<li>0表示匹配到的内容</li>
+<li>1表示匹配到的第一个原子组，可以通过\1引用</li>
+<li>2表示匹配到的第二个原子组，可以通过\2引用</li>
+<li>input是输入</li>
+</ul>
+<h3 id="邮箱验证中原子组的使用">邮箱验证中原子组的使用</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;邮箱验证中原子组的使用&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  <span style="color:#75715e">&lt;!-- 根据用户在文本框的输入判断邮箱是否合理 --&gt;</span>
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mail&#34;</span>&gt;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rel&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;
+  &lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#75715e">// 1600639146@qq.com.cn
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reg</span><span style="color:#f92672">=</span><span style="color:#e6db74">/^\w+@(\w+\.)+(com|cn|cc|net)$/i</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">span</span><span style="color:#f92672">=</span>document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;rel&#39;</span>);
+    document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;[name=mail]&#34;</span>)
+            .<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;keyup&#34;</span>,<span style="color:#66d9ef">function</span>(){
+              <span style="color:#a6e22e">span</span>.<span style="color:#a6e22e">innerText</span><span style="color:#f92672">=</span><span style="color:#a6e22e">reg</span>.<span style="color:#a6e22e">test</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span>)<span style="color:#f92672">?</span><span style="color:#e6db74">&#39;正确&#39;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;错误&#39;</span>;
+            });
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h3 id="原子组引用完成替换操作">原子组引用完成替换操作</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;原子组引用完成替换操作&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  <span style="color:#75715e">&lt;!-- 将所有h标签替换成p标签 --&gt;</span>
+  &lt;<span style="color:#f92672">h1</span>&gt;hello word&lt;/<span style="color:#f92672">h1</span>&gt;
+  &lt;<span style="color:#f92672">h2</span>&gt;name：王勤涛&lt;/<span style="color:#f92672">h2</span>&gt;
+  &lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reg</span><span style="color:#f92672">=</span><span style="color:#e6db74">/&lt;(h[1-6])&gt;([\s\S]+)&lt;\/\1&gt;/g</span>
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span><span style="color:#f92672">=</span>document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">innerHTML</span>;
+    document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">innerHTML</span><span style="color:#f92672">=</span><span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">reg</span>,(<span style="color:#a6e22e">p0</span>,<span style="color:#a6e22e">p1</span>,<span style="color:#a6e22e">p2</span>)=&gt;<span style="color:#e6db74">`&lt;p&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">p2</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/p&gt;`</span>);
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h3 id="嵌套分组与不记录组">嵌套分组与不记录组</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`
+</span><span style="color:#e6db74">  https://www.baidu.com
+</span><span style="color:#e6db74">  https://rocetturtle.github.io
+</span><span style="color:#e6db74">  http://sadsad.cn
+</span><span style="color:#e6db74">`</span>;
+
+<span style="color:#75715e">//拿到所有域名
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">rel</span> <span style="color:#f92672">=</span> [], <span style="color:#a6e22e">res</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reg</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/https?:\/\/((?:\w+\.)+(?:com|net|cn|cc|io))/ig</span>;
+<span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">res</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">reg</span>.<span style="color:#a6e22e">exec</span>(<span style="color:#a6e22e">str</span>)) {
+  <span style="color:#a6e22e">rel</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">res</span>[<span style="color:#ae81ff">1</span>]);
+}
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">rel</span>);
+</code></pre></div><ul>
+<li>?:表示忽略原子组</li>
+<li>exec表示每一次匹配到的结果都是一个数组，数组的第一项是匹配到的字符串，第二项是第一个原子组</li>
+</ul>
+<h3 id="多种重复匹配基本使用">多种重复匹配基本使用</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:center">案例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">?</td>
+<td style="text-align:center">修饰前面一个元素时表示0个或一个</td>
+<td style="text-align:center">/hd?/</td>
+</tr>
+<tr>
+<td style="text-align:center">{a,b}</td>
+<td style="text-align:center">修饰前面一个元素时表示a-b个</td>
+<td style="text-align:center">/hd{3,6}/</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">修饰前面一个元素时，表示0个或多个</td>
+<td style="text-align:center">/hd*/</td>
+</tr>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">修饰前面一个元素时表示一个或多个</td>
+<td style="text-align:center">/hd+/</td>
+</tr>
+</tbody>
+</table>
+<h3 id="电话号码的匹配">电话号码的匹配</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//010-77777777
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">tel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;010-77777777&#39;</span>
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">tel</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/^0\d{3,4}-\d{7,8}$/</span>));
+</code></pre></div><h3 id="网站用户名的验证">网站用户名的验证</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;网站用户名的验证&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span>&gt;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rel&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;
+  &lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reg</span><span style="color:#f92672">=</span><span style="color:#e6db74">/^[a-z][\w\-]{2,6}$/i</span>;
+    document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;[name=username]&#39;</span>)
+            .<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;keyup&#39;</span>,<span style="color:#a6e22e">e</span>=&gt;{
+              document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;rel&#39;</span>).<span style="color:#a6e22e">innerText</span><span style="color:#f92672">=</span><span style="color:#a6e22e">reg</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">value</span>)<span style="color:#f92672">?</span><span style="color:#e6db74">&#39;正确&#39;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;错误&#39;</span>;
+            });
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

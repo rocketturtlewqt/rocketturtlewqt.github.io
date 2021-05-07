@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="RocketTurtle" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://rocketturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
+    <link rel="stylesheet" href="https:rocketturtlewqt/github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
 
     
     <meta name="twitter:card" content="summary"/>
@@ -18,7 +18,7 @@
     <meta property="og:title" content="本地库和远程库" />
 <meta property="og:description" content="代码托管中心  代码托管中心用来维护远程库 局域网下搭建的服务器：GitLab 外网下的服务器：GitHub，码云  本地库基本操作 本地库初始化 git init  可以通过 ls -lA 查看.git/下的子目录与文件  设置签名  用来区分不同开发人员身份，与登陆到远程库的用户名和密码作用不同 项目级别：git config user.name=tom_xm user.email=1600639146@qq.com，查看使用cat .git 系统级别：git config &ndash;global user.name=tom_global user.email=1600639146@qq.com，查看步骤：定位到用户夹 cd ~ =&gt; 查看.gitconfig文件 cat .gitconfig  基本操作  查看  //查看当前的状态，没有被追踪的文件颜色为红色，即表明目前在工作区中；在暂存区中的文件显示为绿色 git status 添加  //将文件添加到暂存区中，此时使用git status文件显示为绿色 git add &lt;filename&gt; 撤销  //撤销add操作，将文件状态回退到工作区 git rm --cache &lt;filename&gt; 提交  //将文件从暂存区提交到本地仓库 git commit -m &#34;&lt;提交说明&gt;&#34; &lt;filename&gt; 查看历史记录   git log：详细查看提交的历史记录  git log &ndash;pretty=oneline：简略查看提交的历史记录，hash值很长，每条记录一行  git log &ndash;oneline：与git log &ndash;pretty=oneline的区别是其hash值比较短  git reflog：最理想的方式，HEAD@{&lt;回退步数&gt;}   回退/前进历史版本   基于索引值操作  git reset --hard &lt;局部索引值&gt;  使用^符号：只能后退  //几个^表示后退几步 git reset --hard HEAD^  使用~符号：只能后退  //n表示后退几步 git reset --hard HEAD~n   hard、mixed、soft对比  //本地库向前移动了一个单位，此时 git status 颜色为绿色，看起来是暂存区向后移动了一个单位 git reset --soft &lt;局部索引值&gt; //本地库以及暂存区向前移动了一个单位，此时 git status 颜色为红色，看起来是工作区向后移动了一个单位 git reset --mixed &lt;局部索引值&gt; //本地库、暂存区以及工作区向前移动了一个单位 git reset --hard &lt;局部索引值&gt; //使用mixed或soft移动后回到当前指针指向的位置 git reset --hard HEAD   永久删除文件并回退  rm &lt;filename&gt; 使用上述命令删除后，也可以通过 git reset &ndash;hard &lt;局部索引值&gt; 找回" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rocketturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/" /><meta property="article:section" content="git" />
+<meta property="og:url" content="https:rocketturtlewqt/github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/" /><meta property="article:section" content="git" />
 <meta property="article:published_time" content="2021-05-03T12:12:17&#43;08:00" />
 <meta property="article:modified_time" content="2021-05-03T12:12:17&#43;08:00" />
 
@@ -27,7 +27,7 @@
   </head>
   <body>
     <header class="app-header">
-      <a href="https://rocketturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
+      <a href="https:rocketturtlewqt/github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
       <h1>RocketTurtle</h1>
       <nav class="app-header-menu">
           <a class="app-header-menu-item" href="/">home</a>

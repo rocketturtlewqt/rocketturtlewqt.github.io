@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on RocketTurtle</title>
-    <link>https://rocketturtlewqt.github.io/blog/</link>
+    <link>https:rocketturtlewqt/github.io/blog/</link>
     <description>Recent content in Blogs on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 May 2021 16:57:04 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 May 2021 16:57:04 +0800</lastBuildDate><atom:link href="https:rocketturtlewqt/github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hugo搭建静态技术博客教程</title>
-      <link>https://rocketturtlewqt.github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</link>
+      <link>https:rocketturtlewqt/github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</link>
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</guid>
+      <guid>https:rocketturtlewqt/github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</guid>
       <description>注意  创建的github其命名要符合规范：&amp;lt;用户名&amp;gt;.github.io &amp;lt;用户名&amp;gt;.github.io  使用hugo生成项目基本结构 hugo new site &amp;lt;项目根目录名称&amp;gt; 进入当前项目根目录 cd &amp;lt;项目根目录名称&amp;gt;/ 选定主题，并拉取到本地 git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c 尝试本地运行项目 hugo serve -t m10c --buildDrafts 运行以上命令后，打开地址看看是否成功
 同步到远程 hugo --theme=m10c --baseUrl=&amp;#34;https://rocketturtlewqt.github.io&amp;#34; --buildDrafts 运行以上命令，项目根目录会出现public子目录
 进入到public子目录 cd public/ 执行git操作 从工作区添加所有文件到暂存区 git add . 从暂存区提交到本地仓库 git commit -m &amp;#34;附加内容&amp;#34; 添加远程仓库地址 git remote origin &amp;lt;仓库地址&amp;gt; 往远程仓库推送 git push -u origin master </description>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MacOsxes on RocketTurtle</title>
-    <link>https://rocketturtlewqt.github.io/macosx/</link>
+    <link>https:rocketturtlewqt/github.io/macosx/</link>
     <description>Recent content in MacOsxes on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 May 2021 16:57:04 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/macosx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 May 2021 16:57:04 +0800</lastBuildDate><atom:link href="https:rocketturtlewqt/github.io/macosx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MacOs X常用终端命令</title>
-      <link>https://rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>https:rocketturtlewqt/github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https:rocketturtlewqt/github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>目录操作    命令 描述 示例     mkdir 创建目录a mkdir a   rmdir 删除空目录b rmdir b   mvdir 移动目录a到目录b mkdir a b   cd 进入到当前目录下的public子目录(返回上级目录则是cd ..) cd public/   pwd 显示当前目录的绝对路径(/Users/wangqintao/Desktop) pwd   ls 显示当前目录的内容 ls    文件操作    命令 描述 示例     cat 终端下打开当前目录下的demo.txt文件 cat demo.txt   more 分页显示文件内容(按空格键切换到下一页，按ctrl+B返回上一页) more demo.txt   cp 复制文件(复制a.</description>
     </item>
     
