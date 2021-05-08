@@ -6,7 +6,16 @@
     <description>Recent content in MacOsxes on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 May 2021 16:57:04 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/macosx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 May 2021 19:39:35 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/macosx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>常用快捷键</title>
+      <link>https://rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Sat, 08 May 2021 19:39:35 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>强制退出  调出强制退出窗口 command+option+esc 在程序有响应的情况下，退出该程序command+option+shift+esc  </description>
+    </item>
+    
     <item>
       <title>MacOs X常用终端命令</title>
       <link>https://rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
