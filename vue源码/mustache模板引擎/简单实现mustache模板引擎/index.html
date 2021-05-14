@@ -13,10 +13,10 @@
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="简单实现mustache模板引擎"/>
-<meta name="twitter:description" content="mustache模板引擎简单情况下用js正则表达式实现 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;实现简单模板替换&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; const mustacheStr=` &lt;h2&gt;我叫{{name}}，我的年龄是{{age}}，性别{{sex}}，我想要改变世界&lt;/h2&gt; `; const data={ name:&#39;小红&#39;, age:21, sex:&#39;女&#39; }; function render(mustacheStr,data){ return mustacheStr.replace(/\{\{(\w&#43;)\}\}/g,function(template,$1){ return data[$1]; }); } const domStr=render(mustacheStr,data); console.log(domStr); &lt;/script&gt; &lt;/body&gt; &lt;/html&gt; "/>
+<meta name="twitter:description" content="观察tockens的正确姿势 let rel = nestTokens(squashTokens(tokens)); console.log(rel);  找到parseTemplate这样一个实现函数，在源代码的第248行左右进行如下更改  复杂情况  运行以下代码，观察控制台输出   tokens就是嵌套数组，每一个数组单元就是一个token，它描述了截取到的内容  &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;使用mustache&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#34;container&#34;&gt;&lt;/div&gt; &lt;script type=&#34;module&#34;&gt; import mustache from &#39;./lib/mustache.js&#39;; const mustacheStr=` &lt;ul&gt; {{#arr}} &lt;li&gt; &lt;h3&gt;{{name}}的信息&lt;/h3&gt; &lt;span&gt;名字：{{name}}&lt;/span&gt; &lt;span&gt;年龄：{{age}}&lt;/span&gt; &lt;span&gt;性别：{{sex}}&lt;/span&gt; &lt;/li&gt; {{/arr}} &lt;/ul&gt; `; const data={ arr:[ { name:&#39;小红&#39;, age:21, sex:&#39;男&#39; }, { name:&#39;小李&#39;, age:22, sex:&#39;男&#39; }, { name:&#39;小王&#39;, age:21, sex:&#39;男&#39; } ] }; const domStr=mustache."/>
 
     <meta property="og:title" content="简单实现mustache模板引擎" />
-<meta property="og:description" content="mustache模板引擎简单情况下用js正则表达式实现 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;实现简单模板替换&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; const mustacheStr=` &lt;h2&gt;我叫{{name}}，我的年龄是{{age}}，性别{{sex}}，我想要改变世界&lt;/h2&gt; `; const data={ name:&#39;小红&#39;, age:21, sex:&#39;女&#39; }; function render(mustacheStr,data){ return mustacheStr.replace(/\{\{(\w&#43;)\}\}/g,function(template,$1){ return data[$1]; }); } const domStr=render(mustacheStr,data); console.log(domStr); &lt;/script&gt; &lt;/body&gt; &lt;/html&gt; " />
+<meta property="og:description" content="观察tockens的正确姿势 let rel = nestTokens(squashTokens(tokens)); console.log(rel);  找到parseTemplate这样一个实现函数，在源代码的第248行左右进行如下更改  复杂情况  运行以下代码，观察控制台输出   tokens就是嵌套数组，每一个数组单元就是一个token，它描述了截取到的内容  &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;使用mustache&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#34;container&#34;&gt;&lt;/div&gt; &lt;script type=&#34;module&#34;&gt; import mustache from &#39;./lib/mustache.js&#39;; const mustacheStr=` &lt;ul&gt; {{#arr}} &lt;li&gt; &lt;h3&gt;{{name}}的信息&lt;/h3&gt; &lt;span&gt;名字：{{name}}&lt;/span&gt; &lt;span&gt;年龄：{{age}}&lt;/span&gt; &lt;span&gt;性别：{{sex}}&lt;/span&gt; &lt;/li&gt; {{/arr}} &lt;/ul&gt; `; const data={ arr:[ { name:&#39;小红&#39;, age:21, sex:&#39;男&#39; }, { name:&#39;小李&#39;, age:22, sex:&#39;男&#39; }, { name:&#39;小王&#39;, age:21, sex:&#39;男&#39; } ] }; const domStr=mustache." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/" /><meta property="article:section" content="vue源码" />
 <meta property="article:published_time" content="2021-05-04T19:53:06&#43;08:00" />
@@ -86,6 +86,73 @@
     </header>
     <div class="post-content">
       <p><img src="https://rocketturtlewqt.github.io/2021050492719aft.png" alt="mustache模板引擎原理"></p>
+<h2 id="观察tockens的正确姿势">观察tockens的正确姿势</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">rel</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">nestTokens</span>(<span style="color:#a6e22e">squashTokens</span>(<span style="color:#a6e22e">tokens</span>));
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">rel</span>);
+</code></pre></div><ul>
+<li>找到parseTemplate这样一个实现函数，在源代码的第248行左右进行如下更改</li>
+</ul>
+<p><img src="https://rocketturtlewqt.github.io/2021050895544aft.png" alt="添加代码观察tockens"></p>
+<h2 id="复杂情况">复杂情况</h2>
+<ul>
+<li>运行以下代码，观察控制台输出</li>
+</ul>
+<p><img src="https://rocketturtlewqt.github.io/2021050895848aft.png" alt="嵌套数组"></p>
+<ul>
+<li>tokens就是嵌套数组，每一个数组单元就是一个token，它描述了截取到的内容</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;使用mustache&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span>&gt;
+    <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">mustache</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./lib/mustache.js&#39;</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mustacheStr</span><span style="color:#f92672">=</span><span style="color:#e6db74">`
+</span><span style="color:#e6db74">      &lt;ul&gt;
+</span><span style="color:#e6db74">        {{#arr}}
+</span><span style="color:#e6db74">          &lt;li&gt;
+</span><span style="color:#e6db74">            &lt;h3&gt;{{name}}的信息&lt;/h3&gt;
+</span><span style="color:#e6db74">            &lt;span&gt;名字：{{name}}&lt;/span&gt;
+</span><span style="color:#e6db74">            &lt;span&gt;年龄：{{age}}&lt;/span&gt;
+</span><span style="color:#e6db74">            &lt;span&gt;性别：{{sex}}&lt;/span&gt;
+</span><span style="color:#e6db74">          &lt;/li&gt;
+</span><span style="color:#e6db74">        {{/arr}}
+</span><span style="color:#e6db74">      &lt;/ul&gt;
+</span><span style="color:#e6db74">    `</span>;
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span>{
+      <span style="color:#a6e22e">arr</span><span style="color:#f92672">:</span>[
+        {
+          <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;小红&#39;</span>,
+          <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span><span style="color:#ae81ff">21</span>,
+          <span style="color:#a6e22e">sex</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;男&#39;</span>
+        },
+        {
+          <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;小李&#39;</span>,
+          <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span><span style="color:#ae81ff">22</span>,
+          <span style="color:#a6e22e">sex</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;男&#39;</span>
+        },
+        {
+          <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;小王&#39;</span>,
+          <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span><span style="color:#ae81ff">21</span>,
+          <span style="color:#a6e22e">sex</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;男&#39;</span>
+        }
+      ]
+    };
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">domStr</span><span style="color:#f92672">=</span><span style="color:#a6e22e">mustache</span>.<span style="color:#a6e22e">render</span>(<span style="color:#a6e22e">mustacheStr</span>,<span style="color:#a6e22e">data</span>);
+    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;container&#39;</span>).<span style="color:#a6e22e">innerHTML</span><span style="color:#f92672">=</span><span style="color:#a6e22e">domStr</span>;
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><ul>
+<li>循环的情况无法使用简单的正则来将数据映射为视图</li>
+</ul>
 <h2 id="mustache模板引擎简单情况下用js正则表达式实现">mustache模板引擎简单情况下用js正则表达式实现</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
@@ -118,7 +185,10 @@
   &lt;/<span style="color:#f92672">script</span>&gt;
 &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div>
+</code></pre></div><ul>
+<li>实际上源码不是这样实现的</li>
+</ul>
+
     </div>
     <div class="post-footer">
       

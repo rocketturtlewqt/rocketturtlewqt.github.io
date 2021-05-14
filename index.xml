@@ -6,7 +6,16 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 May 2021 19:39:35 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 May 2021 12:09:25 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diff算法</title>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E8%99%9A%E6%8B%9Fdom%E5%92%8Cdiff%E7%AE%97%E6%B3%95/diff%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Fri, 14 May 2021 12:09:25 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E8%99%9A%E6%8B%9Fdom%E5%92%8Cdiff%E7%AE%97%E6%B3%95/diff%E7%AE%97%E6%B3%95/</guid>
+      <description>diff算法  diff算法是发生在虚拟dom上的 新虚拟dom和旧虚拟dom进行diff（精细化比较），算出如何最小量更新，最后反映到真实的dom上  import { init, classModule, propsModule, styleModule, eventListenersModule, h, } from &amp;#34;snabbdom&amp;#34;; const patch = init([ // Init patch function with chosen modules classModule, // makes it easy to toggle classes propsModule, // for setting properties on DOM elements styleModule, // handles styling on elements with support for animations eventListenersModule, // attaches event listeners ]); const container = document.getElementById(&amp;#34;container&amp;#34;); const myVnode = h(&amp;#39;ul&amp;#39;, { class: { &amp;#39;box&amp;#39;: true } }, [ h(&amp;#39;li&amp;#39;, &amp;#39;技&amp;#39;), h(&amp;#39;li&amp;#39;, &amp;#39;术&amp;#39;), h(&amp;#39;li&amp;#39;, &amp;#39;博&amp;#39;), h(&amp;#39;li&amp;#39;, &amp;#39;客&amp;#39;), h(&amp;#39;a&amp;#39;, { props: { href: &amp;#39;https://rocketturtlewqt.</description>
+    </item>
+    
     <item>
       <title>常用快捷键</title>
       <link>https://rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
@@ -31,7 +40,7 @@
       <pubDate>Tue, 04 May 2021 19:53:06 +0800</pubDate>
       
       <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</guid>
-      <description>mustache模板引擎简单情况下用js正则表达式实现 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;实现简单模板替换&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; const mustacheStr=` &amp;lt;h2&amp;gt;我叫{{name}}，我的年龄是{{age}}，性别{{sex}}，我想要改变世界&amp;lt;/h2&amp;gt; `; const data={ name:&amp;#39;小红&amp;#39;, age:21, sex:&amp;#39;女&amp;#39; }; function render(mustacheStr,data){ return mustacheStr.replace(/\{\{(\w+)\}\}/g,function(template,$1){ return data[$1]; }); } const domStr=render(mustacheStr,data); console.log(domStr); &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; </description>
+      <description>观察tockens的正确姿势 let rel = nestTokens(squashTokens(tokens)); console.log(rel);  找到parseTemplate这样一个实现函数，在源代码的第248行左右进行如下更改  复杂情况  运行以下代码，观察控制台输出   tokens就是嵌套数组，每一个数组单元就是一个token，它描述了截取到的内容  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;使用mustache&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34;&amp;gt; import mustache from &amp;#39;./lib/mustache.js&amp;#39;; const mustacheStr=` &amp;lt;ul&amp;gt; {{#arr}} &amp;lt;li&amp;gt; &amp;lt;h3&amp;gt;{{name}}的信息&amp;lt;/h3&amp;gt; &amp;lt;span&amp;gt;名字：{{name}}&amp;lt;/span&amp;gt; &amp;lt;span&amp;gt;年龄：{{age}}&amp;lt;/span&amp;gt; &amp;lt;span&amp;gt;性别：{{sex}}&amp;lt;/span&amp;gt; &amp;lt;/li&amp;gt; {{/arr}} &amp;lt;/ul&amp;gt; `; const data={ arr:[ { name:&amp;#39;小红&amp;#39;, age:21, sex:&amp;#39;男&amp;#39; }, { name:&amp;#39;小李&amp;#39;, age:22, sex:&amp;#39;男&amp;#39; }, { name:&amp;#39;小王&amp;#39;, age:21, sex:&amp;#39;男&amp;#39; } ] }; const domStr=mustache.</description>
     </item>
     
     <item>
@@ -84,12 +93,12 @@
     
     <item>
       <title>MacOs X vscode使用教程/常用快捷键</title>
-      <link>https://rocketturtlewqt.github.io/vscode/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>https://rocketturtlewqt.github.io/vscode/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/vscode/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-      <description>知乎大佬总结vscode
-配置vscode语言  使用快捷键shift+command+p打开搜索框 键入configure language设置语言为zh-cn 设置完后ide会提示需要重启，重启后就会更换语言了  setting.json常用配置选项  editor.fontSize：用来设置字体大小，默认为12 files.autoSave：设置文件保存相关内容，一般建议设为onFocuschange，即切换文件时自动保存  工作区快速打开文件/文件夹  command+o  </description>
+      <guid>https://rocketturtlewqt.github.io/vscode/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>å 知乎大佬总结vscode
+配置vscode语言  使用快捷键shift+command+p打开搜索框 键入configure language设置语言为zh-cn 设置完后ide会提示需要重启，重启后就会更换语言了  setting.json常用配置选项`  editor.fontSize：用来设置字体大小，默认为12 files.autoSave：设置文件保存相关内容，一般建议设为onFocuschange，即切换文件时自动保存  工作区快速打开文件/文件夹  command + o  开启终端  ~ + controlå  </description>
     </item>
     
     <item>
