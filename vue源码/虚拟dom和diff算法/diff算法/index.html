@@ -142,6 +142,12 @@ patch(container, myVnode);
 <li>sel：选择器，当前标签名</li>
 <li>test：标签内的文本节点</li>
 </ul>
+<h3 id="diff算法特点">diff算法特点</h3>
+<ol>
+<li>最小量更新，key是虚拟节点的唯一标识（diff算法会根据key值去找缓存中相对应的虚拟节点进行缓存复用），若没有key值，则按顺序进行复用。</li>
+<li>只有是同一个虚拟节点才会进行精细化比较。</li>
+<li>diff算法是同层比较，不会跨层比较，同层虚拟节点的顺序可以打乱，不影响diff算法缓存复用。</li>
+</ol>
 
     </div>
     <div class="post-footer">
