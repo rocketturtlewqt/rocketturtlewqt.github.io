@@ -6,7 +6,16 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 May 2021 12:09:25 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 May 2021 12:09:55 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>响应式原理</title>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Thu, 20 May 2021 12:09:55 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</guid>
+      <description>响应式原理 核心函数说明 observe  在对象上添加__ob__属性，这个属性指向一个Observer侦测对象  Observer  侦测类，作用是将对象的每一层转为响应式 dep类的实例在此类中实例化，用来收集依赖Watcher的实例  defineReactive  两个核心getter和setter 在getter中收集依赖（主要看Dep.target是否不为空，不为空就说明目前有依赖，多个依赖竞争Dep.target） 在setter中触发依赖  parsePath  将字符串路径，例如&amp;rsquo;a.b.c.d&#39;，转为能够在原对象上读取此路径对应的值的函数  array  改写Array.prototype上的七个函数，让它们变为响应式   在arrayMethods定义七个一模一样的api，并重写覆盖Array.prototype上的这七个api。再将数组实例的原型设置为arrayMethods  github源码地址 手写数据响应式原理</description>
+    </item>
+    
     <item>
       <title>Diff算法</title>
       <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E8%99%9A%E6%8B%9Fdom%E5%92%8Cdiff%E7%AE%97%E6%B3%95/diff%E7%AE%97%E6%B3%95/</link>
