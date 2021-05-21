@@ -6,7 +6,16 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 May 2021 12:09:55 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 May 2021 21:15:49 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>打包css资源</title>
+      <link>https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85css%E8%B5%84%E6%BA%90/</link>
+      <pubDate>Fri, 21 May 2021 21:15:49 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85css%E8%B5%84%E6%BA%90/</guid>
+      <description>使用webpack打包css样式资源 webpack.config.js  entry：打包的入口文件 output：整合后资源的输出位置 module：webpack本身只认识js文件，其它文件一般需要一些loader进行处理，才能被webpack认识 plugin：插件，一般用于上线时的优化，例如，压缩 mode：打包环境（开发环境、生产环境）  const path = require(&amp;#39;path&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;bundle.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, module: { rules: [ { test: /\.css$/, use: [ &amp;#39;style-loader&amp;#39;, &amp;#39;css-loader&amp;#39; ] } ] }, mode:&amp;#39;development&amp;#39; }  css-loader：将css文件转换成commonjs模块塞入js中 style-loader：在head标签中创建style标签，将css代码插入到style标签里  </description>
+    </item>
+    
     <item>
       <title>响应式原理</title>
       <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</link>
