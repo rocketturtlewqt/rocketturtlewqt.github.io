@@ -6,7 +6,16 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 May 2021 12:06:33 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 May 2021 12:42:52 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>打包图片资源</title>
+      <link>https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90/</link>
+      <pubDate>Sat, 22 May 2021 12:42:52 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90/</guid>
+      <description>使用webpack打包图片资源  url-loader@1.3.2 file-loader html-loader 注意url-loader和html-loader模块冲突问题，需要配置url-loader选项，将esModule属性关闭  const path = require(&amp;#39;path&amp;#39;); const HtmlWebpackPlugin = require(&amp;#39;html-webpack-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;bundle.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, module: { rules: [ { test: /\.css$/, use: [ &amp;#39;style-loader&amp;#39;, &amp;#39;css-loader&amp;#39; ] }, { test: /\.(gif|png|jpg)$/, loader: &amp;#39;url-loader&amp;#39;, options: { //当图片体积小于8k的时候，采用base64编码  limit: 8 * 1024, //url-loader默认采用es6模块解析，和html-loader的commanjs冲突，需要关闭  esModule: false, name: &amp;#39;[hash:10].[ext]&amp;#39; } }, { test: /\.html$/, loader: &amp;#39;html-loader&amp;#39; } ] }, plugins: [ new HtmlWebpackPlugin({ template: &amp;#39;.</description>
+    </item>
+    
     <item>
       <title>打包html资源</title>
       <link>https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85html%E8%B5%84%E6%BA%90/</link>
