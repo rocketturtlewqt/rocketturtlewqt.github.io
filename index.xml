@@ -6,7 +6,16 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 May 2021 12:42:52 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 May 2021 12:34:12 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vuex原理及源码</title>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/vuex/vuex%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81/</link>
+      <pubDate>Sun, 23 May 2021 12:34:12 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/vuex/vuex%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81/</guid>
+      <description>vuex原理  state：单一状态树，类似于全局的一个容器 getter：相对于state的计算属性 mutations：定义同步方法 actions：定义异步逻辑，请求过后再去调用mutations里的方法  </description>
+    </item>
+    
     <item>
       <title>打包图片资源</title>
       <link>https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90/</link>
