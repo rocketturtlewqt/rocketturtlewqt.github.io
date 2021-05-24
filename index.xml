@@ -6,7 +6,16 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 May 2021 12:34:12 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 May 2021 20:13:43 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dev Server</title>
+      <link>https://rocketturtlewqt.github.io/webpack/dev-server/</link>
+      <pubDate>Mon, 24 May 2021 20:13:43 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/webpack/dev-server/</guid>
+      <description>webpack-dev-server  安装webpack-dev-server  npm i webpackdev-server@3.11.0 -D webpack-dev-server的特点  自动编译 内存操作（没有实际输出的bundle） 热更新  通用配置选项  contentBase：html文件所在的目录 compress：是否启动gzip压缩 port：指定项目所在端口  const path = require(&amp;#39;path&amp;#39;); const HtmlWebpackPlugin = require(&amp;#39;html-webpack-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;build.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, plugins: [ new HtmlWebpackPlugin({ template: &amp;#39;./src/index.html&amp;#39; }) ], mode: &amp;#39;development&amp;#39;, /** * 1.自动编译 * 2.内存操作 * 3.热更新 */ devServer: { //指定项目html文件所在的根目录  contentBase: path.resolve(__dirname, &amp;#39;dist&amp;#39;), //指定项目端口号  port: 3000, //启动gzip压缩  compress: true } } </description>
+    </item>
+    
     <item>
       <title>Vuex原理及源码</title>
       <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/vuex/vuex%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81/</link>
