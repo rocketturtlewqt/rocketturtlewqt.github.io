@@ -13,10 +13,10 @@
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vuex原理及源码"/>
-<meta name="twitter:description" content="vuex原理  state：单一状态树，类似于全局的一个容器 getter：相对于state的计算属性 mutations：定义同步方法 actions：定义异步逻辑，请求过后再去调用mutations里的方法  "/>
+<meta name="twitter:description" content="vuex原理  state：单一状态树，类似于全局的一个容器 getter：相对于state的计算属性 mutations：定义同步方法 actions：定义异步逻辑，请求过后再去调用mutations里的方法  ModuleCollection.js export default class ModuleCollection{ constructor(options) { this.register([], options); } register(path, rootModule) { let rawModule = { _raw: rootModule, _children: {}, state: rootModule.state } if (!this.root) { this.root = rawModule; } else { let parentNode = path.slice(0,-1).reduce((root, current) =&gt; { return root._children[current]; }, this.root); parentNode._children[path[path.length - 1]] = rawModule; } if (rootModule.modules) { Object.keys(rootModule.modules).forEach(moduleName =&gt; { this.register(path.concat(moduleName), rootModule.modules[moduleName]); }); } } } export default new Vuex."/>
 
     <meta property="og:title" content="Vuex原理及源码" />
-<meta property="og:description" content="vuex原理  state：单一状态树，类似于全局的一个容器 getter：相对于state的计算属性 mutations：定义同步方法 actions：定义异步逻辑，请求过后再去调用mutations里的方法  " />
+<meta property="og:description" content="vuex原理  state：单一状态树，类似于全局的一个容器 getter：相对于state的计算属性 mutations：定义同步方法 actions：定义异步逻辑，请求过后再去调用mutations里的方法  ModuleCollection.js export default class ModuleCollection{ constructor(options) { this.register([], options); } register(path, rootModule) { let rawModule = { _raw: rootModule, _children: {}, state: rootModule.state } if (!this.root) { this.root = rawModule; } else { let parentNode = path.slice(0,-1).reduce((root, current) =&gt; { return root._children[current]; }, this.root); parentNode._children[path[path.length - 1]] = rawModule; } if (rootModule.modules) { Object.keys(rootModule.modules).forEach(moduleName =&gt; { this.register(path.concat(moduleName), rootModule.modules[moduleName]); }); } } } export default new Vuex." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/vuex/vuex%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81/" /><meta property="article:section" content="vue源码" />
 <meta property="article:published_time" content="2021-05-23T12:34:12&#43;08:00" />
@@ -83,7 +83,7 @@
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
-          1 min read
+          3 min read
         </div>
       </div>
     </header>
@@ -96,6 +96,231 @@
 <li>actions：定义异步逻辑，请求过后再去调用mutations里的方法</li>
 </ul>
 <p><img src="https://rocketturtlewqt.github.io/20210523123441aft.png" alt="vuex原理图"></p>
+<h3 id="modulecollectionjs">ModuleCollection.js</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ModuleCollection</span>{
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">options</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">register</span>([], <span style="color:#a6e22e">options</span>);
+  }
+
+  <span style="color:#a6e22e">register</span>(<span style="color:#a6e22e">path</span>, <span style="color:#a6e22e">rootModule</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">rawModule</span> <span style="color:#f92672">=</span> {
+      <span style="color:#a6e22e">_raw</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">rootModule</span>,
+      <span style="color:#a6e22e">_children</span><span style="color:#f92672">:</span> {},
+      <span style="color:#a6e22e">state</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">rootModule</span>.<span style="color:#a6e22e">state</span>
+    }
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">root</span>) {
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">root</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">rawModule</span>;
+    } <span style="color:#66d9ef">else</span> {
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">parentNode</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">root</span>, <span style="color:#a6e22e">current</span>) =&gt; {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">_children</span>[<span style="color:#a6e22e">current</span>];
+      }, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">root</span>);
+      <span style="color:#a6e22e">parentNode</span>.<span style="color:#a6e22e">_children</span>[<span style="color:#a6e22e">path</span>[<span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]] <span style="color:#f92672">=</span> <span style="color:#a6e22e">rawModule</span>;
+    }
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">rootModule</span>.<span style="color:#a6e22e">modules</span>) {
+      Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">rootModule</span>.<span style="color:#a6e22e">modules</span>).<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">moduleName</span> =&gt; {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">register</span>(<span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">moduleName</span>), <span style="color:#a6e22e">rootModule</span>.<span style="color:#a6e22e">modules</span>[<span style="color:#a6e22e">moduleName</span>]);
+      });
+    }
+  }
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vuex</span>.<span style="color:#a6e22e">Store</span>({
+  <span style="color:#a6e22e">state</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">msg</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>
+  },
+  <span style="color:#a6e22e">getters</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">state</span>) {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">msg</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">20</span>;
+    }
+  },
+  <span style="color:#a6e22e">mutations</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">syncAddTen</span>(<span style="color:#a6e22e">state</span>, <span style="color:#a6e22e">payload</span>) {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;最外层&#39;</span>);
+      <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">msg</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">payload</span>;
+    }
+  },
+  <span style="color:#a6e22e">actions</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">asyncAddTen</span>({ <span style="color:#a6e22e">commit</span> }, <span style="color:#a6e22e">payload</span>) {
+      <span style="color:#a6e22e">commit</span>(<span style="color:#e6db74">&#39;syncAddTen&#39;</span>, <span style="color:#a6e22e">payload</span>);
+    }
+  },
+  <span style="color:#a6e22e">modules</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">a</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">state</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">msg_a</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>
+      },
+      <span style="color:#a6e22e">mutations</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">syncAddTen</span>() {
+          <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;hello a&#39;</span>);
+        }
+      }
+    },
+    <span style="color:#a6e22e">b</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">modules</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">c</span><span style="color:#f92672">:</span> {
+          <span style="color:#a6e22e">state</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">x</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">12</span>
+          },
+          <span style="color:#a6e22e">mutations</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">syncAddTen</span>() {
+              <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;hello c&#39;</span>);
+            }
+          }
+        },
+        <span style="color:#a6e22e">d</span><span style="color:#f92672">:</span> {
+          <span style="color:#a6e22e">mutations</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">syncAddTen</span>() {
+              <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;hello d&#39;</span>);
+            }
+          }
+        }
+      }
+    },
+    <span style="color:#a6e22e">f</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">mutations</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">syncAddTen</span>() {
+          <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;hello f&#39;</span>);
+        }
+      }
+    }
+  }
+})
+</code></pre></div><ul>
+<li>目的是根据以上的代码构建出以下一个对象</li>
+<li>核心算法就是使用path数组推进路径，比如，将b格式化模块挂载到a格式化模块下面，path=[&hellip;..,&lsquo;a&rsquo;,&lsquo;b&rsquo;]，使用数组reduce方法推进到a模块那一层，然后将b的格式化模块挂载到a格式化模块的_children属性下</li>
+</ul>
+<p><img src="https://rocketturtlewqt.github.io/2021052431400aft.png" alt="ModuleCollection类构建的目标对象"></p>
+<h3 id="initmodulejs">initModule.js</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">installModule</span>(<span style="color:#a6e22e">Vue</span>, <span style="color:#a6e22e">store</span>, <span style="color:#a6e22e">rootState</span>, <span style="color:#a6e22e">path</span>, <span style="color:#a6e22e">rawModule</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">parentState</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">root</span>, <span style="color:#a6e22e">current</span>) =&gt; {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">rootState</span>[<span style="color:#a6e22e">current</span>];
+    }, <span style="color:#a6e22e">rootState</span>);
+    
+    
+    <span style="color:#a6e22e">Vue</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">parentState</span>, <span style="color:#a6e22e">path</span>[<span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>], <span style="color:#a6e22e">rawModule</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">rawModule</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">:</span> {});
+  }
+
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getters</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">rawModule</span>.<span style="color:#a6e22e">_raw</span>.<span style="color:#a6e22e">getters</span>;
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">getters</span>) {
+    Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">getters</span>).<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">getterName</span> =&gt; {
+      Object.<span style="color:#a6e22e">defineProperty</span>(<span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">getters</span>, <span style="color:#a6e22e">getterName</span>, {
+        <span style="color:#a6e22e">get</span>() {
+          <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">getters</span>[<span style="color:#a6e22e">getterName</span>](<span style="color:#a6e22e">rawModule</span>.<span style="color:#a6e22e">state</span>);
+        }
+      });
+    });
+  }
+
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">mutations</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">rawModule</span>.<span style="color:#a6e22e">_raw</span>.<span style="color:#a6e22e">mutations</span>;
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">mutations</span>) {
+    Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">mutations</span>).<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">mutationName</span> =&gt; {
+      <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">mutations</span>[<span style="color:#a6e22e">mutationName</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">mutations</span>[<span style="color:#a6e22e">mutationName</span>] <span style="color:#f92672">?</span>
+        <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">mutations</span>[<span style="color:#a6e22e">mutationName</span>] <span style="color:#f92672">:</span> [];
+      <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">mutations</span>[<span style="color:#a6e22e">mutationName</span>].<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">payload</span> =&gt; {
+        <span style="color:#a6e22e">mutations</span>[<span style="color:#a6e22e">mutationName</span>](<span style="color:#a6e22e">rootState</span>, <span style="color:#a6e22e">payload</span>);
+      });
+    });
+  }
+
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">actions</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">rawModule</span>.<span style="color:#a6e22e">_raw</span>.<span style="color:#a6e22e">actions</span>;
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">actions</span>) {
+    Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">actions</span>).<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">actionName</span> =&gt; {
+      <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">actions</span>[<span style="color:#a6e22e">actionName</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">actions</span>[<span style="color:#a6e22e">actionName</span>] <span style="color:#f92672">?</span>
+        <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">actions</span>[<span style="color:#a6e22e">actionName</span>] <span style="color:#f92672">:</span> [];
+      <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">actions</span>[<span style="color:#a6e22e">actionName</span>].<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">payload</span> =&gt; {
+        <span style="color:#a6e22e">actions</span>[<span style="color:#a6e22e">actionName</span>](<span style="color:#a6e22e">store</span>, <span style="color:#a6e22e">payload</span>);
+      });
+    });
+  }
+
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">rawModule</span>.<span style="color:#a6e22e">_children</span>) {
+    Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">rawModule</span>.<span style="color:#a6e22e">_children</span>).<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">moduleName</span> =&gt; {
+      <span style="color:#a6e22e">installModule</span>(<span style="color:#a6e22e">Vue</span>, <span style="color:#a6e22e">store</span>, <span style="color:#a6e22e">rootState</span>, <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">moduleName</span>), <span style="color:#a6e22e">rawModule</span>.<span style="color:#a6e22e">_children</span>[<span style="color:#a6e22e">moduleName</span>]);
+    });
+  }
+}
+</code></pre></div><ul>
+<li>这个函数的主要作用就是将子孙模块的state、getters、mutations、actions全部挂载到它们的根节点上</li>
+<li>算法思想：递归，对于state还是使用path拼接</li>
+</ul>
+<h3 id="indexjs">index.js</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">ModuleCollection</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./MuduleCollection&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">installModule</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./initModule&#39;</span>;
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">Vue</span>;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Store</span>{
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">options</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vm</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vue</span>({
+      <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">state</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">state</span>
+      }
+    });
+    
+    <span style="color:#75715e">// this.getters = {};
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// this.mutations = {};
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// this.actions = {};
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">modules</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ModuleCollection</span>(<span style="color:#a6e22e">options</span>);
+
+    <span style="color:#a6e22e">installModule</span>(<span style="color:#a6e22e">Vue</span>, <span style="color:#66d9ef">this</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>, [], <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">modules</span>.<span style="color:#a6e22e">root</span>);
+    
+  }
+
+  <span style="color:#a6e22e">commit</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">mutationName</span>, <span style="color:#a6e22e">payload</span>) =&gt; {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">mutations</span>[<span style="color:#a6e22e">mutationName</span>].<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">fn</span> =&gt; {
+      <span style="color:#a6e22e">fn</span>(<span style="color:#a6e22e">payload</span>);
+    });
+  }
+
+  <span style="color:#a6e22e">dispatch</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">actionName</span>, <span style="color:#a6e22e">payload</span>) =&gt; {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">actions</span>[<span style="color:#a6e22e">actionName</span>].<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">fn</span> =&gt; {
+      <span style="color:#a6e22e">fn</span>(<span style="color:#a6e22e">payload</span>);
+    });
+  }
+
+  <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">state</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vm</span>.<span style="color:#a6e22e">state</span>;
+  }
+
+  <span style="color:#75715e">// register(moduleName, module) {
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   if (!Array.isArray(moduleName)) {
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//     moduleName = [moduleName];
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   }
+</span><span style="color:#75715e"></span>
+  <span style="color:#75715e">//   this.modules.register(moduleName, module);
+</span><span style="color:#75715e"></span>
+  <span style="color:#75715e">//   installModule(Vue, this, this.state, [], this.modules.root);
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// }
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">install</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">_vue</span>) =&gt; {
+  <span style="color:#a6e22e">Vue</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">_vue</span>;
+  <span style="color:#75715e">/**
+</span><span style="color:#75715e">   * 每次new一个vue实例时，都会去设置它的$store属性
+</span><span style="color:#75715e">   */</span>
+  <span style="color:#a6e22e">Vue</span>.<span style="color:#a6e22e">mixin</span>({
+    <span style="color:#a6e22e">beforeCreate</span>() {
+      <span style="color:#75715e">//根实例
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$options</span>.<span style="color:#a6e22e">store</span>) {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$store</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$options</span>.<span style="color:#a6e22e">store</span>;
+      <span style="color:#75715e">//子组件
+</span><span style="color:#75715e"></span>      } <span style="color:#66d9ef">else</span> {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$store</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$parent</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$parent</span>.<span style="color:#a6e22e">$store</span>;
+      }
+    }
+  });
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+  <span style="color:#a6e22e">Store</span>,
+  <span style="color:#a6e22e">install</span>
+}
+</code></pre></div><ul>
+<li>当外部使用Vue.use的时候，会默认去调用插件的install方法，以上的install方法里面使用传入的全局Vue向之后所有通过new运算符创建的vue实例，挂载上了$store</li>
+<li>全局混入api可以查看官方文档 <a href="https://cn.vuejs.org/v2/guide/mixins.html#%E5%85%A8%E5%B1%80%E6%B7%B7%E5%85%A5">全局混入</a></li>
+</ul>
 
     </div>
     <div class="post-footer">
