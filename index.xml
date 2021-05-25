@@ -6,7 +6,16 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 May 2021 20:13:43 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 May 2021 12:43:10 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基本开发环境配置</title>
+      <link>https://rocketturtlewqt.github.io/webpack/%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Tue, 25 May 2021 12:43:10 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/webpack/%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
+      <description>使用webpack搭建基本开发环境 webpack.config.json const path = require(&amp;#39;path&amp;#39;); const HtmlWebpackPlugin = require(&amp;#39;html-webpack-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/js/index.js&amp;#39;, output: { filename: &amp;#39;build.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, module: { rules: [ { test: /\.css$/, use: [&amp;#39;style-loader&amp;#39;, &amp;#39;css-loader&amp;#39;] }, { test: /\.less$/, use: [&amp;#39;style-loader&amp;#39;, &amp;#39;css-loader&amp;#39;, &amp;#39;less-loader&amp;#39;] }, { test: /\.(png|jpg|gif)$/, loader: &amp;#39;url-loader&amp;#39;, options: { limit: 8 * 1024, esModule: false, name: &amp;#39;[hash:10].[ext]&amp;#39;, outputPath: &amp;#39;images&amp;#39; } }, { test: /\.html$/, loader: &amp;#39;html-loader&amp;#39; }, { exclude: /\.(css|less|png|jpg|gif|html|js)$/, loader: &amp;#39;file-loader&amp;#39;, options: { name: &amp;#39;[hash:10].</description>
+    </item>
+    
     <item>
       <title>Dev Server</title>
       <link>https://rocketturtlewqt.github.io/webpack/dev-server/</link>
