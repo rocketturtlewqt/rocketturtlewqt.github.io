@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>设计模式s on RocketTurtle</title>
+    <link>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+    <description>Recent content in 设计模式s on RocketTurtle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 May 2021 14:17:24 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>继承</title>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%A7%E6%89%BF/</link>
+      <pubDate>Tue, 25 May 2021 14:17:24 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%A7%E6%89%BF/</guid>
+      <description>原型链 类式继承  具体步骤   创建子类和父类 子类的prototype属性指向父类的实例对象   缺点   如果父类中定义了实例属性，并且是个引用类型，那么子类的实例对其进行更改会相互影响（）看以下案例 子类无法向父类传递参数  function Animal() { this.color = [&amp;#39;red&amp;#39;, &amp;#39;green&amp;#39;] } function Person() { } Person.prototype = new Animal(); const per1 = new Person();//[ &amp;#39;red&amp;#39;, &amp;#39;green&amp;#39; ]  const per2 = new Person();//[ &amp;#39;red&amp;#39;, &amp;#39;green&amp;#39;, &amp;#39;blue&amp;#39; ]  console.log(per2.color); per1.color.push(&amp;#39;blue&amp;#39;); console.log(per2.color); </description>
+    </item>
+    
+  </channel>
+</rss>
