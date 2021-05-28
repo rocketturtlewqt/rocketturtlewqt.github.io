@@ -6,7 +6,16 @@
     <description>Recent content in Webpacks on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 May 2021 12:43:10 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/webpack/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 May 2021 14:33:26 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/webpack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>提取css成单独文件</title>
+      <link>https://rocketturtlewqt.github.io/webpack/%E6%8F%90%E5%8F%96css%E6%88%90%E5%8D%95%E7%8B%AC%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Thu, 27 May 2021 14:33:26 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/webpack/%E6%8F%90%E5%8F%96css%E6%88%90%E5%8D%95%E7%8B%AC%E6%96%87%E4%BB%B6/</guid>
+      <description> 下载插件mini-css-extract-plugin  npm i mini-css-extract-plugin -D const path = require(&amp;#39;path&amp;#39;); const MiniCssExtractPlugin = require(&amp;#39;mini-css-extract-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;build.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, module: { rules: [ { test: /\.css$/, use: [ MiniCssExtractPlugin.loader, &amp;#39;css-loader&amp;#39; ] } ] }, plugins: [ new MiniCssExtractPlugin({ filename: &amp;#39;css/build.css&amp;#39; }) ], mode: &amp;#39;development&amp;#39; } </description>
+    </item>
+    
     <item>
       <title>基本开发环境配置</title>
       <link>https://rocketturtlewqt.github.io/webpack/%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
