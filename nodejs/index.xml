@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nodejs on RocketTurtle</title>
-    <link>https://rocketturtlewqt.github.io/nodejs/</link>
+    <link>https://rocketturtlwqt.github.io/nodejs/</link>
     <description>Recent content in Nodejs on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 May 2021 18:26:53 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 May 2021 18:26:53 +0800</lastBuildDate><atom:link href="https://rocketturtlwqt.github.io/nodejs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Npm</title>
-      <link>https://rocketturtlewqt.github.io/nodejs/npm/</link>
+      <link>https://rocketturtlwqt.github.io/nodejs/npm/</link>
       <pubDate>Thu, 27 May 2021 18:26:53 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/nodejs/npm/</guid>
+      <guid>https://rocketturtlwqt.github.io/nodejs/npm/</guid>
       <description>全局安装  npm install webpack --global (-g) 创建package.json  // -y 使用默认配置 npm init -y 本地安装包  //dev：开发环境依赖 //save：放在package.json中 npm install gulp --dev-save //简写 npm install gulp -D //生产环境依赖 npm install gulp --save //简写 npm install gulp -D 查看包的依赖关系  //查看所有包的依赖关系树 npm list //查看指定包的依赖关系树 npm list | grep &amp;lt;包名&amp;gt; 根据package.json安装相应的包  //安装所有依赖 npm i //安装生产环境依赖 npm i --production //安装开发环境依赖 npm i --development 查看包的所有版本  npm view jquery versions node package version    13.</description>
     </item>
     
     <item>
       <title>Node与浏览器的对比</title>
-      <link>https://rocketturtlewqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</link>
+      <link>https://rocketturtlwqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</link>
       <pubDate>Thu, 27 May 2021 17:38:37 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</guid>
+      <guid>https://rocketturtlwqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</guid>
       <description>node与浏览器的对比  node没有浏览器安全级别的限制   浏览器具有跨域沙箱的安全限制，node没有 node可以读写文件 node可以管理继承  /* [ &amp;#39;/usr/local/bin/node&amp;#39;, &amp;#39;/Users/wangqintao/Desktop/nodejs/认识nodejs/tempCodeRunnerFile.js&amp;#39; ] */ console.log(process.argv); http/https  const http = require(&amp;#39;http&amp;#39;); const server = http.createServer((req, res) =&amp;gt; { res.write(req.url); res.end(); }); server.listen(8090, &amp;#39;localhost&amp;#39;, () =&amp;gt; { console.log(&amp;#39;localhost:8090&amp;#39;); }); </description>
     </item>
     
