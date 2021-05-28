@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="RocketTurtle" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://rocketturtlwqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
+    <link rel="stylesheet" href="https://rocketturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
 
     
     <meta name="twitter:card" content="summary"/>
@@ -18,7 +18,7 @@
     <meta property="og:title" content="打包图片资源" />
 <meta property="og:description" content="使用webpack打包图片资源  url-loader@1.3.2 file-loader html-loader 注意url-loader和html-loader模块冲突问题，需要配置url-loader选项，将esModule属性关闭  const path = require(&#39;path&#39;); const HtmlWebpackPlugin = require(&#39;html-webpack-plugin&#39;); module.exports = { entry: &#39;./src/index.js&#39;, output: { filename: &#39;bundle.js&#39;, path: path.resolve(__dirname, &#39;dist&#39;) }, module: { rules: [ { test: /\.css$/, use: [ &#39;style-loader&#39;, &#39;css-loader&#39; ] }, { test: /\.(gif|png|jpg)$/, loader: &#39;url-loader&#39;, options: { //当图片体积小于8k的时候，采用base64编码  limit: 8 * 1024, //url-loader默认采用es6模块解析，和html-loader的commanjs冲突，需要关闭  esModule: false, name: &#39;[hash:10].[ext]&#39; } }, { test: /\.html$/, loader: &#39;html-loader&#39; } ] }, plugins: [ new HtmlWebpackPlugin({ template: &#39;." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rocketturtlwqt.github.io/webpack/%E6%89%93%E5%8C%85%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90/" /><meta property="article:section" content="webpack" />
+<meta property="og:url" content="https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90/" /><meta property="article:section" content="webpack" />
 <meta property="article:published_time" content="2021-05-22T12:42:52&#43;08:00" />
 <meta property="article:modified_time" content="2021-05-22T12:42:52&#43;08:00" />
 
@@ -27,7 +27,7 @@
   </head>
   <body>
     <header class="app-header">
-      <a href="https://rocketturtlwqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
+      <a href="https://rocketturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
       <h1>RocketTurtle</h1>
       <nav class="app-header-menu">
           <a class="app-header-menu-item" href="/">home</a>
