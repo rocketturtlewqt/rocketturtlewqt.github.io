@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <title>Blogs // RocketTurtle</title>
+    <title>Commonjs // RocketTurtle</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.82.1" />
@@ -12,13 +12,15 @@
 
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Blogs"/>
-<meta name="twitter:description" content="使自己变得更优秀！"/>
+<meta name="twitter:title" content="Commonjs"/>
+<meta name="twitter:description" content=" commonjs是nodejs的第三方规范 通过require来引包 使用module.exports和exports来暴露，exports是module.exports的引用 尽量避免循环依赖  module.exports={ name, age } //等价于 exports.name=name; exports.age=age; "/>
 
-    <meta property="og:title" content="Blogs" />
-<meta property="og:description" content="使自己变得更优秀！" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://rocketturtlewqt.github.io/blog/" />
+    <meta property="og:title" content="Commonjs" />
+<meta property="og:description" content=" commonjs是nodejs的第三方规范 通过require来引包 使用module.exports和exports来暴露，exports是module.exports的引用 尽量避免循环依赖  module.exports={ name, age } //等价于 exports.name=name; exports.age=age; " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rocketturtlewqt.github.io/nodejs/commonjs/" /><meta property="article:section" content="nodejs" />
+<meta property="article:published_time" content="2021-05-29T12:06:16&#43;08:00" />
+<meta property="article:modified_time" content="2021-05-29T12:06:16&#43;08:00" />
 
 
 
@@ -74,32 +76,45 @@
     </header>
     <main class="app-container">
       
-  <article>
-    <h1>Blogs</h1>
-    <ul class="posts-list">
-      
-        <li class="posts-list-item">
-          <a class="posts-list-item-title" href="https://rocketturtlewqt.github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">hugo搭建静态技术博客教程</a>
-          <span class="posts-list-item-description">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Commonjs</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
   <title>calendar</title>
   <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
 </svg>
-            May 1, 2021
-            -
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+          May 29, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
-            1 min read
-          </span>
-        </li>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <ul>
+<li>commonjs是nodejs的第三方规范</li>
+<li>通过require来引包</li>
+<li>使用module.exports和exports来暴露，exports是module.exports的引用</li>
+<li>尽量避免循环依赖</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span><span style="color:#f92672">=</span>{
+  <span style="color:#a6e22e">name</span>,
+  <span style="color:#a6e22e">age</span>
+}
+<span style="color:#75715e">//等价于
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#a6e22e">name</span>;
+<span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">age</span><span style="color:#f92672">=</span><span style="color:#a6e22e">age</span>;
+</code></pre></div>
+    </div>
+    <div class="post-footer">
       
-    </ul>
-    
-
-
-
+    </div>
   </article>
 
     </main>

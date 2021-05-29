@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>建造者模式 // RocketTurtle</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.82.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="RocketTurtle" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://rocketturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="建造者模式"/>
+<meta name="twitter:description" content="建造者模式   定义：将一个复杂对象的构建层和表示层分离。
+  它与工厂模式的区别
+   建造者模式更注重于创建对象的过程，而工厂模式更注重于结果 建造者模式使用new来创建一个人，工厂模式是调用工厂函数返回一个实例。因此建造者模式可以使用instanceof运算符判断实例所属类型，而工厂模式不行。   以下是使用建造者模式创建一个人，人具有工作和姓名两个属性  let Human = function () { }; let Name = function (name) { this.wholeName = name; } let Work = function (work) { this.currentWork = work; } function Person(name, work) { let _person = new Human(); _person.name = new Name(name); _person.work = new Work(work); return _person; } let person = new Person(&#39;wqt&#39;, &#39;工程师&#39;); "/>
+
+    <meta property="og:title" content="建造者模式" />
+<meta property="og:description" content="建造者模式   定义：将一个复杂对象的构建层和表示层分离。
+  它与工厂模式的区别
+   建造者模式更注重于创建对象的过程，而工厂模式更注重于结果 建造者模式使用new来创建一个人，工厂模式是调用工厂函数返回一个实例。因此建造者模式可以使用instanceof运算符判断实例所属类型，而工厂模式不行。   以下是使用建造者模式创建一个人，人具有工作和姓名两个属性  let Human = function () { }; let Name = function (name) { this.wholeName = name; } let Work = function (work) { this.currentWork = work; } function Person(name, work) { let _person = new Human(); _person.name = new Name(name); _person.work = new Work(work); return _person; } let person = new Person(&#39;wqt&#39;, &#39;工程师&#39;); " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/" /><meta property="article:section" content="设计模式" />
+<meta property="article:published_time" content="2021-05-29T14:53:47&#43;08:00" />
+<meta property="article:modified_time" content="2021-05-29T14:53:47&#43;08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://rocketturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
+      <h1>RocketTurtle</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/">blog</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/macosx/">MacOsX</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vscode/">vscode</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/git/">git</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vue%E6%BA%90%E7%A0%81/">vue源码</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/javascript/">javascript</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/webpack/">webpack</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/nodejs/">nodejs</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/chrome/">chrome</a>
+      </nav>
+      <p>使自己变得更优秀！</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/rocketturtlewqt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">建造者模式</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          May 29, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h3 id="建造者模式">建造者模式</h3>
+<ul>
+<li>
+<p>定义：将一个复杂对象的构建层和表示层分离。</p>
+</li>
+<li>
+<p>它与工厂模式的区别</p>
+</li>
+</ul>
+<ol>
+<li>建造者模式更注重于创建对象的过程，而工厂模式更注重于结果</li>
+<li>建造者模式使用new来创建一个人，工厂模式是调用工厂函数返回一个实例。因此建造者模式可以使用instanceof运算符判断实例所属类型，而工厂模式不行。</li>
+</ol>
+<ul>
+<li>以下是使用建造者模式创建一个人，人具有工作和姓名两个属性</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">Human</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () { };
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">Name</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">name</span>) {
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">wholeName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+}
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">Work</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">work</span>) {
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">currentWork</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">work</span>;
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Person</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">work</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">_person</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Human</span>();
+  <span style="color:#a6e22e">_person</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Name</span>(<span style="color:#a6e22e">name</span>);
+  <span style="color:#a6e22e">_person</span>.<span style="color:#a6e22e">work</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Work</span>(<span style="color:#a6e22e">work</span>);
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">_person</span>;
+}
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#39;wqt&#39;</span>, <span style="color:#e6db74">&#39;工程师&#39;</span>);
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

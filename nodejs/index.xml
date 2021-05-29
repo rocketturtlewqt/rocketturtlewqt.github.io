@@ -6,7 +6,16 @@
     <description>Recent content in Nodejs on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 May 2021 18:26:53 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 May 2021 12:06:16 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Commonjs</title>
+      <link>https://rocketturtlewqt.github.io/nodejs/commonjs/</link>
+      <pubDate>Sat, 29 May 2021 12:06:16 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/nodejs/commonjs/</guid>
+      <description> commonjs是nodejs的第三方规范 通过require来引包 使用module.exports和exports来暴露，exports是module.exports的引用 尽量避免循环依赖  module.exports={ name, age } //等价于 exports.name=name; exports.age=age; </description>
+    </item>
+    
     <item>
       <title>Npm</title>
       <link>https://rocketturtlewqt.github.io/nodejs/npm/</link>

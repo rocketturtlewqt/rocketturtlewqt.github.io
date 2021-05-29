@@ -6,7 +6,36 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 May 2021 18:24:48 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 May 2021 15:41:16 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>原型模式</title>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Sat, 29 May 2021 15:41:16 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/</guid>
+      <description>原型模式  特点：类实例共享原型对象的属性和方法  let LoopImg = function (imagesArr, container) { this.imagesArr = imagesArr; this.container = container; } //创建焦点图 LoopImg.prototype.createImg = function () { console.log(`LoopImg`); } //切换焦点图 LoopImg.prototype.changeImg = function () { console.log(`LoopImg`); } let SideLoopImg = function (sideImagesArr, sideContainer) { LoopImg.call(this, sideImagesArr, sideImagesArr); } SideLoopImg.prototype = new LoopImg(); SideLoopImg.prototype.createImg = function () { console.log(`SideLoopImg`); } let FadeLoopImg = function (fadeImagesArr, fadeImagesContainer, arrow) { LoopImg.call(this, fadeImagesArr, fadeImagesContainer); this.arrow = arrow; } FadeLoopImg.</description>
+    </item>
+    
+    <item>
+      <title>建造者模式</title>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Sat, 29 May 2021 14:53:47 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</guid>
+      <description>建造者模式   定义：将一个复杂对象的构建层和表示层分离。
+  它与工厂模式的区别
+   建造者模式更注重于创建对象的过程，而工厂模式更注重于结果 建造者模式使用new来创建一个人，工厂模式是调用工厂函数返回一个实例。因此建造者模式可以使用instanceof运算符判断实例所属类型，而工厂模式不行。   以下是使用建造者模式创建一个人，人具有工作和姓名两个属性  let Human = function () { }; let Name = function (name) { this.wholeName = name; } let Work = function (work) { this.currentWork = work; } function Person(name, work) { let _person = new Human(); _person.name = new Name(name); _person.work = new Work(work); return _person; } let person = new Person(&amp;#39;wqt&amp;#39;, &amp;#39;工程师&amp;#39;); </description>
+    </item>
+    
+    <item>
+      <title>Commonjs</title>
+      <link>https://rocketturtlewqt.github.io/nodejs/commonjs/</link>
+      <pubDate>Sat, 29 May 2021 12:06:16 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/nodejs/commonjs/</guid>
+      <description> commonjs是nodejs的第三方规范 通过require来引包 使用module.exports和exports来暴露，exports是module.exports的引用 尽量避免循环依赖  module.exports={ name, age } //等价于 exports.name=name; exports.age=age; </description>
+    </item>
+    
     <item>
       <title>Chrome浏览器调试技巧</title>
       <link>https://rocketturtlewqt.github.io/chrome/chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/</link>
