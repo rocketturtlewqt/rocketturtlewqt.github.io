@@ -6,7 +6,25 @@
     <description>Recent content in Webpacks on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 May 2021 14:33:26 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/webpack/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Jun 2021 19:33:29 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/webpack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>压缩css</title>
+      <link>https://rocketturtlewqt.github.io/webpack/%E5%8E%8B%E7%BC%A9css/</link>
+      <pubDate>Wed, 02 Jun 2021 19:33:29 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/webpack/%E5%8E%8B%E7%BC%A9css/</guid>
+      <description>使用webpack打包时压缩css文件 npm i optimize-css-assets-webpack-plugin -D const path = require(&amp;#39;path&amp;#39;); const HtmlWebpackPlugin = require(&amp;#39;html-webpack-plugin&amp;#39;); const MiniCssExtractPlugin = require(&amp;#39;mini-css-extract-plugin&amp;#39;); const OptimizeCssAssetsWebpackPlugin = require(&amp;#39;optimize-css-assets-webpack-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;bundle.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, module: { rules: [ { test: /\.css$/, use: [ MiniCssExtractPlugin.loader, &amp;#39;css-loader&amp;#39; ] } ] }, plugins: [ new HtmlWebpackPlugin({ template: &amp;#39;./src/index.html&amp;#39; }), new MiniCssExtractPlugin({ filename: &amp;#39;css/bundle.css&amp;#39; }), new OptimizeCssAssetsWebpackPlugin() ], mode: &amp;#39;development&amp;#39; } </description>
+    </item>
+    
+    <item>
+      <title>Css兼容性处理</title>
+      <link>https://rocketturtlewqt.github.io/webpack/css%E5%85%BC%E5%AE%B9%E6%80%A7%E5%A4%84%E7%90%86/</link>
+      <pubDate>Mon, 31 May 2021 18:15:57 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/webpack/css%E5%85%BC%E5%AE%B9%E6%80%A7%E5%A4%84%E7%90%86/</guid>
+      <description>用到的依赖：postcss-loader（4.2.0），postcss-preset-env（6.7.0） 以上两个依赖需要注意版本问题  npm i postcss-loader@4.2.0 postcss-preset-env@6.7.0 -D const path = require(&amp;#39;path&amp;#39;); const HtmlWebpackPlugin = require(&amp;#39;html-webpack-plugin&amp;#39;); const MiniCssExtractPlugin = require(&amp;#39;mini-css-extract-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;bundle.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, module: { rules: [ { test: /\.css$/, use: [ MiniCssExtractPlugin.loader, &amp;#39;css-loader&amp;#39;, { loader:&amp;#39;postcss-loader&amp;#39;, options: { postcssOptions: { plugins: [ [ &amp;#39;postcss-preset-env&amp;#39;, { browsers:&amp;#39;last 2 versions&amp;#39; } ] ] } } } ] } ] }, plugins: [ new HtmlWebpackPlugin({ template:&amp;#39;.</description>
+    </item>
+    
     <item>
       <title>提取css成单独文件</title>
       <link>https://rocketturtlewqt.github.io/webpack/%E6%8F%90%E5%8F%96css%E6%88%90%E5%8D%95%E7%8B%AC%E6%96%87%E4%BB%B6/</link>
