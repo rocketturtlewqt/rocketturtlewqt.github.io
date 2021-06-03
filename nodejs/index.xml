@@ -6,7 +6,17 @@
     <description>Recent content in Nodejs on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 May 2021 12:06:16 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Jun 2021 12:53:20 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>内置模块 Url</title>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-url/</link>
+      <pubDate>Thu, 03 Jun 2021 12:53:20 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-url/</guid>
+      <description>内置模块url常用api  log4js模块用来记录日志  npm i log4js -D log4j模块文档
+ url内置模块用来解析url地址   url.parse()：将url字符串地址解析为url对象 url.format()：将url对象解析为url字符串地址 url.resolve（）：用来处理路径上下文 URLSearchParams类接收一个参数，类似于?id=12（可以通过url.parse(location).search获取），之后通过实例对象的 get api获取参数  const log4js = require(&amp;#34;log4js&amp;#34;); log4js.configure({ appenders: { cheese: { type: &amp;#34;file&amp;#34;, filename: &amp;#34;cheese.log&amp;#34; } }, categories: { default: { appenders: [&amp;#34;cheese&amp;#34;], level: &amp;#34;error&amp;#34; } } }); const logger = log4js.getLogger(&amp;#39;cheese&amp;#39;); logger.level = &amp;#34;debug&amp;#34;; const url = require(&amp;#39;url&amp;#39;); const location = &amp;#39;https://www.baidu.com:443/path/index.html?id=12#tag&amp;#39;; const location_obj={ protocol: &amp;#39;https:&amp;#39;, slashes: true, auth: null, host: &amp;#39;www.</description>
+    </item>
+    
     <item>
       <title>Commonjs</title>
       <link>https://rocketturtlewqt.github.io/nodejs/commonjs/</link>
