@@ -6,7 +6,27 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Jun 2021 13:13:45 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Jun 2021 10:18:51 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web缓存</title>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/web%E7%BC%93%E5%AD%98/</link>
+      <pubDate>Fri, 04 Jun 2021 10:18:51 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/web%E7%BC%93%E5%AD%98/</guid>
+      <description>客户通过web缓存请求对象 客户通过web缓存请求对象
+大致工作流程  客户浏览器向代理服务器发送请求 代理服务器先检查本地是否存储了该对象的副本，若有，则直接返回响应报文，实体体中包含该对象。若没有，则再向初始服务器发送对该对象的请求报文 初始服务器返回包含该对象的响应报文 代理服务器收到包含该对象的响应报文，将该对象的副本保存在本地，再向客户浏览器返回包含该对象的响应报文   代理服务器具有双重角色，即客户和服务器  </description>
+    </item>
+    
+    <item>
+      <title>应用层cookie</title>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/%E5%BA%94%E7%94%A8%E5%B1%82cookie/</link>
+      <pubDate>Fri, 04 Jun 2021 10:05:31 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/%E5%BA%94%E7%94%A8%E5%B1%82cookie/</guid>
+      <description>用cookie跟踪用户状态 用cookie跟踪用户状态
+cookie的工作过程  以访问amazon网站为例   用户访问amazon网站 amazon web服务器为用户生成一个识别码，并在后端数据库中生成一个表项，返回响应报文时，在首部行添加 Set-cookie:&amp;lt;识别码&amp;gt; 浏览器接收响应报文，在管理cookie的文件中添加一行关于这个cookie的信息 当浏览器用户再次请求amazon web服务器时，在请求报文中携带cookie字段，值为web服务器为用户分配的识别码  </description>
+    </item>
+    
     <item>
       <title>内置模块 Http</title>
       <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/</link>
