@@ -6,7 +6,25 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Jun 2021 10:18:51 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Jun 2021 14:16:07 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flex弹性布局</title>
+      <link>https://rocketturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</link>
+      <pubDate>Sat, 05 Jun 2021 14:16:07 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</guid>
+      <description>主轴和垂轴  flex-direction：设置主轴方向。row（左-&amp;gt;右）、row-reverse（右-&amp;gt;左）、column（上-&amp;gt;下）、column-reverse（下-&amp;gt;上），默认为row flex-wrap：设置垂轴方向。nowrap（不换行）、wrap（换行）、wrap-reverse（反向换行），默认为nowrap flex-flow：同时设置主轴和垂轴方向  主轴和垂轴的方向（从左至右）  主轴和垂轴的方向和语言的书写方向有关，这里仅讨论从左至右书写的语言  </description>
+    </item>
+    
+    <item>
+      <title>Smtp</title>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/smtp/</link>
+      <pubDate>Sat, 05 Jun 2021 10:33:33 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/smtp/</guid>
+      <description>因特网电子邮件  因特网电子邮件所使用的协议是smtp，每个邮件服务器既是smtp的客户端也是smtp的服务端 当接收方的邮件服务器出现故障时，报文会被存放在发送方的邮件服务器的报文队列中，一般每隔30分钟发送一次，如果几天后仍不能成功，就删除并通知发送者 smtp协议是基于tcp连接的  smtp的基本操作  提供接收方的邮件地址 发送方写邮件，由用户代理交给发送方邮件服务器，并放入报文队列 smtp客户端监测到报文，建立与smtp服务器端的tcp连接 经过smtp的初始握手，报文发送到接收方的邮件服务器 接收方通过用户代理读取报文  </description>
+    </item>
+    
     <item>
       <title>Web缓存</title>
       <link>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/web%E7%BC%93%E5%AD%98/</link>
