@@ -13,7 +13,9 @@
       <pubDate>Fri, 04 Jun 2021 10:18:51 +0800</pubDate>
       
       <guid>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/web%E7%BC%93%E5%AD%98/</guid>
-      <description>客户通过web缓存请求对象 大致工作流程  客户浏览器向代理服务器发送请求 代理服务器先检查本地是否存储了该对象的副本，若有，则直接返回响应报文，实体体中包含该对象。若没有，则再向初始服务器发送对该对象的请求报文 初始服务器返回包含该对象的响应报文 代理服务器收到包含该对象的响应报文，将该对象的副本保存在本地，再向客户浏览器返回包含该对象的响应报文   代理服务器具有双重角色，即客户和服务器  </description>
+      <description>客户通过web缓存请求对象 大致工作流程  客户浏览器向代理服务器发送请求 代理服务器先检查本地是否存储了该对象的副本，若有，则直接返回响应报文，实体体中包含该对象。若没有，则再向初始服务器发送对该对象的请求报文 初始服务器返回包含该对象的响应报文 代理服务器收到包含该对象的响应报文，将该对象的副本保存在本地，再向客户浏览器返回包含该对象的响应报文   代理服务器具有双重角色，即客户和服务器  条件get请求   可能存在一种情况，代理服务器缓存的对象是旧版本，即在代理服务器缓存了对象之后初始服务又对其进行了更改
+  请求报文使用get方法，并且首部行中带有 If-modified-since 字段，这类请求就是条件请求。当这类请求发送到代理服务器后，代理服务器也会发送请求到初始服务器。若初始服务器的对象没有更新，它会返回一个响应报文，其中描述字段为 Not modified，状态码字段为304。
+  </description>
     </item>
     
     <item>
@@ -31,7 +33,7 @@
       <pubDate>Thu, 03 Jun 2021 13:13:45 +0800</pubDate>
       
       <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/</guid>
-      <description>node浏览器调试 node --inspect --inspect-brk app.js  打开chrome浏览器，输入chrome://inspect进行调试  node进程管理工具  supervisor nodemon forever pm2   安装nodemon  npm i nodemon -g response  若不设置response的头信息，浏览器默认以html形式解析字符串 writeHead   第一个参数为状态码 第二个参数用来设置头部具体信息，例如，content-type  const http = require(&amp;#39;http&amp;#39;); const server = http.createServer((req, res) =&amp;gt; { res.writeHead(200, { &amp;#39;content-type&amp;#39;: &amp;#39;text/plain&amp;#39; }) res.write(&amp;#39;&amp;lt;div&amp;gt;hello world&amp;lt;/div&amp;gt;&amp;#39;) res.end(); }); server.listen(&amp;#39;7002&amp;#39;); </description>
+      <description>node浏览器调试 node --inspect --inspect-brk app.js  打开chrome浏览器，输入chrome://inspect进行调试  node进程管理工具  supervisor nodemon forever pm2   安装nodemon  npm i nodemon -g response  若不设置response的头信息，浏览器默认以html形式解析字符串 writeHead   第一个参数为状态码 第二个参数用来设置头部具体信息，例如，content-type  const http = require(&amp;#39;http&amp;#39;); const server = http.createServer((req, res) =&amp;gt; { res.writeHead(200, { &amp;#39;content-type&amp;#39;: &amp;#39;text/plain&amp;#39; }) res.write(&amp;#39;&amp;lt;div&amp;gt;hello world&amp;lt;/div&amp;gt;&amp;#39;) res.end(); }); server.listen(&amp;#39;7002&amp;#39;); http.request  后端请求另一个后端接口  将http.request请求封装成模块</description>
     </item>
     
     <item>

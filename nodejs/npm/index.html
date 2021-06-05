@@ -264,6 +264,7 @@ npm unpublish --force
 <li>start和test命令不需要加run，例如，npm start/test</li>
 <li>其它命令需要加run</li>
 <li>访问自定义选项，例如，以下config中的env，那么执行脚本start，运行内置模块.js中的内容 process.env.npm_package_config_env 可以获得env对应的值</li>
+<li>在package.json中访问变量可以通过 $npm_package_config_env 的形式访问</li>
 <li>在package.json中，echo可以渲染变量</li>
 </ul>
 <h4 id="packagejson">package.json</h4>
@@ -325,8 +326,14 @@ npm i git+ssh://&lt;ssh地址&gt;
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//获取环境变量
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">node_env</span><span style="color:#f92672">=</span><span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span>;
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">node_env</span>);
-</code></pre></div><ul>
-<li>windows系统</li>
+</code></pre></div><h4 id="cross-env">cross-env</h4>
+<ul>
+<li>
+<p>cross-env：运行跨平台设置和使用环境变量的脚本</p>
+</li>
+<li>
+<p>windows系统</p>
+</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">npm i cross-env -D
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{

@@ -13,10 +13,10 @@
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="内置模块 Http"/>
-<meta name="twitter:description" content="node浏览器调试 node --inspect --inspect-brk app.js  打开chrome浏览器，输入chrome://inspect进行调试  node进程管理工具  supervisor nodemon forever pm2   安装nodemon  npm i nodemon -g response  若不设置response的头信息，浏览器默认以html形式解析字符串 writeHead   第一个参数为状态码 第二个参数用来设置头部具体信息，例如，content-type  const http = require(&#39;http&#39;); const server = http.createServer((req, res) =&gt; { res.writeHead(200, { &#39;content-type&#39;: &#39;text/plain&#39; }) res.write(&#39;&lt;div&gt;hello world&lt;/div&gt;&#39;) res.end(); }); server.listen(&#39;7002&#39;); "/>
+<meta name="twitter:description" content="node浏览器调试 node --inspect --inspect-brk app.js  打开chrome浏览器，输入chrome://inspect进行调试  node进程管理工具  supervisor nodemon forever pm2   安装nodemon  npm i nodemon -g response  若不设置response的头信息，浏览器默认以html形式解析字符串 writeHead   第一个参数为状态码 第二个参数用来设置头部具体信息，例如，content-type  const http = require(&#39;http&#39;); const server = http.createServer((req, res) =&gt; { res.writeHead(200, { &#39;content-type&#39;: &#39;text/plain&#39; }) res.write(&#39;&lt;div&gt;hello world&lt;/div&gt;&#39;) res.end(); }); server.listen(&#39;7002&#39;); http.request  后端请求另一个后端接口  将http.request请求封装成模块"/>
 
     <meta property="og:title" content="内置模块 Http" />
-<meta property="og:description" content="node浏览器调试 node --inspect --inspect-brk app.js  打开chrome浏览器，输入chrome://inspect进行调试  node进程管理工具  supervisor nodemon forever pm2   安装nodemon  npm i nodemon -g response  若不设置response的头信息，浏览器默认以html形式解析字符串 writeHead   第一个参数为状态码 第二个参数用来设置头部具体信息，例如，content-type  const http = require(&#39;http&#39;); const server = http.createServer((req, res) =&gt; { res.writeHead(200, { &#39;content-type&#39;: &#39;text/plain&#39; }) res.write(&#39;&lt;div&gt;hello world&lt;/div&gt;&#39;) res.end(); }); server.listen(&#39;7002&#39;); " />
+<meta property="og:description" content="node浏览器调试 node --inspect --inspect-brk app.js  打开chrome浏览器，输入chrome://inspect进行调试  node进程管理工具  supervisor nodemon forever pm2   安装nodemon  npm i nodemon -g response  若不设置response的头信息，浏览器默认以html形式解析字符串 writeHead   第一个参数为状态码 第二个参数用来设置头部具体信息，例如，content-type  const http = require(&#39;http&#39;); const server = http.createServer((req, res) =&gt; { res.writeHead(200, { &#39;content-type&#39;: &#39;text/plain&#39; }) res.write(&#39;&lt;div&gt;hello world&lt;/div&gt;&#39;) res.end(); }); server.listen(&#39;7002&#39;); http.request  后端请求另一个后端接口  将http.request请求封装成模块" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/" /><meta property="article:section" content="nodejs" />
 <meta property="article:published_time" content="2021-06-03T13:13:45&#43;08:00" />
@@ -136,9 +136,12 @@
 });
 
 <span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">listen</span>(<span style="color:#e6db74">&#39;7002&#39;</span>);
+</code></pre></div><h3 id="httprequest">http.request</h3>
+<ul>
+<li>后端请求另一个后端接口</li>
+</ul>
+<p><a href="https://blog.csdn.net/mdsdnw/article/details/107875631?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162280053816780255251704%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162280053816780255251704&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-8-107875631.first_rank_v2_pc_rank_v29&amp;utm_term=nodejs+http.request&amp;spm=1018.2226.3001.4187">将http.request请求封装成模块</a></p>
 
-
-</code></pre></div>
     </div>
     <div class="post-footer">
       
