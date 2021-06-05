@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chromes on RocketTurtle</title>
-    <link>https://rocketturtlewqt.github.io/chrome/</link>
+    <link>https//rocketturtlewqt.github.io/chrome/</link>
     <description>Recent content in Chromes on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 May 2021 18:24:48 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/chrome/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 May 2021 18:24:48 +0800</lastBuildDate><atom:link href="https//rocketturtlewqt.github.io/chrome/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chrome浏览器调试技巧</title>
-      <link>https://rocketturtlewqt.github.io/chrome/chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/</link>
+      <link>https//rocketturtlewqt.github.io/chrome/chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/</link>
       <pubDate>Fri, 28 May 2021 18:24:48 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/chrome/chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/</guid>
+      <guid>https//rocketturtlewqt.github.io/chrome/chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/</guid>
       <description>打开控制台命令行快捷键  command+shift+p  设置控制台显示的位置  点击右边倒数第二个图标（三个点）  尺子与当前屏幕截图  Show rulers：显示尺子 Capture screenshot：截取当前屏幕截图 Capture full size screenshot：截取长图  其它（console）   以下语句均为控制台输入
   console.asserts(&amp;lt;变量&amp;gt;, &amp;lt;语句&amp;gt;);
   let result=false; //当result为false的时候，打印信息；当result为true的时候不打印信息 console.asserts(result,&amp;#39;result is false&amp;#39;);  占位符：%s  //hello world console.log(&amp;#39;hello：%s&amp;#39;,&amp;#39;world&amp;#39;);  设置控制台输出内容的样式样式：%c  //红色单词over console.log(&amp;#39;%cover&amp;#39;,&amp;#39;color:red;&amp;#39;)  测试执行时间  //执行时间: 24396.9599609375 ms console.time(&amp;#39;执行时间&amp;#39;); for(let i=0;i&amp;lt;10000000;i++){} console.timeEnd(&amp;#39;执行时间&amp;#39;);  以表格形式打印对象数组  let per=[{name:&amp;#39;wqt&amp;#39;,age:21},{name:&amp;#39;ljt&amp;#39;,age:21}]; console.table(per);  分组打印  console.group(&amp;#39;分组1&amp;#39;); console.log(1); console.log(2); console.group(&amp;#39;分组2&amp;#39;); console.log(3); console.</description>

@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>设计模式s on RocketTurtle</title>
-    <link>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+    <link>https//rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
     <description>Recent content in 设计模式s on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 May 2021 15:41:16 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 May 2021 15:41:16 +0800</lastBuildDate><atom:link href="https//rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>原型模式</title>
-      <link>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/</link>
+      <link>https//rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Sat, 29 May 2021 15:41:16 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/</guid>
+      <guid>https//rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/</guid>
       <description>原型模式  特点：类实例共享原型对象的属性和方法  let LoopImg = function (imagesArr, container) { this.imagesArr = imagesArr; this.container = container; } //创建焦点图 LoopImg.prototype.createImg = function () { console.log(`LoopImg`); } //切换焦点图 LoopImg.prototype.changeImg = function () { console.log(`LoopImg`); } let SideLoopImg = function (sideImagesArr, sideContainer) { LoopImg.call(this, sideImagesArr, sideImagesArr); } SideLoopImg.prototype = new LoopImg(); SideLoopImg.prototype.createImg = function () { console.log(`SideLoopImg`); } let FadeLoopImg = function (fadeImagesArr, fadeImagesContainer, arrow) { LoopImg.call(this, fadeImagesArr, fadeImagesContainer); this.arrow = arrow; } FadeLoopImg.</description>
     </item>
     
     <item>
       <title>建造者模式</title>
-      <link>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</link>
+      <link>https//rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Sat, 29 May 2021 14:53:47 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</guid>
+      <guid>https//rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</guid>
       <description>建造者模式   定义：将一个复杂对象的构建层和表示层分离。
   它与工厂模式的区别
    建造者模式更注重于创建对象的过程，而工厂模式更注重于结果 建造者模式使用new来创建一个人，工厂模式是调用工厂函数返回一个实例。因此建造者模式可以使用instanceof运算符判断实例所属类型，而工厂模式不行。   以下是使用建造者模式创建一个人，人具有工作和姓名两个属性  let Human = function () { }; let Name = function (name) { this.wholeName = name; } let Work = function (work) { this.currentWork = work; } function Person(name, work) { let _person = new Human(); _person.name = new Name(name); _person.work = new Work(work); return _person; } let person = new Person(&amp;#39;wqt&amp;#39;, &amp;#39;工程师&amp;#39;); </description>
@@ -29,19 +29,19 @@
     
     <item>
       <title>工厂模式</title>
-      <link>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</link>
+      <link>https//rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Thu, 27 May 2021 11:57:58 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</guid>
+      <guid>https//rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</guid>
       <description>简单工厂模式 let Basketball = function () { this.intro = &amp;#39;篮球&amp;#39;; } Basketball.prototype = { getMember: function () { console.log(&amp;#39;每个队伍需要5名队员&amp;#39;); } } let Football = function () { this.intro = &amp;#39;足球&amp;#39;; } Basketball.prototype = { getMember: function () { console.log(&amp;#39;每个队伍需要11名队员&amp;#39;); } } function sportsFactory(name) { switch (name) { case: &amp;#39;basketball&amp;#39; return new Basketball(); case: &amp;#39;football&amp;#39; return new Football(); } } function createBook(name, time, type) { let o = new Object(); o.name = name; o.</description>
     </item>
     
     <item>
       <title>继承</title>
-      <link>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%A7%E6%89%BF/</link>
+      <link>https//rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%A7%E6%89%BF/</link>
       <pubDate>Tue, 25 May 2021 14:17:24 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%A7%E6%89%BF/</guid>
+      <guid>https//rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%A7%E6%89%BF/</guid>
       <description>原型链 类式继承   类式继承是通过子类的原型prototype对父类实例化来实现的
   具体步骤
    创建子类和父类 子类的prototype属性指向父类的实例对象   缺点   如果父类中定义了实例属性，并且是个引用类型，那么子类的实例对其进行更改会相互影响（）看以下案例 子类无法向父类传递参数  function Animal() { this.color = [&amp;#39;red&amp;#39;, &amp;#39;green&amp;#39;] } function Person() { } Person.prototype = new Animal(); const per1 = new Person();//[ &amp;#39;red&amp;#39;, &amp;#39;green&amp;#39; ]  const per2 = new Person();//[ &amp;#39;red&amp;#39;, &amp;#39;green&amp;#39;, &amp;#39;blue&amp;#39; ]  console.log(per2.color); per1.color.push(&amp;#39;blue&amp;#39;); console.log(per2.color); 构造函数继承   构造函数继承是通过在子类的构造函数作用环境中执行一次父类的构造函数来实现的
