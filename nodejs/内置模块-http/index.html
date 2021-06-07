@@ -13,10 +13,12 @@
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="内置模块 Http"/>
-<meta name="twitter:description" content="node浏览器调试 node --inspect --inspect-brk app.js  打开chrome浏览器，输入chrome://inspect进行调试  node进程管理工具  supervisor nodemon forever pm2   安装nodemon  npm i nodemon -g response  若不设置response的头信息，浏览器默认以html形式解析字符串 writeHead   第一个参数为状态码 第二个参数用来设置头部具体信息，例如，content-type  const http = require(&#39;http&#39;); const server = http.createServer((req, res) =&gt; { res.writeHead(200, { &#39;content-type&#39;: &#39;text/plain&#39; }) res.write(&#39;&lt;div&gt;hello world&lt;/div&gt;&#39;) res.end(); }); server.listen(&#39;7002&#39;); http.request  后端请求另一个后端接口  将http.request请求封装成模块"/>
+<meta name="twitter:description" content="node浏览器调试 node --inspect --inspect-brk app.js  打开chrome浏览器，输入chrome://inspect进行调试  node进程管理工具  supervisor nodemon forever pm2   安装nodemon  npm i nodemon -g response  若不设置response的头信息，浏览器默认以html形式解析字符串 writeHead   第一个参数为状态码 第二个参数用来设置头部具体信息，例如，content-type  const http = require(&#39;http&#39;); const server = http.createServer((req, res) =&gt; { res.writeHead(200, { &#39;content-type&#39;: &#39;text/plain&#39; }) res.write(&#39;&lt;div&gt;hello world&lt;/div&gt;&#39;) res.end(); }); server.listen(&#39;7002&#39;); http.request  后端请求另一个后端接口  将http.request请求封装成模块
+cors  当请求的协议、域名或者端口号与当前浏览器客户端地址不同时，会产生跨域限制，这是浏览器本身的安全策略。可以通过在服务端设置 &lsquo;Access-Control-Allow-Origin&rsquo;: &lsquo;*&rsquo; 来解决。  &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1."/>
 
     <meta property="og:title" content="内置模块 Http" />
-<meta property="og:description" content="node浏览器调试 node --inspect --inspect-brk app.js  打开chrome浏览器，输入chrome://inspect进行调试  node进程管理工具  supervisor nodemon forever pm2   安装nodemon  npm i nodemon -g response  若不设置response的头信息，浏览器默认以html形式解析字符串 writeHead   第一个参数为状态码 第二个参数用来设置头部具体信息，例如，content-type  const http = require(&#39;http&#39;); const server = http.createServer((req, res) =&gt; { res.writeHead(200, { &#39;content-type&#39;: &#39;text/plain&#39; }) res.write(&#39;&lt;div&gt;hello world&lt;/div&gt;&#39;) res.end(); }); server.listen(&#39;7002&#39;); http.request  后端请求另一个后端接口  将http.request请求封装成模块" />
+<meta property="og:description" content="node浏览器调试 node --inspect --inspect-brk app.js  打开chrome浏览器，输入chrome://inspect进行调试  node进程管理工具  supervisor nodemon forever pm2   安装nodemon  npm i nodemon -g response  若不设置response的头信息，浏览器默认以html形式解析字符串 writeHead   第一个参数为状态码 第二个参数用来设置头部具体信息，例如，content-type  const http = require(&#39;http&#39;); const server = http.createServer((req, res) =&gt; { res.writeHead(200, { &#39;content-type&#39;: &#39;text/plain&#39; }) res.write(&#39;&lt;div&gt;hello world&lt;/div&gt;&#39;) res.end(); }); server.listen(&#39;7002&#39;); http.request  后端请求另一个后端接口  将http.request请求封装成模块
+cors  当请求的协议、域名或者端口号与当前浏览器客户端地址不同时，会产生跨域限制，这是浏览器本身的安全策略。可以通过在服务端设置 &lsquo;Access-Control-Allow-Origin&rsquo;: &lsquo;*&rsquo; 来解决。  &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https//rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/" /><meta property="article:section" content="nodejs" />
 <meta property="article:published_time" content="2021-06-03T13:13:45&#43;08:00" />
@@ -144,7 +146,60 @@
 <li>后端请求另一个后端接口</li>
 </ul>
 <p><a href="https://blog.csdn.net/mdsdnw/article/details/107875631?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162280053816780255251704%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162280053816780255251704&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-8-107875631.first_rank_v2_pc_rank_v29&amp;utm_term=nodejs+http.request&amp;spm=1018.2226.3001.4187">将http.request请求封装成模块</a></p>
+<h3 id="cors">cors</h3>
+<ul>
+<li>当请求的协议、域名或者端口号与当前浏览器客户端地址不同时，会产生跨域限制，这是浏览器本身的安全策略。可以通过在服务端设置 &lsquo;Access-Control-Allow-Origin&rsquo;: &lsquo;*&rsquo; 来解决。</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;04-cors&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">xhr</span><span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> <span style="color:#a6e22e">XMLHttpRequest</span>();
+    <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#39;get&#39;</span>,<span style="color:#e6db74">&#39;http://localhost:3000/api/data?a=3&#39;</span>,<span style="color:#66d9ef">true</span>);
+    <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">onreadystatechange</span><span style="color:#f92672">=</span><span style="color:#66d9ef">function</span>(){
+      <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">readyState</span><span style="color:#f92672">===</span><span style="color:#ae81ff">4</span>){
+        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">status</span><span style="color:#f92672">===</span><span style="color:#ae81ff">200</span>){
+          <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">responseText</span>);
+        }<span style="color:#66d9ef">else</span>{
+          <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#39;请求过程中发生错误&#39;</span>);
+        }
+      }<span style="color:#66d9ef">else</span>{
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;---&#39;</span>);
+      }
+    }
+    <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">send</span>();
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">http</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;http&#39;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;url&#39;</span>);
 
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">createServer</span>((<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">urlObj</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>);
+  <span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">urlObj</span>.<span style="color:#a6e22e">pathname</span>) {
+    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;/api/data&#39;</span><span style="color:#f92672">:</span>
+      <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#ae81ff">200</span>, {
+        <span style="color:#e6db74">&#39;content-type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span>,
+        <span style="color:#e6db74">&#39;Access-Control-Allow-Origin&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;*&#39;</span>
+      });
+      <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;{a:2,b:3}&#34;</span>);
+      <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+      <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#39;hello world&#39;</span>);
+  }
+  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>();
+});
+
+<span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">listen</span>(<span style="color:#ae81ff">3000</span>, () =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;http://localhost:3000&#39;</span>);
+});
+</code></pre></div>
     </div>
     <div class="post-footer">
       
