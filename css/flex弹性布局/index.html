@@ -13,22 +13,36 @@
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Flex弹性布局"/>
-<meta name="twitter:description" content="主轴和垂轴  flex-direction：设置主轴方向。row（左-&gt;右）、row-reverse（右-&gt;左）、column（上-&gt;下）、column-reverse（下-&gt;上），默认为row flex-wrap：设置垂轴方向。nowrap（不换行）、wrap（换行）、wrap-reverse（反向换行），默认为nowrap flex-flow：同时设置主轴和垂轴方向 以上三个属性都应用于弹性容器  主轴和垂轴的方向（从左至右)  主轴和垂轴的方向和语言的书写方向有关，这里仅讨论从左至右书写的语言  justify-content（作用于弹性容器）   应用于弹性容器，定义弹性元素在主轴方向上的对齐方式
+<meta name="twitter:description" content="弹性元素的外边距不折叠  主轴和垂轴  flex-direction：设置主轴方向。row（左-&gt;右）、row-reverse（右-&gt;左）、column（上-&gt;下）、column-reverse（下-&gt;上），默认为row flex-wrap：设置垂轴方向。nowrap（不换行）、wrap（换行）、wrap-reverse（反向换行），默认为nowrap flex-flow：同时设置主轴和垂轴方向 以上三个属性都应用于弹性容器  主轴和垂轴的方向（从左至右)  主轴和垂轴的方向和语言的书写方向有关，这里仅讨论从左至右书写的语言  justify-content（作用于弹性容器）   应用于弹性容器，定义弹性元素在主轴方向上的对齐方式
   取值：flex-start、flex-end、center、space-between、space-around、space-evently
+  作用的弹性元素是包含外边距的
   justify-content的六个属性效果如下
-   justify-content的六个属性溢出效果如下  align-items （作用于弹性容器）   应用于弹性容器，定义弹性容器内所有弹性元素在各弹性行垂轴方向上的对齐方式
+   justify-content的六个属性溢出效果如下  align-items（作用于弹性容器）   应用于弹性容器，定义弹性容器内所有弹性元素在各弹性行垂轴方向上的对齐方式
   取值：flex-start、flex-end、center、baseline、stretch（若没有为弹性元素在垂轴方向上设定宽高，那么弹性元素会被拉伸，width/height/max-width/max-height/min-width/min-height优先级比stretch更高）
-  对于stretch取值，作用的弹性元素是包含外边距的
-  "/>
+  作用的弹性元素是包含外边距的
+  align-self（作用于弹性元素）   用于在指定的弹性元素上覆盖align-items值，即指定单个弹性元素在弹性行的垂轴方向上的对齐方式
+  取值：auto、flex-start、flex-end、center、baseline、stretch
+  align-content（作用于弹性元素行）   若只有一行弹性元素或者不允许换行，align-content不起作用
+  取值：flex-start、flex-end、center、space-between、space-around、space-evently、stretch
+  弹性元素   弹性容器的直接子元素为弹性元素，其中除了非空的文本节点都会成为弹性元素。文本节点将成为匿名弹性元素，不能直接为它设置css样式。
+  float（不会使弹性元素移出文档流）、clear、vertical-align对弹性元素没有影响。
+  绝对定位会影响弹性元素，它会将弹性元素移出文档流。同时，绝对定位的弹性元素会受应用在弹性容器上的属性和应用在自身的弹性属性的影响。比如，align-self：center，先会使弹性元素垂直居中，然后再偏移。"/>
 
     <meta property="og:title" content="Flex弹性布局" />
-<meta property="og:description" content="主轴和垂轴  flex-direction：设置主轴方向。row（左-&gt;右）、row-reverse（右-&gt;左）、column（上-&gt;下）、column-reverse（下-&gt;上），默认为row flex-wrap：设置垂轴方向。nowrap（不换行）、wrap（换行）、wrap-reverse（反向换行），默认为nowrap flex-flow：同时设置主轴和垂轴方向 以上三个属性都应用于弹性容器  主轴和垂轴的方向（从左至右)  主轴和垂轴的方向和语言的书写方向有关，这里仅讨论从左至右书写的语言  justify-content（作用于弹性容器）   应用于弹性容器，定义弹性元素在主轴方向上的对齐方式
+<meta property="og:description" content="弹性元素的外边距不折叠  主轴和垂轴  flex-direction：设置主轴方向。row（左-&gt;右）、row-reverse（右-&gt;左）、column（上-&gt;下）、column-reverse（下-&gt;上），默认为row flex-wrap：设置垂轴方向。nowrap（不换行）、wrap（换行）、wrap-reverse（反向换行），默认为nowrap flex-flow：同时设置主轴和垂轴方向 以上三个属性都应用于弹性容器  主轴和垂轴的方向（从左至右)  主轴和垂轴的方向和语言的书写方向有关，这里仅讨论从左至右书写的语言  justify-content（作用于弹性容器）   应用于弹性容器，定义弹性元素在主轴方向上的对齐方式
   取值：flex-start、flex-end、center、space-between、space-around、space-evently
+  作用的弹性元素是包含外边距的
   justify-content的六个属性效果如下
-   justify-content的六个属性溢出效果如下  align-items （作用于弹性容器）   应用于弹性容器，定义弹性容器内所有弹性元素在各弹性行垂轴方向上的对齐方式
+   justify-content的六个属性溢出效果如下  align-items（作用于弹性容器）   应用于弹性容器，定义弹性容器内所有弹性元素在各弹性行垂轴方向上的对齐方式
   取值：flex-start、flex-end、center、baseline、stretch（若没有为弹性元素在垂轴方向上设定宽高，那么弹性元素会被拉伸，width/height/max-width/max-height/min-width/min-height优先级比stretch更高）
-  对于stretch取值，作用的弹性元素是包含外边距的
-  " />
+  作用的弹性元素是包含外边距的
+  align-self（作用于弹性元素）   用于在指定的弹性元素上覆盖align-items值，即指定单个弹性元素在弹性行的垂轴方向上的对齐方式
+  取值：auto、flex-start、flex-end、center、baseline、stretch
+  align-content（作用于弹性元素行）   若只有一行弹性元素或者不允许换行，align-content不起作用
+  取值：flex-start、flex-end、center、space-between、space-around、space-evently、stretch
+  弹性元素   弹性容器的直接子元素为弹性元素，其中除了非空的文本节点都会成为弹性元素。文本节点将成为匿名弹性元素，不能直接为它设置css样式。
+  float（不会使弹性元素移出文档流）、clear、vertical-align对弹性元素没有影响。
+  绝对定位会影响弹性元素，它会将弹性元素移出文档流。同时，绝对定位的弹性元素会受应用在弹性容器上的属性和应用在自身的弹性属性的影响。比如，align-self：center，先会使弹性元素垂直居中，然后再偏移。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rocketturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/" /><meta property="article:section" content="css" />
 <meta property="article:published_time" content="2021-06-05T14:16:07&#43;08:00" />
@@ -115,7 +129,10 @@
       </div>
     </header>
     <div class="post-content">
-      <h3 id="主轴和垂轴">主轴和垂轴</h3>
+      <ul>
+<li>弹性元素的外边距不折叠</li>
+</ul>
+<h3 id="主轴和垂轴">主轴和垂轴</h3>
 <ul>
 <li>flex-direction：设置主轴方向。row（左-&gt;右）、row-reverse（右-&gt;左）、column（上-&gt;下）、column-reverse（下-&gt;上），默认为row</li>
 <li>flex-wrap：设置垂轴方向。nowrap（不换行）、wrap（换行）、wrap-reverse（反向换行），默认为nowrap</li>
@@ -136,6 +153,9 @@
 <p>取值：flex-start、flex-end、center、space-between、space-around、space-evently</p>
 </li>
 <li>
+<p>作用的弹性元素是包含<code>外边距</code>的</p>
+</li>
+<li>
 <p>justify-content的六个属性效果如下</p>
 </li>
 </ul>
@@ -144,7 +164,7 @@
 <li>justify-content的六个属性溢出效果如下</li>
 </ul>
 <p><img src="https://rocketturtlewqt.github.io/2021060525211aft.png" alt="justify-content的六个属性溢出效果"></p>
-<h4 id="align-items-作用于弹性容器">align-items （作用于弹性容器）</h4>
+<h4 id="align-items作用于弹性容器">align-items（作用于弹性容器）</h4>
 <ul>
 <li>
 <p>应用于弹性容器，定义弹性容器内所有弹性元素在各弹性行垂轴方向上的对齐方式</p>
@@ -153,10 +173,43 @@
 <p>取值：flex-start、flex-end、center、baseline、stretch（若没有为弹性元素在垂轴方向上设定宽高，那么弹性元素会被拉伸，width/height/max-width/max-height/min-width/min-height优先级比stretch更高）</p>
 </li>
 <li>
-<p>对于stretch取值，作用的弹性元素是包含<code>外边距</code>的</p>
+<p>作用的弹性元素是包含<code>外边距</code>的</p>
 </li>
 </ul>
 <p><img src="https://rocketturtlewqt.github.io/2021060822204aft.png" alt="对于stretch取值，作用的弹性元素是包含外边距的"></p>
+<h4 id="align-self作用于弹性元素">align-self（作用于弹性元素）</h4>
+<ul>
+<li>
+<p>用于在指定的弹性元素上覆盖align-items值，即指定单个弹性元素在弹性行的垂轴方向上的对齐方式</p>
+</li>
+<li>
+<p>取值：auto、flex-start、flex-end、center、baseline、stretch</p>
+</li>
+</ul>
+<h4 id="align-content作用于弹性元素行">align-content（作用于弹性元素行）</h4>
+<ul>
+<li>
+<p>若只有一行弹性元素或者不允许换行，align-content不起作用</p>
+</li>
+<li>
+<p>取值：flex-start、flex-end、center、space-between、space-around、space-evently、stretch</p>
+</li>
+</ul>
+<h3 id="弹性元素">弹性元素</h3>
+<ul>
+<li>
+<p>弹性容器的直接子元素为弹性元素，其中除了非空的文本节点都会成为弹性元素。文本节点将成为匿名弹性元素，不能直接为它设置css样式。</p>
+</li>
+<li>
+<p>float（不会使弹性元素移出文档流）、clear、vertical-align对弹性元素没有影响。</p>
+</li>
+<li>
+<p>绝对定位会影响弹性元素，它会将弹性元素移出文档流。同时，绝对定位的弹性元素会受应用在弹性容器上的属性和应用在自身的弹性属性的影响。比如，align-self：center，先会使弹性元素垂直居中，然后再偏移。</p>
+</li>
+<li>
+<p>order属性对开启绝对定位的弹性元素没有影响，对同辈元素的绘制顺序有影响。</p>
+</li>
+</ul>
 
     </div>
     <div class="post-footer">

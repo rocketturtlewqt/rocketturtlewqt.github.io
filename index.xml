@@ -6,20 +6,38 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Jun 2021 14:16:07 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Jun 2021 19:43:53 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>内置模块 Http Proxy Middleware</title>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http-proxy-middleware/</link>
+      <pubDate>Tue, 08 Jun 2021 19:43:53 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http-proxy-middleware/</guid>
+      <description>通过node中间件http-proxy-middleware做正向代理   它可以利用node没有浏览器安全级别的跨域限制解决跨域问题
+  安装 http-proxy-middleware 模块
+  npm i http-proxy-middleware -S const http = require(&amp;#39;http&amp;#39;); const { createProxyMiddleware } = require(&amp;#39;http-proxy-middleware&amp;#39;); const server = http.createServer((req, res) =&amp;gt; { const urlStr = req.url; if (/^\/api\/v3\/search/.test(urlStr)) { const proxy = createProxyMiddleware({ target: &amp;#39;https://so.csdn.net&amp;#39;, changeOrigin: true }); proxy(req, res); } else { console.log(&amp;#39;error&amp;#39;); res.write(&amp;#39;error&amp;#39;); } // res.end(); }); server.listen(3000, () =&amp;gt; { console.log(&amp;#39;http://localhost:3000&amp;#39;); });  以上将 http://localhost:3000/api/v3/search&amp;hellip;. 代理=&amp;gt; https://so.csdn.net/api/v3/search.... 若想重写path，可以添加 pathRewrite 选项，具体可以参见 http-proxy-middleware文档  </description>
+    </item>
+    
     <item>
       <title>Flex弹性布局</title>
       <link>https://rocketturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</link>
       <pubDate>Sat, 05 Jun 2021 14:16:07 +0800</pubDate>
       
       <guid>https://rocketturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</guid>
-      <description>主轴和垂轴  flex-direction：设置主轴方向。row（左-&amp;gt;右）、row-reverse（右-&amp;gt;左）、column（上-&amp;gt;下）、column-reverse（下-&amp;gt;上），默认为row flex-wrap：设置垂轴方向。nowrap（不换行）、wrap（换行）、wrap-reverse（反向换行），默认为nowrap flex-flow：同时设置主轴和垂轴方向 以上三个属性都应用于弹性容器  主轴和垂轴的方向（从左至右)  主轴和垂轴的方向和语言的书写方向有关，这里仅讨论从左至右书写的语言  justify-content（作用于弹性容器）   应用于弹性容器，定义弹性元素在主轴方向上的对齐方式
+      <description>弹性元素的外边距不折叠  主轴和垂轴  flex-direction：设置主轴方向。row（左-&amp;gt;右）、row-reverse（右-&amp;gt;左）、column（上-&amp;gt;下）、column-reverse（下-&amp;gt;上），默认为row flex-wrap：设置垂轴方向。nowrap（不换行）、wrap（换行）、wrap-reverse（反向换行），默认为nowrap flex-flow：同时设置主轴和垂轴方向 以上三个属性都应用于弹性容器  主轴和垂轴的方向（从左至右)  主轴和垂轴的方向和语言的书写方向有关，这里仅讨论从左至右书写的语言  justify-content（作用于弹性容器）   应用于弹性容器，定义弹性元素在主轴方向上的对齐方式
   取值：flex-start、flex-end、center、space-between、space-around、space-evently
+  作用的弹性元素是包含外边距的
   justify-content的六个属性效果如下
-   justify-content的六个属性溢出效果如下  align-items （作用于弹性容器）   应用于弹性容器，定义弹性容器内所有弹性元素在各弹性行垂轴方向上的对齐方式
+   justify-content的六个属性溢出效果如下  align-items（作用于弹性容器）   应用于弹性容器，定义弹性容器内所有弹性元素在各弹性行垂轴方向上的对齐方式
   取值：flex-start、flex-end、center、baseline、stretch（若没有为弹性元素在垂轴方向上设定宽高，那么弹性元素会被拉伸，width/height/max-width/max-height/min-width/min-height优先级比stretch更高）
-  对于stretch取值，作用的弹性元素是包含外边距的
-  </description>
+  作用的弹性元素是包含外边距的
+  align-self（作用于弹性元素）   用于在指定的弹性元素上覆盖align-items值，即指定单个弹性元素在弹性行的垂轴方向上的对齐方式
+  取值：auto、flex-start、flex-end、center、baseline、stretch
+  align-content（作用于弹性元素行）   若只有一行弹性元素或者不允许换行，align-content不起作用
+  取值：flex-start、flex-end、center、space-between、space-around、space-evently、stretch
+  弹性元素   弹性容器的直接子元素为弹性元素，其中除了非空的文本节点都会成为弹性元素。文本节点将成为匿名弹性元素，不能直接为它设置css样式。
+  float（不会使弹性元素移出文档流）、clear、vertical-align对弹性元素没有影响。
+  绝对定位会影响弹性元素，它会将弹性元素移出文档流。同时，绝对定位的弹性元素会受应用在弹性容器上的属性和应用在自身的弹性属性的影响。比如，align-self：center，先会使弹性元素垂直居中，然后再偏移。</description>
     </item>
     
     <item>
