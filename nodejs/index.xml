@@ -2,55 +2,55 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nodejs on RocketTurtle</title>
-    <link>https//rocketturtlewqt.github.io/nodejs/</link>
+    <link>https://rocketturtlewqt.github.io/nodejs/</link>
     <description>Recent content in Nodejs on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Jun 2021 13:13:45 +0800</lastBuildDate><atom:link href="https//rocketturtlewqt.github.io/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Jun 2021 13:13:45 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/nodejs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>内置模块 Http</title>
-      <link>https//rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/</link>
       <pubDate>Thu, 03 Jun 2021 13:13:45 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/</guid>
       <description>node浏览器调试 node --inspect --inspect-brk app.js  打开chrome浏览器，输入chrome://inspect进行调试  node进程管理工具  supervisor nodemon forever pm2   安装nodemon  npm i nodemon -g response  若不设置response的头信息，浏览器默认以html形式解析字符串 writeHead   第一个参数为状态码 第二个参数用来设置头部具体信息，例如，content-type  const http = require(&amp;#39;http&amp;#39;); const server = http.createServer((req, res) =&amp;gt; { res.writeHead(200, { &amp;#39;content-type&amp;#39;: &amp;#39;text/plain&amp;#39; }) res.write(&amp;#39;&amp;lt;div&amp;gt;hello world&amp;lt;/div&amp;gt;&amp;#39;) res.end(); }); server.listen(&amp;#39;7002&amp;#39;); http.request  后端请求另一个后端接口  将http.request请求封装成模块
 cors  当请求的协议、域名或者端口号与当前浏览器客户端地址不同时，会产生跨域限制，这是浏览器本身的安全策略。可以通过在服务端设置 &amp;lsquo;Access-Control-Allow-Origin&amp;rsquo;: &amp;lsquo;*&amp;rsquo; 来解决。  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.</description>
     </item>
     
     <item>
       <title>内置模块 Url</title>
-      <link>https//rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-url/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-url/</link>
       <pubDate>Thu, 03 Jun 2021 12:53:20 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-url/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-url/</guid>
       <description>内置模块url常用api  log4js模块用来记录日志  npm i log4js -D log4j模块文档
  url内置模块用来解析url地址   url.parse()：将url字符串地址解析为url对象 url.format()：将url对象解析为url字符串地址 url.resolve（）：用来处理路径上下文 URLSearchParams类接收一个参数，类似于?id=12（可以通过url.parse(location).search获取），之后通过实例对象的 get api获取参数  const log4js = require(&amp;#34;log4js&amp;#34;); log4js.configure({ appenders: { cheese: { type: &amp;#34;file&amp;#34;, filename: &amp;#34;cheese.log&amp;#34; } }, categories: { default: { appenders: [&amp;#34;cheese&amp;#34;], level: &amp;#34;error&amp;#34; } } }); const logger = log4js.getLogger(&amp;#39;cheese&amp;#39;); logger.level = &amp;#34;debug&amp;#34;; const url = require(&amp;#39;url&amp;#39;); const location = &amp;#39;https://www.baidu.com:443/path/index.html?id=12#tag&amp;#39;; const location_obj={ protocol: &amp;#39;https:&amp;#39;, slashes: true, auth: null, host: &amp;#39;www.</description>
     </item>
     
     <item>
       <title>Commonjs</title>
-      <link>https//rocketturtlewqt.github.io/nodejs/commonjs/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/commonjs/</link>
       <pubDate>Sat, 29 May 2021 12:06:16 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/nodejs/commonjs/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/commonjs/</guid>
       <description> commonjs是nodejs的第三方规范 通过require来引包 使用module.exports和exports来暴露，exports是module.exports的引用 尽量避免循环依赖  module.exports={ name, age } //等价于 exports.name=name; exports.age=age; </description>
     </item>
     
     <item>
       <title>Npm</title>
-      <link>https//rocketturtlewqt.github.io/nodejs/npm/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/npm/</link>
       <pubDate>Thu, 27 May 2021 18:26:53 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/nodejs/npm/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/npm/</guid>
       <description>全局安装  npm install webpack --global (-g) 创建package.json  // -y 使用默认配置 npm init -y 本地安装包  //dev：开发环境依赖 //save：放在package.json中 npm install gulp --dev-save //简写 npm install gulp -D //生产环境依赖 npm install gulp --save //简写 npm install gulp -D 查看包的依赖关系  //查看所有包的依赖关系树 npm list //查看指定包的依赖关系树 npm list | grep &amp;lt;包名&amp;gt; 根据package.json安装相应的包  //安装所有依赖 npm i //安装生产环境依赖 npm i --production //安装开发环境依赖 npm i --development 查看包的所有版本  npm view jquery versions node package version    13.</description>
     </item>
     
     <item>
       <title>Node与浏览器的对比</title>
-      <link>https//rocketturtlewqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</link>
       <pubDate>Thu, 27 May 2021 17:38:37 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</guid>
       <description>node与浏览器的对比  node没有浏览器安全级别的限制   浏览器具有跨域沙箱的安全限制，node没有 node可以读写文件 node可以管理继承  /* [ &amp;#39;/usr/local/bin/node&amp;#39;, &amp;#39;/Users/wangqintao/Desktop/nodejs/认识nodejs/tempCodeRunnerFile.js&amp;#39; ] */ console.log(process.argv); http/https  const http = require(&amp;#39;http&amp;#39;); const server = http.createServer((req, res) =&amp;gt; { res.write(req.url); res.end(); }); server.listen(8090, &amp;#39;localhost&amp;#39;, () =&amp;gt; { console.log(&amp;#39;localhost:8090&amp;#39;); }); </description>
     </item>
     

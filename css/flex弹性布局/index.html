@@ -8,23 +8,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="RocketTurtle" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="/https/rocketturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
+    <link rel="stylesheet" href="https://rocketturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
 
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Flex弹性布局"/>
-<meta name="twitter:description" content="主轴和垂轴  flex-direction：设置主轴方向。row（左-&gt;右）、row-reverse（右-&gt;左）、column（上-&gt;下）、column-reverse（下-&gt;上），默认为row flex-wrap：设置垂轴方向。nowrap（不换行）、wrap（换行）、wrap-reverse（反向换行），默认为nowrap flex-flow：同时设置主轴和垂轴方向 以上三个属性都应用于弹性容器  主轴和垂轴的方向（从左至右)  主轴和垂轴的方向和语言的书写方向有关，这里仅讨论从左至右书写的语言  justify-content   应用于弹性容器，定义弹性元素在主轴方向上的对齐方式
+<meta name="twitter:description" content="主轴和垂轴  flex-direction：设置主轴方向。row（左-&gt;右）、row-reverse（右-&gt;左）、column（上-&gt;下）、column-reverse（下-&gt;上），默认为row flex-wrap：设置垂轴方向。nowrap（不换行）、wrap（换行）、wrap-reverse（反向换行），默认为nowrap flex-flow：同时设置主轴和垂轴方向 以上三个属性都应用于弹性容器  主轴和垂轴的方向（从左至右)  主轴和垂轴的方向和语言的书写方向有关，这里仅讨论从左至右书写的语言  justify-content（作用于弹性容器）   应用于弹性容器，定义弹性元素在主轴方向上的对齐方式
   取值：flex-start、flex-end、center、space-between、space-around、space-evently
   justify-content的六个属性效果如下
-   justify-content的六个属性溢出效果如下  "/>
+   justify-content的六个属性溢出效果如下  align-items （作用于弹性容器）   应用于弹性容器，定义弹性容器内所有弹性元素在各弹性行垂轴方向上的对齐方式
+  取值：flex-start、flex-end、center、baseline、stretch（若没有为弹性元素在垂轴方向上设定宽高，那么弹性元素会被拉伸，width/height/max-width/max-height/min-width/min-height优先级比stretch更高）
+  对于stretch取值，作用的弹性元素是包含外边距的
+  "/>
 
     <meta property="og:title" content="Flex弹性布局" />
-<meta property="og:description" content="主轴和垂轴  flex-direction：设置主轴方向。row（左-&gt;右）、row-reverse（右-&gt;左）、column（上-&gt;下）、column-reverse（下-&gt;上），默认为row flex-wrap：设置垂轴方向。nowrap（不换行）、wrap（换行）、wrap-reverse（反向换行），默认为nowrap flex-flow：同时设置主轴和垂轴方向 以上三个属性都应用于弹性容器  主轴和垂轴的方向（从左至右)  主轴和垂轴的方向和语言的书写方向有关，这里仅讨论从左至右书写的语言  justify-content   应用于弹性容器，定义弹性元素在主轴方向上的对齐方式
+<meta property="og:description" content="主轴和垂轴  flex-direction：设置主轴方向。row（左-&gt;右）、row-reverse（右-&gt;左）、column（上-&gt;下）、column-reverse（下-&gt;上），默认为row flex-wrap：设置垂轴方向。nowrap（不换行）、wrap（换行）、wrap-reverse（反向换行），默认为nowrap flex-flow：同时设置主轴和垂轴方向 以上三个属性都应用于弹性容器  主轴和垂轴的方向（从左至右)  主轴和垂轴的方向和语言的书写方向有关，这里仅讨论从左至右书写的语言  justify-content（作用于弹性容器）   应用于弹性容器，定义弹性元素在主轴方向上的对齐方式
   取值：flex-start、flex-end、center、space-between、space-around、space-evently
   justify-content的六个属性效果如下
-   justify-content的六个属性溢出效果如下  " />
+   justify-content的六个属性溢出效果如下  align-items （作用于弹性容器）   应用于弹性容器，定义弹性容器内所有弹性元素在各弹性行垂轴方向上的对齐方式
+  取值：flex-start、flex-end、center、baseline、stretch（若没有为弹性元素在垂轴方向上设定宽高，那么弹性元素会被拉伸，width/height/max-width/max-height/min-width/min-height优先级比stretch更高）
+  对于stretch取值，作用的弹性元素是包含外边距的
+  " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https//rocketturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/" /><meta property="article:section" content="css" />
+<meta property="og:url" content="https://rocketturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/" /><meta property="article:section" content="css" />
 <meta property="article:published_time" content="2021-06-05T14:16:07&#43;08:00" />
 <meta property="article:modified_time" content="2021-06-05T14:16:07&#43;08:00" />
 
@@ -33,46 +39,46 @@
   </head>
   <body>
     <header class="app-header">
-      <a href="https//rocketturtlewqt.github.io"><img class="app-header-avatar" src="/https/rocketturtlewqt.github.io/avatar.jpg" alt="RocketTurtle" /></a>
+      <a href="https://rocketturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
       <h1>RocketTurtle</h1>
       <nav class="app-header-menu">
-          <a class="app-header-menu-item" href="https/rocketturtlewqt.github.io/">home</a>
+          <a class="app-header-menu-item" href="/">home</a>
              - 
           
-          <a class="app-header-menu-item" href="https/rocketturtlewqt.github.io/blog/">blog</a>
+          <a class="app-header-menu-item" href="/blog/">blog</a>
              - 
           
-          <a class="app-header-menu-item" href="https/rocketturtlewqt.github.io/macosx/">MacOsX</a>
+          <a class="app-header-menu-item" href="/macosx/">MacOsX</a>
              - 
           
-          <a class="app-header-menu-item" href="https/rocketturtlewqt.github.io/vscode/">vscode</a>
+          <a class="app-header-menu-item" href="/vscode/">vscode</a>
              - 
           
-          <a class="app-header-menu-item" href="https/rocketturtlewqt.github.io/git/">git</a>
+          <a class="app-header-menu-item" href="/git/">git</a>
              - 
           
-          <a class="app-header-menu-item" href="https/rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/">vue源码</a>
+          <a class="app-header-menu-item" href="/vue%E6%BA%90%E7%A0%81/">vue源码</a>
              - 
           
-          <a class="app-header-menu-item" href="https/rocketturtlewqt.github.io/javascript/">javascript</a>
+          <a class="app-header-menu-item" href="/javascript/">javascript</a>
              - 
           
-          <a class="app-header-menu-item" href="https/rocketturtlewqt.github.io/webpack/">webpack</a>
+          <a class="app-header-menu-item" href="/webpack/">webpack</a>
              - 
           
-          <a class="app-header-menu-item" href="https/rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+          <a class="app-header-menu-item" href="/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
              - 
           
-          <a class="app-header-menu-item" href="https/rocketturtlewqt.github.io/nodejs/">nodejs</a>
+          <a class="app-header-menu-item" href="/nodejs/">nodejs</a>
              - 
           
-          <a class="app-header-menu-item" href="https/rocketturtlewqt.github.io/chrome/">chrome</a>
+          <a class="app-header-menu-item" href="/chrome/">chrome</a>
              - 
           
-          <a class="app-header-menu-item" href="https/rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/">计网</a>
+          <a class="app-header-menu-item" href="/%E8%AE%A1%E7%BD%91/">计网</a>
              - 
           
-          <a class="app-header-menu-item" href="https/rocketturtlewqt.github.io/css/">css</a>
+          <a class="app-header-menu-item" href="/css/">css</a>
       </nav>
       <p>使自己变得更优秀！</p>
       <div class="app-header-social">
@@ -121,7 +127,7 @@
 <li>主轴和垂轴的方向和语言的书写方向有关，这里仅讨论从左至右书写的语言</li>
 </ul>
 <p><img src="https://rocketturtlewqt.github.io/2021060522240aft.png" alt="从左至右书写模式下的弹性方向"></p>
-<h4 id="justify-content">justify-content</h4>
+<h4 id="justify-content作用于弹性容器">justify-content（作用于弹性容器）</h4>
 <ul>
 <li>
 <p>应用于弹性容器，定义弹性元素在主轴方向上的对齐方式</p>
@@ -138,6 +144,19 @@
 <li>justify-content的六个属性溢出效果如下</li>
 </ul>
 <p><img src="https://rocketturtlewqt.github.io/2021060525211aft.png" alt="justify-content的六个属性溢出效果"></p>
+<h4 id="align-items-作用于弹性容器">align-items （作用于弹性容器）</h4>
+<ul>
+<li>
+<p>应用于弹性容器，定义弹性容器内所有弹性元素在各弹性行垂轴方向上的对齐方式</p>
+</li>
+<li>
+<p>取值：flex-start、flex-end、center、baseline、stretch（若没有为弹性元素在垂轴方向上设定宽高，那么弹性元素会被拉伸，width/height/max-width/max-height/min-width/min-height优先级比stretch更高）</p>
+</li>
+<li>
+<p>对于stretch取值，作用的弹性元素是包含<code>外边距</code>的</p>
+</li>
+</ul>
+<p><img src="https://rocketturtlewqt.github.io/2021060822204aft.png" alt="对于stretch取值，作用的弹性元素是包含外边距的"></p>
 
     </div>
     <div class="post-footer">

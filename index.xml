@@ -2,38 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>RocketTurtle</title>
-    <link>https//rocketturtlewqt.github.io/</link>
+    <link>https://rocketturtlewqt.github.io/</link>
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Jun 2021 14:16:07 +0800</lastBuildDate><atom:link href="https//rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Jun 2021 14:16:07 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Flex弹性布局</title>
-      <link>https//rocketturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</link>
+      <link>https://rocketturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</link>
       <pubDate>Sat, 05 Jun 2021 14:16:07 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</guid>
-      <description>主轴和垂轴  flex-direction：设置主轴方向。row（左-&amp;gt;右）、row-reverse（右-&amp;gt;左）、column（上-&amp;gt;下）、column-reverse（下-&amp;gt;上），默认为row flex-wrap：设置垂轴方向。nowrap（不换行）、wrap（换行）、wrap-reverse（反向换行），默认为nowrap flex-flow：同时设置主轴和垂轴方向 以上三个属性都应用于弹性容器  主轴和垂轴的方向（从左至右)  主轴和垂轴的方向和语言的书写方向有关，这里仅讨论从左至右书写的语言  justify-content   应用于弹性容器，定义弹性元素在主轴方向上的对齐方式
+      <guid>https://rocketturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</guid>
+      <description>主轴和垂轴  flex-direction：设置主轴方向。row（左-&amp;gt;右）、row-reverse（右-&amp;gt;左）、column（上-&amp;gt;下）、column-reverse（下-&amp;gt;上），默认为row flex-wrap：设置垂轴方向。nowrap（不换行）、wrap（换行）、wrap-reverse（反向换行），默认为nowrap flex-flow：同时设置主轴和垂轴方向 以上三个属性都应用于弹性容器  主轴和垂轴的方向（从左至右)  主轴和垂轴的方向和语言的书写方向有关，这里仅讨论从左至右书写的语言  justify-content（作用于弹性容器）   应用于弹性容器，定义弹性元素在主轴方向上的对齐方式
   取值：flex-start、flex-end、center、space-between、space-around、space-evently
   justify-content的六个属性效果如下
-   justify-content的六个属性溢出效果如下  </description>
+   justify-content的六个属性溢出效果如下  align-items （作用于弹性容器）   应用于弹性容器，定义弹性容器内所有弹性元素在各弹性行垂轴方向上的对齐方式
+  取值：flex-start、flex-end、center、baseline、stretch（若没有为弹性元素在垂轴方向上设定宽高，那么弹性元素会被拉伸，width/height/max-width/max-height/min-width/min-height优先级比stretch更高）
+  对于stretch取值，作用的弹性元素是包含外边距的
+  </description>
     </item>
     
     <item>
       <title>Smtp</title>
-      <link>https//rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/smtp/</link>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/smtp/</link>
       <pubDate>Sat, 05 Jun 2021 10:33:33 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/smtp/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/smtp/</guid>
       <description>因特网电子邮件  因特网电子邮件所使用的协议是smtp，每个邮件服务器既是smtp的客户端也是smtp的服务端 当接收方的邮件服务器出现故障时，报文会被存放在发送方的邮件服务器的报文队列中，一般每隔30分钟发送一次，如果几天后仍不能成功，就删除并通知发送者 smtp协议是基于tcp连接的  smtp的基本操作  提供接收方的邮件地址 发送方写邮件，由用户代理交给发送方邮件服务器，并放入报文队列 smtp客户端监测到报文，建立与smtp服务器端的tcp连接 经过smtp的初始握手，报文发送到接收方的邮件服务器 接收方通过用户代理读取报文  </description>
     </item>
     
     <item>
       <title>Web缓存</title>
-      <link>https//rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/web%E7%BC%93%E5%AD%98/</link>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/web%E7%BC%93%E5%AD%98/</link>
       <pubDate>Fri, 04 Jun 2021 10:18:51 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/web%E7%BC%93%E5%AD%98/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/web%E7%BC%93%E5%AD%98/</guid>
       <description>客户通过web缓存请求对象 大致工作流程  客户浏览器向代理服务器发送请求 代理服务器先检查本地是否存储了该对象的副本，若有，则直接返回响应报文，实体体中包含该对象。若没有，则再向初始服务器发送对该对象的请求报文 初始服务器返回包含该对象的响应报文 代理服务器收到包含该对象的响应报文，将该对象的副本保存在本地，再向客户浏览器返回包含该对象的响应报文   代理服务器具有双重角色，即客户和服务器  条件get请求   可能存在一种情况，代理服务器缓存的对象是旧版本，即在代理服务器缓存了对象之后初始服务又对其进行了更改
   请求报文使用get方法，并且首部行中带有 If-modified-since 字段，这类请求就是条件请求。当这类请求发送到代理服务器后，代理服务器也会发送请求到初始服务器。若初始服务器的对象没有更新，它会返回一个响应报文，其中描述字段为 Not modified，状态码字段为304。
   </description>
@@ -41,75 +44,75 @@
     
     <item>
       <title>应用层cookie</title>
-      <link>https//rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/%E5%BA%94%E7%94%A8%E5%B1%82cookie/</link>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/%E5%BA%94%E7%94%A8%E5%B1%82cookie/</link>
       <pubDate>Fri, 04 Jun 2021 10:05:31 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/%E5%BA%94%E7%94%A8%E5%B1%82cookie/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/%E5%BA%94%E7%94%A8%E5%B1%82cookie/</guid>
       <description>用cookie跟踪用户状态 cookie的工作过程  以访问amazon网站为例   用户访问amazon网站 amazon web服务器为用户生成一个识别码，并在后端数据库中生成一个表项，返回响应报文时，在首部行添加 Set-cookie:&amp;lt;识别码&amp;gt; 浏览器接收响应报文，在管理cookie的文件中添加一行关于这个cookie的信息 当浏览器用户再次请求amazon web服务器时，在请求报文中携带cookie字段，值为web服务器为用户分配的识别码  </description>
     </item>
     
     <item>
       <title>内置模块 Http</title>
-      <link>https//rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/</link>
       <pubDate>Thu, 03 Jun 2021 13:13:45 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/</guid>
       <description>node浏览器调试 node --inspect --inspect-brk app.js  打开chrome浏览器，输入chrome://inspect进行调试  node进程管理工具  supervisor nodemon forever pm2   安装nodemon  npm i nodemon -g response  若不设置response的头信息，浏览器默认以html形式解析字符串 writeHead   第一个参数为状态码 第二个参数用来设置头部具体信息，例如，content-type  const http = require(&amp;#39;http&amp;#39;); const server = http.createServer((req, res) =&amp;gt; { res.writeHead(200, { &amp;#39;content-type&amp;#39;: &amp;#39;text/plain&amp;#39; }) res.write(&amp;#39;&amp;lt;div&amp;gt;hello world&amp;lt;/div&amp;gt;&amp;#39;) res.end(); }); server.listen(&amp;#39;7002&amp;#39;); http.request  后端请求另一个后端接口  将http.request请求封装成模块
 cors  当请求的协议、域名或者端口号与当前浏览器客户端地址不同时，会产生跨域限制，这是浏览器本身的安全策略。可以通过在服务端设置 &amp;lsquo;Access-Control-Allow-Origin&amp;rsquo;: &amp;lsquo;*&amp;rsquo; 来解决。  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.</description>
     </item>
     
     <item>
       <title>内置模块 Url</title>
-      <link>https//rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-url/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-url/</link>
       <pubDate>Thu, 03 Jun 2021 12:53:20 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-url/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-url/</guid>
       <description>内置模块url常用api  log4js模块用来记录日志  npm i log4js -D log4j模块文档
  url内置模块用来解析url地址   url.parse()：将url字符串地址解析为url对象 url.format()：将url对象解析为url字符串地址 url.resolve（）：用来处理路径上下文 URLSearchParams类接收一个参数，类似于?id=12（可以通过url.parse(location).search获取），之后通过实例对象的 get api获取参数  const log4js = require(&amp;#34;log4js&amp;#34;); log4js.configure({ appenders: { cheese: { type: &amp;#34;file&amp;#34;, filename: &amp;#34;cheese.log&amp;#34; } }, categories: { default: { appenders: [&amp;#34;cheese&amp;#34;], level: &amp;#34;error&amp;#34; } } }); const logger = log4js.getLogger(&amp;#39;cheese&amp;#39;); logger.level = &amp;#34;debug&amp;#34;; const url = require(&amp;#39;url&amp;#39;); const location = &amp;#39;https://www.baidu.com:443/path/index.html?id=12#tag&amp;#39;; const location_obj={ protocol: &amp;#39;https:&amp;#39;, slashes: true, auth: null, host: &amp;#39;www.</description>
     </item>
     
     <item>
       <title>压缩css</title>
-      <link>https//rocketturtlewqt.github.io/webpack/%E5%8E%8B%E7%BC%A9css/</link>
+      <link>https://rocketturtlewqt.github.io/webpack/%E5%8E%8B%E7%BC%A9css/</link>
       <pubDate>Wed, 02 Jun 2021 19:33:29 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/webpack/%E5%8E%8B%E7%BC%A9css/</guid>
+      <guid>https://rocketturtlewqt.github.io/webpack/%E5%8E%8B%E7%BC%A9css/</guid>
       <description>使用webpack打包时压缩css文件 npm i optimize-css-assets-webpack-plugin -D const path = require(&amp;#39;path&amp;#39;); const HtmlWebpackPlugin = require(&amp;#39;html-webpack-plugin&amp;#39;); const MiniCssExtractPlugin = require(&amp;#39;mini-css-extract-plugin&amp;#39;); const OptimizeCssAssetsWebpackPlugin = require(&amp;#39;optimize-css-assets-webpack-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;bundle.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, module: { rules: [ { test: /\.css$/, use: [ MiniCssExtractPlugin.loader, &amp;#39;css-loader&amp;#39; ] } ] }, plugins: [ new HtmlWebpackPlugin({ template: &amp;#39;./src/index.html&amp;#39; }), new MiniCssExtractPlugin({ filename: &amp;#39;css/bundle.css&amp;#39; }), new OptimizeCssAssetsWebpackPlugin() ], mode: &amp;#39;development&amp;#39; } </description>
     </item>
     
     <item>
       <title>Css兼容性处理</title>
-      <link>https//rocketturtlewqt.github.io/webpack/css%E5%85%BC%E5%AE%B9%E6%80%A7%E5%A4%84%E7%90%86/</link>
+      <link>https://rocketturtlewqt.github.io/webpack/css%E5%85%BC%E5%AE%B9%E6%80%A7%E5%A4%84%E7%90%86/</link>
       <pubDate>Mon, 31 May 2021 18:15:57 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/webpack/css%E5%85%BC%E5%AE%B9%E6%80%A7%E5%A4%84%E7%90%86/</guid>
+      <guid>https://rocketturtlewqt.github.io/webpack/css%E5%85%BC%E5%AE%B9%E6%80%A7%E5%A4%84%E7%90%86/</guid>
       <description>用到的依赖：postcss-loader（4.2.0），postcss-preset-env（6.7.0） 以上两个依赖需要注意版本问题  npm i postcss-loader@4.2.0 postcss-preset-env@6.7.0 -D const path = require(&amp;#39;path&amp;#39;); const HtmlWebpackPlugin = require(&amp;#39;html-webpack-plugin&amp;#39;); const MiniCssExtractPlugin = require(&amp;#39;mini-css-extract-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;bundle.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, module: { rules: [ { test: /\.css$/, use: [ MiniCssExtractPlugin.loader, &amp;#39;css-loader&amp;#39;, { loader:&amp;#39;postcss-loader&amp;#39;, options: { postcssOptions: { plugins: [ [ &amp;#39;postcss-preset-env&amp;#39;, { browsers:&amp;#39;last 2 versions&amp;#39; } ] ] } } } ] } ] }, plugins: [ new HtmlWebpackPlugin({ template:&amp;#39;.</description>
     </item>
     
     <item>
       <title>应用层协议http</title>
-      <link>https//rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AEhttp/</link>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AEhttp/</link>
       <pubDate>Sat, 29 May 2021 18:28:24 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AEhttp/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AEhttp/</guid>
       <description>基本常识  Web页面是由对象组成的。这个对象可以是一个html文件，也可以是图片等，且它们可以通过一个url地址寻找。 浏览器实现了HTTP的客户端，Web服务器实现了HTTP的服务器端。 HTTP是一个无状态的协议。当HTTP客户端多次请求同一个对象，HTTP服务器端并不会因为此前返回过这个对象就不再响应，而是每请求一次就响应一次。 客户端套接字是客户端应用进程与TCP连接之门，负责HTTP请求报文的发送和响应报文的接收。服务端套接字是服务端应用进程与TCP连接之门，负责HTTP响应报文的发送和请求报文的接收。  持续连接与非持续连接 非持续连接  http1.0 假若服务器目前有一个html文件和10张图片需要响应，那么对于非持续连接分为以下几步   http客户端通过80端向http服务端发起一条tcp连接 建立tcp连接后，http客户端将http请求报文通过80端口发送给http服务端 http服务端进程通过套接字接收http请求报文，从存储器中读取响应的内容，并通过套接字发送给http客户端 服务端进程通知tcp断开tcp连接（要等http客户端接收到响应报文后才会真正断开） http客户端接收到响应报文，断开tcp连接 有几个对象就重复几遍1~5   建立tcp的过程还伴随有三次握手，http请求报文是随着第三次握手发送给http服务端的  持续连接  http1.1 持续连接使得传输的对象能够在同一条tcp连接上进行。对于非持续连接，完成一个对象的请求和响应过程都需要2个RTT时间，客户端和服务端都要为每一条tcp连接分配缓存和变量，所以持续连接在一定程度上节约了时间  http报文格式 http请求报文格式  第一行为请求行，由方法字段、URL字段和协议版本组成 之后的行称为首部行   一般当请求报文的方法字段为GET时，实体体为空。当为POST时，通常以表单形式提交，实体体中的内容为表单中输入的值   HEAD方法类似于GET方法。当服务器收到一个HEAD请求时，会使用HTTP报文作为响应，不过不会返回任何响应对象 PUT方法。它允许用户上传对象到指定web服务器上的指定路径 DELETE方法。它允许用户或应用程序删除web服务器上的指定对象  http响应报文格式  第一行为状态行，由协议版本、状态码和描述组成 之后的六行是首部行 最后一行是实体体  </description>
     </item>
     
     <item>
       <title>原型模式</title>
-      <link>https//rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/</link>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Sat, 29 May 2021 15:41:16 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/</guid>
       <description>原型模式  特点：类实例共享原型对象的属性和方法  let LoopImg = function (imagesArr, container) { this.imagesArr = imagesArr; this.container = container; } //创建焦点图 LoopImg.prototype.createImg = function () { console.log(`LoopImg`); } //切换焦点图 LoopImg.prototype.changeImg = function () { console.log(`LoopImg`); } let SideLoopImg = function (sideImagesArr, sideContainer) { LoopImg.call(this, sideImagesArr, sideImagesArr); } SideLoopImg.prototype = new LoopImg(); SideLoopImg.prototype.createImg = function () { console.log(`SideLoopImg`); } let FadeLoopImg = function (fadeImagesArr, fadeImagesContainer, arrow) { LoopImg.call(this, fadeImagesArr, fadeImagesContainer); this.arrow = arrow; } FadeLoopImg.</description>
     </item>
     
     <item>
       <title>建造者模式</title>
-      <link>https//rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</link>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Sat, 29 May 2021 14:53:47 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</guid>
       <description>建造者模式   定义：将一个复杂对象的构建层和表示层分离。
   它与工厂模式的区别
    建造者模式更注重于创建对象的过程，而工厂模式更注重于结果 建造者模式使用new来创建一个人，工厂模式是调用工厂函数返回一个实例。因此建造者模式可以使用instanceof运算符判断实例所属类型，而工厂模式不行。   以下是使用建造者模式创建一个人，人具有工作和姓名两个属性  let Human = function () { }; let Name = function (name) { this.wholeName = name; } let Work = function (work) { this.currentWork = work; } function Person(name, work) { let _person = new Human(); _person.name = new Name(name); _person.work = new Work(work); return _person; } let person = new Person(&amp;#39;wqt&amp;#39;, &amp;#39;工程师&amp;#39;); </description>
@@ -117,19 +120,19 @@ cors  当请求的协议、域名或者端口号与当前浏览器客户端地�
     
     <item>
       <title>Commonjs</title>
-      <link>https//rocketturtlewqt.github.io/nodejs/commonjs/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/commonjs/</link>
       <pubDate>Sat, 29 May 2021 12:06:16 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/nodejs/commonjs/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/commonjs/</guid>
       <description> commonjs是nodejs的第三方规范 通过require来引包 使用module.exports和exports来暴露，exports是module.exports的引用 尽量避免循环依赖  module.exports={ name, age } //等价于 exports.name=name; exports.age=age; </description>
     </item>
     
     <item>
       <title>Chrome浏览器调试技巧</title>
-      <link>https//rocketturtlewqt.github.io/chrome/chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/</link>
+      <link>https://rocketturtlewqt.github.io/chrome/chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/</link>
       <pubDate>Fri, 28 May 2021 18:24:48 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/chrome/chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/</guid>
+      <guid>https://rocketturtlewqt.github.io/chrome/chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/</guid>
       <description>打开控制台命令行快捷键  command+shift+p  设置控制台显示的位置  点击右边倒数第二个图标（三个点）  尺子与当前屏幕截图  Show rulers：显示尺子 Capture screenshot：截取当前屏幕截图 Capture full size screenshot：截取长图  其它（console）   以下语句均为控制台输入
   console.asserts(&amp;lt;变量&amp;gt;, &amp;lt;语句&amp;gt;);
   let result=false; //当result为false的时候，打印信息；当result为true的时候不打印信息 console.asserts(result,&amp;#39;result is false&amp;#39;);  占位符：%s  //hello world console.log(&amp;#39;hello：%s&amp;#39;,&amp;#39;world&amp;#39;);  设置控制台输出内容的样式样式：%c  //红色单词over console.log(&amp;#39;%cover&amp;#39;,&amp;#39;color:red;&amp;#39;)  测试执行时间  //执行时间: 24396.9599609375 ms console.time(&amp;#39;执行时间&amp;#39;); for(let i=0;i&amp;lt;10000000;i++){} console.timeEnd(&amp;#39;执行时间&amp;#39;);  以表格形式打印对象数组  let per=[{name:&amp;#39;wqt&amp;#39;,age:21},{name:&amp;#39;ljt&amp;#39;,age:21}]; console.table(per);  分组打印  console.group(&amp;#39;分组1&amp;#39;); console.log(1); console.log(2); console.group(&amp;#39;分组2&amp;#39;); console.log(3); console.</description>
@@ -137,46 +140,46 @@ cors  当请求的协议、域名或者端口号与当前浏览器客户端地�
     
     <item>
       <title>Npm</title>
-      <link>https//rocketturtlewqt.github.io/nodejs/npm/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/npm/</link>
       <pubDate>Thu, 27 May 2021 18:26:53 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/nodejs/npm/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/npm/</guid>
       <description>全局安装  npm install webpack --global (-g) 创建package.json  // -y 使用默认配置 npm init -y 本地安装包  //dev：开发环境依赖 //save：放在package.json中 npm install gulp --dev-save //简写 npm install gulp -D //生产环境依赖 npm install gulp --save //简写 npm install gulp -D 查看包的依赖关系  //查看所有包的依赖关系树 npm list //查看指定包的依赖关系树 npm list | grep &amp;lt;包名&amp;gt; 根据package.json安装相应的包  //安装所有依赖 npm i //安装生产环境依赖 npm i --production //安装开发环境依赖 npm i --development 查看包的所有版本  npm view jquery versions node package version    13.</description>
     </item>
     
     <item>
       <title>Node与浏览器的对比</title>
-      <link>https//rocketturtlewqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</link>
       <pubDate>Thu, 27 May 2021 17:38:37 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</guid>
       <description>node与浏览器的对比  node没有浏览器安全级别的限制   浏览器具有跨域沙箱的安全限制，node没有 node可以读写文件 node可以管理继承  /* [ &amp;#39;/usr/local/bin/node&amp;#39;, &amp;#39;/Users/wangqintao/Desktop/nodejs/认识nodejs/tempCodeRunnerFile.js&amp;#39; ] */ console.log(process.argv); http/https  const http = require(&amp;#39;http&amp;#39;); const server = http.createServer((req, res) =&amp;gt; { res.write(req.url); res.end(); }); server.listen(8090, &amp;#39;localhost&amp;#39;, () =&amp;gt; { console.log(&amp;#39;localhost:8090&amp;#39;); }); </description>
     </item>
     
     <item>
       <title>提取css成单独文件</title>
-      <link>https//rocketturtlewqt.github.io/webpack/%E6%8F%90%E5%8F%96css%E6%88%90%E5%8D%95%E7%8B%AC%E6%96%87%E4%BB%B6/</link>
+      <link>https://rocketturtlewqt.github.io/webpack/%E6%8F%90%E5%8F%96css%E6%88%90%E5%8D%95%E7%8B%AC%E6%96%87%E4%BB%B6/</link>
       <pubDate>Thu, 27 May 2021 14:33:26 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/webpack/%E6%8F%90%E5%8F%96css%E6%88%90%E5%8D%95%E7%8B%AC%E6%96%87%E4%BB%B6/</guid>
+      <guid>https://rocketturtlewqt.github.io/webpack/%E6%8F%90%E5%8F%96css%E6%88%90%E5%8D%95%E7%8B%AC%E6%96%87%E4%BB%B6/</guid>
       <description> 下载插件mini-css-extract-plugin  npm i mini-css-extract-plugin -D const path = require(&amp;#39;path&amp;#39;); const MiniCssExtractPlugin = require(&amp;#39;mini-css-extract-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;build.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, module: { rules: [ { test: /\.css$/, use: [ MiniCssExtractPlugin.loader, &amp;#39;css-loader&amp;#39; ] } ] }, plugins: [ new MiniCssExtractPlugin({ filename: &amp;#39;css/build.css&amp;#39; }) ], mode: &amp;#39;development&amp;#39; } </description>
     </item>
     
     <item>
       <title>工厂模式</title>
-      <link>https//rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</link>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Thu, 27 May 2021 11:57:58 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</guid>
       <description>简单工厂模式 let Basketball = function () { this.intro = &amp;#39;篮球&amp;#39;; } Basketball.prototype = { getMember: function () { console.log(&amp;#39;每个队伍需要5名队员&amp;#39;); } } let Football = function () { this.intro = &amp;#39;足球&amp;#39;; } Basketball.prototype = { getMember: function () { console.log(&amp;#39;每个队伍需要11名队员&amp;#39;); } } function sportsFactory(name) { switch (name) { case: &amp;#39;basketball&amp;#39; return new Basketball(); case: &amp;#39;football&amp;#39; return new Football(); } } function createBook(name, time, type) { let o = new Object(); o.name = name; o.</description>
     </item>
     
     <item>
       <title>继承</title>
-      <link>https//rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%A7%E6%89%BF/</link>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%A7%E6%89%BF/</link>
       <pubDate>Tue, 25 May 2021 14:17:24 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%A7%E6%89%BF/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%A7%E6%89%BF/</guid>
       <description>原型链 类式继承   类式继承是通过子类的原型prototype对父类实例化来实现的
   具体步骤
    创建子类和父类 子类的prototype属性指向父类的实例对象   缺点   如果父类中定义了实例属性，并且是个引用类型，那么子类的实例对其进行更改会相互影响（）看以下案例 子类无法向父类传递参数  function Animal() { this.color = [&amp;#39;red&amp;#39;, &amp;#39;green&amp;#39;] } function Person() { } Person.prototype = new Animal(); const per1 = new Person();//[ &amp;#39;red&amp;#39;, &amp;#39;green&amp;#39; ]  const per2 = new Person();//[ &amp;#39;red&amp;#39;, &amp;#39;green&amp;#39;, &amp;#39;blue&amp;#39; ]  console.log(per2.color); per1.color.push(&amp;#39;blue&amp;#39;); console.log(per2.color); 构造函数继承   构造函数继承是通过在子类的构造函数作用环境中执行一次父类的构造函数来实现的
@@ -186,146 +189,146 @@ cors  当请求的协议、域名或者端口号与当前浏览器客户端地�
     
     <item>
       <title>基本开发环境配置</title>
-      <link>https//rocketturtlewqt.github.io/webpack/%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+      <link>https://rocketturtlewqt.github.io/webpack/%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Tue, 25 May 2021 12:43:10 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/webpack/%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://rocketturtlewqt.github.io/webpack/%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
       <description>使用webpack搭建基本开发环境 webpack.config.json const path = require(&amp;#39;path&amp;#39;); const HtmlWebpackPlugin = require(&amp;#39;html-webpack-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/js/index.js&amp;#39;, output: { filename: &amp;#39;build.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, module: { rules: [ { test: /\.css$/, use: [&amp;#39;style-loader&amp;#39;, &amp;#39;css-loader&amp;#39;] }, { test: /\.less$/, use: [&amp;#39;style-loader&amp;#39;, &amp;#39;css-loader&amp;#39;, &amp;#39;less-loader&amp;#39;] }, { test: /\.(png|jpg|gif)$/, loader: &amp;#39;url-loader&amp;#39;, options: { limit: 8 * 1024, esModule: false, name: &amp;#39;[hash:10].[ext]&amp;#39;, outputPath: &amp;#39;images&amp;#39; } }, { test: /\.html$/, loader: &amp;#39;html-loader&amp;#39; }, { exclude: /\.(css|less|png|jpg|gif|html|js)$/, loader: &amp;#39;file-loader&amp;#39;, options: { name: &amp;#39;[hash:10].</description>
     </item>
     
     <item>
       <title>Dev Server</title>
-      <link>https//rocketturtlewqt.github.io/webpack/dev-server/</link>
+      <link>https://rocketturtlewqt.github.io/webpack/dev-server/</link>
       <pubDate>Mon, 24 May 2021 20:13:43 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/webpack/dev-server/</guid>
+      <guid>https://rocketturtlewqt.github.io/webpack/dev-server/</guid>
       <description>webpack-dev-server  安装webpack-dev-server  npm i webpackdev-server@3.11.0 -D webpack-dev-server的特点  自动编译 内存操作（没有实际输出的bundle） 热更新  通用配置选项  contentBase：html文件所在的目录 compress：是否启动gzip压缩 port：指定项目所在端口  const path = require(&amp;#39;path&amp;#39;); const HtmlWebpackPlugin = require(&amp;#39;html-webpack-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;build.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, plugins: [ new HtmlWebpackPlugin({ template: &amp;#39;./src/index.html&amp;#39; }) ], mode: &amp;#39;development&amp;#39;, /** * 1.自动编译 * 2.内存操作 * 3.热更新 */ devServer: { //指定项目html文件所在的根目录  contentBase: path.resolve(__dirname, &amp;#39;dist&amp;#39;), //指定项目端口号  port: 3000, //启动gzip压缩  compress: true } } </description>
     </item>
     
     <item>
       <title>Vuex原理及源码</title>
-      <link>https//rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/vuex/vuex%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/vuex/vuex%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81/</link>
       <pubDate>Sun, 23 May 2021 12:34:12 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/vuex/vuex%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/vuex/vuex%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81/</guid>
       <description>vuex原理  state：单一状态树，类似于全局的一个容器 getter：相对于state的计算属性 mutations：定义同步方法 actions：定义异步逻辑，请求过后再去调用mutations里的方法  ModuleCollection.js export default class ModuleCollection{ constructor(options) { this.register([], options); } register(path, rootModule) { let rawModule = { _raw: rootModule, _children: {}, state: rootModule.state } if (!this.root) { this.root = rawModule; } else { let parentNode = path.slice(0,-1).reduce((root, current) =&amp;gt; { return root._children[current]; }, this.root); parentNode._children[path[path.length - 1]] = rawModule; } if (rootModule.modules) { Object.keys(rootModule.modules).forEach(moduleName =&amp;gt; { this.register(path.concat(moduleName), rootModule.modules[moduleName]); }); } } } export default new Vuex.</description>
     </item>
     
     <item>
       <title>打包图片资源</title>
-      <link>https//rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90/</link>
+      <link>https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90/</link>
       <pubDate>Sat, 22 May 2021 12:42:52 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90/</guid>
+      <guid>https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90/</guid>
       <description>使用webpack打包图片资源  url-loader@1.3.2 file-loader html-loader 注意url-loader和html-loader模块冲突问题，需要配置url-loader选项，将esModule属性关闭  const path = require(&amp;#39;path&amp;#39;); const HtmlWebpackPlugin = require(&amp;#39;html-webpack-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;bundle.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, module: { rules: [ { test: /\.css$/, use: [ &amp;#39;style-loader&amp;#39;, &amp;#39;css-loader&amp;#39; ] }, { test: /\.(gif|png|jpg)$/, loader: &amp;#39;url-loader&amp;#39;, options: { //当图片体积小于8k的时候，采用base64编码  limit: 8 * 1024, //url-loader默认采用es6模块解析，和html-loader的commanjs冲突，需要关闭  esModule: false, name: &amp;#39;[hash:10].[ext]&amp;#39; } }, { test: /\.html$/, loader: &amp;#39;html-loader&amp;#39; } ] }, plugins: [ new HtmlWebpackPlugin({ template: &amp;#39;.</description>
     </item>
     
     <item>
       <title>打包html资源</title>
-      <link>https//rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85html%E8%B5%84%E6%BA%90/</link>
+      <link>https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85html%E8%B5%84%E6%BA%90/</link>
       <pubDate>Sat, 22 May 2021 12:06:33 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85html%E8%B5%84%E6%BA%90/</guid>
+      <guid>https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85html%E8%B5%84%E6%BA%90/</guid>
       <description>使用webpack打包html资源  安装插件 html-webpack-plugin ，注意版本号为 4.5.0 其中指定模板为自己的html模版位置  const path = require(&amp;#39;path&amp;#39;); const HtmlWebpackPlugin = require(&amp;#39;html-webpack-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;bundle.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, plugins: [ new HtmlWebpackPlugin({ //指定自己的html模板位置  template: &amp;#39;./src/index.html&amp;#39; }) ], mode: &amp;#39;development&amp;#39; } </description>
     </item>
     
     <item>
       <title>打包css资源</title>
-      <link>https//rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85css%E8%B5%84%E6%BA%90/</link>
+      <link>https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85css%E8%B5%84%E6%BA%90/</link>
       <pubDate>Fri, 21 May 2021 21:15:49 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85css%E8%B5%84%E6%BA%90/</guid>
+      <guid>https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85css%E8%B5%84%E6%BA%90/</guid>
       <description>使用webpack打包css样式资源 webpack.config.js  entry：打包的入口文件 output：整合后资源的输出位置 module：webpack本身只认识js文件，其它文件一般需要一些loader进行处理，才能被webpack认识 plugin：插件，一般用于上线时的优化，例如，压缩 mode：打包环境（开发环境、生产环境）  const path = require(&amp;#39;path&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;bundle.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, module: { rules: [ { test: /\.css$/, use: [ &amp;#39;style-loader&amp;#39;, &amp;#39;css-loader&amp;#39; ] } ] }, mode:&amp;#39;development&amp;#39; }  css-loader：将css文件转换成commonjs模块塞入js中 style-loader：在head标签中创建style标签，将css代码插入到style标签里  </description>
     </item>
     
     <item>
       <title>响应式原理</title>
-      <link>https//rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</link>
       <pubDate>Thu, 20 May 2021 12:09:55 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</guid>
       <description>响应式原理 核心函数说明 observe  在对象上添加__ob__属性，这个属性指向一个Observer侦测对象  Observer  侦测类，作用是将对象的每一层转为响应式 dep类的实例在此类中实例化，用来收集依赖Watcher的实例  defineReactive  两个核心getter和setter 在getter中收集依赖（主要看Dep.target是否不为空，不为空就说明目前有依赖，多个依赖竞争Dep.target） 在setter中触发依赖  parsePath  将字符串路径，例如&amp;rsquo;a.b.c.d&#39;，转为能够在原对象上读取此路径对应的值的函数  array  改写Array.prototype上的七个函数，让它们变为响应式   在arrayMethods定义七个一模一样的api，并重写覆盖Array.prototype上的这七个api。再将数组实例的原型设置为arrayMethods  github源码地址 手写数据响应式原理</description>
     </item>
     
     <item>
       <title>Diff算法</title>
-      <link>https//rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E8%99%9A%E6%8B%9Fdom%E5%92%8Cdiff%E7%AE%97%E6%B3%95/diff%E7%AE%97%E6%B3%95/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E8%99%9A%E6%8B%9Fdom%E5%92%8Cdiff%E7%AE%97%E6%B3%95/diff%E7%AE%97%E6%B3%95/</link>
       <pubDate>Fri, 14 May 2021 12:09:25 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E8%99%9A%E6%8B%9Fdom%E5%92%8Cdiff%E7%AE%97%E6%B3%95/diff%E7%AE%97%E6%B3%95/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E8%99%9A%E6%8B%9Fdom%E5%92%8Cdiff%E7%AE%97%E6%B3%95/diff%E7%AE%97%E6%B3%95/</guid>
       <description>diff算法  diff算法是发生在虚拟dom上的 新虚拟dom和旧虚拟dom进行diff（精细化比较），算出如何最小量更新，最后反映到真实的dom上  import { init, classModule, propsModule, styleModule, eventListenersModule, h, } from &amp;#34;snabbdom&amp;#34;; const patch = init([ // Init patch function with chosen modules classModule, // makes it easy to toggle classes propsModule, // for setting properties on DOM elements styleModule, // handles styling on elements with support for animations eventListenersModule, // attaches event listeners ]); const container = document.getElementById(&amp;#34;container&amp;#34;); const myVnode = h(&amp;#39;ul&amp;#39;, { class: { &amp;#39;box&amp;#39;: true } }, [ h(&amp;#39;li&amp;#39;, &amp;#39;技&amp;#39;), h(&amp;#39;li&amp;#39;, &amp;#39;术&amp;#39;), h(&amp;#39;li&amp;#39;, &amp;#39;博&amp;#39;), h(&amp;#39;li&amp;#39;, &amp;#39;客&amp;#39;), h(&amp;#39;a&amp;#39;, { props: { href: &amp;#39;https://rocketturtlewqt.</description>
     </item>
     
     <item>
       <title>常用快捷键</title>
-      <link>https//rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <link>https://rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
       <pubDate>Sat, 08 May 2021 19:39:35 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <guid>https://rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
       <description>强制退出  调出强制退出窗口 command+option+esc 在程序有响应的情况下，退出该程序command+option+shift+esc  </description>
     </item>
     
     <item>
       <title>正则表达式</title>
-      <link>https//rocketturtlewqt.github.io/javascript/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <link>https://rocketturtlewqt.github.io/javascript/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
       <pubDate>Fri, 07 May 2021 12:04:26 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/javascript/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <guid>https://rocketturtlewqt.github.io/javascript/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
       <description>体验正则表达式的魅力 let str = &amp;#39;asjdhka17821sdjashdkj23324&amp;#39;; //将数字拼接成字符串返回 //不用正则表达式 function parseNumber(s) { let result = &amp;#39;&amp;#39;; for (let i = 0; i &amp;lt; s.length; i++){ if (!Number.isNaN(parseInt(s[i]))) result += s[i]; } return result; } //用正则表达式 console.log(str.match(/\d/g).join(&amp;#39;&amp;#39;)); 字面量创建正则表达式 const str = &amp;#39;Abctds&amp;#39;; // RegExp参数 // - 正则表达式 // - 模式匹配 i表示忽略大小写，g表示全局匹配 let exp = new RegExp(&amp;#39;a&amp;#39;, &amp;#39;i&amp;#39;); console.log(exp.test(str)); //使用字面量创建正则表达式 console.log(/a/i.test(str)); 使用对象创建正则表达式 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.</description>
     </item>
     
     <item>
       <title>简单实现mustache模板引擎</title>
-      <link>https//rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</link>
       <pubDate>Tue, 04 May 2021 19:53:06 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</guid>
       <description>观察tockens的正确姿势 let rel = nestTokens(squashTokens(tokens)); console.log(rel);  找到parseTemplate这样一个实现函数，在源代码的第248行左右进行如下更改  复杂情况  运行以下代码，观察控制台输出   tokens就是嵌套数组，每一个数组单元就是一个token，它描述了截取到的内容  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;使用mustache&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34;&amp;gt; import mustache from &amp;#39;./lib/mustache.js&amp;#39;; const mustacheStr=` &amp;lt;ul&amp;gt; {{#arr}} &amp;lt;li&amp;gt; &amp;lt;h3&amp;gt;{{name}}的信息&amp;lt;/h3&amp;gt; &amp;lt;span&amp;gt;名字：{{name}}&amp;lt;/span&amp;gt; &amp;lt;span&amp;gt;年龄：{{age}}&amp;lt;/span&amp;gt; &amp;lt;span&amp;gt;性别：{{sex}}&amp;lt;/span&amp;gt; &amp;lt;/li&amp;gt; {{/arr}} &amp;lt;/ul&amp;gt; `; const data={ arr:[ { name:&amp;#39;小红&amp;#39;, age:21, sex:&amp;#39;男&amp;#39; }, { name:&amp;#39;小李&amp;#39;, age:22, sex:&amp;#39;男&amp;#39; }, { name:&amp;#39;小王&amp;#39;, age:21, sex:&amp;#39;男&amp;#39; } ] }; const domStr=mustache.</description>
     </item>
     
     <item>
       <title>Mustache模板引擎基本基用</title>
-      <link>https//rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/</link>
       <pubDate>Tue, 04 May 2021 19:23:16 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/</guid>
       <description>不循环数组 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;不循环数组&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34;&amp;gt; import mustache from &amp;#39;./lib/mustache.js&amp;#39;; const mustacheStr=` &amp;lt;h2&amp;gt;我买了一部{{phone}}手机，好{{mood}}呀！&amp;lt;/h2&amp;gt; `; const data={ phone:&amp;#39;苹果&amp;#39;, mood:&amp;#39;开心&amp;#39; }; const domStr=mustache.render(mustacheStr,data); document.getElementById(&amp;#39;container&amp;#39;).innerHTML=domStr; &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 显示隐藏 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;显示或隐藏&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34;&amp;gt; import mustache from &amp;#39;./lib/mustache.js&amp;#39;; const mustacheStr=` {{#flag}} &amp;lt;span&amp;gt;hello&amp;lt;/span&amp;gt; {{/flag}} `; const data={ flag:false }; const domStr=mustache.</description>
     </item>
     
     <item>
       <title>Git基本原理</title>
-      <link>https//rocketturtlewqt.github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</link>
+      <link>https://rocketturtlewqt.github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</link>
       <pubDate>Mon, 03 May 2021 19:26:34 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</guid>
+      <guid>https://rocketturtlewqt.github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</guid>
       <description>哈希算法 各类哈希算法的共同点
  输入数据被加密后的hash值长度是相同的。 输入数据相同，加密形成的hash值相同。 输入数据不同，加密形成的hash值不同。 hash算法不可逆。 Git底层采用的是SHA-1算法保证数据完整性。 hash算法被用来检验文件完整性。   Git版本数据管理机制  构建树对象，维护父子节点关系 提交对象与树对象是一一映射关系，多个提交对象形成一个链条，也就是历史版本  Git分支管理  初始化本地仓库，并创建分支hot_fix  切换当前指针指向hot_fix指针，修改内容并提交  切换当前指针指向master，修改内容并提交  之后合并时若产生冲突问题，可以参考合并分支时的冲突问题  </description>
     </item>
     
     <item>
       <title>本地库和远程库</title>
-      <link>https//rocketturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</link>
+      <link>https://rocketturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</link>
       <pubDate>Mon, 03 May 2021 12:12:17 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</guid>
+      <guid>https://rocketturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</guid>
       <description>代码托管中心  代码托管中心用来维护远程库 局域网下搭建的服务器：GitLab 外网下的服务器：GitHub，码云  本地库基本操作 本地库初始化 git init  可以通过 ls -lA 查看.git/下的子目录与文件  设置签名  用来区分不同开发人员身份，与登陆到远程库的用户名和密码作用不同 项目级别：git config user.name=tom_xm user.email=1600639146@qq.com，查看使用cat .git 系统级别：git config &amp;ndash;global user.name=tom_global user.email=1600639146@qq.com，查看步骤：定位到用户夹 cd ~ =&amp;gt; 查看.gitconfig文件 cat .gitconfig  基本操作  查看  //查看当前的状态，没有被追踪的文件颜色为红色，即表明目前在工作区中；在暂存区中的文件显示为绿色 git status 添加  //将文件添加到暂存区中，此时使用git status文件显示为绿色 git add &amp;lt;filename&amp;gt; 撤销  //撤销add操作，将文件状态回退到工作区 git rm --cache &amp;lt;filename&amp;gt; 提交  //将文件从暂存区提交到本地仓库 git commit -m &amp;#34;&amp;lt;提交说明&amp;gt;&amp;#34; &amp;lt;filename&amp;gt; 查看历史记录   git log：详细查看提交的历史记录  git log &amp;ndash;pretty=oneline：简略查看提交的历史记录，hash值很长，每条记录一行  git log &amp;ndash;oneline：与git log &amp;ndash;pretty=oneline的区别是其hash值比较短  git reflog：最理想的方式，HEAD@{&amp;lt;回退步数&amp;gt;}   回退/前进历史版本   基于索引值操作  git reset --hard &amp;lt;局部索引值&amp;gt;  使用^符号：只能后退  //几个^表示后退几步 git reset --hard HEAD^  使用~符号：只能后退  //n表示后退几步 git reset --hard HEAD~n   hard、mixed、soft对比  //本地库向前移动了一个单位，此时 git status 颜色为绿色，看起来是暂存区向后移动了一个单位 git reset --soft &amp;lt;局部索引值&amp;gt; //本地库以及暂存区向前移动了一个单位，此时 git status 颜色为红色，看起来是工作区向后移动了一个单位 git reset --mixed &amp;lt;局部索引值&amp;gt; //本地库、暂存区以及工作区向前移动了一个单位 git reset --hard &amp;lt;局部索引值&amp;gt; //使用mixed或soft移动后回到当前指针指向的位置 git reset --hard HEAD   永久删除文件并回退  rm &amp;lt;filename&amp;gt; 使用上述命令删除后，也可以通过 git reset &amp;ndash;hard &amp;lt;局部索引值&amp;gt; 找回</description>
     </item>
     
     <item>
       <title>Git结构</title>
-      <link>https//rocketturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</link>
+      <link>https://rocketturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</link>
       <pubDate>Mon, 03 May 2021 11:48:18 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</guid>
+      <guid>https://rocketturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</guid>
       <description>git本地结构  工作区 =&amp;gt; 暂存区=&amp;gt; 本地库 工作区：编写代码 暂存区：临时存储 本地库：历史版本 工作区 =&amp;gt; 暂存区：git add，暂存区 =&amp;gt; 本地库：git commit  </description>
     </item>
     
     <item>
       <title>hugo搭建静态技术博客教程</title>
-      <link>https//rocketturtlewqt.github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</link>
+      <link>https://rocketturtlewqt.github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</link>
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</guid>
+      <guid>https://rocketturtlewqt.github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</guid>
       <description>注意  创建的github其命名要符合规范：&amp;lt;用户名&amp;gt;.github.io &amp;lt;用户名&amp;gt;.github.io  使用hugo生成项目基本结构 hugo new site &amp;lt;项目根目录名称&amp;gt; 进入当前项目根目录 cd &amp;lt;项目根目录名称&amp;gt;/ 选定主题，并拉取到本地 git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c 尝试本地运行项目 hugo serve -t m10c --buildDrafts 运行以上命令后，打开地址看看是否成功
 同步到远程 hugo --theme=m10c --baseUrl=&amp;#34;https://rocketturtlewqt.github.io&amp;#34; --buildDrafts 运行以上命令，项目根目录会出现public子目录
 进入到public子目录 cd public/ 执行git操作 从工作区添加所有文件到暂存区 git add . 从暂存区提交到本地仓库 git commit -m &amp;#34;附加内容&amp;#34; 添加远程仓库地址 git remote origin &amp;lt;仓库地址&amp;gt; 往远程仓库推送 git push -u origin master </description>
@@ -333,29 +336,29 @@ cors  当请求的协议、域名或者端口号与当前浏览器客户端地�
     
     <item>
       <title>MacOs X vscode使用教程/常用快捷键</title>
-      <link>https//rocketturtlewqt.github.io/vscode/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <link>https://rocketturtlewqt.github.io/vscode/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/vscode/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <guid>https://rocketturtlewqt.github.io/vscode/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
       <description>å 知乎大佬总结vscode
 配置vscode语言  使用快捷键shift+command+p打开搜索框 键入configure language设置语言为zh-cn 设置完后ide会提示需要重启，重启后就会更换语言了  setting.json常用配置选项`  editor.fontSize：用来设置字体大小，默认为12 files.autoSave：设置文件保存相关内容，一般建议设为onFocuschange，即切换文件时自动保存  工作区快速打开文件/文件夹  command + o  开启终端  ~ + controlå  </description>
     </item>
     
     <item>
       <title>MacOs X常用终端命令</title>
-      <link>https//rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>https://rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>目录操作    命令 描述 示例     mkdir 创建目录a mkdir a   rmdir 删除空目录b rmdir b   mvdir 移动目录a到目录b mkdir a b   cd 进入到当前目录下的public子目录(返回上级目录则是cd ..) cd public/   pwd 显示当前目录的绝对路径(/Users/wangqintao/Desktop) pwd   ls 显示当前目录的内容 ls    文件操作    命令 描述 示例     cat 终端下打开当前目录下的demo.txt文件 cat demo.txt   more 分页显示文件内容(按空格键切换到下一页，按ctrl+B返回上一页) more demo.txt   cp 复制文件(复制a.</description>
     </item>
     
     <item>
       <title>mustache模板引擎是什么</title>
-      <link>https//rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E6%98%AF%E4%BB%80%E4%B9%88/</link>
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
-      <guid>https//rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
       <description>mustache模板引擎  它是将数据转换为视图的一种解决方案
 &amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt; &amp;lt;div v-for=&amp;quot;item in per&amp;quot; :key=&amp;quot;item.id&amp;quot;&amp;gt; &amp;lt;span&amp;gt;名字：{{item.name}}&amp;lt;/span&amp;gt; &amp;lt;span&amp;gt;年龄：{{item.age}}&amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;  vue源码中v-for指令底层使用的其实就是mustache模板引擎，以上代码通过v-for指令映射成以下视图
 常见的将数据转换为视图的方案
