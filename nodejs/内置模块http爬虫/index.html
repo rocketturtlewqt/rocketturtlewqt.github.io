@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>内置模块http爬虫 // RocketTurtle</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.82.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="RocketTurtle" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://rocketturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="内置模块http爬虫"/>
+<meta name="twitter:description" content="cheerio  第三方模块，将爬取的数据进行解析 实现了核心jquery的子集 中文文档：cheerio爬虫  npm i cheerio -S const http = require(&#39;http&#39;); const https = require(&#39;https&#39;); const cheerio = require(&#39;cheerio&#39;); function handleRel(data) { const $ = cheerio.load(data); $(&#39;.button-wrapper&#39;).each((index, value) =&gt; { console.log(index); }); } const server = http.createServer((req, res) =&gt; { let data = &#39;&#39;; https.get(&#39;https://www.meizu.com&#39;, (rel) =&gt; { rel.on(&#39;data&#39;, (chunk) =&gt; { data &#43;= chunk; }); rel.on(&#39;end&#39;, () =&gt; { handleRel(data); }); }); }); server.listen(3000, () =&gt; { console."/>
+
+    <meta property="og:title" content="内置模块http爬虫" />
+<meta property="og:description" content="cheerio  第三方模块，将爬取的数据进行解析 实现了核心jquery的子集 中文文档：cheerio爬虫  npm i cheerio -S const http = require(&#39;http&#39;); const https = require(&#39;https&#39;); const cheerio = require(&#39;cheerio&#39;); function handleRel(data) { const $ = cheerio.load(data); $(&#39;.button-wrapper&#39;).each((index, value) =&gt; { console.log(index); }); } const server = http.createServer((req, res) =&gt; { let data = &#39;&#39;; https.get(&#39;https://www.meizu.com&#39;, (rel) =&gt; { rel.on(&#39;data&#39;, (chunk) =&gt; { data &#43;= chunk; }); rel.on(&#39;end&#39;, () =&gt; { handleRel(data); }); }); }); server.listen(3000, () =&gt; { console." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97http%E7%88%AC%E8%99%AB/" /><meta property="article:section" content="nodejs" />
+<meta property="article:published_time" content="2021-06-10T20:32:33&#43;08:00" />
+<meta property="article:modified_time" content="2021-06-10T20:32:33&#43;08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://rocketturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
+      <h1>RocketTurtle</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/">blog</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/macosx/">MacOsX</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vscode/">vscode</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/git/">git</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vue%E6%BA%90%E7%A0%81/">vue源码</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/javascript/">javascript</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/webpack/">webpack</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/nodejs/">nodejs</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/chrome/">chrome</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E8%AE%A1%E7%BD%91/">计网</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/css/">css</a>
+      </nav>
+      <p>使自己变得更优秀！</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/rocketturtlewqt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">内置模块http爬虫</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jun 10, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h4 id="cheerio">cheerio</h4>
+<ul>
+<li>第三方模块，将爬取的数据进行解析</li>
+<li>实现了核心jquery的子集</li>
+<li>中文文档：<a href="https://github.com/cheeriojs/cheerio/wiki/Chinese-README">cheerio爬虫</a></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">npm i cheerio -S
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">http</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;http&#39;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">https</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;https&#39;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cheerio</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;cheerio&#39;</span>);
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">handleRel</span>(<span style="color:#a6e22e">data</span>) {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">$</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cheerio</span>.<span style="color:#a6e22e">load</span>(<span style="color:#a6e22e">data</span>);
+  <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;.button-wrapper&#39;</span>).<span style="color:#a6e22e">each</span>((<span style="color:#a6e22e">index</span>, <span style="color:#a6e22e">value</span>) =&gt; {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">index</span>);
+  });
+}
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">createServer</span>((<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+  <span style="color:#a6e22e">https</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;https://www.meizu.com&#39;</span>, (<span style="color:#a6e22e">rel</span>) =&gt; {
+    <span style="color:#a6e22e">rel</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;data&#39;</span>, (<span style="color:#a6e22e">chunk</span>) =&gt; {
+      <span style="color:#a6e22e">data</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">chunk</span>;
+    });
+
+    <span style="color:#a6e22e">rel</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;end&#39;</span>, () =&gt; {
+      <span style="color:#a6e22e">handleRel</span>(<span style="color:#a6e22e">data</span>);
+    });
+  });
+});
+
+<span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">listen</span>(<span style="color:#ae81ff">3000</span>, () =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;http://localhost:3000&#39;</span>);
+});
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

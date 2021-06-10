@@ -6,7 +6,16 @@
     <description>Recent content in Nodejs on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Jun 2021 19:43:53 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Jun 2021 20:32:33 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>内置模块http爬虫</title>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97http%E7%88%AC%E8%99%AB/</link>
+      <pubDate>Thu, 10 Jun 2021 20:32:33 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97http%E7%88%AC%E8%99%AB/</guid>
+      <description>cheerio  第三方模块，将爬取的数据进行解析 实现了核心jquery的子集 中文文档：cheerio爬虫  npm i cheerio -S const http = require(&amp;#39;http&amp;#39;); const https = require(&amp;#39;https&amp;#39;); const cheerio = require(&amp;#39;cheerio&amp;#39;); function handleRel(data) { const $ = cheerio.load(data); $(&amp;#39;.button-wrapper&amp;#39;).each((index, value) =&amp;gt; { console.log(index); }); } const server = http.createServer((req, res) =&amp;gt; { let data = &amp;#39;&amp;#39;; https.get(&amp;#39;https://www.meizu.com&amp;#39;, (rel) =&amp;gt; { rel.on(&amp;#39;data&amp;#39;, (chunk) =&amp;gt; { data += chunk; }); rel.on(&amp;#39;end&amp;#39;, () =&amp;gt; { handleRel(data); }); }); }); server.listen(3000, () =&amp;gt; { console.</description>
+    </item>
+    
     <item>
       <title>内置模块 Http Proxy Middleware</title>
       <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http-proxy-middleware/</link>
