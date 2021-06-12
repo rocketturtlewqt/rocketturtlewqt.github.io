@@ -210,6 +210,63 @@
 <p>order属性对开启绝对定位的弹性元素没有影响，对同辈元素的绘制顺序有影响。</p>
 </li>
 </ul>
+<h4 id="flex作用于弹性元素">flex（作用于弹性元素）</h4>
+<ul>
+<li>由flex-grow（增长因子）、flex-shrink（缩减因子）、flex-basis（基准值）构成，flex-basis设置的基准值比width和height的优先级更高，即时它们加了权重!important</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;Document&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;<span style="color:#f92672">style</span>&gt;
+        <span style="color:#f92672">*</span>{
+            <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+            <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>;
+        }
+
+        #container{
+            <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>;
+            <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">red</span>;
+            <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+        }
+
+        #container<span style="color:#f92672">&gt;</span><span style="color:#f92672">div</span>{
+            <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span> <span style="color:#75715e">!important</span>;
+            <span style="color:#66d9ef">flex</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>;
+            <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">blue</span>;
+        }
+    &lt;/<span style="color:#f92672">style</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+        &lt;<span style="color:#f92672">div</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><ul>
+<li>以上代码内部idv宽度为200px</li>
+</ul>
+<hr>
+<h4 id="flex-grow增长因子">flex-grow（增长因子）</h4>
+<ul>
+<li>一般不建议单独设置flex-grow，因为单独设置会使得flex-basis默认设为auto。那么通过增长因子按剩余空间分配。如果为flex-basis设置为0%那么它会覆盖元素长度，通过增长因子分配全部主轴空间。</li>
+</ul>
+<h4 id="flex-shrink缩减因子">flex-shrink（缩减因子）</h4>
+<ul>
+<li>
+<p>一般不建议单独设置flex-shrink</p>
+</li>
+<li>
+<p>对于弹性元素中存在不允许缩小的媒体元素，比如图片。那么对其尽量缩小。余下的空间交给其余的缩减因子缩小。</p>
+</li>
+<li>
+<p>缩减长度计算方式</p>
+</li>
+</ul>
+<p><img src="https://rocketturtlewqt.github.io/2021061235649aft.png" alt="缩减长度计算方式"></p>
 
     </div>
     <div class="post-footer">
