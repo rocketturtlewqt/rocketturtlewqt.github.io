@@ -6,7 +6,25 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Jun 2021 20:32:33 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Jun 2021 14:00:49 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>内置模块 Fs</title>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-fs/</link>
+      <pubDate>Tue, 15 Jun 2021 14:00:49 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-fs/</guid>
+      <description>内置模块fs  mkdir：创建文件夹 rmdir：删除文件夹 rename：重命名文件夹或文件 readir：读取文件夹下的内容  const fs = require(&amp;#39;fs&amp;#39;); //创建文件夹 // fs.mkdir(&amp;#39;logs&amp;#39;, err =&amp;gt; { // if (err) throw err; // console.log(&amp;#39;文件夹创建成功&amp;#39;); // });  //删除文件夹 // fs.rmdir(&amp;#39;logs&amp;#39;, () =&amp;gt; { // console.log(&amp;#39;文件夹删除成功&amp;#39;); // });  //重命名文件夹或文件 // fs.rename(&amp;#39;./logs&amp;#39;, &amp;#39;./log&amp;#39;, () =&amp;gt; { // console.log(&amp;#39;文件夹重命名成功&amp;#39;); // });  //读取文件夹下的内容 fs.readdir(&amp;#39;./log&amp;#39;, (err, result) =&amp;gt; { console.log(result); }); </description>
+    </item>
+    
+    <item>
+      <title>内置模块 Events</title>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-events/</link>
+      <pubDate>Tue, 15 Jun 2021 13:44:45 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-events/</guid>
+      <description>内置模块events  内置模块events能够用哦来自定义事件 实例的on方法用来定义可以被触发多次的事件 实例的once方法用来定义只能被触发一次的事件 实例的emit方法用来触发事件  const EventEmitter = require(&amp;#39;events&amp;#39;); class MyEventEmitter extends EventEmitter{ } const event = new MyEventEmitter(); event.on(&amp;#39;play&amp;#39;, value =&amp;gt; { console.log(value); }); event.once(&amp;#39;hello&amp;#39;, value =&amp;gt; { console.log(value); }); event.emit(&amp;#39;play&amp;#39;, &amp;#39;one&amp;#39;);//one event.emit(&amp;#39;play&amp;#39;, &amp;#39;one&amp;#39;);//one  event.emit(&amp;#39;hello&amp;#39;, &amp;#39;two&amp;#39;);//two event.emit(&amp;#39;hello&amp;#39;, &amp;#39;two&amp;#39;);// </description>
+    </item>
+    
     <item>
       <title>内置模块http爬虫</title>
       <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97http%E7%88%AC%E8%99%AB/</link>
