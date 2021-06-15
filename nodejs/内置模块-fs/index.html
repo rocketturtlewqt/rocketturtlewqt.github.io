@@ -13,10 +13,10 @@
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="内置模块 Fs"/>
-<meta name="twitter:description" content="内置模块fs  mkdir：创建文件夹 rmdir：删除文件夹 rename：重命名文件夹或文件 readir：读取文件夹下的内容  const fs = require(&#39;fs&#39;); //创建文件夹 // fs.mkdir(&#39;logs&#39;, err =&gt; { // if (err) throw err; // console.log(&#39;文件夹创建成功&#39;); // });  //删除文件夹 // fs.rmdir(&#39;logs&#39;, () =&gt; { // console.log(&#39;文件夹删除成功&#39;); // });  //重命名文件夹或文件 // fs.rename(&#39;./logs&#39;, &#39;./log&#39;, () =&gt; { // console.log(&#39;文件夹重命名成功&#39;); // });  //读取文件夹下的内容 fs.readdir(&#39;./log&#39;, (err, result) =&gt; { console.log(result); }); "/>
+<meta name="twitter:description" content="内置模块fs  mkdir：创建文件夹 rmdir：删除文件夹 rename：重命名文件夹或文件 readir：读取文件夹下的内容 writeFile：写文件 appendFile：在文件中追加内容 unlink：删除文件 readFile：异步读取文件 readFileSync：同步读取文件 watch：监听目录或文件变化 文档  const fs = require(&#39;fs&#39;); // import { readFile } from &#39;fs/promises&#39;;  //创建文件夹 // fs.mkdir(&#39;logs&#39;, err =&gt; { // if (err) throw err; // console.log(&#39;文件夹创建成功&#39;); // });  //删除文件夹 // fs.rmdir(&#39;logs&#39;, () =&gt; { // console.log(&#39;文件夹删除成功&#39;); // });  //重命名文件夹或文件 // fs.rename(&#39;./logs&#39;, &#39;./log&#39;, () =&gt; { // console.log(&#39;文件夹重命名成功&#39;); // });  //读取文件夹下的内容 // fs.readdir(__dirname &#43; &#39;/log&#39;, (err, result) =&gt; { // console."/>
 
     <meta property="og:title" content="内置模块 Fs" />
-<meta property="og:description" content="内置模块fs  mkdir：创建文件夹 rmdir：删除文件夹 rename：重命名文件夹或文件 readir：读取文件夹下的内容  const fs = require(&#39;fs&#39;); //创建文件夹 // fs.mkdir(&#39;logs&#39;, err =&gt; { // if (err) throw err; // console.log(&#39;文件夹创建成功&#39;); // });  //删除文件夹 // fs.rmdir(&#39;logs&#39;, () =&gt; { // console.log(&#39;文件夹删除成功&#39;); // });  //重命名文件夹或文件 // fs.rename(&#39;./logs&#39;, &#39;./log&#39;, () =&gt; { // console.log(&#39;文件夹重命名成功&#39;); // });  //读取文件夹下的内容 fs.readdir(&#39;./log&#39;, (err, result) =&gt; { console.log(result); }); " />
+<meta property="og:description" content="内置模块fs  mkdir：创建文件夹 rmdir：删除文件夹 rename：重命名文件夹或文件 readir：读取文件夹下的内容 writeFile：写文件 appendFile：在文件中追加内容 unlink：删除文件 readFile：异步读取文件 readFileSync：同步读取文件 watch：监听目录或文件变化 文档  const fs = require(&#39;fs&#39;); // import { readFile } from &#39;fs/promises&#39;;  //创建文件夹 // fs.mkdir(&#39;logs&#39;, err =&gt; { // if (err) throw err; // console.log(&#39;文件夹创建成功&#39;); // });  //删除文件夹 // fs.rmdir(&#39;logs&#39;, () =&gt; { // console.log(&#39;文件夹删除成功&#39;); // });  //重命名文件夹或文件 // fs.rename(&#39;./logs&#39;, &#39;./log&#39;, () =&gt; { // console.log(&#39;文件夹重命名成功&#39;); // });  //读取文件夹下的内容 // fs.readdir(__dirname &#43; &#39;/log&#39;, (err, result) =&gt; { // console." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-fs/" /><meta property="article:section" content="nodejs" />
 <meta property="article:published_time" content="2021-06-15T14:00:49&#43;08:00" />
@@ -109,9 +109,16 @@
 <li>rmdir：删除文件夹</li>
 <li>rename：重命名文件夹或文件</li>
 <li>readir：读取文件夹下的内容</li>
+<li>writeFile：写文件</li>
+<li>appendFile：在文件中追加内容</li>
+<li>unlink：删除文件</li>
+<li>readFile：异步读取文件</li>
+<li>readFileSync：同步读取文件</li>
+<li>watch：监听目录或文件变化 <a href="http://nodejs.cn/api/fs.html#fs_fs_watch_filename_options_listener">文档</a></li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>);
-
+<span style="color:#75715e">// import { readFile } from &#39;fs/promises&#39;;
+</span><span style="color:#75715e"></span>
 <span style="color:#75715e">//创建文件夹
 </span><span style="color:#75715e">// fs.mkdir(&#39;logs&#39;, err =&gt; {
 </span><span style="color:#75715e">//   if (err) throw err;
@@ -129,8 +136,55 @@
 </span><span style="color:#75715e">// });
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">//读取文件夹下的内容
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readdir</span>(<span style="color:#e6db74">&#39;./log&#39;</span>, (<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">result</span>) =&gt; {
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">result</span>);
+</span><span style="color:#75715e">// fs.readdir(__dirname + &#39;/log&#39;, (err, result) =&gt; {
+</span><span style="color:#75715e">//   console.log(result);
+</span><span style="color:#75715e">// });
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 写文件
+</span><span style="color:#75715e">// fs.writeFile(&#39;./log/log1.log&#39;, &#39;hello\nworld&#39;, err =&gt; {
+</span><span style="color:#75715e">//   console.log(&#39;done&#39;);
+</span><span style="color:#75715e">// });
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//在文件中追加内容
+</span><span style="color:#75715e">// fs.appendFile(&#39;./log/log1.log&#39;, &#39;!!!&#39;, err =&gt; {
+</span><span style="color:#75715e">//   console.log(&#39;追加内容成功&#39;);
+</span><span style="color:#75715e">// });
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//删除文件
+</span><span style="color:#75715e">// fs.unlink(&#39;./log/log1.log&#39;, err =&gt; {
+</span><span style="color:#75715e">//   console.log(&#39;文件删除成功&#39;);
+</span><span style="color:#75715e">// });
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//异步读取文件1
+</span><span style="color:#75715e">// fs.readFile(&#39;./log/log1.log&#39;, &#39;utf-8&#39;, (err, content) =&gt; {
+</span><span style="color:#75715e">//   console.log(content);
+</span><span style="color:#75715e">// })
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//异步读取文件2
+</span><span style="color:#75715e">// fs.readFile(&#39;./log/log1.log&#39;, (err, content) =&gt; {
+</span><span style="color:#75715e">//   console.log(content.toString());
+</span><span style="color:#75715e">// });;
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//同步读取文件
+</span><span style="color:#75715e">// const content = fs.readFileSync(&#39;./log/log1.log&#39;);
+</span><span style="color:#75715e">// console.log(content.toString());
+</span><span style="color:#75715e">// console.log(&#39;continue...&#39;);
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//返回promise
+</span><span style="color:#75715e">// (async () =&gt; {
+</span><span style="color:#75715e">//   const content = await readFile(&#39;./log/log1.log&#39;);
+</span><span style="color:#75715e">//   console.log(content.toString());
+</span><span style="color:#75715e">// })();
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// for (let i = 0; i &lt; 10; i++){
+</span><span style="color:#75715e">//   fs.writeFile(`./log/log${i}.log`, &#39;hello world!&#39;, err =&gt; {
+</span><span style="color:#75715e">//     console.log(&#39;done&#39;);
+</span><span style="color:#75715e">//   });
+</span><span style="color:#75715e">// }
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//监听目录或文件变化
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">watch</span>(<span style="color:#a6e22e">__dirname</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/log/log1.log&#39;</span>, (<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">content</span>) =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;file has changed&#39;</span>);
 });
 </code></pre></div>
     </div>

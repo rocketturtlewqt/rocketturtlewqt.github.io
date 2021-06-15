@@ -13,7 +13,7 @@
       <pubDate>Tue, 15 Jun 2021 14:00:49 +0800</pubDate>
       
       <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-fs/</guid>
-      <description>内置模块fs  mkdir：创建文件夹 rmdir：删除文件夹 rename：重命名文件夹或文件 readir：读取文件夹下的内容  const fs = require(&amp;#39;fs&amp;#39;); //创建文件夹 // fs.mkdir(&amp;#39;logs&amp;#39;, err =&amp;gt; { // if (err) throw err; // console.log(&amp;#39;文件夹创建成功&amp;#39;); // });  //删除文件夹 // fs.rmdir(&amp;#39;logs&amp;#39;, () =&amp;gt; { // console.log(&amp;#39;文件夹删除成功&amp;#39;); // });  //重命名文件夹或文件 // fs.rename(&amp;#39;./logs&amp;#39;, &amp;#39;./log&amp;#39;, () =&amp;gt; { // console.log(&amp;#39;文件夹重命名成功&amp;#39;); // });  //读取文件夹下的内容 fs.readdir(&amp;#39;./log&amp;#39;, (err, result) =&amp;gt; { console.log(result); }); </description>
+      <description>内置模块fs  mkdir：创建文件夹 rmdir：删除文件夹 rename：重命名文件夹或文件 readir：读取文件夹下的内容 writeFile：写文件 appendFile：在文件中追加内容 unlink：删除文件 readFile：异步读取文件 readFileSync：同步读取文件 watch：监听目录或文件变化 文档  const fs = require(&amp;#39;fs&amp;#39;); // import { readFile } from &amp;#39;fs/promises&amp;#39;;  //创建文件夹 // fs.mkdir(&amp;#39;logs&amp;#39;, err =&amp;gt; { // if (err) throw err; // console.log(&amp;#39;文件夹创建成功&amp;#39;); // });  //删除文件夹 // fs.rmdir(&amp;#39;logs&amp;#39;, () =&amp;gt; { // console.log(&amp;#39;文件夹删除成功&amp;#39;); // });  //重命名文件夹或文件 // fs.rename(&amp;#39;./logs&amp;#39;, &amp;#39;./log&amp;#39;, () =&amp;gt; { // console.log(&amp;#39;文件夹重命名成功&amp;#39;); // });  //读取文件夹下的内容 // fs.readdir(__dirname + &amp;#39;/log&amp;#39;, (err, result) =&amp;gt; { // console.</description>
     </item>
     
     <item>
