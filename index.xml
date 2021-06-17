@@ -6,7 +6,25 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Jun 2021 20:26:43 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Jun 2021 20:43:33 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>内置模块 Crypto</title>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-crypto/</link>
+      <pubDate>Thu, 17 Jun 2021 20:43:33 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-crypto/</guid>
+      <description>内置模块crypto  crypto模块主要用途是加密  const crypto = require(&amp;#39;crypto&amp;#39;); const password = &amp;#39;abc123 7sjds&amp;#39;; /** * createHash：指定加密算法 * update：指定加密的对象 * digest：指定加密使用几进制 */ const hash = crypto.createHash(&amp;#39;sha1&amp;#39;).update(password).digest(&amp;#39;hex&amp;#39;); console.log(hash);//e4aeea77b4c55d3cdbfbf3577b6cc9384a96bd29 </description>
+    </item>
+    
+    <item>
+      <title>内置模块 Readline</title>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-readline/</link>
+      <pubDate>Thu, 17 Jun 2021 20:33:59 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-readline/</guid>
+      <description>内置模块readline  逐行读取  const readline = require(&amp;#39;readline&amp;#39;); const rl = readline.createInterface({ input: process.stdin, output: process.stdout }); rl.question(&amp;#39;请输入你的名字：&amp;#39;, answer =&amp;gt; { console.log(`你好！${answer}`); rl.close(); }); </description>
+    </item>
+    
     <item>
       <title>内置模块 zlib</title>
       <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-zlib/</link>
