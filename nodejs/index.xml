@@ -6,7 +6,16 @@
     <description>Recent content in Nodejs on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Jun 2021 14:00:49 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Jun 2021 20:26:43 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>内置模块 zlib</title>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-zlib/</link>
+      <pubDate>Thu, 17 Jun 2021 20:26:43 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-zlib/</guid>
+      <description>内置模块zlib  此模块主要是用来将指定文件的内容压缩，生成一个新的gzip文件  const fs = require(&amp;#39;fs&amp;#39;); const { dirname } = require(&amp;#39;path&amp;#39;); const zlib = require(&amp;#39;zlib&amp;#39;); const gzip = zlib.createGzip(); const readStream = fs.createReadStream(`${__dirname}/log1.txt`); const writeStram = fs.createWriteStream(`${__dirname}/log2.gzip`); readStream .pipe(gzip) .pipe(writeStram); </description>
+    </item>
+    
     <item>
       <title>内置模块 Fs</title>
       <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-fs/</link>
