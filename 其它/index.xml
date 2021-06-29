@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>其它s on RocketTurtle</title>
+    <link>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/</link>
+    <description>Recent content in 其它s on RocketTurtle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Jun 2021 19:20:54 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>本地安装jenkins</title>
+      <link>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85jenkins/</link>
+      <pubDate>Tue, 29 Jun 2021 19:20:54 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85jenkins/</guid>
+      <description> 下载jenkins镜像  docker pull jenkins/jenkins:lts 根据镜像创建jenkins容器实例并运行  docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts-jdk11  如上终端，会有一串hash值，将它复制粘贴到管理员密码框即可  安装推荐的插件  创建管理员用户  </description>
+    </item>
+    
+  </channel>
+</rss>
