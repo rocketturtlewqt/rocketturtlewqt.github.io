@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Serverless基本概念 // RocketTurtle</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.82.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="RocketTurtle" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://rocketturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Serverless基本概念"/>
+<meta name="twitter:description" content="云函数计算基金会对serverless的定义   Serverless架构应该是采用Fass（函数即服务）和Sass（后端即服务）服务来解决问题的一种设计。
+  狭义上的Serverless就是Fass&#43;Sass的组合。
+  Fass：Function as a Service。本质上就是一个函数运行平台，集成了触发器。它会负责服务器资源的调度和运维。
+  Bass：Backend as a Service。可以理解为黑盒，Sererless将后端架构整个承担了下来，以接口的方式提供服务。
+  Serverless优点   事件驱动：云函数也不是一直运行的，而是通过一定的条件触发。是通过一些类似消息事件、定时器等等触发的。产生事件的源头叫做触发器。
+  按量付费：Serverless是按照fass调用次数，以及消耗的cpu、内存等资源按量计费的。Fass也会根据并发量生成多个函数实例。
+  弹性伸缩：Bass也会根据并发亮自动调配服务器资源。实现了不同访问量的实时弹性伸缩。
+  Fass和Bass的架构是分离计算和存储的架构。计算由Fass负责，存储由Bass负责。Fass和Bass也被分开部署和收费。应用的存储已经不是应用的一部分，而是演变为了独立的云服务器。
+  Serverless缺点  严重依赖云平台厂商：例如A厂商认为数据可以采用sql形式存储，B厂商则认为还可以采用json格式形式存储。那么它们所对应的Fass接口是不同的。同一套代码是不可能在不同的Serverless产品上运行的。 开发调试困难，Serverless依赖云服务，本地难以搭建环境。 底层硬件不确定。bass是一个黑盒，有些代码必须使用特定的cpu和gpu运行的。  "/>
+
+    <meta property="og:title" content="Serverless基本概念" />
+<meta property="og:description" content="云函数计算基金会对serverless的定义   Serverless架构应该是采用Fass（函数即服务）和Sass（后端即服务）服务来解决问题的一种设计。
+  狭义上的Serverless就是Fass&#43;Sass的组合。
+  Fass：Function as a Service。本质上就是一个函数运行平台，集成了触发器。它会负责服务器资源的调度和运维。
+  Bass：Backend as a Service。可以理解为黑盒，Sererless将后端架构整个承担了下来，以接口的方式提供服务。
+  Serverless优点   事件驱动：云函数也不是一直运行的，而是通过一定的条件触发。是通过一些类似消息事件、定时器等等触发的。产生事件的源头叫做触发器。
+  按量付费：Serverless是按照fass调用次数，以及消耗的cpu、内存等资源按量计费的。Fass也会根据并发量生成多个函数实例。
+  弹性伸缩：Bass也会根据并发亮自动调配服务器资源。实现了不同访问量的实时弹性伸缩。
+  Fass和Bass的架构是分离计算和存储的架构。计算由Fass负责，存储由Bass负责。Fass和Bass也被分开部署和收费。应用的存储已经不是应用的一部分，而是演变为了独立的云服务器。
+  Serverless缺点  严重依赖云平台厂商：例如A厂商认为数据可以采用sql形式存储，B厂商则认为还可以采用json格式形式存储。那么它们所对应的Fass接口是不同的。同一套代码是不可能在不同的Serverless产品上运行的。 开发调试困难，Serverless依赖云服务，本地难以搭建环境。 底层硬件不确定。bass是一个黑盒，有些代码必须使用特定的cpu和gpu运行的。  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rocketturtlewqt.github.io/serverless/serverless%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" /><meta property="article:section" content="serverless" />
+<meta property="article:published_time" content="2021-07-03T16:15:30&#43;08:00" />
+<meta property="article:modified_time" content="2021-07-03T16:15:30&#43;08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://rocketturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
+      <h1>RocketTurtle</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/">blog</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/macosx/">MacOsX</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vscode/">vscode</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/git/">git</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vue%E6%BA%90%E7%A0%81/">vue源码</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/javascript/">javascript</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/webpack/">webpack</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/nodejs/">nodejs</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/chrome/">chrome</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E8%AE%A1%E7%BD%91/">计网</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/css/">css</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E5%85%B6%E5%AE%83/">其它</a>
+      </nav>
+      <p>使自己变得更优秀！</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/rocketturtlewqt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Serverless基本概念</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 3, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="云函数计算基金会对serverless的定义">云函数计算基金会对serverless的定义</h2>
+<ul>
+<li>
+<p>Serverless架构应该是采用Fass（函数即服务）和Sass（后端即服务）服务来解决问题的一种设计。</p>
+</li>
+<li>
+<p>狭义上的Serverless就是Fass+Sass的组合。</p>
+</li>
+<li>
+<p>Fass：Function as a Service。本质上就是一个函数运行平台，集成了触发器。它会负责服务器资源的调度和运维。</p>
+</li>
+<li>
+<p>Bass：Backend as a Service。可以理解为黑盒，Sererless将后端架构整个承担了下来，以接口的方式提供服务。</p>
+</li>
+</ul>
+<h3 id="serverless优点">Serverless优点</h3>
+<p><img src="https://rocketturtlewqt.github.io/2021070342336aft.png" alt="Serverless"></p>
+<ul>
+<li>
+<p>事件驱动：云函数也不是一直运行的，而是通过一定的条件触发。是通过一些类似消息事件、定时器等等触发的。产生事件的源头叫做触发器。</p>
+</li>
+<li>
+<p>按量付费：Serverless是按照fass调用次数，以及消耗的cpu、内存等资源按量计费的。Fass也会根据并发量生成多个函数实例。</p>
+</li>
+<li>
+<p>弹性伸缩：Bass也会根据并发亮自动调配服务器资源。实现了不同访问量的实时弹性伸缩。</p>
+</li>
+<li>
+<p>Fass和Bass的架构是分离计算和存储的架构。计算由Fass负责，存储由Bass负责。Fass和Bass也被分开部署和收费。应用的存储已经不是应用的一部分，而是演变为了独立的云服务器。</p>
+</li>
+</ul>
+<h3 id="serverless缺点">Serverless缺点</h3>
+<ul>
+<li>严重依赖云平台厂商：例如A厂商认为数据可以采用sql形式存储，B厂商则认为还可以采用json格式形式存储。那么它们所对应的Fass接口是不同的。同一套代码是不可能在不同的Serverless产品上运行的。</li>
+<li>开发调试困难，Serverless依赖云服务，本地难以搭建环境。</li>
+<li>底层硬件不确定。bass是一个黑盒，有些代码必须使用特定的cpu和gpu运行的。</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
