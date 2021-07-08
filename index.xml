@@ -6,7 +6,24 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Jul 2021 16:15:30 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jul 2021 22:22:22 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker常用命令</title>
+      <link>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Thu, 08 Jul 2021 22:22:22 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>什么是docker   docker镜像：一个只读的模板。镜像可以创建docker容器。一个镜像可以创建很多容器。镜像可以类比为类，容器就是一个一个的实例。
+  docker容器：独立运行一个或一组应用。容器使用镜像创建的运行实例。可以把容器看作是一个简易版的linux环境和运行在其中的应用程序。
+  docker仓库：集中存放镜像的场所。
+  镜像概念:
+    应用的一整套环境，不仅仅是代码，包括运行环境、配置环境、依赖包、内核等等。
+  Docker：打破了运行环境和配置问题的容器，方便做持续集成整体发布的容器虚拟化技术。
+  容器内的应用进程运行于宿主的内核，其本身没有内核，而且也没有进行硬件虚拟。
+  每个容器之间相互隔离。
+  docker run hello world干了什么？ docker常用命令 docker version：docker版本 docker info：docker信息描述 docker --help：帮助命令 镜像命令 docker images：列出本地主机上的镜像 docker images -a：列出本地主机上的所有镜像 docker images -q：显示当前镜像的id docker images -qa：显示本地主机上的所有镜像的id docker images --degests：显示镜像的摘要信息 docker images --degests --no-trunk：显示镜像的完整信息 docker search &amp;lt;镜像名字&amp;gt;：从docker hub上搜取镜像 docker search -s &amp;lt;star数&amp;gt; &amp;lt;镜像名字&amp;gt;：列出在docker hub上star数不小于指定的镜像 docker search --no-trunk &amp;lt;镜像名字&amp;gt;：显示完整的镜像描述 docker search --automated：只列出automated build类型的镜像 docker pull &amp;lt;镜像名字&amp;gt;等价于docker pull &amp;lt;镜像名字&amp;gt;:lastest：拉取镜像 docker rmi &amp;lt;镜像名字&amp;gt;等价于docker rmi &amp;lt;镜像名字&amp;gt;:latest：删除镜像 docker rmi -f &amp;lt;镜像名字&amp;gt;：强制删除镜像 docker rmi -f &amp;lt;镜像名字1&amp;gt; &amp;lt;镜像名字2&amp;gt;.</description>
+    </item>
+    
     <item>
       <title>Serverless基本概念</title>
       <link>https://rocketturtlewqt.github.io/serverless/serverless%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
