@@ -6,7 +6,16 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Jul 2021 22:22:22 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Jul 2021 11:19:59 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mustache模板引擎具体实现</title>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Sat, 10 Jul 2021 11:19:59 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0/</guid>
+      <description>scanner类  scanner本质上就是一个扫描器，可以看作一个指针不断的移动扫描，对扫描的内容进行分流判断。为将模板转换为tokens提供了方法支持。  export default class Scanner{ constructor(string) { this.string = string; this.pos = 0; this.tail = string; } eos() { return this.tail === &amp;#39;&amp;#39;? false : true; } scan(reg) { let rel = this.tail.match(reg); if (!rel) { return &amp;#39;&amp;#39;; } this.tail = this.tail.substring(rel[0].length); this.pos += rel[0].length; return rel[0]; } scanUntil(reg) { let rel = this.tail.match(reg), qz; if (!rel) { qz = this.tail; this.tail = &amp;#39;&amp;#39;; } else if (rel.</description>
+    </item>
+    
     <item>
       <title>Docker常用命令</title>
       <link>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
