@@ -6,7 +6,20 @@
     <description>Recent content in Csses on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Jun 2021 14:16:07 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Jul 2021 16:20:39 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>变形</title>
+      <link>https://rocketturtlewqt.github.io/css/%E5%8F%98%E5%BD%A2/</link>
+      <pubDate>Sat, 10 Jul 2021 16:20:39 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/css/%E5%8F%98%E5%BD%A2/</guid>
+      <description>范围框  受css控制的元素，其范围框是边框框，即元素边框的边界。在计算范围框时是不算上轮廓和外边距的。  注意   对于所有变形函数，元素都有自己的堆叠上下文。例如，经过缩放/放大的元素，其所占的空间大小是不变的，这一点对所有变形函数都成立。
+  变形函数的书写顺序可能会影响最后的显示结果，变形函数实施顺序，左-&amp;gt;右
+  //书写1 img{ tranform: translate(200px) rotate(45deg); } //书写2 img{ transform: translate(200px) rotate(45deg); }  旋转图像的过程中，主轴和垂轴也会变    当有多个变形函数时，每一个函数都要正确设置，否则整个变形都将失效
+  变形函数不能应用在基元行内框上，例如，span元素、a元素
+  平移函数  translateX()：延x轴平移 translateY()：延y轴平移 translate()：同时设置x轴和y轴的平移距离 translateZ()：设置z轴方向的平移，不能取值百分数。任何有关z轴的百分数都不能取值百分数 取值百分数相对于自身的宽度计算  </description>
+    </item>
+    
     <item>
       <title>Flex弹性布局</title>
       <link>https://rocketturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</link>
