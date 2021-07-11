@@ -21,7 +21,7 @@
   按量付费：Serverless是按照fass调用次数，以及消耗的cpu、内存等资源按量计费的。Fass也会根据并发量生成多个函数实例。
   弹性伸缩：Bass也会根据并发亮自动调配服务器资源。实现了不同访问量的实时弹性伸缩。
   Fass和Bass的架构是分离计算和存储的架构。计算由Fass负责，存储由Bass负责。Fass和Bass也被分开部署和收费。应用的存储已经不是应用的一部分，而是演变为了独立的云服务器。
-  Serverless缺点  严重依赖云平台厂商：例如A厂商认为数据可以采用sql形式存储，B厂商则认为还可以采用json格式形式存储。那么它们所对应的Fass接口是不同的。同一套代码是不可能在不同的Serverless产品上运行的。 开发调试困难，Serverless依赖云服务，本地难以搭建环境。 底层硬件不确定。bass是一个黑盒，有些代码必须使用特定的cpu和gpu运行的。  "/>
+  Serverless缺点  严重依赖云平台厂商：例如A厂商认为数据可以采用sql形式存储，B厂商则认为还可以采用json格式形式存储。那么它们所对应的Fass接口是不同的。同一套代码是不可能在不同的Serverless产品上运行的。 开发调试困难，Serverless依赖云服务，本地难以搭建环境。 底层硬件不确定。bass是一个黑盒，有些代码必须使用特定的cpu和gpu运行的。  使用serverless-http包装express和云函数 "/>
 
     <meta property="og:title" content="Serverless基本概念" />
 <meta property="og:description" content="云函数计算基金会对serverless的定义   Serverless架构应该是采用Fass（函数即服务）和Sass（后端即服务）服务来解决问题的一种设计。
@@ -32,7 +32,7 @@
   按量付费：Serverless是按照fass调用次数，以及消耗的cpu、内存等资源按量计费的。Fass也会根据并发量生成多个函数实例。
   弹性伸缩：Bass也会根据并发亮自动调配服务器资源。实现了不同访问量的实时弹性伸缩。
   Fass和Bass的架构是分离计算和存储的架构。计算由Fass负责，存储由Bass负责。Fass和Bass也被分开部署和收费。应用的存储已经不是应用的一部分，而是演变为了独立的云服务器。
-  Serverless缺点  严重依赖云平台厂商：例如A厂商认为数据可以采用sql形式存储，B厂商则认为还可以采用json格式形式存储。那么它们所对应的Fass接口是不同的。同一套代码是不可能在不同的Serverless产品上运行的。 开发调试困难，Serverless依赖云服务，本地难以搭建环境。 底层硬件不确定。bass是一个黑盒，有些代码必须使用特定的cpu和gpu运行的。  " />
+  Serverless缺点  严重依赖云平台厂商：例如A厂商认为数据可以采用sql形式存储，B厂商则认为还可以采用json格式形式存储。那么它们所对应的Fass接口是不同的。同一套代码是不可能在不同的Serverless产品上运行的。 开发调试困难，Serverless依赖云服务，本地难以搭建环境。 底层硬件不确定。bass是一个黑盒，有些代码必须使用特定的cpu和gpu运行的。  使用serverless-http包装express和云函数 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rocketturtlewqt.github.io/serverless/serverless%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" /><meta property="article:section" content="serverless" />
 <meta property="article:published_time" content="2021-07-03T16:15:30&#43;08:00" />
@@ -162,6 +162,8 @@
 <li>开发调试困难，Serverless依赖云服务，本地难以搭建环境。</li>
 <li>底层硬件不确定。bass是一个黑盒，有些代码必须使用特定的cpu和gpu运行的。</li>
 </ul>
+<h3 id="使用serverless-http包装express和云函数">使用serverless-http包装express和云函数</h3>
+<p><img src="https://rocketturtlewqt.github.io/2021071080632aft.png" alt="使用serverless-http包装express和云函数"></p>
 
     </div>
     <div class="post-footer">

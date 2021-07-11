@@ -17,14 +17,14 @@
   变形函数的书写顺序可能会影响最后的显示结果，变形函数实施顺序，左-&gt;右
   //书写1 img{ tranform: translate(200px) rotate(45deg); } //书写2 img{ transform: translate(200px) rotate(45deg); }  旋转图像的过程中，主轴和垂轴也会变    当有多个变形函数时，每一个函数都要正确设置，否则整个变形都将失效
   变形函数不能应用在基元行内框上，例如，span元素、a元素
-  平移函数  translateX()：延x轴平移 translateY()：延y轴平移 translate()：同时设置x轴和y轴的平移距离 translateZ()：设置z轴方向的平移，不能取值百分数。任何有关z轴的百分数都不能取值百分数 取值百分数相对于自身的宽度计算  "/>
+  平移函数  translateX()：延x轴平移 translateY()：延y轴平移 translate()：同时设置x轴和y轴的平移距离 translateZ()：设置z轴方向的平移，不能取值百分数。任何有关z轴的百分数都不能取值百分数 translate3d()：能同时设定x轴、y轴、z轴的平移距离 取值百分数相对于自身的宽度计算  缩放函数  scaleX()：缩放/放大宽度 scaleY()：缩放/放大高度 scale()：缩放/放大宽度和高度 scaleZ()：在z轴上缩放/放大 scale3d()：在三个方向上缩放/放大  旋转函数  rotate()：效果等同于rotateZ() rotateX()：绕x轴旋转 rotateY()：绕y轴旋转 rotateZ()：绕z轴旋转 rotate3d()：前三个值指定x轴、y轴和z轴的分量。第四个值为角度值。 判断旋转的方向：站在向量的终点，顺时针旋转角度  倾斜函数  skewX() skewY() skew()  "/>
 
     <meta property="og:title" content="变形" />
 <meta property="og:description" content="范围框  受css控制的元素，其范围框是边框框，即元素边框的边界。在计算范围框时是不算上轮廓和外边距的。  注意   对于所有变形函数，元素都有自己的堆叠上下文。例如，经过缩放/放大的元素，其所占的空间大小是不变的，这一点对所有变形函数都成立。
   变形函数的书写顺序可能会影响最后的显示结果，变形函数实施顺序，左-&gt;右
   //书写1 img{ tranform: translate(200px) rotate(45deg); } //书写2 img{ transform: translate(200px) rotate(45deg); }  旋转图像的过程中，主轴和垂轴也会变    当有多个变形函数时，每一个函数都要正确设置，否则整个变形都将失效
   变形函数不能应用在基元行内框上，例如，span元素、a元素
-  平移函数  translateX()：延x轴平移 translateY()：延y轴平移 translate()：同时设置x轴和y轴的平移距离 translateZ()：设置z轴方向的平移，不能取值百分数。任何有关z轴的百分数都不能取值百分数 取值百分数相对于自身的宽度计算  " />
+  平移函数  translateX()：延x轴平移 translateY()：延y轴平移 translate()：同时设置x轴和y轴的平移距离 translateZ()：设置z轴方向的平移，不能取值百分数。任何有关z轴的百分数都不能取值百分数 translate3d()：能同时设定x轴、y轴、z轴的平移距离 取值百分数相对于自身的宽度计算  缩放函数  scaleX()：缩放/放大宽度 scaleY()：缩放/放大高度 scale()：缩放/放大宽度和高度 scaleZ()：在z轴上缩放/放大 scale3d()：在三个方向上缩放/放大  旋转函数  rotate()：效果等同于rotateZ() rotateX()：绕x轴旋转 rotateY()：绕y轴旋转 rotateZ()：绕z轴旋转 rotate3d()：前三个值指定x轴、y轴和z轴的分量。第四个值为角度值。 判断旋转的方向：站在向量的终点，顺时针旋转角度  倾斜函数  skewX() skewY() skew()  " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rocketturtlewqt.github.io/css/%E5%8F%98%E5%BD%A2/" /><meta property="article:section" content="css" />
 <meta property="article:published_time" content="2021-07-10T16:20:39&#43;08:00" />
@@ -156,7 +156,31 @@
 <li>translateY()：延y轴平移</li>
 <li>translate()：同时设置x轴和y轴的平移距离</li>
 <li>translateZ()：设置z轴方向的平移，不能取值百分数。任何有关z轴的百分数都不能取值百分数</li>
+<li>translate3d()：能同时设定x轴、y轴、z轴的平移距离</li>
 <li>取值百分数相对于自身的宽度计算</li>
+</ul>
+<h3 id="缩放函数">缩放函数</h3>
+<ul>
+<li>scaleX()：缩放/放大宽度</li>
+<li>scaleY()：缩放/放大高度</li>
+<li>scale()：缩放/放大宽度和高度</li>
+<li>scaleZ()：在z轴上缩放/放大</li>
+<li>scale3d()：在三个方向上缩放/放大</li>
+</ul>
+<h3 id="旋转函数">旋转函数</h3>
+<ul>
+<li>rotate()：效果等同于rotateZ()</li>
+<li>rotateX()：绕x轴旋转</li>
+<li>rotateY()：绕y轴旋转</li>
+<li>rotateZ()：绕z轴旋转</li>
+<li>rotate3d()：前三个值指定x轴、y轴和z轴的分量。第四个值为角度值。</li>
+<li>判断旋转的方向：站在向量的终点，顺时针旋转角度</li>
+</ul>
+<h3 id="倾斜函数">倾斜函数</h3>
+<ul>
+<li>skewX()</li>
+<li>skewY()</li>
+<li>skew()</li>
 </ul>
 
     </div>
