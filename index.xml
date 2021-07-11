@@ -6,7 +6,19 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jul 2021 16:20:39 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Jul 2021 15:24:13 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>初见less</title>
+      <link>https://rocketturtlewqt.github.io/less/%E5%88%9D%E8%A7%81less/</link>
+      <pubDate>Sun, 11 Jul 2021 15:24:13 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/less/%E5%88%9D%E8%A7%81less/</guid>
+      <description>什么是less   less是一个css预编译器，意思是它可以扩展css语言，添加功能如允许变量（variables）、混合（mixins）、函数（functions）和许多其它的技术，让你的css更具维护性，主题性和扩展性。
+  less官网 英文官网 中文官网
+  less写法
+  传统css写法 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;less写法&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; .container&amp;gt;ul{ list-style: none; } .container&amp;gt;ul&amp;gt;li&amp;gt;a{ text-decoration: none; color: gray; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div class=&amp;#34;container&amp;#34;&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;这是一个超链接&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;这是一个超链接&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;这是一个超链接&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;这是一个超链接&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;这是一个超链接&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; less写法 .container&amp;gt;ul&amp;gt;li&amp;gt;a{ text-decoration: none; color: gray; ul{ list-style: none; } }  less注释   //：这类注释不会被编译到css文件中去 /**/：这类注释会被编译到css文件中去  </description>
+    </item>
+    
     <item>
       <title>变形</title>
       <link>https://rocketturtlewqt.github.io/css/%E5%8F%98%E5%BD%A2/</link>
