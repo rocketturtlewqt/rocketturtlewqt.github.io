@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>React简介 // RocketTurtle</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.82.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="RocketTurtle" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://rocketturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="React简介"/>
+<meta name="twitter:description" content="react是什么  react是构建用户界面的javascript库，是将数据渲染为html页面的开源javascript库  react谁开发的  是由Facebook开发，且开源  为什么要学react  原生javascript操作dom繁琐，且效率低。   dom-api操作ui  document.getElementById(&#39;app&#39;); docuemnt.querySelectot(&#39;#app&#39;); 使用javascript操作dom，浏览器会进行大量的重绘重排 原生javascript没有组件化编码方案，代码复用率低  react的优点  采用组件化模式、声明式编码，提高开发效率与组件服用率 在React Native中可以使用React语法进行移动端开发 使用虚拟DOM&#43;优秀的diffing算法，尽量减少与真实DOM的交互   001和002的虚拟dom在内存中，当有003出现时，001和002会复用。  "/>
+
+    <meta property="og:title" content="React简介" />
+<meta property="og:description" content="react是什么  react是构建用户界面的javascript库，是将数据渲染为html页面的开源javascript库  react谁开发的  是由Facebook开发，且开源  为什么要学react  原生javascript操作dom繁琐，且效率低。   dom-api操作ui  document.getElementById(&#39;app&#39;); docuemnt.querySelectot(&#39;#app&#39;); 使用javascript操作dom，浏览器会进行大量的重绘重排 原生javascript没有组件化编码方案，代码复用率低  react的优点  采用组件化模式、声明式编码，提高开发效率与组件服用率 在React Native中可以使用React语法进行移动端开发 使用虚拟DOM&#43;优秀的diffing算法，尽量减少与真实DOM的交互   001和002的虚拟dom在内存中，当有003出现时，001和002会复用。  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rocketturtlewqt.github.io/react/react%E7%AE%80%E4%BB%8B/" /><meta property="article:section" content="react" />
+<meta property="article:published_time" content="2021-07-11T18:25:24&#43;08:00" />
+<meta property="article:modified_time" content="2021-07-11T18:25:24&#43;08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://rocketturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
+      <h1>RocketTurtle</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/">blog</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/macosx/">MacOsX</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vscode/">vscode</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/git/">git</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vue%E6%BA%90%E7%A0%81/">vue源码</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/javascript/">javascript</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/webpack/">webpack</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/nodejs/">nodejs</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/chrome/">chrome</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E8%AE%A1%E7%BD%91/">计网</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/css/">css</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/serverless/">serverless</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/less/">less</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E5%85%B6%E5%AE%83/">其它</a>
+      </nav>
+      <p>使自己变得更优秀！</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/rocketturtlewqt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">React简介</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 11, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h3 id="react是什么">react是什么</h3>
+<ul>
+<li>react是构建用户界面的javascript库，是将数据渲染为html页面的开源javascript库</li>
+</ul>
+<h3 id="react谁开发的">react谁开发的</h3>
+<ul>
+<li>是由Facebook开发，且开源</li>
+</ul>
+<h3 id="为什么要学react">为什么要学react</h3>
+<ol>
+<li>原生javascript操作dom繁琐，且效率低。</li>
+</ol>
+<ul>
+<li>dom-api操作ui</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;app&#39;</span>);
+<span style="color:#a6e22e">docuemnt</span>.<span style="color:#a6e22e">querySelectot</span>(<span style="color:#e6db74">&#39;#app&#39;</span>);
+</code></pre></div><ol start="2">
+<li>使用javascript操作dom，浏览器会进行大量的重绘重排</li>
+<li>原生javascript没有组件化编码方案，代码复用率低</li>
+</ol>
+<h3 id="react的优点">react的优点</h3>
+<ol>
+<li>采用组件化模式、声明式编码，提高开发效率与组件服用率</li>
+<li>在React Native中可以使用React语法进行移动端开发</li>
+<li>使用虚拟DOM+优秀的diffing算法，尽量减少与真实DOM的交互</li>
+</ol>
+<p><img src="https://rocketturtlewqt.github.io/2021071164904aft.png" alt="虚拟dom"></p>
+<ul>
+<li>001和002的虚拟dom在内存中，当有003出现时，001和002会复用。</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

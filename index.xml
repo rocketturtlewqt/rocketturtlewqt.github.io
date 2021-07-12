@@ -6,7 +6,45 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Jul 2021 15:24:13 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Jul 2021 21:38:21 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>变量</title>
+      <link>https://rocketturtlewqt.github.io/less/%E5%8F%98%E9%87%8F/</link>
+      <pubDate>Mon, 12 Jul 2021 21:38:21 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/less/%E5%8F%98%E9%87%8F/</guid>
+      <description>变量的定义 变量名的定义方式@ @green:green; #container{ background-color: @green; ul{ list-style: none; } } 变量在选择器和属性名上的应用 @footer:footer; @width:width; .@{footer}{ @{width}:150px; } 变量在url上的应用 @imgurl:&amp;quot;https://www.baidu.com/img/&amp;quot;; .header{ background: url(&amp;quot;@{imgurl}bdlogo.png&amp;quot;) no-repeat; } 延迟加载  变量是延迟加载的，在使用之前不一定要预先声明  定义多个相同名称的变量  在定义一个变量两次时，只会使用最后定义的变量，less会从当前作用于向上搜索  less变量用法</description>
+    </item>
+    
+    <item>
+      <title>Hello_react案例</title>
+      <link>https://rocketturtlewqt.github.io/react/hello_react%E6%A1%88%E4%BE%8B/</link>
+      <pubDate>Sun, 11 Jul 2021 18:58:06 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/react/hello_react%E6%A1%88%E4%BE%8B/</guid>
+      <description>babel的作用  ES6 ==&amp;gt; ES5 jsx ==&amp;gt; js  </description>
+    </item>
+    
+    <item>
+      <title>React简介</title>
+      <link>https://rocketturtlewqt.github.io/react/react%E7%AE%80%E4%BB%8B/</link>
+      <pubDate>Sun, 11 Jul 2021 18:25:24 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/react/react%E7%AE%80%E4%BB%8B/</guid>
+      <description>react是什么  react是构建用户界面的javascript库，是将数据渲染为html页面的开源javascript库  react谁开发的  是由Facebook开发，且开源  为什么要学react  原生javascript操作dom繁琐，且效率低。   dom-api操作ui  document.getElementById(&amp;#39;app&amp;#39;); docuemnt.querySelectot(&amp;#39;#app&amp;#39;); 使用javascript操作dom，浏览器会进行大量的重绘重排 原生javascript没有组件化编码方案，代码复用率低  react的优点  采用组件化模式、声明式编码，提高开发效率与组件服用率 在React Native中可以使用React语法进行移动端开发 使用虚拟DOM+优秀的diffing算法，尽量减少与真实DOM的交互   001和002的虚拟dom在内存中，当有003出现时，001和002会复用。  </description>
+    </item>
+    
+    <item>
+      <title>正确使用less</title>
+      <link>https://rocketturtlewqt.github.io/less/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8less/</link>
+      <pubDate>Sun, 11 Jul 2021 16:02:23 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/less/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8less/</guid>
+      <description>正确使用less  less只有被编译后，才能被浏览器识别使用  方案一   less编译工具：koala，国人开发的全平台less编译工具，http://koala-app.com
+  客户端调试方式
+   首先使用Link标签引入.less文件，在上将rel标签设置为&amp;quot;stylesheet/less&amp;quot; 再者引入less.js文件，一定要放置在less样式文件之后  方案二  使用webpack搭建less开发环境  使用webpack搭建less开发环境</description>
+    </item>
+    
     <item>
       <title>初见less</title>
       <link>https://rocketturtlewqt.github.io/less/%E5%88%9D%E8%A7%81less/</link>
