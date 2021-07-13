@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>混合 // RocketTurtle</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.82.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="RocketTurtle" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://rocketturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="混合"/>
+<meta name="twitter:description" content="什么是混合  混合就是将一系列属性从一个规则集引入到另一个规则集的方式  普通混合 .font_family { font-family: &#39;Gill Sans&#39;, &#39;Gill Sans MT&#39;, Calibri, &#39;Trebuchet MS&#39;, sans-serif; } h1 { font-size: 28px; font-family: &#39;Gill Sans&#39;, &#39;Gill Sans MT&#39;, Calibri, &#39;Trebuchet MS&#39;, sans-serif; } h2 { font-size: 24px; font-family: &#39;Gill Sans&#39;, &#39;Gill Sans MT&#39;, Calibri, &#39;Trebuchet MS&#39;, sans-serif; }  编译输出后的结果  .font_family { font-family: &#39;Gill Sans&#39;, &#39;Gill Sans MT&#39;, Calibri, &#39;Trebuchet MS&#39;, sans-serif; } h1 { font-size: 28px; font-family: &#39;Gill Sans&#39;, &#39;Gill Sans MT&#39;, Calibri, &#39;Trebuchet MS&#39;, sans-serif; } h2 { font-size: 24px; font-family: &#39;Gill Sans&#39;, &#39;Gill Sans MT&#39;, Calibri, &#39;Trebuchet MS&#39;, sans-serif; } 不带输出的混合   如果逆向创建一个混合集，但是却不想让它输出到你的样式中"/>
+
+    <meta property="og:title" content="混合" />
+<meta property="og:description" content="什么是混合  混合就是将一系列属性从一个规则集引入到另一个规则集的方式  普通混合 .font_family { font-family: &#39;Gill Sans&#39;, &#39;Gill Sans MT&#39;, Calibri, &#39;Trebuchet MS&#39;, sans-serif; } h1 { font-size: 28px; font-family: &#39;Gill Sans&#39;, &#39;Gill Sans MT&#39;, Calibri, &#39;Trebuchet MS&#39;, sans-serif; } h2 { font-size: 24px; font-family: &#39;Gill Sans&#39;, &#39;Gill Sans MT&#39;, Calibri, &#39;Trebuchet MS&#39;, sans-serif; }  编译输出后的结果  .font_family { font-family: &#39;Gill Sans&#39;, &#39;Gill Sans MT&#39;, Calibri, &#39;Trebuchet MS&#39;, sans-serif; } h1 { font-size: 28px; font-family: &#39;Gill Sans&#39;, &#39;Gill Sans MT&#39;, Calibri, &#39;Trebuchet MS&#39;, sans-serif; } h2 { font-size: 24px; font-family: &#39;Gill Sans&#39;, &#39;Gill Sans MT&#39;, Calibri, &#39;Trebuchet MS&#39;, sans-serif; } 不带输出的混合   如果逆向创建一个混合集，但是却不想让它输出到你的样式中" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rocketturtlewqt.github.io/less/%E6%B7%B7%E5%90%88/" /><meta property="article:section" content="less" />
+<meta property="article:published_time" content="2021-07-13T22:00:39&#43;08:00" />
+<meta property="article:modified_time" content="2021-07-13T22:00:39&#43;08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://rocketturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
+      <h1>RocketTurtle</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/">blog</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/macosx/">MacOsX</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vscode/">vscode</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/git/">git</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vue%E6%BA%90%E7%A0%81/">vue源码</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/javascript/">javascript</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/webpack/">webpack</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/nodejs/">nodejs</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/chrome/">chrome</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E8%AE%A1%E7%BD%91/">计网</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/css/">css</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/serverless/">serverless</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/less/">less</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E5%85%B6%E5%AE%83/">其它</a>
+      </nav>
+      <p>使自己变得更优秀！</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/rocketturtlewqt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">混合</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 13, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h3 id="什么是混合">什么是混合</h3>
+<ul>
+<li>混合就是将一系列属性从一个规则集引入到另一个规则集的方式</li>
+</ul>
+<h4 id="普通混合">普通混合</h4>
+<pre><code class="language-less" data-lang="less">.font_family {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1 {
+  font-size: 28px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h2 {
+  font-size: 24px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+</code></pre><ul>
+<li>编译输出后的结果</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">font_family</span> {
+  <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;Gill Sans&#39;</span>, <span style="color:#e6db74">&#39;Gill Sans MT&#39;</span>, Calibri, <span style="color:#e6db74">&#39;Trebuchet MS&#39;</span>, <span style="color:#66d9ef">sans-serif</span>;
+}
+<span style="color:#f92672">h1</span> {
+  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">28</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;Gill Sans&#39;</span>, <span style="color:#e6db74">&#39;Gill Sans MT&#39;</span>, Calibri, <span style="color:#e6db74">&#39;Trebuchet MS&#39;</span>, <span style="color:#66d9ef">sans-serif</span>;
+}
+<span style="color:#f92672">h2</span> {
+  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">24</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;Gill Sans&#39;</span>, <span style="color:#e6db74">&#39;Gill Sans MT&#39;</span>, Calibri, <span style="color:#e6db74">&#39;Trebuchet MS&#39;</span>, <span style="color:#66d9ef">sans-serif</span>;
+}
+</code></pre></div><h4 id="不带输出的混合">不带输出的混合</h4>
+<ul>
+<li>
+<p>如果逆向创建一个混合集，但是却不想让它输出到你的样式中</p>
+</li>
+<li>
+<p>在不想输出的混合集名字后面加上一个括号，就可以实现</p>
+</li>
+</ul>
+<pre><code class="language-less" data-lang="less">.font_family(){
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1{
+  font-size: 28px;
+  .font_family;
+}
+h2{
+  font-size: 24px;
+  .font_family;
+}
+</code></pre><ul>
+<li>编译输出后的结果</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">h1</span> {
+  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">28</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;Gill Sans&#39;</span>, <span style="color:#e6db74">&#39;Gill Sans MT&#39;</span>, Calibri, <span style="color:#e6db74">&#39;Trebuchet MS&#39;</span>, <span style="color:#66d9ef">sans-serif</span>;
+}
+<span style="color:#f92672">h2</span> {
+  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">24</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;Gill Sans&#39;</span>, <span style="color:#e6db74">&#39;Gill Sans MT&#39;</span>, Calibri, <span style="color:#e6db74">&#39;Trebuchet MS&#39;</span>, <span style="color:#66d9ef">sans-serif</span>;
+}
+</code></pre></div><h4 id="带选择器的混合">带选择器的混合</h4>
+<pre><code class="language-less" data-lang="less">.border{
+  &amp;:hover{
+    border: 1px solid red;
+  }
+}
+h1{
+  font-size: 28px;
+  .border();
+}
+h2{
+  font-size: 24px;
+}
+</code></pre><ul>
+<li>编译后的结果</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">border</span>:<span style="color:#a6e22e">hover</span> {
+  <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">red</span>;
+}
+<span style="color:#f92672">h1</span> {
+  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">28</span><span style="color:#66d9ef">px</span>;
+}
+<span style="color:#f92672">h1</span>:<span style="color:#a6e22e">hover</span> {
+  <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">red</span>;
+}
+<span style="color:#f92672">h2</span> {
+  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">24</span><span style="color:#66d9ef">px</span>;
+}
+</code></pre></div><h4 id="带参数的混合">带参数的混合</h4>
+<pre><code class="language-less" data-lang="less">.border(@color){
+  border: 1px solid @color;
+}
+h1{
+  font-size: 28px;
+  &amp;:hover{
+    .border(green);
+  }
+}
+h2{
+  font-size: 24px;
+}
+</code></pre><ul>
+<li>编译后的结果</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">h1</span> {
+  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">28</span><span style="color:#66d9ef">px</span>;
+}
+<span style="color:#f92672">h1</span>:<span style="color:#a6e22e">hover</span> {
+  <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">green</span>;
+}
+<span style="color:#f92672">h2</span> {
+  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">24</span><span style="color:#66d9ef">px</span>;
+}
+</code></pre></div><h4 id="带参数并且有默认值的混合">带参数并且有默认值的混合</h4>
+<pre><code class="language-less" data-lang="less">.border(@color:green){
+  border: 1px solid @color;
+}
+h1{
+  font-size: 28px;
+  &amp;:hover{
+    .border();
+  }
+}
+h2{
+  font-size: 24px;
+}
+</code></pre><ul>
+<li>编译后</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">h1</span> {
+  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">28</span><span style="color:#66d9ef">px</span>;
+}
+<span style="color:#f92672">h1</span>:<span style="color:#a6e22e">hover</span> {
+  <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">green</span>;
+}
+<span style="color:#f92672">h2</span> {
+  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">24</span><span style="color:#66d9ef">px</span>;
+}
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
