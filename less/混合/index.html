@@ -254,6 +254,124 @@ h2{
 <span style="color:#f92672">h2</span> {
   <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">24</span><span style="color:#66d9ef">px</span>;
 }
+</code></pre></div><h4 id="带多个参数的混合">带多个参数的混合</h4>
+<ul>
+<li>一个组合可以带多个参数，参数之间可以用分号或者逗号分隔。（这里推荐使用分号分隔）</li>
+</ul>
+<pre><code class="language-less" data-lang="less">.mixins(@color;@padding:5px;@margin:5px){
+  color: @color;
+  padding: @padding;
+  margin: @margin;
+}
+
+.container{
+  .mixins(red;10px;);
+}
+</code></pre><ul>
+<li>编译后</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span> {
+  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">red</span>;
+  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
+}
+</code></pre></div><ul>
+<li>如果传参的括号里面全都是以&quot;,&ldquo;分隔，那么会依次传给各个参数</li>
+<li>如果传参的括号里面既有&rdquo;,&quot;，又有&quot;;&quot;，那么会把分号前面以逗号分隔的列表看作一个整体，传给一个参数值</li>
+</ul>
+<h4 id="定义多个具有相同名称和参数的混合">定义多个具有相同名称和参数的混合</h4>
+<pre><code class="language-less" data-lang="less">.mixin(@color){
+  color-1: @color;
+}
+.mixin(@color;@padding:2px){
+  color-2: @color;
+  padding: @padding;
+}
+.mixin(@color;@padding:2px;@margin:2px){
+  color-3: @color;
+  padding: @padding;
+  margin: @margin;
+}
+.container{
+  .mixin(red;);
+}
+</code></pre><ul>
+<li>编译后</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span> {
+  color-1: <span style="color:#66d9ef">red</span>;
+  color-2: <span style="color:#66d9ef">red</span>;
+  color-3: <span style="color:#66d9ef">red</span>;
+  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span>;
+}
+</code></pre></div><h4 id="命名参数">命名参数</h4>
+<pre><code class="language-less" data-lang="less">.mixin(@color;@padding:2px;@margin:2px){
+  color: @color;
+  padding: @padding;
+  margin: @margin;
+}
+.container{
+  .mixin(red;@margin:5px;);
+}
+</code></pre><ul>
+<li>编译后</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span> {
+  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">red</span>;
+  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
+}
+</code></pre></div><h4 id="arguments变量">@arguments变量</h4>
+<ul>
+<li>@arguments变量代表所有可变参数，参数的先后顺序就是括号中参数的先后顺序</li>
+<li>值的位置和个数也是一一对应的，只有一个值，把值赋值给第一个；有两个值，把值赋值给第二个；以此类推。</li>
+</ul>
+<pre><code class="language-less" data-lang="less">.mixins(@x:solid;@color:red;){
+  border: 2px @arguments;
+}
+.container{
+  .mixins();
+}
+</code></pre><ul>
+<li>编译后</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span> {
+  <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">red</span>;
+}
+</code></pre></div><h4 id="匹配模式">匹配模式</h4>
+<ul>
+<li>传值的时候定义一个字符，在使用的时候使用那个字符，就调用那条规则</li>
+</ul>
+<pre><code class="language-less" data-lang="less">.border(all,@border:5px){
+  border-radius: @border;
+}
+.border(t-l,@border:5px){
+  border-top-left-radius: @border;
+}
+.container{
+  .border(t-l, @border:10px)
+}
+</code></pre><ul>
+<li>编译后</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span> {
+  <span style="color:#66d9ef">border-top-left-radius</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+}
+</code></pre></div><h4 id="得到混合中变量的返回值">得到混合中变量的返回值</h4>
+<pre><code class="language-less" data-lang="less">.add(@x;@y){
+  @average: ((@x+@y)/2);
+}
+.container{
+  .add(20px;30px);
+  font-size: @average;
+}
+</code></pre><ul>
+<li>编译后</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span> {
+  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">25</span><span style="color:#66d9ef">px</span>;
+}
 </code></pre></div>
     </div>
     <div class="post-footer">
