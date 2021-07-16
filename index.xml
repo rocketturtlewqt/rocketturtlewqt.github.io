@@ -6,7 +6,27 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Jul 2021 22:00:39 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jul 2021 22:57:13 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>组件与模块</title>
+      <link>https://rocketturtlewqt.github.io/react/%E7%BB%84%E4%BB%B6%E4%B8%8E%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Wed, 14 Jul 2021 22:57:13 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/react/%E7%BB%84%E4%BB%B6%E4%B8%8E%E6%A8%A1%E5%9D%97/</guid>
+      <description>模块  向外提供特定功能的js程序就是一个模块，一般就是一个js文件 为什么要拆成模块呢：随着业务逻辑的增加，代码会越来越多并且越来越复杂 作用：复用js，简化js的编写，提高js运行效率  组件  理解：用来实现局部功能效果的代码和资源的集合（html/css/js/image等） 作用：复用编码，简化项目编码，提高运行效率  模块化  当应用的js都以模块的方式来编写的，这个应用就是一个模块化的应用  组件化  当应用是以多组件的方式实现，这个应用就是一个组件化的应用  </description>
+    </item>
+    
+    <item>
+      <title>Jsx小练习</title>
+      <link>https://rocketturtlewqt.github.io/react/jsx%E5%B0%8F%E7%BB%83%E4%B9%A0/</link>
+      <pubDate>Wed, 14 Jul 2021 22:47:07 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/react/jsx%E5%B0%8F%E7%BB%83%E4%B9%A0/</guid>
+      <description>js语句与js表达式的区别   一个表达式是一个值，可以放在任何需要这个值的地方
+  下面这些都是表达式
+   a a+b demo(x) arr.map() function test() {}   下面这些都是语句   if语句 for循环 switch case  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;script src=&amp;#34;../lib/react.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;../lib/react-dom.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;../lib/browser.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;title&amp;gt;jsx语法规则&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;text/babel&amp;#34;&amp;gt; const data=[&amp;#39;Anguler&amp;#39;,&amp;#39;React&amp;#39;,&amp;#39;Vue&amp;#39;]; //1.创建虚拟dom  const VDOM=( &amp;lt;div class=&amp;#39;container&amp;#39;&amp;gt; &amp;lt;h2&amp;gt;jsx小练习&amp;lt;/h2&amp;gt; &amp;lt;ul&amp;gt; { data.map((item,index)=&amp;gt;{ return &amp;lt;li key={index}&amp;gt;{item}&amp;lt;/li&amp;gt; }) } &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; ); //2.渲染虚拟dom  ReactDOM.render(VDOM,document.getElementById(&amp;#39;container&amp;#39;)); &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; </description>
+    </item>
+    
     <item>
       <title>混合</title>
       <link>https://rocketturtlewqt.github.io/less/%E6%B7%B7%E5%90%88/</link>
@@ -85,7 +105,7 @@
   变形函数的书写顺序可能会影响最后的显示结果，变形函数实施顺序，左-&amp;gt;右
   //书写1 img{ tranform: translate(200px) rotate(45deg); } //书写2 img{ transform: translate(200px) rotate(45deg); }  旋转图像的过程中，主轴和垂轴也会变    当有多个变形函数时，每一个函数都要正确设置，否则整个变形都将失效
   变形函数不能应用在基元行内框上，例如，span元素、a元素
-  平移函数  translateX()：延x轴平移 translateY()：延y轴平移 translate()：同时设置x轴和y轴的平移距离 translateZ()：设置z轴方向的平移，不能取值百分数。任何有关z轴的百分数都不能取值百分数 translate3d()：能同时设定x轴、y轴、z轴的平移距离 取值百分数相对于自身的宽度计算  缩放函数  scaleX()：缩放/放大宽度 scaleY()：缩放/放大高度 scale()：缩放/放大宽度和高度 scaleZ()：在z轴上缩放/放大 scale3d()：在三个方向上缩放/放大  旋转函数  rotate()：效果等同于rotateZ() rotateX()：绕x轴旋转 rotateY()：绕y轴旋转 rotateZ()：绕z轴旋转 rotate3d()：前三个值指定x轴、y轴和z轴的分量。第四个值为角度值。 判断旋转的方向：站在向量的终点，顺时针旋转角度  倾斜函数  skewX() skewY() skew()  视域函数  perspective()：参数为length，参数值必须为正数，不能为0，其它值将导致视域函数失效 当值越大，视觉越温和；当值越小，视觉越极端 若想在变形函数列表中设定视域值，要将视域函数放在最前面  参数分别为200px、800px、2000px 矩阵函数  matrix() matrix3d()  </description>
+  平移函数  translateX()：延x轴平移 translateY()：延y轴平移 translate()：同时设置x轴和y轴的平移距离 translateZ()：设置z轴方向的平移，不能取值百分数。任何有关z轴的百分数都不能取值百分数 translate3d()：能同时设定x轴、y轴、z轴的平移距离 取值百分数相对于自身的宽度计算  缩放函数  scaleX()：缩放/放大宽度 scaleY()：缩放/放大高度 scale()：缩放/放大宽度和高度 scaleZ()：在z轴上缩放/放大 scale3d()：在三个方向上缩放/放大  旋转函数  rotate()：效果等同于rotateZ() rotateX()：绕x轴旋转 rotateY()：绕y轴旋转 rotateZ()：绕z轴旋转 rotate3d()：前三个值指定x轴、y轴和z轴的分量。第四个值为角度值。 判断旋转的方向：站在向量的终点，顺时针旋转角度  倾斜函数  skewX() skewY() skew()  视域函数  perspective()：参数为length，参数值必须为正数，不能为0，其它值将导致视域函数失效 当值越大，视觉越温和；当值越小，视觉越极端 若想在变形函数列表中设定视域值，要将视域函数放在最前面  参数分别为200px、800px、2000px 矩阵函数  matrix() matrix3d()  变形原点  transform-origin 取值：英文字母，例如，top、left、center等，百分数，长度值。对于z轴只能取长度值，百分数相对于自身的宽高计算 移动函数不受变形原点影响  </description>
     </item>
     
     <item>

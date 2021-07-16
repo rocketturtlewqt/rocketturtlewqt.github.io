@@ -6,7 +6,27 @@
     <description>Recent content in Reacts on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Jul 2021 23:50:27 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jul 2021 22:57:13 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>组件与模块</title>
+      <link>https://rocketturtlewqt.github.io/react/%E7%BB%84%E4%BB%B6%E4%B8%8E%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Wed, 14 Jul 2021 22:57:13 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/react/%E7%BB%84%E4%BB%B6%E4%B8%8E%E6%A8%A1%E5%9D%97/</guid>
+      <description>模块  向外提供特定功能的js程序就是一个模块，一般就是一个js文件 为什么要拆成模块呢：随着业务逻辑的增加，代码会越来越多并且越来越复杂 作用：复用js，简化js的编写，提高js运行效率  组件  理解：用来实现局部功能效果的代码和资源的集合（html/css/js/image等） 作用：复用编码，简化项目编码，提高运行效率  模块化  当应用的js都以模块的方式来编写的，这个应用就是一个模块化的应用  组件化  当应用是以多组件的方式实现，这个应用就是一个组件化的应用  </description>
+    </item>
+    
+    <item>
+      <title>Jsx小练习</title>
+      <link>https://rocketturtlewqt.github.io/react/jsx%E5%B0%8F%E7%BB%83%E4%B9%A0/</link>
+      <pubDate>Wed, 14 Jul 2021 22:47:07 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/react/jsx%E5%B0%8F%E7%BB%83%E4%B9%A0/</guid>
+      <description>js语句与js表达式的区别   一个表达式是一个值，可以放在任何需要这个值的地方
+  下面这些都是表达式
+   a a+b demo(x) arr.map() function test() {}   下面这些都是语句   if语句 for循环 switch case  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;script src=&amp;#34;../lib/react.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;../lib/react-dom.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;../lib/browser.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;title&amp;gt;jsx语法规则&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;text/babel&amp;#34;&amp;gt; const data=[&amp;#39;Anguler&amp;#39;,&amp;#39;React&amp;#39;,&amp;#39;Vue&amp;#39;]; //1.创建虚拟dom  const VDOM=( &amp;lt;div class=&amp;#39;container&amp;#39;&amp;gt; &amp;lt;h2&amp;gt;jsx小练习&amp;lt;/h2&amp;gt; &amp;lt;ul&amp;gt; { data.map((item,index)=&amp;gt;{ return &amp;lt;li key={index}&amp;gt;{item}&amp;lt;/li&amp;gt; }) } &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; ); //2.渲染虚拟dom  ReactDOM.render(VDOM,document.getElementById(&amp;#39;container&amp;#39;)); &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; </description>
+    </item>
+    
     <item>
       <title>Jsx语法规则</title>
       <link>https://rocketturtlewqt.github.io/react/jsx%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/</link>
