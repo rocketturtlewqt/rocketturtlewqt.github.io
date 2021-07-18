@@ -6,7 +6,25 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Jul 2021 22:57:13 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Jul 2021 21:18:12 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>运算</title>
+      <link>https://rocketturtlewqt.github.io/less/%E8%BF%90%E7%AE%97/</link>
+      <pubDate>Sat, 17 Jul 2021 21:18:12 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/less/%E8%BF%90%E7%AE%97/</guid>
+      <description>运算说明  任何数值、颜色和变量都可以进行运算  数值模型运算  less会为你自动推算数值的单位，所以你不必为每一个数值加上单位 注意：运算符与数值之间要用空格隔开，涉及优先级时以()进行优先级运算  .container{ width: 450px + 450; }  编译后  .container { width: 900px; } .container{ width: (450 + 50) * 2 + 24px; }  编译后  .container { width: 1024px; } 颜色值运算  less在运算时，现将颜色转换为rgb模式，然后再转换为16制的颜色并返回 注意：不能直接对颜色名称进行运算  .container{ width: #000000 + 255; }  编译后  .container { width: #ffffff; } </description>
+    </item>
+    
+    <item>
+      <title>嵌套规则</title>
+      <link>https://rocketturtlewqt.github.io/less/%E5%B5%8C%E5%A5%97%E8%A7%84%E5%88%99/</link>
+      <pubDate>Fri, 16 Jul 2021 23:13:38 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/less/%E5%B5%8C%E5%A5%97%E8%A7%84%E5%88%99/</guid>
+      <description>什么是嵌套规则  嵌套规则模仿了html结构，让我们的代码更加简洁清晰  css写法 #container { background-color: red; width: 200px; height: 200px; } #container p { width: 200px; height: 100px; background-color: blue; } #container a { text-decoration: none; } less写法 #container{ background-color: red; width: 200px; height: 200px; p{ width: 200px; height: 100px; background-color: blue; } a{ text-decoration: none; } } 父元素选择器&amp;amp;  &amp;amp;：表示当前选择器的所有父选择器  less #container{ background-color: red; width: 200px; height: 200px; p{ width: 200px; height: 100px; background-color: blue; span{ display: block; width: 50px; height: 50px; background-color: green; &amp;amp;:hover{ background-color: black; } } } a{ text-decoration: none; } } css #container { background-color: red; width: 200px; height: 200px; } #container p { width: 200px; height: 100px; background-color: blue; } #container p span { display: block; width: 50px; height: 50px; background-color: green; } #container p span:hover { background-color: black; } #container a { text-decoration: none; } 将&amp;amp;放在选择器的后面  第一种情况  .</description>
+    </item>
+    
     <item>
       <title>组件与模块</title>
       <link>https://rocketturtlewqt.github.io/react/%E7%BB%84%E4%BB%B6%E4%B8%8E%E6%A8%A1%E5%9D%97/</link>
@@ -105,7 +123,7 @@
   变形函数的书写顺序可能会影响最后的显示结果，变形函数实施顺序，左-&amp;gt;右
   //书写1 img{ tranform: translate(200px) rotate(45deg); } //书写2 img{ transform: translate(200px) rotate(45deg); }  旋转图像的过程中，主轴和垂轴也会变    当有多个变形函数时，每一个函数都要正确设置，否则整个变形都将失效
   变形函数不能应用在基元行内框上，例如，span元素、a元素
-  平移函数  translateX()：延x轴平移 translateY()：延y轴平移 translate()：同时设置x轴和y轴的平移距离 translateZ()：设置z轴方向的平移，不能取值百分数。任何有关z轴的百分数都不能取值百分数 translate3d()：能同时设定x轴、y轴、z轴的平移距离 取值百分数相对于自身的宽度计算  缩放函数  scaleX()：缩放/放大宽度 scaleY()：缩放/放大高度 scale()：缩放/放大宽度和高度 scaleZ()：在z轴上缩放/放大 scale3d()：在三个方向上缩放/放大  旋转函数  rotate()：效果等同于rotateZ() rotateX()：绕x轴旋转 rotateY()：绕y轴旋转 rotateZ()：绕z轴旋转 rotate3d()：前三个值指定x轴、y轴和z轴的分量。第四个值为角度值。 判断旋转的方向：站在向量的终点，顺时针旋转角度  倾斜函数  skewX() skewY() skew()  视域函数  perspective()：参数为length，参数值必须为正数，不能为0，其它值将导致视域函数失效 当值越大，视觉越温和；当值越小，视觉越极端 若想在变形函数列表中设定视域值，要将视域函数放在最前面  参数分别为200px、800px、2000px 矩阵函数  matrix() matrix3d()  变形原点  transform-origin 取值：英文字母，例如，top、left、center等，百分数，长度值。对于z轴只能取长度值，百分数相对于自身的宽高计算 移动函数不受变形原点影响  </description>
+  平移函数  translateX()：延x轴平移 translateY()：延y轴平移 translate()：同时设置x轴和y轴的平移距离 translateZ()：设置z轴方向的平移，不能取值百分数。任何有关z轴的百分数都不能取值百分数 translate3d()：能同时设定x轴、y轴、z轴的平移距离 取值百分数相对于自身的宽度计算  缩放函数  scaleX()：缩放/放大宽度 scaleY()：缩放/放大高度 scale()：缩放/放大宽度和高度 scaleZ()：在z轴上缩放/放大 scale3d()：在三个方向上缩放/放大  旋转函数  rotate()：效果等同于rotateZ() rotateX()：绕x轴旋转 rotateY()：绕y轴旋转 rotateZ()：绕z轴旋转 rotate3d()：前三个值指定x轴、y轴和z轴的分量。第四个值为角度值。 判断旋转的方向：站在向量的终点，顺时针旋转角度  倾斜函数  skewX() skewY() skew()  视域函数  perspective()：参数为length，参数值必须为正数，不能为0，其它值将导致视域函数失效 当值越大，视觉越温和；当值越小，视觉越极端 若想在变形函数列表中设定视域值，要将视域函数放在最前面  参数分别为200px、800px、2000px 矩阵函数  matrix() matrix3d()  变形原点  transform-origin 取值：英文字母，例如，top、left、center等，百分数，长度值。对于z轴只能取长度值，百分数相对于自身的宽高计算 移动函数不受变形原点影响  开启3D变形 未开启3D立体模式 &amp;lt;!</description>
     </item>
     
     <item>

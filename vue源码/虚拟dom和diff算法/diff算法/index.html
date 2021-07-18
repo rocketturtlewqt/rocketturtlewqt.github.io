@@ -110,7 +110,7 @@
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
-          2 min read
+          4 min read
         </div>
       </div>
     </header>
@@ -160,7 +160,7 @@ patch(container, myVnode);
 
 </code></pre></div><p><img src="https://rocketturtlewqt.github.io/20210514123837aft.png" alt="h函数嵌套"></p>
 <ul>
-<li>diff算法diceng调用了patch，patch的作用就是让虚拟节点上树</li>
+<li>diff算法底层调用了patch，patch的作用就是让虚拟节点上树</li>
 <li>h函数的作用就是用来生成虚拟dom，h函数可以嵌套</li>
 </ul>
 <p><img src="https://rocketturtlewqt.github.io/20210514124041aft.png" alt="虚拟dom结构"></p>
@@ -229,7 +229,243 @@ patch(container, myVnode);
 <li>diff算法流程图</li>
 </ul>
 <p><img src="https://rocketturtlewqt.github.io/20210516113416aft.png" alt="diff算法流程图"></p>
-<h2 id="github源码地址">github源码地址</h2>
+<h2 id="自我实现的diff算法">自我实现的diff算法</h2>
+<h3 id="vnode">vnode</h3>
+<ul>
+<li>vnode函数用来生成虚拟dom，虚拟dom本质上就是一个js对象</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 虚拟dom就是一个js对象
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Vnode</span>(<span style="color:#a6e22e">sel</span>, <span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">children</span>, <span style="color:#a6e22e">text</span>, <span style="color:#a6e22e">elm</span>, <span style="color:#a6e22e">key</span>) {
+  <span style="color:#66d9ef">return</span> {
+    <span style="color:#a6e22e">sel</span>,
+    <span style="color:#a6e22e">data</span>,
+    <span style="color:#a6e22e">children</span>,
+    <span style="color:#a6e22e">text</span>,
+    <span style="color:#a6e22e">elm</span>,
+    <span style="color:#a6e22e">key</span>
+  }
+}
+</code></pre></div><h3 id="h函数">h函数</h3>
+<ul>
+<li>用来生成虚拟dom</li>
+<li>主要针对以下三种情况</li>
+</ul>
+<ol>
+<li>h(&lsquo;li&rsquo;,{},&lsquo;a&rsquo;)：虚拟节点无子虚拟节点，只有内部文本</li>
+<li>h(&lsquo;li&rsquo;,{},[])：虚拟节点有多个子虚拟节点</li>
+<li>h(&lsquo;li&rsquo;,{},h())：虚拟节点只有一个虚拟节点</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">vnode</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./vnode&#39;</span>;
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 自我手写的简易版h渲染函数，目前只支持如下三种情况（必须接收三个参数）
+</span><span style="color:#75715e"> * 1.h(&#39;li&#39;,{},&#39;a&#39;)
+</span><span style="color:#75715e"> * 2.h(&#39;li&#39;,{},[])
+</span><span style="color:#75715e"> * 3.h(&#39;li&#39;,{},h())
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">sel</span>, <span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">c</span>) {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">elm</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#a6e22e">sel</span>);
+  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;string&#39;</span> <span style="color:#f92672">||</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;number&#39;</span>) {
+    <span style="color:#a6e22e">elm</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>;
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">vnode</span>(<span style="color:#a6e22e">sel</span>, <span style="color:#a6e22e">data</span>, <span style="color:#66d9ef">undefined</span>, <span style="color:#a6e22e">c</span>, <span style="color:#a6e22e">elm</span>, <span style="color:#a6e22e">data</span>[<span style="color:#e6db74">&#39;key&#39;</span>]);
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (Array.<span style="color:#a6e22e">isArray</span>(<span style="color:#a6e22e">c</span>)) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">children</span> <span style="color:#f92672">=</span> [];
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+      <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>(<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">c</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;object&#39;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">c</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">hasOwnProperty</span>(<span style="color:#e6db74">&#39;sel&#39;</span>))) {
+        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#39;这是一个低配版本的渲染函数，只支持接收固定三个参数&#39;</span>);
+      }
+      <span style="color:#a6e22e">children</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">c</span>[<span style="color:#a6e22e">i</span>]);
+      <span style="color:#a6e22e">elm</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">c</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">elm</span>);
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">vnode</span>(<span style="color:#a6e22e">sel</span>, <span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">children</span>, <span style="color:#66d9ef">undefined</span>, <span style="color:#a6e22e">elm</span>, <span style="color:#a6e22e">data</span>[<span style="color:#e6db74">&#39;key&#39;</span>]);
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;object&#39;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">hasOwnProperty</span>(<span style="color:#e6db74">&#39;sel&#39;</span>)) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">children</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">c</span>];
+    <span style="color:#a6e22e">elm</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">elm</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">vnode</span>(<span style="color:#a6e22e">sel</span>, <span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">children</span>, <span style="color:#66d9ef">undefined</span>, <span style="color:#a6e22e">elm</span>, <span style="color:#a6e22e">data</span>[<span style="color:#e6db74">&#39;key&#39;</span>]);
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#39;这是一个低配版本的渲染函数，只支持接收固定三个参数&#39;</span>);
+  }
+}
+</code></pre></div><h3 id="createelement">createElement</h3>
+<ul>
+<li>函数的作用就是根据虚拟dom来创建真身dom元素</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createElement</span>(<span style="color:#a6e22e">vnode</span>) {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">newDom</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#a6e22e">vnode</span>.<span style="color:#a6e22e">sel</span>);
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">vnode</span>.<span style="color:#a6e22e">text</span> <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#f92672">&amp;&amp;</span> (<span style="color:#a6e22e">vnode</span>.<span style="color:#a6e22e">children</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">undefined</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">vnode</span>.<span style="color:#a6e22e">children</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>)) {
+    <span style="color:#a6e22e">newDom</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">vnode</span>.<span style="color:#a6e22e">text</span>;
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (Array.<span style="color:#a6e22e">isArray</span>(<span style="color:#a6e22e">vnode</span>.<span style="color:#a6e22e">children</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">vnode</span>.<span style="color:#a6e22e">children</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">vnode</span>.<span style="color:#a6e22e">children</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+      <span style="color:#a6e22e">newDom</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">createElement</span>(<span style="color:#a6e22e">vnode</span>.<span style="color:#a6e22e">children</span>[<span style="color:#a6e22e">i</span>]));
+    }
+  }
+  <span style="color:#a6e22e">vnode</span>.<span style="color:#a6e22e">elm</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newDom</span>;
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">newDom</span>;
+}
+</code></pre></div><h3 id="patch函数">patch函数</h3>
+<ul>
+<li>patch函数主要用来将虚拟dom转为真实dom上树用的</li>
+</ul>
+<ol>
+<li>假若新旧节点不是同一个虚拟节点，就先根据新虚拟节点去创建真实dom节点，插在旧虚拟节点对应的那个真实dom节点的前面，然后将旧虚拟节点对应的那个真实dom节点移除。</li>
+<li>假若新旧节点是同一个虚拟节点，就去调用patchVnode函数就行精细化比较</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">vnode</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./vnode&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">createElement</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./createElement&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">patchVnode</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./patchVnode&#39;</span>;
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * patch函数用来将虚拟dom转换为真实dom上树
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">oldVnode</span>, <span style="color:#a6e22e">newVnode</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">sel</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">sel</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">undefined</span>) {
+    <span style="color:#a6e22e">oldVnode</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">vnode</span>(<span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">tagName</span>.<span style="color:#a6e22e">toLowerCase</span>(), {}, [], <span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">innerText</span>, <span style="color:#a6e22e">oldVnode</span>, <span style="color:#66d9ef">undefined</span>);
+  }
+
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">newVnode</span>.<span style="color:#a6e22e">key</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">key</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">newVnode</span>.<span style="color:#a6e22e">sel</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">sel</span>) {
+    <span style="color:#a6e22e">patchVnode</span>(<span style="color:#a6e22e">newVnode</span>, <span style="color:#a6e22e">oldVnode</span>);
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#75715e">//新旧节点不是同一个虚拟节点
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">newDom</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createElement</span>(<span style="color:#a6e22e">newVnode</span>);
+    <span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">elm</span>.<span style="color:#a6e22e">parentNode</span>.<span style="color:#a6e22e">insertBefore</span>(<span style="color:#a6e22e">newDom</span>, <span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">elm</span>);
+    <span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">elm</span>.<span style="color:#a6e22e">parentNode</span>.<span style="color:#a6e22e">removeChild</span>(<span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">elm</span>);
+  }
+}
+</code></pre></div><h3 id="patchvnode函数">patchVnode函数</h3>
+<ul>
+<li>patchVnode函数主要在新旧两个节点是同一种类型的对象情况下进行精细化比较</li>
+</ul>
+<ol>
+<li>新旧虚拟节点对应的引用相同：什么都不做</li>
+<li>新旧虚拟节点的text属性：text属性相同，什么也不做；不同，就把旧的替换为新的。</li>
+<li>新旧节点是否有孩子的情况：旧没有，新有，清空旧的text，将新虚拟节点的子虚拟节点转换为真实dom挂在到旧虚拟节点对应的真实节点下;若新旧都有子虚拟节点的情况下，就去调用updateChildren函数进行更精细化的比较</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">createElement</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./createElement&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">updateChildren</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./updateChildren&#39;</span>;
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * patchVnode函数用来处理，新旧虚拟dom是同一个虚拟节点的情况
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">patchVnode</span>(<span style="color:#a6e22e">newVnode</span>, <span style="color:#a6e22e">oldVnode</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">oldVnode</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">newVnode</span>) <span style="color:#66d9ef">return</span>;
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">newVnode</span>.<span style="color:#a6e22e">text</span> <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#f92672">&amp;&amp;</span> (<span style="color:#a6e22e">newVnode</span>.<span style="color:#a6e22e">children</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">undefined</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">newVnode</span>.<span style="color:#a6e22e">children</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>)) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">newVnode</span>.<span style="color:#a6e22e">text</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">text</span>) <span style="color:#66d9ef">return</span>;
+    <span style="color:#66d9ef">else</span> {
+      <span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">elm</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newVnode</span>.<span style="color:#a6e22e">text</span>;
+      <span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newVnode</span>.<span style="color:#a6e22e">text</span>;
+    }
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#75715e">//进行精细化比较
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">children</span> <span style="color:#f92672">!==</span> <span style="color:#66d9ef">undefined</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">children</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+      <span style="color:#a6e22e">updateChildren</span>(<span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">elm</span>, <span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">children</span>, <span style="color:#a6e22e">newVnode</span>.<span style="color:#a6e22e">children</span>);
+    } <span style="color:#66d9ef">else</span> {
+      <span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">elm</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+      <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">newVnode</span>.<span style="color:#a6e22e">children</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+        <span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">elm</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">createElement</span>(<span style="color:#a6e22e">newVnode</span>.<span style="color:#a6e22e">children</span>[<span style="color:#a6e22e">i</span>]));
+      }
+    }
+    <span style="color:#75715e">// console.log(oldVnode);
+</span><span style="color:#75715e"></span>  }
+}
+</code></pre></div><h3 id="updatechildren函数">updateChildren函数</h3>
+<ul>
+<li>updateChildren是diff算法对新旧虚拟dom比对的一个优化策略</li>
+<li>该算法的核心就是四个指针，新前、旧前、新后、旧后</li>
+</ul>
+<p><img src="https://rocketturtlewqt.github.io/20210718121200aft.png" alt="四个指针"></p>
+<ol>
+<li>当新前命中旧前，就将两个指针往下移动一个单位。</li>
+<li>当新后命中旧后，就将两个指针向上移动一个单位。</li>
+<li>当新后命中旧前，将新后指向的节点移动到旧后的的后面。
+<img src="https://rocketturtlewqt.github.io/20210718121707aft.png" alt="新后命中旧前"></li>
+<li>当新前命中旧后，将新前指向的节点移动到旧前的前面。
+<img src="https://rocketturtlewqt.github.io/20210718122245aft.png" alt="新前命中旧后"></li>
+<li>当前面四种情况都没命中，就去暴力比对新前和旧前与旧后之间的节点是否有命中的，将命中的节点记为X，将X赋为undefined，将新前节点移到旧前的前面。</li>
+</ol>
+<ul>
+<li>当新前&gt;新后或旧前&gt;旧后，那么就去判断哪两个指针之间还有剩余节点</li>
+</ul>
+<ol>
+<li>当新前与新后之间有剩余节点，就将它们放在旧前的前面</li>
+<li>当旧前与旧后之间有剩余节点，就说明这些节点是将要被删除的节点，将它们全部删除</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">createElement</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./createElement&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">patchVnode</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./patchVnode&#39;</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">judge</span>(<span style="color:#a6e22e">oldVnode</span>, <span style="color:#a6e22e">newVnode</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">sel</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">newVnode</span>.<span style="color:#a6e22e">sel</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">oldVnode</span>.<span style="color:#a6e22e">key</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">newVnode</span>.<span style="color:#a6e22e">key</span>;
+}
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * updateChildren函数用来处理新旧虚拟节点是同一个节点，并且都有children属性的情况
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">updateChildren</span>(<span style="color:#a6e22e">parentElm</span>, <span style="color:#a6e22e">oldCh</span>, <span style="color:#a6e22e">newCh</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">newStartIdx</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">oldStartIdx</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">newEndIdx</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newCh</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">oldEndIdx</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">oldCh</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">mp</span>;
+
+  <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">newStartIdx</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">newEndIdx</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">oldStartIdx</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">oldEndIdx</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`newStartIdx：</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">newStartIdx</span><span style="color:#e6db74">}</span><span style="color:#e6db74">，newEndIdx：</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">newEndIdx</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`oldStartIdx：</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">oldStartIdx</span><span style="color:#e6db74">}</span><span style="color:#e6db74">，oldEndIdx：</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">oldEndIdx</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldStartIdx</span>]) {
+      <span style="color:#a6e22e">oldStartIdx</span><span style="color:#f92672">++</span>;
+    }
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldEndIdx</span>]) {
+      <span style="color:#a6e22e">oldEndIdx</span><span style="color:#f92672">--</span>;
+    }
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">judge</span>(<span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldStartIdx</span>], <span style="color:#a6e22e">newCh</span>[<span style="color:#a6e22e">newStartIdx</span>])) {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;命中新前和旧前&#39;</span>);
+      <span style="color:#a6e22e">patchVnode</span>(<span style="color:#a6e22e">newCh</span>[<span style="color:#a6e22e">newStartIdx</span>], <span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldStartIdx</span>]);
+      <span style="color:#a6e22e">newStartIdx</span><span style="color:#f92672">++</span>;
+      <span style="color:#a6e22e">oldStartIdx</span><span style="color:#f92672">++</span>;
+    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">judge</span>(<span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldEndIdx</span>], <span style="color:#a6e22e">newCh</span>[<span style="color:#a6e22e">newEndIdx</span>])) {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;命中新后与旧后&#39;</span>);
+      <span style="color:#a6e22e">patchVnode</span>(<span style="color:#a6e22e">newCh</span>[<span style="color:#a6e22e">newEndIdx</span>], <span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldEndIdx</span>]);
+      <span style="color:#a6e22e">newEndIdx</span><span style="color:#f92672">--</span>;
+      <span style="color:#a6e22e">oldEndIdx</span><span style="color:#f92672">--</span>;
+    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">judge</span>(<span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldStartIdx</span>], <span style="color:#a6e22e">newCh</span>[<span style="color:#a6e22e">newEndIdx</span>])) {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;命中新后与旧前&#39;</span>);
+      <span style="color:#a6e22e">patchVnode</span>(<span style="color:#a6e22e">newCh</span>[<span style="color:#a6e22e">newEndIdx</span>], <span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldStartIdx</span>]);
+      <span style="color:#a6e22e">parentElm</span>.<span style="color:#a6e22e">insertBefore</span>(<span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldStartIdx</span>].<span style="color:#a6e22e">elm</span>, <span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldEndIdx</span>].<span style="color:#a6e22e">elm</span>.<span style="color:#a6e22e">nextSibling</span>);
+      <span style="color:#a6e22e">newEndIdx</span><span style="color:#f92672">--</span>;
+      <span style="color:#a6e22e">oldStartIdx</span><span style="color:#f92672">++</span>;
+    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">judge</span>(<span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldEndIdx</span>], <span style="color:#a6e22e">newCh</span>[<span style="color:#a6e22e">newStartIdx</span>])) {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;命中新前与旧后&#39;</span>);
+      <span style="color:#a6e22e">patchVnode</span>(<span style="color:#a6e22e">newCh</span>[<span style="color:#a6e22e">newStartIdx</span>], <span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldEndIdx</span>]);
+      <span style="color:#a6e22e">parentElm</span>.<span style="color:#a6e22e">insertBefore</span>(<span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldEndIdx</span>].<span style="color:#a6e22e">elm</span>, <span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldStartIdx</span>].<span style="color:#a6e22e">elm</span>);
+      <span style="color:#a6e22e">newStartIdx</span><span style="color:#f92672">++</span>;
+      <span style="color:#a6e22e">oldEndIdx</span><span style="color:#f92672">--</span>;
+    } <span style="color:#66d9ef">else</span> {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;都没命中&#39;</span>);
+      <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">mp</span>) {
+        <span style="color:#a6e22e">mp</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Map</span>();
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">oldStartIdx</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">oldEndIdx</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+          <span style="color:#a6e22e">mp</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">i</span>);
+        }
+      }
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">oldVnodeIdx</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mp</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">newCh</span>[<span style="color:#a6e22e">newStartIdx</span>].<span style="color:#a6e22e">key</span>);
+      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldVnodeIdx</span>]) {
+        <span style="color:#a6e22e">patchVnode</span>(<span style="color:#a6e22e">newCh</span>[<span style="color:#a6e22e">newStartIdx</span>], <span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldVnodeIdx</span>]);
+        <span style="color:#a6e22e">parentElm</span>.<span style="color:#a6e22e">insertBefore</span>(<span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldVnodeIdx</span>].<span style="color:#a6e22e">elm</span>, <span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldStartIdx</span>].<span style="color:#a6e22e">elm</span>);
+        <span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldVnodeIdx</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">undefined</span>;
+      } <span style="color:#66d9ef">else</span> {
+        <span style="color:#a6e22e">parentElm</span>.<span style="color:#a6e22e">insertBefore</span>(<span style="color:#a6e22e">newCh</span>[<span style="color:#a6e22e">newStartIdx</span>].<span style="color:#a6e22e">elm</span>, <span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldStartIdx</span>].<span style="color:#a6e22e">elm</span>);
+      }
+      <span style="color:#a6e22e">newStartIdx</span><span style="color:#f92672">++</span>;
+    }
+  }
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">newStartIdx</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">newEndIdx</span>) {
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newStartIdx</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">newEndIdx</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+      <span style="color:#a6e22e">parentElm</span>.<span style="color:#a6e22e">insertBefore</span>(<span style="color:#a6e22e">createElement</span>(<span style="color:#a6e22e">newCh</span>[<span style="color:#a6e22e">newEndIdx</span>]), <span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">oldStartIdx</span>]);
+    }
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">oldStartIdx</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">oldEndIdx</span>) {
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">oldStartIdx</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">oldEndIdx</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+      <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">i</span>]) <span style="color:#a6e22e">parentElm</span>.<span style="color:#a6e22e">removeChild</span>(<span style="color:#a6e22e">oldCh</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">elm</span>);
+    }
+  }
+}
+</code></pre></div><h2 id="github源码地址">github源码地址</h2>
 <p><a href="https://github.com/rocketturtlewqt/virtual-dom-diff">手写虚拟dom和diff算法</a></p>
 
     </div>

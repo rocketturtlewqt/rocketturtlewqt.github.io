@@ -6,7 +6,25 @@
     <description>Recent content in Lesses on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Jul 2021 22:00:39 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/less/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Jul 2021 21:18:12 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/less/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>运算</title>
+      <link>https://rocketturtlewqt.github.io/less/%E8%BF%90%E7%AE%97/</link>
+      <pubDate>Sat, 17 Jul 2021 21:18:12 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/less/%E8%BF%90%E7%AE%97/</guid>
+      <description>运算说明  任何数值、颜色和变量都可以进行运算  数值模型运算  less会为你自动推算数值的单位，所以你不必为每一个数值加上单位 注意：运算符与数值之间要用空格隔开，涉及优先级时以()进行优先级运算  .container{ width: 450px + 450; }  编译后  .container { width: 900px; } .container{ width: (450 + 50) * 2 + 24px; }  编译后  .container { width: 1024px; } 颜色值运算  less在运算时，现将颜色转换为rgb模式，然后再转换为16制的颜色并返回 注意：不能直接对颜色名称进行运算  .container{ width: #000000 + 255; }  编译后  .container { width: #ffffff; } </description>
+    </item>
+    
+    <item>
+      <title>嵌套规则</title>
+      <link>https://rocketturtlewqt.github.io/less/%E5%B5%8C%E5%A5%97%E8%A7%84%E5%88%99/</link>
+      <pubDate>Fri, 16 Jul 2021 23:13:38 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/less/%E5%B5%8C%E5%A5%97%E8%A7%84%E5%88%99/</guid>
+      <description>什么是嵌套规则  嵌套规则模仿了html结构，让我们的代码更加简洁清晰  css写法 #container { background-color: red; width: 200px; height: 200px; } #container p { width: 200px; height: 100px; background-color: blue; } #container a { text-decoration: none; } less写法 #container{ background-color: red; width: 200px; height: 200px; p{ width: 200px; height: 100px; background-color: blue; } a{ text-decoration: none; } } 父元素选择器&amp;amp;  &amp;amp;：表示当前选择器的所有父选择器  less #container{ background-color: red; width: 200px; height: 200px; p{ width: 200px; height: 100px; background-color: blue; span{ display: block; width: 50px; height: 50px; background-color: green; &amp;amp;:hover{ background-color: black; } } } a{ text-decoration: none; } } css #container { background-color: red; width: 200px; height: 200px; } #container p { width: 200px; height: 100px; background-color: blue; } #container p span { display: block; width: 50px; height: 50px; background-color: green; } #container p span:hover { background-color: black; } #container a { text-decoration: none; } 将&amp;amp;放在选择器的后面  第一种情况  .</description>
+    </item>
+    
     <item>
       <title>混合</title>
       <link>https://rocketturtlewqt.github.io/less/%E6%B7%B7%E5%90%88/</link>
