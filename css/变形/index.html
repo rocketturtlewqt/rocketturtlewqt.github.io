@@ -281,6 +281,51 @@
 <li>阻碍开启3D模式的属性如下：必须设置为以下值或不声明</li>
 </ul>
 <p><img src="https://rocketturtlewqt.github.io/20210716105426aft.png" alt="阻碍3D模式开启的属性"></p>
+<h4 id="定义视域">定义视域</h4>
+<ul>
+<li>
+<p>perspective属性</p>
+</li>
+<li>
+<p>视域函数效果</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span>{
+    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+    <span style="color:#66d9ef">justify-content</span>: <span style="color:#66d9ef">center</span>;
+}
+.<span style="color:#a6e22e">container</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">div</span>{
+    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">red</span>;
+    <span style="color:#66d9ef">margin-left</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">transform</span>: perspective(<span style="color:#ae81ff">500</span><span style="color:#66d9ef">px</span>) rotateX(<span style="color:#ae81ff">-45</span><span style="color:#66d9ef">deg</span>);
+}
+</code></pre></div><p><img src="https://rocketturtlewqt.github.io/2021071841041aft.png" alt="视域函数"></p>
+<ul>
+<li>视域属性效果</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span>{
+    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+    <span style="color:#66d9ef">justify-content</span>: <span style="color:#66d9ef">center</span>;
+    <span style="color:#66d9ef">perspective</span>: <span style="color:#ae81ff">500</span><span style="color:#66d9ef">px</span>;
+}
+.<span style="color:#a6e22e">container</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">div</span>{
+    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">red</span>;
+    <span style="color:#66d9ef">margin-left</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">transform</span>: rotateX(<span style="color:#ae81ff">-45</span><span style="color:#66d9ef">deg</span>);
+}
+</code></pre></div><p><img src="https://rocketturtlewqt.github.io/2021071841225aft.png" alt="视域属性"></p>
+<ul>
+<li>两者的区别：视域属性与视域函数不同的是，视域属性会应用到当前元素及其所有子元素上，所以，子元素会在其共有的父元素视域上变形。即perspective属性用来设定共有视域</li>
+</ul>
+<h4 id="移动视域的原点">移动视域的原点</h4>
+<ul>
+<li>perspective-origin：能够设置的值与transform-origin相同</li>
+</ul>
+<p><img src="https://rocketturtlewqt.github.io/2021071842458aft.png" alt="各类取值结果图"></p>
 
     </div>
     <div class="post-footer">
