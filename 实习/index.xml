@@ -2,17 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>实习s on RocketTurtle</title>
-    <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/</link>
+    <link>https://rockettturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/</link>
     <description>Recent content in 实习s on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Jul 2021 16:00:38 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Jul 2021 16:11:13 +0800</lastBuildDate><atom:link href="https://rockettturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解析上传的xlsx表格中的数据</title>
+      <link>https://rockettturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E8%A7%A3%E6%9E%90%E4%B8%8A%E4%BC%A0%E7%9A%84xlsx%E8%A1%A8%E6%A0%BC%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Sun, 25 Jul 2021 16:11:13 +0800</pubDate>
+      
+      <guid>https://rockettturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E8%A7%A3%E6%9E%90%E4%B8%8A%E4%BC%A0%E7%9A%84xlsx%E8%A1%A8%E6%A0%BC%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE/</guid>
+      <description>解决方案  调用FileReader实例的api即可。    xlsx解析二进制文件。
+  获取解析的xlsx内容。
+  解析的xlsx内容转换为json格式。
+  handleChangeFile(file) { if (!file) return; const reader = new FileReader(); reader.onload = (e) =&amp;gt; { const data = e.target.result; const workbook = XLSX.read(data, { type: &amp;#39;binary&amp;#39; }); //xlsx解析二进制文件  const worksheet = workbook.Sheets[workbook.SheetNames[0]]; //获取解析的xlsx内容  const json = XLSX.utils.sheet_to_json(worksheet); //解析的xlsx内容转换为json格式  const contentNew = []; json.forEach(item =&amp;gt; { if (Object.prototype.hasOwnProperty.call(item, &amp;#39;文本&amp;#39;)) { contentNew.push(item[&amp;#39;文本&amp;#39;]); } else { contentNew.</description>
+    </item>
+    
+    <item>
+      <title>Chrome高版本中非https无法打开摄像头和录音功能</title>
+      <link>https://rockettturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/chrome%E9%AB%98%E7%89%88%E6%9C%AC%E4%B8%AD%E9%9D%9Ehttps%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%91%84%E5%83%8F%E5%A4%B4%E5%92%8C%E5%BD%95%E9%9F%B3%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Sun, 25 Jul 2021 16:08:46 +0800</pubDate>
+      
+      <guid>https://rockettturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/chrome%E9%AB%98%E7%89%88%E6%9C%AC%E4%B8%AD%E9%9D%9Ehttps%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%91%84%E5%83%8F%E5%A4%B4%E5%92%8C%E5%BD%95%E9%9F%B3%E5%8A%9F%E8%83%BD/</guid>
+      <description>解决方案   在chrome中输入chrome://flags/#unsafely-treat-insecure-origin-as-secure。
+  在方框内填写指定的url。
+  保存。
+  </description>
+    </item>
+    
     <item>
       <title>表格性能优化</title>
-      <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E8%A1%A8%E6%A0%BC%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</link>
+      <link>https://rockettturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E8%A1%A8%E6%A0%BC%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</link>
       <pubDate>Sun, 25 Jul 2021 16:00:38 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E8%A1%A8%E6%A0%BC%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</guid>
+      <guid>https://rockettturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E8%A1%A8%E6%A0%BC%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</guid>
       <description>&amp;lt;任务完成时间&amp;gt;是单独的一个db接口，抽取数据结果的时间略长。同时，&amp;lt;平均每道题目完成时间&amp;gt;依赖于&amp;lt;任务完成时间&amp;gt;和完成题目个数。 其它的列是单独的一个接口，当使用这两个接口同时生成表格时，换页会有明显较长时间的卡顿。  解决方案1   将两个接口分流，先用时间较短的接口进行表格框架的生成，再用db操作时间较长的接口填充剩余表格。
   将针对任务完成时间接口单独抽离出来，用异步请求的方式将结果集包装成一个数组，一次性渲染。
   缺陷：表格框架生成较快，但是任务时间列表可能还是需要等待一段时间才能被渲染。

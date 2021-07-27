@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="RocketTurtle" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://rocketturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
+    <link rel="stylesheet" href="https://rockettturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
 
     
     <meta name="twitter:card" content="summary"/>
@@ -18,7 +18,7 @@
     <meta property="og:title" content="Vuex原理及源码" />
 <meta property="og:description" content="vuex原理  state：单一状态树，类似于全局的一个容器 getter：相对于state的计算属性 mutations：定义同步方法 actions：定义异步逻辑，请求过后再去调用mutations里的方法  ModuleCollection.js export default class ModuleCollection{ constructor(options) { this.register([], options); } register(path, rootModule) { let rawModule = { _raw: rootModule, _children: {}, state: rootModule.state } if (!this.root) { this.root = rawModule; } else { let parentNode = path.slice(0,-1).reduce((root, current) =&gt; { return root._children[current]; }, this.root); parentNode._children[path[path.length - 1]] = rawModule; } if (rootModule.modules) { Object.keys(rootModule.modules).forEach(moduleName =&gt; { this.register(path.concat(moduleName), rootModule.modules[moduleName]); }); } } } export default new Vuex." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/vuex/vuex%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81/" /><meta property="article:section" content="vue源码" />
+<meta property="og:url" content="https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/vuex/vuex%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81/" /><meta property="article:section" content="vue源码" />
 <meta property="article:published_time" content="2021-05-23T12:34:12&#43;08:00" />
 <meta property="article:modified_time" content="2021-05-23T12:34:12&#43;08:00" />
 
@@ -27,7 +27,7 @@
   </head>
   <body>
     <header class="app-header">
-      <a href="https://rocketturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
+      <a href="https://rockettturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
       <h1>RocketTurtle</h1>
       <nav class="app-header-menu">
           <a class="app-header-menu-item" href="/">home</a>

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="RocketTurtle" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://rocketturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
+    <link rel="stylesheet" href="https://rockettturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
 
     
     <meta name="twitter:card" content="summary"/>
@@ -18,7 +18,7 @@
     <meta property="og:title" content="响应式原理" />
 <meta property="og:description" content="响应式原理 核心函数说明 observe  在对象上添加__ob__属性，这个属性指向一个Observer侦测对象  Observer  侦测类，作用是将对象的每一层转为响应式 dep类的实例在此类中实例化，用来收集依赖Watcher的实例  defineReactive  两个核心getter和setter 在getter中收集依赖（主要看Dep.target是否不为空，不为空就说明目前有依赖，多个依赖竞争Dep.target） 在setter中触发依赖  parsePath  将字符串路径，例如&rsquo;a.b.c.d&#39;，转为能够在原对象上读取此路径对应的值的函数  array  改写Array.prototype上的七个函数，让它们变为响应式   在arrayMethods定义七个一模一样的api，并重写覆盖Array.prototype上的这七个api。再将数组实例的原型设置为arrayMethods  github源码地址 手写数据响应式原理" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/" /><meta property="article:section" content="vue源码" />
+<meta property="og:url" content="https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/" /><meta property="article:section" content="vue源码" />
 <meta property="article:published_time" content="2021-05-20T12:09:55&#43;08:00" />
 <meta property="article:modified_time" content="2021-05-20T12:09:55&#43;08:00" />
 
@@ -27,7 +27,7 @@
   </head>
   <body>
     <header class="app-header">
-      <a href="https://rocketturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
+      <a href="https://rockettturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
       <h1>RocketTurtle</h1>
       <nav class="app-header-menu">
           <a class="app-header-menu-item" href="/">home</a>

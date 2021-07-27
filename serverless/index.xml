@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Serverlesses on RocketTurtle</title>
-    <link>https://rocketturtlewqt.github.io/serverless/</link>
+    <link>https://rockettturtlewqt.github.io/serverless/</link>
     <description>Recent content in Serverlesses on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Jul 2021 16:15:30 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/serverless/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Jul 2021 16:15:30 +0800</lastBuildDate><atom:link href="https://rockettturtlewqt.github.io/serverless/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Serverless基本概念</title>
-      <link>https://rocketturtlewqt.github.io/serverless/serverless%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <link>https://rockettturtlewqt.github.io/serverless/serverless%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
       <pubDate>Sat, 03 Jul 2021 16:15:30 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/serverless/serverless%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <guid>https://rockettturtlewqt.github.io/serverless/serverless%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
       <description>云函数计算基金会对serverless的定义   Serverless架构应该是采用Fass（函数即服务）和Sass（后端即服务）服务来解决问题的一种设计。
   狭义上的Serverless就是Fass+Sass的组合。
   Fass：Function as a Service。本质上就是一个函数运行平台，集成了触发器。它会负责服务器资源的调度和运维。

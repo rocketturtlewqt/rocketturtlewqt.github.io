@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reacts on RocketTurtle</title>
-    <link>https://rocketturtlewqt.github.io/react/</link>
+    <link>https://rockettturtlewqt.github.io/react/</link>
     <description>Recent content in Reacts on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Jul 2021 22:57:13 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jul 2021 22:57:13 +0800</lastBuildDate><atom:link href="https://rockettturtlewqt.github.io/react/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>组件与模块</title>
-      <link>https://rocketturtlewqt.github.io/react/%E7%BB%84%E4%BB%B6%E4%B8%8E%E6%A8%A1%E5%9D%97/</link>
+      <link>https://rockettturtlewqt.github.io/react/%E7%BB%84%E4%BB%B6%E4%B8%8E%E6%A8%A1%E5%9D%97/</link>
       <pubDate>Wed, 14 Jul 2021 22:57:13 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/react/%E7%BB%84%E4%BB%B6%E4%B8%8E%E6%A8%A1%E5%9D%97/</guid>
+      <guid>https://rockettturtlewqt.github.io/react/%E7%BB%84%E4%BB%B6%E4%B8%8E%E6%A8%A1%E5%9D%97/</guid>
       <description>模块  向外提供特定功能的js程序就是一个模块，一般就是一个js文件 为什么要拆成模块呢：随着业务逻辑的增加，代码会越来越多并且越来越复杂 作用：复用js，简化js的编写，提高js运行效率  组件  理解：用来实现局部功能效果的代码和资源的集合（html/css/js/image等） 作用：复用编码，简化项目编码，提高运行效率  模块化  当应用的js都以模块的方式来编写的，这个应用就是一个模块化的应用  组件化  当应用是以多组件的方式实现，这个应用就是一个组件化的应用  </description>
     </item>
     
     <item>
       <title>Jsx小练习</title>
-      <link>https://rocketturtlewqt.github.io/react/jsx%E5%B0%8F%E7%BB%83%E4%B9%A0/</link>
+      <link>https://rockettturtlewqt.github.io/react/jsx%E5%B0%8F%E7%BB%83%E4%B9%A0/</link>
       <pubDate>Wed, 14 Jul 2021 22:47:07 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/react/jsx%E5%B0%8F%E7%BB%83%E4%B9%A0/</guid>
+      <guid>https://rockettturtlewqt.github.io/react/jsx%E5%B0%8F%E7%BB%83%E4%B9%A0/</guid>
       <description>js语句与js表达式的区别   一个表达式是一个值，可以放在任何需要这个值的地方
   下面这些都是表达式
    a a+b demo(x) arr.map() function test() {}   下面这些都是语句   if语句 for循环 switch case  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;script src=&amp;#34;../lib/react.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;../lib/react-dom.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;../lib/browser.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;title&amp;gt;jsx语法规则&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;text/babel&amp;#34;&amp;gt; const data=[&amp;#39;Anguler&amp;#39;,&amp;#39;React&amp;#39;,&amp;#39;Vue&amp;#39;]; //1.创建虚拟dom  const VDOM=( &amp;lt;div class=&amp;#39;container&amp;#39;&amp;gt; &amp;lt;h2&amp;gt;jsx小练习&amp;lt;/h2&amp;gt; &amp;lt;ul&amp;gt; { data.map((item,index)=&amp;gt;{ return &amp;lt;li key={index}&amp;gt;{item}&amp;lt;/li&amp;gt; }) } &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; ); //2.渲染虚拟dom  ReactDOM.render(VDOM,document.getElementById(&amp;#39;container&amp;#39;)); &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; </description>
@@ -29,28 +29,28 @@
     
     <item>
       <title>Jsx语法规则</title>
-      <link>https://rocketturtlewqt.github.io/react/jsx%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/</link>
+      <link>https://rockettturtlewqt.github.io/react/jsx%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/</link>
       <pubDate>Mon, 12 Jul 2021 23:50:27 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/react/jsx%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/</guid>
+      <guid>https://rockettturtlewqt.github.io/react/jsx%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/</guid>
       <description>jsx  全程javascript xml 它是react定义的一种xml的js扩展语法：js + xml  jsx语法规则  定义虚拟dom时不要加引号 标签中混入js表达式时要用花括号 样式的类名指定不要用class，要用className 内联样式要用style={{key:value}}的形式去写 虚拟dom必须只有一个根标签 标签必须闭合 标签首字母   (1)若小写字母开头，则将标签转为html同名元素，若html中无该标签对应的同名元素，则报错 (2)若大写字母开头，react就去渲染对应的组件，若组件没有定义，则报错  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;script src=&amp;#34;../lib/react.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;../lib/react-dom.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;../lib/browser.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;title&amp;gt;jsx语法规则&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; .father{ background-color: red; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;text/babel&amp;#34;&amp;gt; const text=&amp;#39;hello react&amp;#39;; //1.创建虚拟dom  const VDOM=( &amp;lt;div&amp;gt; &amp;lt;h2 className=&amp;#34;father&amp;#34;&amp;gt; &amp;lt;span style={{color:&amp;#39;white&amp;#39;}}&amp;gt;{text}&amp;lt;/span&amp;gt; &amp;lt;/h2&amp;gt; &amp;lt;input type=&amp;#34;text&amp;#34;/&amp;gt; &amp;lt;/div&amp;gt; ); //2.渲染虚拟dom到视图上  ReactDOM.render(VDOM,document.getElementById(&amp;#39;container&amp;#39;)); &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; </description>
     </item>
     
     <item>
       <title>Hello_react案例</title>
-      <link>https://rocketturtlewqt.github.io/react/hello_react%E6%A1%88%E4%BE%8B/</link>
+      <link>https://rockettturtlewqt.github.io/react/hello_react%E6%A1%88%E4%BE%8B/</link>
       <pubDate>Sun, 11 Jul 2021 18:58:06 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/react/hello_react%E6%A1%88%E4%BE%8B/</guid>
+      <guid>https://rockettturtlewqt.github.io/react/hello_react%E6%A1%88%E4%BE%8B/</guid>
       <description>babel的作用  ES6 ==&amp;gt; ES5 jsx ==&amp;gt; js  </description>
     </item>
     
     <item>
       <title>React简介</title>
-      <link>https://rocketturtlewqt.github.io/react/react%E7%AE%80%E4%BB%8B/</link>
+      <link>https://rockettturtlewqt.github.io/react/react%E7%AE%80%E4%BB%8B/</link>
       <pubDate>Sun, 11 Jul 2021 18:25:24 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/react/react%E7%AE%80%E4%BB%8B/</guid>
+      <guid>https://rockettturtlewqt.github.io/react/react%E7%AE%80%E4%BB%8B/</guid>
       <description>react是什么  react是构建用户界面的javascript库，是将数据渲染为html页面的开源javascript库  react谁开发的  是由Facebook开发，且开源  为什么要学react  原生javascript操作dom繁琐，且效率低。   dom-api操作ui  document.getElementById(&amp;#39;app&amp;#39;); docuemnt.querySelectot(&amp;#39;#app&amp;#39;); 使用javascript操作dom，浏览器会进行大量的重绘重排 原生javascript没有组件化编码方案，代码复用率低  react的优点  采用组件化模式、声明式编码，提高开发效率与组件服用率 在React Native中可以使用React语法进行移动端开发 使用虚拟DOM+优秀的diffing算法，尽量减少与真实DOM的交互   001和002的虚拟dom在内存中，当有003出现时，001和002会复用。  </description>
     </item>
     

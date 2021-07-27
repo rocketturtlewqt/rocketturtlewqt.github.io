@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gits on RocketTurtle</title>
-    <link>https://rocketturtlewqt.github.io/git/</link>
+    <link>https://rockettturtlewqt.github.io/git/</link>
     <description>Recent content in Gits on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 May 2021 19:26:34 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 May 2021 19:26:34 +0800</lastBuildDate><atom:link href="https://rockettturtlewqt.github.io/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git基本原理</title>
-      <link>https://rocketturtlewqt.github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</link>
+      <link>https://rockettturtlewqt.github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</link>
       <pubDate>Mon, 03 May 2021 19:26:34 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</guid>
+      <guid>https://rockettturtlewqt.github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</guid>
       <description>哈希算法 各类哈希算法的共同点
  输入数据被加密后的hash值长度是相同的。 输入数据相同，加密形成的hash值相同。 输入数据不同，加密形成的hash值不同。 hash算法不可逆。 Git底层采用的是SHA-1算法保证数据完整性。 hash算法被用来检验文件完整性。   Git版本数据管理机制  构建树对象，维护父子节点关系 提交对象与树对象是一一映射关系，多个提交对象形成一个链条，也就是历史版本  Git分支管理  初始化本地仓库，并创建分支hot_fix  切换当前指针指向hot_fix指针，修改内容并提交  切换当前指针指向master，修改内容并提交  之后合并时若产生冲突问题，可以参考合并分支时的冲突问题  </description>
     </item>
     
     <item>
       <title>本地库和远程库</title>
-      <link>https://rocketturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</link>
+      <link>https://rockettturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</link>
       <pubDate>Mon, 03 May 2021 12:12:17 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</guid>
+      <guid>https://rockettturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</guid>
       <description>代码托管中心  代码托管中心用来维护远程库 局域网下搭建的服务器：GitLab 外网下的服务器：GitHub，码云  本地库基本操作 本地库初始化 git init  可以通过 ls -lA 查看.git/下的子目录与文件  设置签名  用来区分不同开发人员身份，与登陆到远程库的用户名和密码作用不同 项目级别：git config user.name=tom_xm user.email=1600639146@qq.com，查看使用cat .git 系统级别：git config &amp;ndash;global user.name=tom_global user.email=1600639146@qq.com，查看步骤：定位到用户夹 cd ~ =&amp;gt; 查看.gitconfig文件 cat .gitconfig  基本操作  查看  //查看当前的状态，没有被追踪的文件颜色为红色，即表明目前在工作区中；在暂存区中的文件显示为绿色 git status 添加  //将文件添加到暂存区中，此时使用git status文件显示为绿色 git add &amp;lt;filename&amp;gt; 撤销  //撤销add操作，将文件状态回退到工作区 git rm --cache &amp;lt;filename&amp;gt; 提交  //将文件从暂存区提交到本地仓库 git commit -m &amp;#34;&amp;lt;提交说明&amp;gt;&amp;#34; &amp;lt;filename&amp;gt; 查看历史记录   git log：详细查看提交的历史记录  git log &amp;ndash;pretty=oneline：简略查看提交的历史记录，hash值很长，每条记录一行  git log &amp;ndash;oneline：与git log &amp;ndash;pretty=oneline的区别是其hash值比较短  git reflog：最理想的方式，HEAD@{&amp;lt;回退步数&amp;gt;}   回退/前进历史版本   基于索引值操作  git reset --hard &amp;lt;局部索引值&amp;gt;  使用^符号：只能后退  //几个^表示后退几步 git reset --hard HEAD^  使用~符号：只能后退  //n表示后退几步 git reset --hard HEAD~n   hard、mixed、soft对比  //本地库向前移动了一个单位，此时 git status 颜色为绿色，看起来是暂存区向后移动了一个单位 git reset --soft &amp;lt;局部索引值&amp;gt; //本地库以及暂存区向前移动了一个单位，此时 git status 颜色为红色，看起来是工作区向后移动了一个单位 git reset --mixed &amp;lt;局部索引值&amp;gt; //本地库、暂存区以及工作区向前移动了一个单位 git reset --hard &amp;lt;局部索引值&amp;gt; //使用mixed或soft移动后回到当前指针指向的位置 git reset --hard HEAD   永久删除文件并回退  rm &amp;lt;filename&amp;gt; 使用上述命令删除后，也可以通过 git reset &amp;ndash;hard &amp;lt;局部索引值&amp;gt; 找回</description>
     </item>
     
     <item>
       <title>Git结构</title>
-      <link>https://rocketturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</link>
+      <link>https://rockettturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</link>
       <pubDate>Mon, 03 May 2021 11:48:18 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</guid>
+      <guid>https://rockettturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</guid>
       <description>git本地结构  工作区 =&amp;gt; 暂存区=&amp;gt; 本地库 工作区：编写代码 暂存区：临时存储 本地库：历史版本 工作区 =&amp;gt; 暂存区：git add，暂存区 =&amp;gt; 本地库：git commit  </description>
     </item>
     

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Chrome高版本中非https无法打开摄像头和录音功能 // RocketTurtle</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.82.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="RocketTurtle" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://rockettturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Chrome高版本中非https无法打开摄像头和录音功能"/>
+<meta name="twitter:description" content="解决方案   在chrome中输入chrome://flags/#unsafely-treat-insecure-origin-as-secure。
+  在方框内填写指定的url。
+  保存。
+  "/>
+
+    <meta property="og:title" content="Chrome高版本中非https无法打开摄像头和录音功能" />
+<meta property="og:description" content="解决方案   在chrome中输入chrome://flags/#unsafely-treat-insecure-origin-as-secure。
+  在方框内填写指定的url。
+  保存。
+  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rockettturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/chrome%E9%AB%98%E7%89%88%E6%9C%AC%E4%B8%AD%E9%9D%9Ehttps%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%91%84%E5%83%8F%E5%A4%B4%E5%92%8C%E5%BD%95%E9%9F%B3%E5%8A%9F%E8%83%BD/" /><meta property="article:section" content="实习" />
+<meta property="article:published_time" content="2021-07-25T16:08:46&#43;08:00" />
+<meta property="article:modified_time" content="2021-07-25T16:08:46&#43;08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://rockettturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
+      <h1>RocketTurtle</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/">blog</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/macosx/">MacOsX</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vscode/">vscode</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/git/">git</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vue%E6%BA%90%E7%A0%81/">vue源码</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/javascript/">javascript</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/webpack/">webpack</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/nodejs/">nodejs</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/chrome/">chrome</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E8%AE%A1%E7%BD%91/">计网</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/css/">css</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/serverless/">serverless</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/less/">less</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/react/">react</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E5%85%B6%E5%AE%83/">其它</a>
+      </nav>
+      <p>使自己变得更优秀！</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/rocketturtlewqt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Chrome高版本中非https无法打开摄像头和录音功能</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 25, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h3 id="解决方案">解决方案</h3>
+<ul>
+<li>
+<p>在chrome中输入chrome://flags/#unsafely-treat-insecure-origin-as-secure。</p>
+</li>
+<li>
+<p>在方框内填写指定的url。</p>
+</li>
+<li>
+<p>保存。</p>
+</li>
+</ul>
+<p><img src="https://rocketturtlewqt.github.io/2021072540919aft.png" alt="Chrome高版本中非https无法打开摄像头和录音功能"></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

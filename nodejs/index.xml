@@ -2,71 +2,71 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nodejs on RocketTurtle</title>
-    <link>https://rocketturtlewqt.github.io/nodejs/</link>
+    <link>https://rockettturtlewqt.github.io/nodejs/</link>
     <description>Recent content in Nodejs on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Jun 2021 20:43:33 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Jun 2021 20:43:33 +0800</lastBuildDate><atom:link href="https://rockettturtlewqt.github.io/nodejs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>内置模块 Crypto</title>
-      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-crypto/</link>
+      <link>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-crypto/</link>
       <pubDate>Thu, 17 Jun 2021 20:43:33 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-crypto/</guid>
+      <guid>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-crypto/</guid>
       <description>内置模块crypto  crypto模块主要用途是加密  const crypto = require(&amp;#39;crypto&amp;#39;); const password = &amp;#39;abc123 7sjds&amp;#39;; /** * createHash：指定加密算法 * update：指定加密的对象 * digest：指定加密使用几进制 */ const hash = crypto.createHash(&amp;#39;sha1&amp;#39;).update(password).digest(&amp;#39;hex&amp;#39;); console.log(hash);//e4aeea77b4c55d3cdbfbf3577b6cc9384a96bd29 </description>
     </item>
     
     <item>
       <title>内置模块 Readline</title>
-      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-readline/</link>
+      <link>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-readline/</link>
       <pubDate>Thu, 17 Jun 2021 20:33:59 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-readline/</guid>
+      <guid>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-readline/</guid>
       <description>内置模块readline  逐行读取  const readline = require(&amp;#39;readline&amp;#39;); const rl = readline.createInterface({ input: process.stdin, output: process.stdout }); rl.question(&amp;#39;请输入你的名字：&amp;#39;, answer =&amp;gt; { console.log(`你好！${answer}`); rl.close(); }); </description>
     </item>
     
     <item>
       <title>内置模块 zlib</title>
-      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-zlib/</link>
+      <link>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-zlib/</link>
       <pubDate>Thu, 17 Jun 2021 20:26:43 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-zlib/</guid>
+      <guid>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-zlib/</guid>
       <description>内置模块zlib  此模块主要是用来将指定文件的内容压缩，生成一个新的gzip文件  const fs = require(&amp;#39;fs&amp;#39;); const { dirname } = require(&amp;#39;path&amp;#39;); const zlib = require(&amp;#39;zlib&amp;#39;); const gzip = zlib.createGzip(); const readStream = fs.createReadStream(`${__dirname}/log1.txt`); const writeStram = fs.createWriteStream(`${__dirname}/log2.gzip`); readStream .pipe(gzip) .pipe(writeStram); </description>
     </item>
     
     <item>
       <title>内置模块 Fs</title>
-      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-fs/</link>
+      <link>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-fs/</link>
       <pubDate>Tue, 15 Jun 2021 14:00:49 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-fs/</guid>
+      <guid>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-fs/</guid>
       <description>内置模块fs  mkdir：创建文件夹 rmdir：删除文件夹 rename：重命名文件夹或文件 readir：读取文件夹下的内容 writeFile：写文件 appendFile：在文件中追加内容 unlink：删除文件 readFile：异步读取文件 readFileSync：同步读取文件 watch：监听目录或文件变化 文档  const fs = require(&amp;#39;fs&amp;#39;); // import { readFile } from &amp;#39;fs/promises&amp;#39;;  //创建文件夹 // fs.mkdir(&amp;#39;logs&amp;#39;, err =&amp;gt; { // if (err) throw err; // console.log(&amp;#39;文件夹创建成功&amp;#39;); // });  //删除文件夹 // fs.rmdir(&amp;#39;logs&amp;#39;, () =&amp;gt; { // console.log(&amp;#39;文件夹删除成功&amp;#39;); // });  //重命名文件夹或文件 // fs.rename(&amp;#39;./logs&amp;#39;, &amp;#39;./log&amp;#39;, () =&amp;gt; { // console.log(&amp;#39;文件夹重命名成功&amp;#39;); // });  //读取文件夹下的内容 // fs.readdir(__dirname + &amp;#39;/log&amp;#39;, (err, result) =&amp;gt; { // console.</description>
     </item>
     
     <item>
       <title>内置模块 Events</title>
-      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-events/</link>
+      <link>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-events/</link>
       <pubDate>Tue, 15 Jun 2021 13:44:45 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-events/</guid>
+      <guid>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-events/</guid>
       <description>内置模块events  内置模块events能够用哦来自定义事件 实例的on方法用来定义可以被触发多次的事件 实例的once方法用来定义只能被触发一次的事件 实例的emit方法用来触发事件  const EventEmitter = require(&amp;#39;events&amp;#39;); class MyEventEmitter extends EventEmitter{ } const event = new MyEventEmitter(); event.on(&amp;#39;play&amp;#39;, value =&amp;gt; { console.log(value); }); event.once(&amp;#39;hello&amp;#39;, value =&amp;gt; { console.log(value); }); event.emit(&amp;#39;play&amp;#39;, &amp;#39;one&amp;#39;);//one event.emit(&amp;#39;play&amp;#39;, &amp;#39;one&amp;#39;);//one  event.emit(&amp;#39;hello&amp;#39;, &amp;#39;two&amp;#39;);//two event.emit(&amp;#39;hello&amp;#39;, &amp;#39;two&amp;#39;);// </description>
     </item>
     
     <item>
       <title>内置模块http爬虫</title>
-      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97http%E7%88%AC%E8%99%AB/</link>
+      <link>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97http%E7%88%AC%E8%99%AB/</link>
       <pubDate>Thu, 10 Jun 2021 20:32:33 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97http%E7%88%AC%E8%99%AB/</guid>
+      <guid>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97http%E7%88%AC%E8%99%AB/</guid>
       <description>cheerio  第三方模块，将爬取的数据进行解析 实现了核心jquery的子集 中文文档：cheerio爬虫  npm i cheerio -S const http = require(&amp;#39;http&amp;#39;); const https = require(&amp;#39;https&amp;#39;); const cheerio = require(&amp;#39;cheerio&amp;#39;); function handleRel(data) { const $ = cheerio.load(data); $(&amp;#39;.button-wrapper&amp;#39;).each((index, value) =&amp;gt; { console.log(index); }); } const server = http.createServer((req, res) =&amp;gt; { let data = &amp;#39;&amp;#39;; https.get(&amp;#39;https://www.meizu.com&amp;#39;, (rel) =&amp;gt; { rel.on(&amp;#39;data&amp;#39;, (chunk) =&amp;gt; { data += chunk; }); rel.on(&amp;#39;end&amp;#39;, () =&amp;gt; { handleRel(data); }); }); }); server.listen(3000, () =&amp;gt; { console.</description>
     </item>
     
     <item>
       <title>内置模块 Http Proxy Middleware</title>
-      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http-proxy-middleware/</link>
+      <link>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http-proxy-middleware/</link>
       <pubDate>Tue, 08 Jun 2021 19:43:53 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http-proxy-middleware/</guid>
+      <guid>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http-proxy-middleware/</guid>
       <description>通过node中间件http-proxy-middleware做正向代理   它可以利用node没有浏览器安全级别的跨域限制解决跨域问题
   安装 http-proxy-middleware 模块
   npm i http-proxy-middleware -S const http = require(&amp;#39;http&amp;#39;); const { createProxyMiddleware } = require(&amp;#39;http-proxy-middleware&amp;#39;); const server = http.createServer((req, res) =&amp;gt; { const urlStr = req.url; if (/^\/api\/v3\/search/.test(urlStr)) { const proxy = createProxyMiddleware({ target: &amp;#39;https://so.csdn.net&amp;#39;, changeOrigin: true }); proxy(req, res); } else { console.log(&amp;#39;error&amp;#39;); res.write(&amp;#39;error&amp;#39;); } // res.end(); }); server.listen(3000, () =&amp;gt; { console.log(&amp;#39;http://localhost:3000&amp;#39;); });  以上将 http://localhost:3000/api/v3/search&amp;hellip;. 代理成 https://so.csdn.net/api/v3/search.... 若想重写path，可以添加 pathRewrite 选项，具体可以参见 http-proxy-middleware文档  </description>
@@ -74,48 +74,48 @@
     
     <item>
       <title>内置模块 Http</title>
-      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/</link>
+      <link>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/</link>
       <pubDate>Thu, 03 Jun 2021 13:13:45 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/</guid>
+      <guid>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/</guid>
       <description>node浏览器调试 node --inspect --inspect-brk app.js  打开chrome浏览器，输入chrome://inspect进行调试  node进程管理工具  supervisor nodemon forever pm2   安装nodemon  npm i nodemon -g response  若不设置response的头信息，浏览器默认以html形式解析字符串 writeHead   第一个参数为状态码 第二个参数用来设置头部具体信息，例如，content-type  const http = require(&amp;#39;http&amp;#39;); const server = http.createServer((req, res) =&amp;gt; { res.writeHead(200, { &amp;#39;content-type&amp;#39;: &amp;#39;text/plain&amp;#39; }) res.write(&amp;#39;&amp;lt;div&amp;gt;hello world&amp;lt;/div&amp;gt;&amp;#39;) res.end(); }); server.listen(&amp;#39;7002&amp;#39;); http.request  后端请求另一个后端接口  将http.request请求封装成模块
 cors  当请求的协议、域名或者端口号与当前浏览器客户端地址不同时，会产生跨域限制，这是浏览器本身的安全策略。可以通过在服务端设置 &amp;lsquo;Access-Control-Allow-Origin&amp;rsquo;: &amp;lsquo;*&amp;rsquo; 来解决。  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.</description>
     </item>
     
     <item>
       <title>内置模块 Url</title>
-      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-url/</link>
+      <link>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-url/</link>
       <pubDate>Thu, 03 Jun 2021 12:53:20 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-url/</guid>
+      <guid>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-url/</guid>
       <description>内置模块url常用api  log4js模块用来记录日志  npm i log4js -D log4j模块文档
  url内置模块用来解析url地址   url.parse()：将url字符串地址解析为url对象 url.format()：将url对象解析为url字符串地址 url.resolve（）：用来处理路径上下文 URLSearchParams类接收一个参数，类似于?id=12（可以通过url.parse(location).search获取），之后通过实例对象的 get api获取参数  const log4js = require(&amp;#34;log4js&amp;#34;); log4js.configure({ appenders: { cheese: { type: &amp;#34;file&amp;#34;, filename: &amp;#34;cheese.log&amp;#34; } }, categories: { default: { appenders: [&amp;#34;cheese&amp;#34;], level: &amp;#34;error&amp;#34; } } }); const logger = log4js.getLogger(&amp;#39;cheese&amp;#39;); logger.level = &amp;#34;debug&amp;#34;; const url = require(&amp;#39;url&amp;#39;); const location = &amp;#39;https://www.baidu.com:443/path/index.html?id=12#tag&amp;#39;; const location_obj={ protocol: &amp;#39;https:&amp;#39;, slashes: true, auth: null, host: &amp;#39;www.</description>
     </item>
     
     <item>
       <title>Commonjs</title>
-      <link>https://rocketturtlewqt.github.io/nodejs/commonjs/</link>
+      <link>https://rockettturtlewqt.github.io/nodejs/commonjs/</link>
       <pubDate>Sat, 29 May 2021 12:06:16 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/nodejs/commonjs/</guid>
+      <guid>https://rockettturtlewqt.github.io/nodejs/commonjs/</guid>
       <description> commonjs是nodejs的第三方规范 通过require来引包 使用module.exports和exports来暴露，exports是module.exports的引用 尽量避免循环依赖  module.exports={ name, age } //等价于 exports.name=name; exports.age=age; </description>
     </item>
     
     <item>
       <title>Npm</title>
-      <link>https://rocketturtlewqt.github.io/nodejs/npm/</link>
+      <link>https://rockettturtlewqt.github.io/nodejs/npm/</link>
       <pubDate>Thu, 27 May 2021 18:26:53 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/nodejs/npm/</guid>
+      <guid>https://rockettturtlewqt.github.io/nodejs/npm/</guid>
       <description>全局安装  npm install webpack --global (-g) 创建package.json  // -y 使用默认配置 npm init -y 本地安装包  //dev：开发环境依赖 //save：放在package.json中 npm install gulp --dev-save //简写 npm install gulp -D //生产环境依赖 npm install gulp --save //简写 npm install gulp -D 查看包的依赖关系  //查看所有包的依赖关系树 npm list //查看指定包的依赖关系树 npm list | grep &amp;lt;包名&amp;gt; 根据package.json安装相应的包  //安装所有依赖 npm i //安装生产环境依赖 npm i --production //安装开发环境依赖 npm i --development 查看包的所有版本  npm view jquery versions node package version    13.</description>
     </item>
     
     <item>
       <title>Node与浏览器的对比</title>
-      <link>https://rocketturtlewqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</link>
+      <link>https://rockettturtlewqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</link>
       <pubDate>Thu, 27 May 2021 17:38:37 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</guid>
+      <guid>https://rockettturtlewqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</guid>
       <description>node与浏览器的对比  node没有浏览器安全级别的限制   浏览器具有跨域沙箱的安全限制，node没有 node可以读写文件 node可以管理继承  /* [ &amp;#39;/usr/local/bin/node&amp;#39;, &amp;#39;/Users/wangqintao/Desktop/nodejs/认识nodejs/tempCodeRunnerFile.js&amp;#39; ] */ console.log(process.argv); http/https  const http = require(&amp;#39;http&amp;#39;); const server = http.createServer((req, res) =&amp;gt; { res.write(req.url); res.end(); }); server.listen(8090, &amp;#39;localhost&amp;#39;, () =&amp;gt; { console.log(&amp;#39;localhost:8090&amp;#39;); }); </description>
     </item>
     

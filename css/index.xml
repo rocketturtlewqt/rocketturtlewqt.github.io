@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Csses on RocketTurtle</title>
-    <link>https://rocketturtlewqt.github.io/css/</link>
+    <link>https://rockettturtlewqt.github.io/css/</link>
     <description>Recent content in Csses on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jul 2021 16:20:39 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Jul 2021 16:20:39 +0800</lastBuildDate><atom:link href="https://rockettturtlewqt.github.io/css/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>变形</title>
-      <link>https://rocketturtlewqt.github.io/css/%E5%8F%98%E5%BD%A2/</link>
+      <link>https://rockettturtlewqt.github.io/css/%E5%8F%98%E5%BD%A2/</link>
       <pubDate>Sat, 10 Jul 2021 16:20:39 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/css/%E5%8F%98%E5%BD%A2/</guid>
+      <guid>https://rockettturtlewqt.github.io/css/%E5%8F%98%E5%BD%A2/</guid>
       <description>范围框  受css控制的元素，其范围框是边框框，即元素边框的边界。在计算范围框时是不算上轮廓和外边距的。  注意   对于所有变形函数，元素都有自己的堆叠上下文。例如，经过缩放/放大的元素，其所占的空间大小是不变的，这一点对所有变形函数都成立。
   变形函数的书写顺序可能会影响最后的显示结果，变形函数实施顺序，左-&amp;gt;右
   //书写1 img{ tranform: translate(200px) rotate(45deg); } //书写2 img{ transform: translate(200px) rotate(45deg); }  旋转图像的过程中，主轴和垂轴也会变    当有多个变形函数时，每一个函数都要正确设置，否则整个变形都将失效
@@ -22,10 +22,10 @@
     
     <item>
       <title>Flex弹性布局</title>
-      <link>https://rocketturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</link>
+      <link>https://rockettturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</link>
       <pubDate>Sat, 05 Jun 2021 14:16:07 +0800</pubDate>
       
-      <guid>https://rocketturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</guid>
+      <guid>https://rockettturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</guid>
       <description>弹性元素的外边距不折叠  主轴和垂轴  flex-direction：设置主轴方向。row（左-&amp;gt;右）、row-reverse（右-&amp;gt;左）、column（上-&amp;gt;下）、column-reverse（下-&amp;gt;上），默认为row flex-wrap：设置垂轴方向。nowrap（不换行）、wrap（换行）、wrap-reverse（反向换行），默认为nowrap flex-flow：同时设置主轴和垂轴方向 以上三个属性都应用于弹性容器  主轴和垂轴的方向（从左至右)  主轴和垂轴的方向和语言的书写方向有关，这里仅讨论从左至右书写的语言  justify-content（作用于弹性容器）   应用于弹性容器，定义弹性元素在主轴方向上的对齐方式
   取值：flex-start、flex-end、center、space-between、space-around、space-evently
   作用的弹性元素是包含外边距的
