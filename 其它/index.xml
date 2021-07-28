@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>其它s on RocketTurtle</title>
-    <link>https://rockettturtlewqt.github.io/%E5%85%B6%E5%AE%83/</link>
+    <link>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/</link>
     <description>Recent content in 其它s on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Jul 2021 22:22:22 +0800</lastBuildDate><atom:link href="https://rockettturtlewqt.github.io/%E5%85%B6%E5%AE%83/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jul 2021 22:22:22 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker常用命令</title>
-      <link>https://rockettturtlewqt.github.io/%E5%85%B6%E5%AE%83/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Thu, 08 Jul 2021 22:22:22 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/%E5%85%B6%E5%AE%83/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>什么是docker   docker镜像：一个只读的模板。镜像可以创建docker容器。一个镜像可以创建很多容器。镜像可以类比为类，容器就是一个一个的实例。
   docker容器：独立运行一个或一组应用。容器使用镜像创建的运行实例。可以把容器看作是一个简易版的linux环境和运行在其中的应用程序。
   docker仓库：集中存放镜像的场所。
@@ -26,19 +26,19 @@
     
     <item>
       <title>day2-撰写项目安装教程-分享给团队成员部署</title>
-      <link>https://rockettturtlewqt.github.io/%E5%85%B6%E5%AE%83/%E9%A1%B9%E7%9B%AE%E5%AE%89%E8%A3%85/</link>
+      <link>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/%E9%A1%B9%E7%9B%AE%E5%AE%89%E8%A3%85/</link>
       <pubDate>Wed, 30 Jun 2021 23:10:29 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/%E5%85%B6%E5%AE%83/%E9%A1%B9%E7%9B%AE%E5%AE%89%E8%A3%85/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/%E9%A1%B9%E7%9B%AE%E5%AE%89%E8%A3%85/</guid>
       <description>6.30任务  项目的本地测试，观测是否正常运行。 撰写技术文档，提供给团队成员安装部署。  之后的任务  项目部分地方存在bug，需要调试更改。 更改项目，配合团队成员持续集成、部署。  self-website（前端项目1）安装步骤  将项目克隆到本地  git clone https://github.com/rocketturtlewqt/self-website.git 安装相关依赖  npm i 启动项目  npm run serve 效果图 self-website-manager（前端项目2）安装步骤  将项目克隆到本地  git clone https://github.com/rocketturtlewqt/self-website-manager.git 安装相关依赖  npm i 启动项目  npm run serve 效果图  登陆密码：Wqt197781806  self-website-backstage（后端项目）安装步骤  将项目克隆到本地  git clone https://github.com/rocketturtlewqt/self-website-backstage.git 安装相关依赖  npm i 更改mysql配置   找到self-website-backstage/config/config.default.js 只需要更改client部分即可  安装数据库及表   创建数据库 sql文件在sql目录下，直接跑一下即可  启动项目  npm run dev 三个项目的github地址 前端项目1 前端项目2 后端项目</description>
     </item>
     
     <item>
       <title>day1-本地并测试安装jenkins</title>
-      <link>https://rockettturtlewqt.github.io/%E5%85%B6%E5%AE%83/%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85jenkins/</link>
+      <link>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85jenkins/</link>
       <pubDate>Tue, 29 Jun 2021 19:20:54 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/%E5%85%B6%E5%AE%83/%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85jenkins/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85jenkins/</guid>
       <description>6.29任务   本地安装并配置jenkins，并运行。了解jenkins的基础知识。
   下载jenkins镜像
   docker pull jenkins/jenkins:lts 根据镜像创建jenkins容器实例并运行  docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts-jdk11  如上终端，会有一串hash值，将它复制粘贴到管理员密码框即可  安装推荐的插件  创建管理员用户  </description>

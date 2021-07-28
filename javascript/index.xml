@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Javascripts on RocketTurtle</title>
-    <link>https://rockettturtlewqt.github.io/javascript/</link>
+    <link>https://rocketturtlewqt.github.io/javascript/</link>
     <description>Recent content in Javascripts on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Jul 2021 21:46:41 +0800</lastBuildDate><atom:link href="https://rockettturtlewqt.github.io/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Jul 2021 21:46:41 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>手写promise</title>
-      <link>https://rockettturtlewqt.github.io/javascript/%E6%89%8B%E5%86%99promise/</link>
+      <link>https://rocketturtlewqt.github.io/javascript/%E6%89%8B%E5%86%99promise/</link>
       <pubDate>Tue, 27 Jul 2021 21:46:41 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/javascript/%E6%89%8B%E5%86%99promise/</guid>
+      <guid>https://rocketturtlewqt.github.io/javascript/%E6%89%8B%E5%86%99promise/</guid>
       <description>promise简单实现 const PENDING = &amp;#39;pending&amp;#39;; const FULLFILLED = &amp;#39;fullfilled&amp;#39;; const REJECTED = &amp;#39;rejected&amp;#39;; function Mypromise(fn) { const self = this; this.state = PENDING; this.value = null; this.reason = null; this.resolveCb = []; this.rejectedCb = []; let resolve = function (value) { self.state = FULLFILLED; self.value = value; self.resolveCb.forEach(handler =&amp;gt; { handler(value); }); }; let rejected = function (reason) { self.state = REJECTED; self.reason = reason; self.rejectedCb.forEach(handler =&amp;gt; { handler(reason); }); }; try { fn(resolve, rejected); } catch (err) { rejected(err); } } Mypromise.</description>
     </item>
     
     <item>
       <title>正则表达式</title>
-      <link>https://rockettturtlewqt.github.io/javascript/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <link>https://rocketturtlewqt.github.io/javascript/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
       <pubDate>Fri, 07 May 2021 12:04:26 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/javascript/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <guid>https://rocketturtlewqt.github.io/javascript/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
       <description>体验正则表达式的魅力 let str = &amp;#39;asjdhka17821sdjashdkj23324&amp;#39;; //将数字拼接成字符串返回 //不用正则表达式 function parseNumber(s) { let result = &amp;#39;&amp;#39;; for (let i = 0; i &amp;lt; s.length; i++){ if (!Number.isNaN(parseInt(s[i]))) result += s[i]; } return result; } //用正则表达式 console.log(str.match(/\d/g).join(&amp;#39;&amp;#39;)); 字面量创建正则表达式 const str = &amp;#39;Abctds&amp;#39;; // RegExp参数 // - 正则表达式 // - 模式匹配 i表示忽略大小写，g表示全局匹配 let exp = new RegExp(&amp;#39;a&amp;#39;, &amp;#39;i&amp;#39;); console.log(exp.test(str)); //使用字面量创建正则表达式 console.log(/a/i.test(str)); 使用对象创建正则表达式 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.</description>
     </item>
     

@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lesses on RocketTurtle</title>
-    <link>https://rockettturtlewqt.github.io/less/</link>
+    <link>https://rocketturtlewqt.github.io/less/</link>
     <description>Recent content in Lesses on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 17 Jul 2021 21:18:12 +0800</lastBuildDate><atom:link href="https://rockettturtlewqt.github.io/less/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Jul 2021 21:18:12 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/less/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>运算</title>
-      <link>https://rockettturtlewqt.github.io/less/%E8%BF%90%E7%AE%97/</link>
+      <link>https://rocketturtlewqt.github.io/less/%E8%BF%90%E7%AE%97/</link>
       <pubDate>Sat, 17 Jul 2021 21:18:12 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/less/%E8%BF%90%E7%AE%97/</guid>
+      <guid>https://rocketturtlewqt.github.io/less/%E8%BF%90%E7%AE%97/</guid>
       <description>运算说明  任何数值、颜色和变量都可以进行运算  数值模型运算  less会为你自动推算数值的单位，所以你不必为每一个数值加上单位 注意：运算符与数值之间要用空格隔开，涉及优先级时以()进行优先级运算  .container{ width: 450px + 450; }  编译后  .container { width: 900px; } .container{ width: (450 + 50) * 2 + 24px; }  编译后  .container { width: 1024px; } 颜色值运算  less在运算时，现将颜色转换为rgb模式，然后再转换为16制的颜色并返回 注意：不能直接对颜色名称进行运算  .container{ width: #000000 + 255; }  编译后  .container { width: #ffffff; } </description>
     </item>
     
     <item>
       <title>嵌套规则</title>
-      <link>https://rockettturtlewqt.github.io/less/%E5%B5%8C%E5%A5%97%E8%A7%84%E5%88%99/</link>
+      <link>https://rocketturtlewqt.github.io/less/%E5%B5%8C%E5%A5%97%E8%A7%84%E5%88%99/</link>
       <pubDate>Fri, 16 Jul 2021 23:13:38 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/less/%E5%B5%8C%E5%A5%97%E8%A7%84%E5%88%99/</guid>
+      <guid>https://rocketturtlewqt.github.io/less/%E5%B5%8C%E5%A5%97%E8%A7%84%E5%88%99/</guid>
       <description>什么是嵌套规则  嵌套规则模仿了html结构，让我们的代码更加简洁清晰  css写法 #container { background-color: red; width: 200px; height: 200px; } #container p { width: 200px; height: 100px; background-color: blue; } #container a { text-decoration: none; } less写法 #container{ background-color: red; width: 200px; height: 200px; p{ width: 200px; height: 100px; background-color: blue; } a{ text-decoration: none; } } 父元素选择器&amp;amp;  &amp;amp;：表示当前选择器的所有父选择器  less #container{ background-color: red; width: 200px; height: 200px; p{ width: 200px; height: 100px; background-color: blue; span{ display: block; width: 50px; height: 50px; background-color: green; &amp;amp;:hover{ background-color: black; } } } a{ text-decoration: none; } } css #container { background-color: red; width: 200px; height: 200px; } #container p { width: 200px; height: 100px; background-color: blue; } #container p span { display: block; width: 50px; height: 50px; background-color: green; } #container p span:hover { background-color: black; } #container a { text-decoration: none; } 将&amp;amp;放在选择器的后面  第一种情况  .</description>
     </item>
     
     <item>
       <title>混合</title>
-      <link>https://rockettturtlewqt.github.io/less/%E6%B7%B7%E5%90%88/</link>
+      <link>https://rocketturtlewqt.github.io/less/%E6%B7%B7%E5%90%88/</link>
       <pubDate>Tue, 13 Jul 2021 22:00:39 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/less/%E6%B7%B7%E5%90%88/</guid>
+      <guid>https://rocketturtlewqt.github.io/less/%E6%B7%B7%E5%90%88/</guid>
       <description>什么是混合  混合就是将一系列属性从一个规则集引入到另一个规则集的方式  普通混合 .font_family { font-family: &#39;Gill Sans&#39;, &#39;Gill Sans MT&#39;, Calibri, &#39;Trebuchet MS&#39;, sans-serif; } h1 { font-size: 28px; font-family: &#39;Gill Sans&#39;, &#39;Gill Sans MT&#39;, Calibri, &#39;Trebuchet MS&#39;, sans-serif; } h2 { font-size: 24px; font-family: &#39;Gill Sans&#39;, &#39;Gill Sans MT&#39;, Calibri, &#39;Trebuchet MS&#39;, sans-serif; }  编译输出后的结果  .font_family { font-family: &amp;#39;Gill Sans&amp;#39;, &amp;#39;Gill Sans MT&amp;#39;, Calibri, &amp;#39;Trebuchet MS&amp;#39;, sans-serif; } h1 { font-size: 28px; font-family: &amp;#39;Gill Sans&amp;#39;, &amp;#39;Gill Sans MT&amp;#39;, Calibri, &amp;#39;Trebuchet MS&amp;#39;, sans-serif; } h2 { font-size: 24px; font-family: &amp;#39;Gill Sans&amp;#39;, &amp;#39;Gill Sans MT&amp;#39;, Calibri, &amp;#39;Trebuchet MS&amp;#39;, sans-serif; } 不带输出的混合   如果逆向创建一个混合集，但是却不想让它输出到你的样式中</description>
     </item>
     
     <item>
       <title>变量</title>
-      <link>https://rockettturtlewqt.github.io/less/%E5%8F%98%E9%87%8F/</link>
+      <link>https://rocketturtlewqt.github.io/less/%E5%8F%98%E9%87%8F/</link>
       <pubDate>Mon, 12 Jul 2021 21:38:21 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/less/%E5%8F%98%E9%87%8F/</guid>
+      <guid>https://rocketturtlewqt.github.io/less/%E5%8F%98%E9%87%8F/</guid>
       <description>变量的定义 变量名的定义方式@ @green:green; #container{ background-color: @green; ul{ list-style: none; } } 变量在选择器和属性名上的应用 @footer:footer; @width:width; .@{footer}{ @{width}:150px; } 变量在url上的应用 @imgurl:&amp;quot;https://www.baidu.com/img/&amp;quot;; .header{ background: url(&amp;quot;@{imgurl}bdlogo.png&amp;quot;) no-repeat; } 延迟加载  变量是延迟加载的，在使用之前不一定要预先声明  定义多个相同名称的变量  在定义一个变量两次时，只会使用最后定义的变量，less会从当前作用于向上搜索  less变量用法</description>
     </item>
     
     <item>
       <title>正确使用less</title>
-      <link>https://rockettturtlewqt.github.io/less/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8less/</link>
+      <link>https://rocketturtlewqt.github.io/less/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8less/</link>
       <pubDate>Sun, 11 Jul 2021 16:02:23 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/less/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8less/</guid>
+      <guid>https://rocketturtlewqt.github.io/less/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8less/</guid>
       <description>正确使用less  less只有被编译后，才能被浏览器识别使用  方案一   less编译工具：koala，国人开发的全平台less编译工具，http://koala-app.com
   客户端调试方式
    首先使用Link标签引入.less文件，在上将rel标签设置为&amp;quot;stylesheet/less&amp;quot; 再者引入less.js文件，一定要放置在less样式文件之后  方案二  使用webpack搭建less开发环境  使用webpack搭建less开发环境</description>
@@ -56,10 +56,10 @@
     
     <item>
       <title>初见less</title>
-      <link>https://rockettturtlewqt.github.io/less/%E5%88%9D%E8%A7%81less/</link>
+      <link>https://rocketturtlewqt.github.io/less/%E5%88%9D%E8%A7%81less/</link>
       <pubDate>Sun, 11 Jul 2021 15:24:13 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/less/%E5%88%9D%E8%A7%81less/</guid>
+      <guid>https://rocketturtlewqt.github.io/less/%E5%88%9D%E8%A7%81less/</guid>
       <description>什么是less   less是一个css预编译器，意思是它可以扩展css语言，添加功能如允许变量（variables）、混合（mixins）、函数（functions）和许多其它的技术，让你的css更具维护性，主题性和扩展性。
   less官网 英文官网 中文官网
   less写法

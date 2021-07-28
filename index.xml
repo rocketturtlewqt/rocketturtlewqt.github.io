@@ -2,26 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>RocketTurtle</title>
-    <link>https://rockettturtlewqt.github.io/</link>
+    <link>https://rocketturtlewqt.github.io/</link>
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Jul 2021 21:46:41 +0800</lastBuildDate><atom:link href="https://rockettturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Jul 2021 00:12:47 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>浏览器关闭安全策略</title>
+      <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%B3%E9%97%AD%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5/</link>
+      <pubDate>Thu, 29 Jul 2021 00:12:47 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%B3%E9%97%AD%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5/</guid>
+      <description>  因本地调试需求，需要有一种跨域访问后端接口的方式。
+  在语音合成功能模块，有个接口需要跨域调用，但是浏览器本身出于安全问题，有安全策略的限制，所以这个接口调用不成功。
+  解决方案  在/Users/rt_wqt/Documents/路径下创建MyChromeDevUserData文件夹 =&amp;gt; /Users/rt_wqt/Documents/MyChromeDevUserData，rt_wqt改成自己的home名就可以了。 以命令行方式启动chrome浏览。  open -n /Applications/Google\ Chrome.app/ --args --disable-web-security --user-data-dir=&amp;lt;MyChromeDevUserData所在的绝对路径地址&amp;gt; </description>
+    </item>
+    
     <item>
       <title>手写promise</title>
-      <link>https://rockettturtlewqt.github.io/javascript/%E6%89%8B%E5%86%99promise/</link>
+      <link>https://rocketturtlewqt.github.io/javascript/%E6%89%8B%E5%86%99promise/</link>
       <pubDate>Tue, 27 Jul 2021 21:46:41 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/javascript/%E6%89%8B%E5%86%99promise/</guid>
+      <guid>https://rocketturtlewqt.github.io/javascript/%E6%89%8B%E5%86%99promise/</guid>
       <description>promise简单实现 const PENDING = &amp;#39;pending&amp;#39;; const FULLFILLED = &amp;#39;fullfilled&amp;#39;; const REJECTED = &amp;#39;rejected&amp;#39;; function Mypromise(fn) { const self = this; this.state = PENDING; this.value = null; this.reason = null; this.resolveCb = []; this.rejectedCb = []; let resolve = function (value) { self.state = FULLFILLED; self.value = value; self.resolveCb.forEach(handler =&amp;gt; { handler(value); }); }; let rejected = function (reason) { self.state = REJECTED; self.reason = reason; self.rejectedCb.forEach(handler =&amp;gt; { handler(reason); }); }; try { fn(resolve, rejected); } catch (err) { rejected(err); } } Mypromise.</description>
     </item>
     
     <item>
       <title>解析上传的xlsx表格中的数据</title>
-      <link>https://rockettturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E8%A7%A3%E6%9E%90%E4%B8%8A%E4%BC%A0%E7%9A%84xlsx%E8%A1%A8%E6%A0%BC%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE/</link>
+      <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E8%A7%A3%E6%9E%90%E4%B8%8A%E4%BC%A0%E7%9A%84xlsx%E8%A1%A8%E6%A0%BC%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE/</link>
       <pubDate>Sun, 25 Jul 2021 16:11:13 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E8%A7%A3%E6%9E%90%E4%B8%8A%E4%BC%A0%E7%9A%84xlsx%E8%A1%A8%E6%A0%BC%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E8%A7%A3%E6%9E%90%E4%B8%8A%E4%BC%A0%E7%9A%84xlsx%E8%A1%A8%E6%A0%BC%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE/</guid>
       <description>解决方案  调用FileReader实例的api即可。    xlsx解析二进制文件。
   获取解析的xlsx内容。
   解析的xlsx内容转换为json格式。
@@ -30,10 +41,10 @@
     
     <item>
       <title>Chrome高版本中非https无法打开摄像头和录音功能</title>
-      <link>https://rockettturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/chrome%E9%AB%98%E7%89%88%E6%9C%AC%E4%B8%AD%E9%9D%9Ehttps%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%91%84%E5%83%8F%E5%A4%B4%E5%92%8C%E5%BD%95%E9%9F%B3%E5%8A%9F%E8%83%BD/</link>
+      <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/chrome%E9%AB%98%E7%89%88%E6%9C%AC%E4%B8%AD%E9%9D%9Ehttps%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%91%84%E5%83%8F%E5%A4%B4%E5%92%8C%E5%BD%95%E9%9F%B3%E5%8A%9F%E8%83%BD/</link>
       <pubDate>Sun, 25 Jul 2021 16:08:46 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/chrome%E9%AB%98%E7%89%88%E6%9C%AC%E4%B8%AD%E9%9D%9Ehttps%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%91%84%E5%83%8F%E5%A4%B4%E5%92%8C%E5%BD%95%E9%9F%B3%E5%8A%9F%E8%83%BD/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/chrome%E9%AB%98%E7%89%88%E6%9C%AC%E4%B8%AD%E9%9D%9Ehttps%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%91%84%E5%83%8F%E5%A4%B4%E5%92%8C%E5%BD%95%E9%9F%B3%E5%8A%9F%E8%83%BD/</guid>
       <description>解决方案   在chrome中输入chrome://flags/#unsafely-treat-insecure-origin-as-secure。
   在方框内填写指定的url。
   保存。
@@ -42,10 +53,10 @@
     
     <item>
       <title>表格性能优化</title>
-      <link>https://rockettturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E8%A1%A8%E6%A0%BC%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</link>
+      <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E8%A1%A8%E6%A0%BC%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</link>
       <pubDate>Sun, 25 Jul 2021 16:00:38 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E8%A1%A8%E6%A0%BC%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E8%A1%A8%E6%A0%BC%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</guid>
       <description>&amp;lt;任务完成时间&amp;gt;是单独的一个db接口，抽取数据结果的时间略长。同时，&amp;lt;平均每道题目完成时间&amp;gt;依赖于&amp;lt;任务完成时间&amp;gt;和完成题目个数。 其它的列是单独的一个接口，当使用这两个接口同时生成表格时，换页会有明显较长时间的卡顿。  解决方案1   将两个接口分流，先用时间较短的接口进行表格框架的生成，再用db操作时间较长的接口填充剩余表格。
   将针对任务完成时间接口单独抽离出来，用异步请求的方式将结果集包装成一个数组，一次性渲染。
   缺陷：表格框架生成较快，但是任务时间列表可能还是需要等待一段时间才能被渲染。
@@ -57,37 +68,37 @@
     
     <item>
       <title>运算</title>
-      <link>https://rockettturtlewqt.github.io/less/%E8%BF%90%E7%AE%97/</link>
+      <link>https://rocketturtlewqt.github.io/less/%E8%BF%90%E7%AE%97/</link>
       <pubDate>Sat, 17 Jul 2021 21:18:12 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/less/%E8%BF%90%E7%AE%97/</guid>
+      <guid>https://rocketturtlewqt.github.io/less/%E8%BF%90%E7%AE%97/</guid>
       <description>运算说明  任何数值、颜色和变量都可以进行运算  数值模型运算  less会为你自动推算数值的单位，所以你不必为每一个数值加上单位 注意：运算符与数值之间要用空格隔开，涉及优先级时以()进行优先级运算  .container{ width: 450px + 450; }  编译后  .container { width: 900px; } .container{ width: (450 + 50) * 2 + 24px; }  编译后  .container { width: 1024px; } 颜色值运算  less在运算时，现将颜色转换为rgb模式，然后再转换为16制的颜色并返回 注意：不能直接对颜色名称进行运算  .container{ width: #000000 + 255; }  编译后  .container { width: #ffffff; } </description>
     </item>
     
     <item>
       <title>嵌套规则</title>
-      <link>https://rockettturtlewqt.github.io/less/%E5%B5%8C%E5%A5%97%E8%A7%84%E5%88%99/</link>
+      <link>https://rocketturtlewqt.github.io/less/%E5%B5%8C%E5%A5%97%E8%A7%84%E5%88%99/</link>
       <pubDate>Fri, 16 Jul 2021 23:13:38 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/less/%E5%B5%8C%E5%A5%97%E8%A7%84%E5%88%99/</guid>
+      <guid>https://rocketturtlewqt.github.io/less/%E5%B5%8C%E5%A5%97%E8%A7%84%E5%88%99/</guid>
       <description>什么是嵌套规则  嵌套规则模仿了html结构，让我们的代码更加简洁清晰  css写法 #container { background-color: red; width: 200px; height: 200px; } #container p { width: 200px; height: 100px; background-color: blue; } #container a { text-decoration: none; } less写法 #container{ background-color: red; width: 200px; height: 200px; p{ width: 200px; height: 100px; background-color: blue; } a{ text-decoration: none; } } 父元素选择器&amp;amp;  &amp;amp;：表示当前选择器的所有父选择器  less #container{ background-color: red; width: 200px; height: 200px; p{ width: 200px; height: 100px; background-color: blue; span{ display: block; width: 50px; height: 50px; background-color: green; &amp;amp;:hover{ background-color: black; } } } a{ text-decoration: none; } } css #container { background-color: red; width: 200px; height: 200px; } #container p { width: 200px; height: 100px; background-color: blue; } #container p span { display: block; width: 50px; height: 50px; background-color: green; } #container p span:hover { background-color: black; } #container a { text-decoration: none; } 将&amp;amp;放在选择器的后面  第一种情况  .</description>
     </item>
     
     <item>
       <title>组件与模块</title>
-      <link>https://rockettturtlewqt.github.io/react/%E7%BB%84%E4%BB%B6%E4%B8%8E%E6%A8%A1%E5%9D%97/</link>
+      <link>https://rocketturtlewqt.github.io/react/%E7%BB%84%E4%BB%B6%E4%B8%8E%E6%A8%A1%E5%9D%97/</link>
       <pubDate>Wed, 14 Jul 2021 22:57:13 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/react/%E7%BB%84%E4%BB%B6%E4%B8%8E%E6%A8%A1%E5%9D%97/</guid>
+      <guid>https://rocketturtlewqt.github.io/react/%E7%BB%84%E4%BB%B6%E4%B8%8E%E6%A8%A1%E5%9D%97/</guid>
       <description>模块  向外提供特定功能的js程序就是一个模块，一般就是一个js文件 为什么要拆成模块呢：随着业务逻辑的增加，代码会越来越多并且越来越复杂 作用：复用js，简化js的编写，提高js运行效率  组件  理解：用来实现局部功能效果的代码和资源的集合（html/css/js/image等） 作用：复用编码，简化项目编码，提高运行效率  模块化  当应用的js都以模块的方式来编写的，这个应用就是一个模块化的应用  组件化  当应用是以多组件的方式实现，这个应用就是一个组件化的应用  </description>
     </item>
     
     <item>
       <title>Jsx小练习</title>
-      <link>https://rockettturtlewqt.github.io/react/jsx%E5%B0%8F%E7%BB%83%E4%B9%A0/</link>
+      <link>https://rocketturtlewqt.github.io/react/jsx%E5%B0%8F%E7%BB%83%E4%B9%A0/</link>
       <pubDate>Wed, 14 Jul 2021 22:47:07 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/react/jsx%E5%B0%8F%E7%BB%83%E4%B9%A0/</guid>
+      <guid>https://rocketturtlewqt.github.io/react/jsx%E5%B0%8F%E7%BB%83%E4%B9%A0/</guid>
       <description>js语句与js表达式的区别   一个表达式是一个值，可以放在任何需要这个值的地方
   下面这些都是表达式
    a a+b demo(x) arr.map() function test() {}   下面这些都是语句   if语句 for循环 switch case  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;script src=&amp;#34;../lib/react.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;../lib/react-dom.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;../lib/browser.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;title&amp;gt;jsx语法规则&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;text/babel&amp;#34;&amp;gt; const data=[&amp;#39;Anguler&amp;#39;,&amp;#39;React&amp;#39;,&amp;#39;Vue&amp;#39;]; //1.创建虚拟dom  const VDOM=( &amp;lt;div class=&amp;#39;container&amp;#39;&amp;gt; &amp;lt;h2&amp;gt;jsx小练习&amp;lt;/h2&amp;gt; &amp;lt;ul&amp;gt; { data.map((item,index)=&amp;gt;{ return &amp;lt;li key={index}&amp;gt;{item}&amp;lt;/li&amp;gt; }) } &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; ); //2.渲染虚拟dom  ReactDOM.render(VDOM,document.getElementById(&amp;#39;container&amp;#39;)); &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; </description>
@@ -95,55 +106,55 @@
     
     <item>
       <title>混合</title>
-      <link>https://rockettturtlewqt.github.io/less/%E6%B7%B7%E5%90%88/</link>
+      <link>https://rocketturtlewqt.github.io/less/%E6%B7%B7%E5%90%88/</link>
       <pubDate>Tue, 13 Jul 2021 22:00:39 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/less/%E6%B7%B7%E5%90%88/</guid>
+      <guid>https://rocketturtlewqt.github.io/less/%E6%B7%B7%E5%90%88/</guid>
       <description>什么是混合  混合就是将一系列属性从一个规则集引入到另一个规则集的方式  普通混合 .font_family { font-family: &#39;Gill Sans&#39;, &#39;Gill Sans MT&#39;, Calibri, &#39;Trebuchet MS&#39;, sans-serif; } h1 { font-size: 28px; font-family: &#39;Gill Sans&#39;, &#39;Gill Sans MT&#39;, Calibri, &#39;Trebuchet MS&#39;, sans-serif; } h2 { font-size: 24px; font-family: &#39;Gill Sans&#39;, &#39;Gill Sans MT&#39;, Calibri, &#39;Trebuchet MS&#39;, sans-serif; }  编译输出后的结果  .font_family { font-family: &amp;#39;Gill Sans&amp;#39;, &amp;#39;Gill Sans MT&amp;#39;, Calibri, &amp;#39;Trebuchet MS&amp;#39;, sans-serif; } h1 { font-size: 28px; font-family: &amp;#39;Gill Sans&amp;#39;, &amp;#39;Gill Sans MT&amp;#39;, Calibri, &amp;#39;Trebuchet MS&amp;#39;, sans-serif; } h2 { font-size: 24px; font-family: &amp;#39;Gill Sans&amp;#39;, &amp;#39;Gill Sans MT&amp;#39;, Calibri, &amp;#39;Trebuchet MS&amp;#39;, sans-serif; } 不带输出的混合   如果逆向创建一个混合集，但是却不想让它输出到你的样式中</description>
     </item>
     
     <item>
       <title>Jsx语法规则</title>
-      <link>https://rockettturtlewqt.github.io/react/jsx%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/</link>
+      <link>https://rocketturtlewqt.github.io/react/jsx%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/</link>
       <pubDate>Mon, 12 Jul 2021 23:50:27 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/react/jsx%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/</guid>
+      <guid>https://rocketturtlewqt.github.io/react/jsx%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/</guid>
       <description>jsx  全程javascript xml 它是react定义的一种xml的js扩展语法：js + xml  jsx语法规则  定义虚拟dom时不要加引号 标签中混入js表达式时要用花括号 样式的类名指定不要用class，要用className 内联样式要用style={{key:value}}的形式去写 虚拟dom必须只有一个根标签 标签必须闭合 标签首字母   (1)若小写字母开头，则将标签转为html同名元素，若html中无该标签对应的同名元素，则报错 (2)若大写字母开头，react就去渲染对应的组件，若组件没有定义，则报错  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;script src=&amp;#34;../lib/react.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;../lib/react-dom.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;../lib/browser.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;title&amp;gt;jsx语法规则&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; .father{ background-color: red; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;text/babel&amp;#34;&amp;gt; const text=&amp;#39;hello react&amp;#39;; //1.创建虚拟dom  const VDOM=( &amp;lt;div&amp;gt; &amp;lt;h2 className=&amp;#34;father&amp;#34;&amp;gt; &amp;lt;span style={{color:&amp;#39;white&amp;#39;}}&amp;gt;{text}&amp;lt;/span&amp;gt; &amp;lt;/h2&amp;gt; &amp;lt;input type=&amp;#34;text&amp;#34;/&amp;gt; &amp;lt;/div&amp;gt; ); //2.渲染虚拟dom到视图上  ReactDOM.render(VDOM,document.getElementById(&amp;#39;container&amp;#39;)); &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; </description>
     </item>
     
     <item>
       <title>变量</title>
-      <link>https://rockettturtlewqt.github.io/less/%E5%8F%98%E9%87%8F/</link>
+      <link>https://rocketturtlewqt.github.io/less/%E5%8F%98%E9%87%8F/</link>
       <pubDate>Mon, 12 Jul 2021 21:38:21 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/less/%E5%8F%98%E9%87%8F/</guid>
+      <guid>https://rocketturtlewqt.github.io/less/%E5%8F%98%E9%87%8F/</guid>
       <description>变量的定义 变量名的定义方式@ @green:green; #container{ background-color: @green; ul{ list-style: none; } } 变量在选择器和属性名上的应用 @footer:footer; @width:width; .@{footer}{ @{width}:150px; } 变量在url上的应用 @imgurl:&amp;quot;https://www.baidu.com/img/&amp;quot;; .header{ background: url(&amp;quot;@{imgurl}bdlogo.png&amp;quot;) no-repeat; } 延迟加载  变量是延迟加载的，在使用之前不一定要预先声明  定义多个相同名称的变量  在定义一个变量两次时，只会使用最后定义的变量，less会从当前作用于向上搜索  less变量用法</description>
     </item>
     
     <item>
       <title>Hello_react案例</title>
-      <link>https://rockettturtlewqt.github.io/react/hello_react%E6%A1%88%E4%BE%8B/</link>
+      <link>https://rocketturtlewqt.github.io/react/hello_react%E6%A1%88%E4%BE%8B/</link>
       <pubDate>Sun, 11 Jul 2021 18:58:06 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/react/hello_react%E6%A1%88%E4%BE%8B/</guid>
+      <guid>https://rocketturtlewqt.github.io/react/hello_react%E6%A1%88%E4%BE%8B/</guid>
       <description>babel的作用  ES6 ==&amp;gt; ES5 jsx ==&amp;gt; js  </description>
     </item>
     
     <item>
       <title>React简介</title>
-      <link>https://rockettturtlewqt.github.io/react/react%E7%AE%80%E4%BB%8B/</link>
+      <link>https://rocketturtlewqt.github.io/react/react%E7%AE%80%E4%BB%8B/</link>
       <pubDate>Sun, 11 Jul 2021 18:25:24 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/react/react%E7%AE%80%E4%BB%8B/</guid>
+      <guid>https://rocketturtlewqt.github.io/react/react%E7%AE%80%E4%BB%8B/</guid>
       <description>react是什么  react是构建用户界面的javascript库，是将数据渲染为html页面的开源javascript库  react谁开发的  是由Facebook开发，且开源  为什么要学react  原生javascript操作dom繁琐，且效率低。   dom-api操作ui  document.getElementById(&amp;#39;app&amp;#39;); docuemnt.querySelectot(&amp;#39;#app&amp;#39;); 使用javascript操作dom，浏览器会进行大量的重绘重排 原生javascript没有组件化编码方案，代码复用率低  react的优点  采用组件化模式、声明式编码，提高开发效率与组件服用率 在React Native中可以使用React语法进行移动端开发 使用虚拟DOM+优秀的diffing算法，尽量减少与真实DOM的交互   001和002的虚拟dom在内存中，当有003出现时，001和002会复用。  </description>
     </item>
     
     <item>
       <title>正确使用less</title>
-      <link>https://rockettturtlewqt.github.io/less/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8less/</link>
+      <link>https://rocketturtlewqt.github.io/less/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8less/</link>
       <pubDate>Sun, 11 Jul 2021 16:02:23 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/less/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8less/</guid>
+      <guid>https://rocketturtlewqt.github.io/less/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8less/</guid>
       <description>正确使用less  less只有被编译后，才能被浏览器识别使用  方案一   less编译工具：koala，国人开发的全平台less编译工具，http://koala-app.com
   客户端调试方式
    首先使用Link标签引入.less文件，在上将rel标签设置为&amp;quot;stylesheet/less&amp;quot; 再者引入less.js文件，一定要放置在less样式文件之后  方案二  使用webpack搭建less开发环境  使用webpack搭建less开发环境</description>
@@ -151,10 +162,10 @@
     
     <item>
       <title>初见less</title>
-      <link>https://rockettturtlewqt.github.io/less/%E5%88%9D%E8%A7%81less/</link>
+      <link>https://rocketturtlewqt.github.io/less/%E5%88%9D%E8%A7%81less/</link>
       <pubDate>Sun, 11 Jul 2021 15:24:13 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/less/%E5%88%9D%E8%A7%81less/</guid>
+      <guid>https://rocketturtlewqt.github.io/less/%E5%88%9D%E8%A7%81less/</guid>
       <description>什么是less   less是一个css预编译器，意思是它可以扩展css语言，添加功能如允许变量（variables）、混合（mixins）、函数（functions）和许多其它的技术，让你的css更具维护性，主题性和扩展性。
   less官网 英文官网 中文官网
   less写法
@@ -163,10 +174,10 @@
     
     <item>
       <title>变形</title>
-      <link>https://rockettturtlewqt.github.io/css/%E5%8F%98%E5%BD%A2/</link>
+      <link>https://rocketturtlewqt.github.io/css/%E5%8F%98%E5%BD%A2/</link>
       <pubDate>Sat, 10 Jul 2021 16:20:39 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/css/%E5%8F%98%E5%BD%A2/</guid>
+      <guid>https://rocketturtlewqt.github.io/css/%E5%8F%98%E5%BD%A2/</guid>
       <description>范围框  受css控制的元素，其范围框是边框框，即元素边框的边界。在计算范围框时是不算上轮廓和外边距的。  注意   对于所有变形函数，元素都有自己的堆叠上下文。例如，经过缩放/放大的元素，其所占的空间大小是不变的，这一点对所有变形函数都成立。
   变形函数的书写顺序可能会影响最后的显示结果，变形函数实施顺序，左-&amp;gt;右
   //书写1 img{ tranform: translate(200px) rotate(45deg); } //书写2 img{ transform: translate(200px) rotate(45deg); }  旋转图像的过程中，主轴和垂轴也会变    当有多个变形函数时，每一个函数都要正确设置，否则整个变形都将失效
@@ -176,19 +187,19 @@
     
     <item>
       <title>Mustache模板引擎具体实现</title>
-      <link>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0/</link>
       <pubDate>Sat, 10 Jul 2021 11:19:59 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0/</guid>
       <description>scanner类  scanner本质上就是一个扫描器，可以看作一个指针不断的移动扫描，对扫描的内容进行分流判断。为将模板转换为tokens提供了方法支持。  export default class Scanner{ constructor(string) { this.string = string; this.pos = 0; this.tail = string; } eos() { return this.tail === &amp;#39;&amp;#39;? false : true; } scan(reg) { let rel = this.tail.match(reg); if (!rel) { return &amp;#39;&amp;#39;; } this.tail = this.tail.substring(rel[0].length); this.pos += rel[0].length; return rel[0]; } scanUntil(reg) { let rel = this.tail.match(reg), qz; if (!rel) { qz = this.tail; this.tail = &amp;#39;&amp;#39;; } else if (rel.</description>
     </item>
     
     <item>
       <title>Docker常用命令</title>
-      <link>https://rockettturtlewqt.github.io/%E5%85%B6%E5%AE%83/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Thu, 08 Jul 2021 22:22:22 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/%E5%85%B6%E5%AE%83/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>什么是docker   docker镜像：一个只读的模板。镜像可以创建docker容器。一个镜像可以创建很多容器。镜像可以类比为类，容器就是一个一个的实例。
   docker容器：独立运行一个或一组应用。容器使用镜像创建的运行实例。可以把容器看作是一个简易版的linux环境和运行在其中的应用程序。
   docker仓库：集中存放镜像的场所。
@@ -202,10 +213,10 @@
     
     <item>
       <title>Serverless基本概念</title>
-      <link>https://rockettturtlewqt.github.io/serverless/serverless%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <link>https://rocketturtlewqt.github.io/serverless/serverless%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
       <pubDate>Sat, 03 Jul 2021 16:15:30 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/serverless/serverless%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <guid>https://rocketturtlewqt.github.io/serverless/serverless%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
       <description>云函数计算基金会对serverless的定义   Serverless架构应该是采用Fass（函数即服务）和Sass（后端即服务）服务来解决问题的一种设计。
   狭义上的Serverless就是Fass+Sass的组合。
   Fass：Function as a Service。本质上就是一个函数运行平台，集成了触发器。它会负责服务器资源的调度和运维。
@@ -219,19 +230,19 @@
     
     <item>
       <title>day2-撰写项目安装教程-分享给团队成员部署</title>
-      <link>https://rockettturtlewqt.github.io/%E5%85%B6%E5%AE%83/%E9%A1%B9%E7%9B%AE%E5%AE%89%E8%A3%85/</link>
+      <link>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/%E9%A1%B9%E7%9B%AE%E5%AE%89%E8%A3%85/</link>
       <pubDate>Wed, 30 Jun 2021 23:10:29 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/%E5%85%B6%E5%AE%83/%E9%A1%B9%E7%9B%AE%E5%AE%89%E8%A3%85/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/%E9%A1%B9%E7%9B%AE%E5%AE%89%E8%A3%85/</guid>
       <description>6.30任务  项目的本地测试，观测是否正常运行。 撰写技术文档，提供给团队成员安装部署。  之后的任务  项目部分地方存在bug，需要调试更改。 更改项目，配合团队成员持续集成、部署。  self-website（前端项目1）安装步骤  将项目克隆到本地  git clone https://github.com/rocketturtlewqt/self-website.git 安装相关依赖  npm i 启动项目  npm run serve 效果图 self-website-manager（前端项目2）安装步骤  将项目克隆到本地  git clone https://github.com/rocketturtlewqt/self-website-manager.git 安装相关依赖  npm i 启动项目  npm run serve 效果图  登陆密码：Wqt197781806  self-website-backstage（后端项目）安装步骤  将项目克隆到本地  git clone https://github.com/rocketturtlewqt/self-website-backstage.git 安装相关依赖  npm i 更改mysql配置   找到self-website-backstage/config/config.default.js 只需要更改client部分即可  安装数据库及表   创建数据库 sql文件在sql目录下，直接跑一下即可  启动项目  npm run dev 三个项目的github地址 前端项目1 前端项目2 后端项目</description>
     </item>
     
     <item>
       <title>day1-本地并测试安装jenkins</title>
-      <link>https://rockettturtlewqt.github.io/%E5%85%B6%E5%AE%83/%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85jenkins/</link>
+      <link>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85jenkins/</link>
       <pubDate>Tue, 29 Jun 2021 19:20:54 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/%E5%85%B6%E5%AE%83/%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85jenkins/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85jenkins/</guid>
       <description>6.29任务   本地安装并配置jenkins，并运行。了解jenkins的基础知识。
   下载jenkins镜像
   docker pull jenkins/jenkins:lts 根据镜像创建jenkins容器实例并运行  docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts-jdk11  如上终端，会有一串hash值，将它复制粘贴到管理员密码框即可  安装推荐的插件  创建管理员用户  </description>
@@ -239,64 +250,64 @@
     
     <item>
       <title>内置模块 Crypto</title>
-      <link>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-crypto/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-crypto/</link>
       <pubDate>Thu, 17 Jun 2021 20:43:33 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-crypto/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-crypto/</guid>
       <description>内置模块crypto  crypto模块主要用途是加密  const crypto = require(&amp;#39;crypto&amp;#39;); const password = &amp;#39;abc123 7sjds&amp;#39;; /** * createHash：指定加密算法 * update：指定加密的对象 * digest：指定加密使用几进制 */ const hash = crypto.createHash(&amp;#39;sha1&amp;#39;).update(password).digest(&amp;#39;hex&amp;#39;); console.log(hash);//e4aeea77b4c55d3cdbfbf3577b6cc9384a96bd29 </description>
     </item>
     
     <item>
       <title>内置模块 Readline</title>
-      <link>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-readline/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-readline/</link>
       <pubDate>Thu, 17 Jun 2021 20:33:59 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-readline/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-readline/</guid>
       <description>内置模块readline  逐行读取  const readline = require(&amp;#39;readline&amp;#39;); const rl = readline.createInterface({ input: process.stdin, output: process.stdout }); rl.question(&amp;#39;请输入你的名字：&amp;#39;, answer =&amp;gt; { console.log(`你好！${answer}`); rl.close(); }); </description>
     </item>
     
     <item>
       <title>内置模块 zlib</title>
-      <link>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-zlib/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-zlib/</link>
       <pubDate>Thu, 17 Jun 2021 20:26:43 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-zlib/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-zlib/</guid>
       <description>内置模块zlib  此模块主要是用来将指定文件的内容压缩，生成一个新的gzip文件  const fs = require(&amp;#39;fs&amp;#39;); const { dirname } = require(&amp;#39;path&amp;#39;); const zlib = require(&amp;#39;zlib&amp;#39;); const gzip = zlib.createGzip(); const readStream = fs.createReadStream(`${__dirname}/log1.txt`); const writeStram = fs.createWriteStream(`${__dirname}/log2.gzip`); readStream .pipe(gzip) .pipe(writeStram); </description>
     </item>
     
     <item>
       <title>内置模块 Fs</title>
-      <link>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-fs/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-fs/</link>
       <pubDate>Tue, 15 Jun 2021 14:00:49 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-fs/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-fs/</guid>
       <description>内置模块fs  mkdir：创建文件夹 rmdir：删除文件夹 rename：重命名文件夹或文件 readir：读取文件夹下的内容 writeFile：写文件 appendFile：在文件中追加内容 unlink：删除文件 readFile：异步读取文件 readFileSync：同步读取文件 watch：监听目录或文件变化 文档  const fs = require(&amp;#39;fs&amp;#39;); // import { readFile } from &amp;#39;fs/promises&amp;#39;;  //创建文件夹 // fs.mkdir(&amp;#39;logs&amp;#39;, err =&amp;gt; { // if (err) throw err; // console.log(&amp;#39;文件夹创建成功&amp;#39;); // });  //删除文件夹 // fs.rmdir(&amp;#39;logs&amp;#39;, () =&amp;gt; { // console.log(&amp;#39;文件夹删除成功&amp;#39;); // });  //重命名文件夹或文件 // fs.rename(&amp;#39;./logs&amp;#39;, &amp;#39;./log&amp;#39;, () =&amp;gt; { // console.log(&amp;#39;文件夹重命名成功&amp;#39;); // });  //读取文件夹下的内容 // fs.readdir(__dirname + &amp;#39;/log&amp;#39;, (err, result) =&amp;gt; { // console.</description>
     </item>
     
     <item>
       <title>内置模块 Events</title>
-      <link>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-events/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-events/</link>
       <pubDate>Tue, 15 Jun 2021 13:44:45 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-events/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-events/</guid>
       <description>内置模块events  内置模块events能够用哦来自定义事件 实例的on方法用来定义可以被触发多次的事件 实例的once方法用来定义只能被触发一次的事件 实例的emit方法用来触发事件  const EventEmitter = require(&amp;#39;events&amp;#39;); class MyEventEmitter extends EventEmitter{ } const event = new MyEventEmitter(); event.on(&amp;#39;play&amp;#39;, value =&amp;gt; { console.log(value); }); event.once(&amp;#39;hello&amp;#39;, value =&amp;gt; { console.log(value); }); event.emit(&amp;#39;play&amp;#39;, &amp;#39;one&amp;#39;);//one event.emit(&amp;#39;play&amp;#39;, &amp;#39;one&amp;#39;);//one  event.emit(&amp;#39;hello&amp;#39;, &amp;#39;two&amp;#39;);//two event.emit(&amp;#39;hello&amp;#39;, &amp;#39;two&amp;#39;);// </description>
     </item>
     
     <item>
       <title>内置模块http爬虫</title>
-      <link>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97http%E7%88%AC%E8%99%AB/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97http%E7%88%AC%E8%99%AB/</link>
       <pubDate>Thu, 10 Jun 2021 20:32:33 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97http%E7%88%AC%E8%99%AB/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97http%E7%88%AC%E8%99%AB/</guid>
       <description>cheerio  第三方模块，将爬取的数据进行解析 实现了核心jquery的子集 中文文档：cheerio爬虫  npm i cheerio -S const http = require(&amp;#39;http&amp;#39;); const https = require(&amp;#39;https&amp;#39;); const cheerio = require(&amp;#39;cheerio&amp;#39;); function handleRel(data) { const $ = cheerio.load(data); $(&amp;#39;.button-wrapper&amp;#39;).each((index, value) =&amp;gt; { console.log(index); }); } const server = http.createServer((req, res) =&amp;gt; { let data = &amp;#39;&amp;#39;; https.get(&amp;#39;https://www.meizu.com&amp;#39;, (rel) =&amp;gt; { rel.on(&amp;#39;data&amp;#39;, (chunk) =&amp;gt; { data += chunk; }); rel.on(&amp;#39;end&amp;#39;, () =&amp;gt; { handleRel(data); }); }); }); server.listen(3000, () =&amp;gt; { console.</description>
     </item>
     
     <item>
       <title>内置模块 Http Proxy Middleware</title>
-      <link>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http-proxy-middleware/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http-proxy-middleware/</link>
       <pubDate>Tue, 08 Jun 2021 19:43:53 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http-proxy-middleware/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http-proxy-middleware/</guid>
       <description>通过node中间件http-proxy-middleware做正向代理   它可以利用node没有浏览器安全级别的跨域限制解决跨域问题
   安装 http-proxy-middleware 模块
   npm i http-proxy-middleware -S const http = require(&amp;#39;http&amp;#39;); const { createProxyMiddleware } = require(&amp;#39;http-proxy-middleware&amp;#39;); const server = http.createServer((req, res) =&amp;gt; { const urlStr = req.url; if (/^\/api\/v3\/search/.test(urlStr)) { const proxy = createProxyMiddleware({ target: &amp;#39;https://so.csdn.net&amp;#39;, changeOrigin: true }); proxy(req, res); } else { console.log(&amp;#39;error&amp;#39;); res.write(&amp;#39;error&amp;#39;); } // res.end(); }); server.listen(3000, () =&amp;gt; { console.log(&amp;#39;http://localhost:3000&amp;#39;); });  以上将 http://localhost:3000/api/v3/search&amp;hellip;. 代理成 https://so.csdn.net/api/v3/search.... 若想重写path，可以添加 pathRewrite 选项，具体可以参见 http-proxy-middleware文档  </description>
@@ -304,10 +315,10 @@
     
     <item>
       <title>Flex弹性布局</title>
-      <link>https://rockettturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</link>
+      <link>https://rocketturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</link>
       <pubDate>Sat, 05 Jun 2021 14:16:07 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</guid>
+      <guid>https://rocketturtlewqt.github.io/css/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</guid>
       <description>弹性元素的外边距不折叠  主轴和垂轴  flex-direction：设置主轴方向。row（左-&amp;gt;右）、row-reverse（右-&amp;gt;左）、column（上-&amp;gt;下）、column-reverse（下-&amp;gt;上），默认为row flex-wrap：设置垂轴方向。nowrap（不换行）、wrap（换行）、wrap-reverse（反向换行），默认为nowrap flex-flow：同时设置主轴和垂轴方向 以上三个属性都应用于弹性容器  主轴和垂轴的方向（从左至右)  主轴和垂轴的方向和语言的书写方向有关，这里仅讨论从左至右书写的语言  justify-content（作用于弹性容器）   应用于弹性容器，定义弹性元素在主轴方向上的对齐方式
   取值：flex-start、flex-end、center、space-between、space-around、space-evently
   作用的弹性元素是包含外边距的
@@ -326,19 +337,19 @@
     
     <item>
       <title>Smtp</title>
-      <link>https://rockettturtlewqt.github.io/%E8%AE%A1%E7%BD%91/smtp/</link>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/smtp/</link>
       <pubDate>Sat, 05 Jun 2021 10:33:33 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/%E8%AE%A1%E7%BD%91/smtp/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/smtp/</guid>
       <description>因特网电子邮件  因特网电子邮件所使用的协议是smtp，每个邮件服务器既是smtp的客户端也是smtp的服务端 当接收方的邮件服务器出现故障时，报文会被存放在发送方的邮件服务器的报文队列中，一般每隔30分钟发送一次，如果几天后仍不能成功，就删除并通知发送者 smtp协议是基于tcp连接的  smtp的基本操作  提供接收方的邮件地址 发送方写邮件，由用户代理交给发送方邮件服务器，并放入报文队列 smtp客户端监测到报文，建立与smtp服务器端的tcp连接 经过smtp的初始握手，报文发送到接收方的邮件服务器 接收方通过用户代理读取报文  </description>
     </item>
     
     <item>
       <title>Web缓存</title>
-      <link>https://rockettturtlewqt.github.io/%E8%AE%A1%E7%BD%91/web%E7%BC%93%E5%AD%98/</link>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/web%E7%BC%93%E5%AD%98/</link>
       <pubDate>Fri, 04 Jun 2021 10:18:51 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/%E8%AE%A1%E7%BD%91/web%E7%BC%93%E5%AD%98/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/web%E7%BC%93%E5%AD%98/</guid>
       <description>客户通过web缓存请求对象 大致工作流程  客户浏览器向代理服务器发送请求 代理服务器先检查本地是否存储了该对象的副本，若有，则直接返回响应报文，实体体中包含该对象。若没有，则再向初始服务器发送对该对象的请求报文 初始服务器返回包含该对象的响应报文 代理服务器收到包含该对象的响应报文，将该对象的副本保存在本地，再向客户浏览器返回包含该对象的响应报文   代理服务器具有双重角色，即客户和服务器  条件get请求   可能存在一种情况，代理服务器缓存的对象是旧版本，即在代理服务器缓存了对象之后初始服务又对其进行了更改
   请求报文使用get方法，并且首部行中带有 If-modified-since 字段，这类请求就是条件请求。当这类请求发送到代理服务器后，代理服务器也会发送请求到初始服务器。若初始服务器的对象没有更新，它会返回一个响应报文，其中描述字段为 Not modified，状态码字段为304。
   </description>
@@ -346,75 +357,75 @@
     
     <item>
       <title>应用层cookie</title>
-      <link>https://rockettturtlewqt.github.io/%E8%AE%A1%E7%BD%91/%E5%BA%94%E7%94%A8%E5%B1%82cookie/</link>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/%E5%BA%94%E7%94%A8%E5%B1%82cookie/</link>
       <pubDate>Fri, 04 Jun 2021 10:05:31 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/%E8%AE%A1%E7%BD%91/%E5%BA%94%E7%94%A8%E5%B1%82cookie/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/%E5%BA%94%E7%94%A8%E5%B1%82cookie/</guid>
       <description>用cookie跟踪用户状态 cookie的工作过程  以访问amazon网站为例   用户访问amazon网站 amazon web服务器为用户生成一个识别码，并在后端数据库中生成一个表项，返回响应报文时，在首部行添加 Set-cookie:&amp;lt;识别码&amp;gt; 浏览器接收响应报文，在管理cookie的文件中添加一行关于这个cookie的信息 当浏览器用户再次请求amazon web服务器时，在请求报文中携带cookie字段，值为web服务器为用户分配的识别码  </description>
     </item>
     
     <item>
       <title>内置模块 Http</title>
-      <link>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/</link>
       <pubDate>Thu, 03 Jun 2021 13:13:45 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-http/</guid>
       <description>node浏览器调试 node --inspect --inspect-brk app.js  打开chrome浏览器，输入chrome://inspect进行调试  node进程管理工具  supervisor nodemon forever pm2   安装nodemon  npm i nodemon -g response  若不设置response的头信息，浏览器默认以html形式解析字符串 writeHead   第一个参数为状态码 第二个参数用来设置头部具体信息，例如，content-type  const http = require(&amp;#39;http&amp;#39;); const server = http.createServer((req, res) =&amp;gt; { res.writeHead(200, { &amp;#39;content-type&amp;#39;: &amp;#39;text/plain&amp;#39; }) res.write(&amp;#39;&amp;lt;div&amp;gt;hello world&amp;lt;/div&amp;gt;&amp;#39;) res.end(); }); server.listen(&amp;#39;7002&amp;#39;); http.request  后端请求另一个后端接口  将http.request请求封装成模块
 cors  当请求的协议、域名或者端口号与当前浏览器客户端地址不同时，会产生跨域限制，这是浏览器本身的安全策略。可以通过在服务端设置 &amp;lsquo;Access-Control-Allow-Origin&amp;rsquo;: &amp;lsquo;*&amp;rsquo; 来解决。  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.</description>
     </item>
     
     <item>
       <title>内置模块 Url</title>
-      <link>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-url/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-url/</link>
       <pubDate>Thu, 03 Jun 2021 12:53:20 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-url/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97-url/</guid>
       <description>内置模块url常用api  log4js模块用来记录日志  npm i log4js -D log4j模块文档
  url内置模块用来解析url地址   url.parse()：将url字符串地址解析为url对象 url.format()：将url对象解析为url字符串地址 url.resolve（）：用来处理路径上下文 URLSearchParams类接收一个参数，类似于?id=12（可以通过url.parse(location).search获取），之后通过实例对象的 get api获取参数  const log4js = require(&amp;#34;log4js&amp;#34;); log4js.configure({ appenders: { cheese: { type: &amp;#34;file&amp;#34;, filename: &amp;#34;cheese.log&amp;#34; } }, categories: { default: { appenders: [&amp;#34;cheese&amp;#34;], level: &amp;#34;error&amp;#34; } } }); const logger = log4js.getLogger(&amp;#39;cheese&amp;#39;); logger.level = &amp;#34;debug&amp;#34;; const url = require(&amp;#39;url&amp;#39;); const location = &amp;#39;https://www.baidu.com:443/path/index.html?id=12#tag&amp;#39;; const location_obj={ protocol: &amp;#39;https:&amp;#39;, slashes: true, auth: null, host: &amp;#39;www.</description>
     </item>
     
     <item>
       <title>压缩css</title>
-      <link>https://rockettturtlewqt.github.io/webpack/%E5%8E%8B%E7%BC%A9css/</link>
+      <link>https://rocketturtlewqt.github.io/webpack/%E5%8E%8B%E7%BC%A9css/</link>
       <pubDate>Wed, 02 Jun 2021 19:33:29 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/webpack/%E5%8E%8B%E7%BC%A9css/</guid>
+      <guid>https://rocketturtlewqt.github.io/webpack/%E5%8E%8B%E7%BC%A9css/</guid>
       <description>使用webpack打包时压缩css文件 npm i optimize-css-assets-webpack-plugin -D const path = require(&amp;#39;path&amp;#39;); const HtmlWebpackPlugin = require(&amp;#39;html-webpack-plugin&amp;#39;); const MiniCssExtractPlugin = require(&amp;#39;mini-css-extract-plugin&amp;#39;); const OptimizeCssAssetsWebpackPlugin = require(&amp;#39;optimize-css-assets-webpack-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;bundle.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, module: { rules: [ { test: /\.css$/, use: [ MiniCssExtractPlugin.loader, &amp;#39;css-loader&amp;#39; ] } ] }, plugins: [ new HtmlWebpackPlugin({ template: &amp;#39;./src/index.html&amp;#39; }), new MiniCssExtractPlugin({ filename: &amp;#39;css/bundle.css&amp;#39; }), new OptimizeCssAssetsWebpackPlugin() ], mode: &amp;#39;development&amp;#39; } </description>
     </item>
     
     <item>
       <title>Css兼容性处理</title>
-      <link>https://rockettturtlewqt.github.io/webpack/css%E5%85%BC%E5%AE%B9%E6%80%A7%E5%A4%84%E7%90%86/</link>
+      <link>https://rocketturtlewqt.github.io/webpack/css%E5%85%BC%E5%AE%B9%E6%80%A7%E5%A4%84%E7%90%86/</link>
       <pubDate>Mon, 31 May 2021 18:15:57 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/webpack/css%E5%85%BC%E5%AE%B9%E6%80%A7%E5%A4%84%E7%90%86/</guid>
+      <guid>https://rocketturtlewqt.github.io/webpack/css%E5%85%BC%E5%AE%B9%E6%80%A7%E5%A4%84%E7%90%86/</guid>
       <description>用到的依赖：postcss-loader（4.2.0），postcss-preset-env（6.7.0） 以上两个依赖需要注意版本问题  npm i postcss-loader@4.2.0 postcss-preset-env@6.7.0 -D const path = require(&amp;#39;path&amp;#39;); const HtmlWebpackPlugin = require(&amp;#39;html-webpack-plugin&amp;#39;); const MiniCssExtractPlugin = require(&amp;#39;mini-css-extract-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;bundle.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, module: { rules: [ { test: /\.css$/, use: [ MiniCssExtractPlugin.loader, &amp;#39;css-loader&amp;#39;, { loader:&amp;#39;postcss-loader&amp;#39;, options: { postcssOptions: { plugins: [ [ &amp;#39;postcss-preset-env&amp;#39;, { browsers:&amp;#39;last 2 versions&amp;#39; } ] ] } } } ] } ] }, plugins: [ new HtmlWebpackPlugin({ template:&amp;#39;.</description>
     </item>
     
     <item>
       <title>应用层协议http</title>
-      <link>https://rockettturtlewqt.github.io/%E8%AE%A1%E7%BD%91/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AEhttp/</link>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AEhttp/</link>
       <pubDate>Sat, 29 May 2021 18:28:24 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/%E8%AE%A1%E7%BD%91/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AEhttp/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%A1%E7%BD%91/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AEhttp/</guid>
       <description>基本常识  Web页面是由对象组成的。这个对象可以是一个html文件，也可以是图片等，且它们可以通过一个url地址寻找。 浏览器实现了HTTP的客户端，Web服务器实现了HTTP的服务器端。 HTTP是一个无状态的协议。当HTTP客户端多次请求同一个对象，HTTP服务器端并不会因为此前返回过这个对象就不再响应，而是每请求一次就响应一次。 客户端套接字是客户端应用进程与TCP连接之门，负责HTTP请求报文的发送和响应报文的接收。服务端套接字是服务端应用进程与TCP连接之门，负责HTTP响应报文的发送和请求报文的接收。  持续连接与非持续连接 非持续连接  http1.0 假若服务器目前有一个html文件和10张图片需要响应，那么对于非持续连接分为以下几步   http客户端通过80端向http服务端发起一条tcp连接 建立tcp连接后，http客户端将http请求报文通过80端口发送给http服务端 http服务端进程通过套接字接收http请求报文，从存储器中读取响应的内容，并通过套接字发送给http客户端 服务端进程通知tcp断开tcp连接（要等http客户端接收到响应报文后才会真正断开） http客户端接收到响应报文，断开tcp连接 有几个对象就重复几遍1~5   建立tcp的过程还伴随有三次握手，http请求报文是随着第三次握手发送给http服务端的  持续连接  http1.1 持续连接使得传输的对象能够在同一条tcp连接上进行。对于非持续连接，完成一个对象的请求和响应过程都需要2个RTT时间，客户端和服务端都要为每一条tcp连接分配缓存和变量，所以持续连接在一定程度上节约了时间  http报文格式 http请求报文格式  第一行为请求行，由方法字段、URL字段和协议版本组成 之后的行称为首部行   一般当请求报文的方法字段为GET时，实体体为空。当为POST时，通常以表单形式提交，实体体中的内容为表单中输入的值   HEAD方法类似于GET方法。当服务器收到一个HEAD请求时，会使用HTTP报文作为响应，不过不会返回任何响应对象 PUT方法。它允许用户上传对象到指定web服务器上的指定路径 DELETE方法。它允许用户或应用程序删除web服务器上的指定对象  http响应报文格式  第一行为状态行，由协议版本、状态码和描述组成 之后的六行是首部行 最后一行是实体体  </description>
     </item>
     
     <item>
       <title>原型模式</title>
-      <link>https://rockettturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/</link>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Sat, 29 May 2021 15:41:16 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/</guid>
       <description>原型模式  特点：类实例共享原型对象的属性和方法  let LoopImg = function (imagesArr, container) { this.imagesArr = imagesArr; this.container = container; } //创建焦点图 LoopImg.prototype.createImg = function () { console.log(`LoopImg`); } //切换焦点图 LoopImg.prototype.changeImg = function () { console.log(`LoopImg`); } let SideLoopImg = function (sideImagesArr, sideContainer) { LoopImg.call(this, sideImagesArr, sideImagesArr); } SideLoopImg.prototype = new LoopImg(); SideLoopImg.prototype.createImg = function () { console.log(`SideLoopImg`); } let FadeLoopImg = function (fadeImagesArr, fadeImagesContainer, arrow) { LoopImg.call(this, fadeImagesArr, fadeImagesContainer); this.arrow = arrow; } FadeLoopImg.</description>
     </item>
     
     <item>
       <title>建造者模式</title>
-      <link>https://rockettturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</link>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Sat, 29 May 2021 14:53:47 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</guid>
       <description>建造者模式   定义：将一个复杂对象的构建层和表示层分离。
   它与工厂模式的区别
    建造者模式更注重于创建对象的过程，而工厂模式更注重于结果 建造者模式使用new来创建一个人，工厂模式是调用工厂函数返回一个实例。因此建造者模式可以使用instanceof运算符判断实例所属类型，而工厂模式不行。   以下是使用建造者模式创建一个人，人具有工作和姓名两个属性  let Human = function () { }; let Name = function (name) { this.wholeName = name; } let Work = function (work) { this.currentWork = work; } function Person(name, work) { let _person = new Human(); _person.name = new Name(name); _person.work = new Work(work); return _person; } let person = new Person(&amp;#39;wqt&amp;#39;, &amp;#39;工程师&amp;#39;); </description>
@@ -422,19 +433,19 @@ cors  当请求的协议、域名或者端口号与当前浏览器客户端地�
     
     <item>
       <title>Commonjs</title>
-      <link>https://rockettturtlewqt.github.io/nodejs/commonjs/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/commonjs/</link>
       <pubDate>Sat, 29 May 2021 12:06:16 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/nodejs/commonjs/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/commonjs/</guid>
       <description> commonjs是nodejs的第三方规范 通过require来引包 使用module.exports和exports来暴露，exports是module.exports的引用 尽量避免循环依赖  module.exports={ name, age } //等价于 exports.name=name; exports.age=age; </description>
     </item>
     
     <item>
       <title>Chrome浏览器调试技巧</title>
-      <link>https://rockettturtlewqt.github.io/chrome/chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/</link>
+      <link>https://rocketturtlewqt.github.io/chrome/chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/</link>
       <pubDate>Fri, 28 May 2021 18:24:48 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/chrome/chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/</guid>
+      <guid>https://rocketturtlewqt.github.io/chrome/chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/</guid>
       <description>打开控制台命令行快捷键  command+shift+p  设置控制台显示的位置  点击右边倒数第二个图标（三个点）  尺子与当前屏幕截图  Show rulers：显示尺子 Capture screenshot：截取当前屏幕截图 Capture full size screenshot：截取长图  其它（console）   以下语句均为控制台输入
   console.asserts(&amp;lt;变量&amp;gt;, &amp;lt;语句&amp;gt;);
   let result=false; //当result为false的时候，打印信息；当result为true的时候不打印信息 console.asserts(result,&amp;#39;result is false&amp;#39;);  占位符：%s  //hello world console.log(&amp;#39;hello：%s&amp;#39;,&amp;#39;world&amp;#39;);  设置控制台输出内容的样式样式：%c  //红色单词over console.log(&amp;#39;%cover&amp;#39;,&amp;#39;color:red;&amp;#39;)  测试执行时间  //执行时间: 24396.9599609375 ms console.time(&amp;#39;执行时间&amp;#39;); for(let i=0;i&amp;lt;10000000;i++){} console.timeEnd(&amp;#39;执行时间&amp;#39;);  以表格形式打印对象数组  let per=[{name:&amp;#39;wqt&amp;#39;,age:21},{name:&amp;#39;ljt&amp;#39;,age:21}]; console.table(per);  分组打印  console.group(&amp;#39;分组1&amp;#39;); console.log(1); console.log(2); console.group(&amp;#39;分组2&amp;#39;); console.log(3); console.</description>
@@ -442,46 +453,46 @@ cors  当请求的协议、域名或者端口号与当前浏览器客户端地�
     
     <item>
       <title>Npm</title>
-      <link>https://rockettturtlewqt.github.io/nodejs/npm/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/npm/</link>
       <pubDate>Thu, 27 May 2021 18:26:53 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/nodejs/npm/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/npm/</guid>
       <description>全局安装  npm install webpack --global (-g) 创建package.json  // -y 使用默认配置 npm init -y 本地安装包  //dev：开发环境依赖 //save：放在package.json中 npm install gulp --dev-save //简写 npm install gulp -D //生产环境依赖 npm install gulp --save //简写 npm install gulp -D 查看包的依赖关系  //查看所有包的依赖关系树 npm list //查看指定包的依赖关系树 npm list | grep &amp;lt;包名&amp;gt; 根据package.json安装相应的包  //安装所有依赖 npm i //安装生产环境依赖 npm i --production //安装开发环境依赖 npm i --development 查看包的所有版本  npm view jquery versions node package version    13.</description>
     </item>
     
     <item>
       <title>Node与浏览器的对比</title>
-      <link>https://rockettturtlewqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</link>
+      <link>https://rocketturtlewqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</link>
       <pubDate>Thu, 27 May 2021 17:38:37 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</guid>
+      <guid>https://rocketturtlewqt.github.io/nodejs/node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AF%B9%E6%AF%94/</guid>
       <description>node与浏览器的对比  node没有浏览器安全级别的限制   浏览器具有跨域沙箱的安全限制，node没有 node可以读写文件 node可以管理继承  /* [ &amp;#39;/usr/local/bin/node&amp;#39;, &amp;#39;/Users/wangqintao/Desktop/nodejs/认识nodejs/tempCodeRunnerFile.js&amp;#39; ] */ console.log(process.argv); http/https  const http = require(&amp;#39;http&amp;#39;); const server = http.createServer((req, res) =&amp;gt; { res.write(req.url); res.end(); }); server.listen(8090, &amp;#39;localhost&amp;#39;, () =&amp;gt; { console.log(&amp;#39;localhost:8090&amp;#39;); }); </description>
     </item>
     
     <item>
       <title>提取css成单独文件</title>
-      <link>https://rockettturtlewqt.github.io/webpack/%E6%8F%90%E5%8F%96css%E6%88%90%E5%8D%95%E7%8B%AC%E6%96%87%E4%BB%B6/</link>
+      <link>https://rocketturtlewqt.github.io/webpack/%E6%8F%90%E5%8F%96css%E6%88%90%E5%8D%95%E7%8B%AC%E6%96%87%E4%BB%B6/</link>
       <pubDate>Thu, 27 May 2021 14:33:26 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/webpack/%E6%8F%90%E5%8F%96css%E6%88%90%E5%8D%95%E7%8B%AC%E6%96%87%E4%BB%B6/</guid>
+      <guid>https://rocketturtlewqt.github.io/webpack/%E6%8F%90%E5%8F%96css%E6%88%90%E5%8D%95%E7%8B%AC%E6%96%87%E4%BB%B6/</guid>
       <description> 下载插件mini-css-extract-plugin  npm i mini-css-extract-plugin -D const path = require(&amp;#39;path&amp;#39;); const MiniCssExtractPlugin = require(&amp;#39;mini-css-extract-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;build.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, module: { rules: [ { test: /\.css$/, use: [ MiniCssExtractPlugin.loader, &amp;#39;css-loader&amp;#39; ] } ] }, plugins: [ new MiniCssExtractPlugin({ filename: &amp;#39;css/build.css&amp;#39; }) ], mode: &amp;#39;development&amp;#39; } </description>
     </item>
     
     <item>
       <title>工厂模式</title>
-      <link>https://rockettturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</link>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Thu, 27 May 2021 11:57:58 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</guid>
       <description>简单工厂模式 let Basketball = function () { this.intro = &amp;#39;篮球&amp;#39;; } Basketball.prototype = { getMember: function () { console.log(&amp;#39;每个队伍需要5名队员&amp;#39;); } } let Football = function () { this.intro = &amp;#39;足球&amp;#39;; } Basketball.prototype = { getMember: function () { console.log(&amp;#39;每个队伍需要11名队员&amp;#39;); } } function sportsFactory(name) { switch (name) { case: &amp;#39;basketball&amp;#39; return new Basketball(); case: &amp;#39;football&amp;#39; return new Football(); } } function createBook(name, time, type) { let o = new Object(); o.name = name; o.</description>
     </item>
     
     <item>
       <title>继承</title>
-      <link>https://rockettturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%A7%E6%89%BF/</link>
+      <link>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%A7%E6%89%BF/</link>
       <pubDate>Tue, 25 May 2021 14:17:24 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%A7%E6%89%BF/</guid>
+      <guid>https://rocketturtlewqt.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%A7%E6%89%BF/</guid>
       <description>原型链 类式继承   类式继承是通过子类的原型prototype对父类实例化来实现的
   具体步骤
    创建子类和父类 子类的prototype属性指向父类的实例对象   缺点   如果父类中定义了实例属性，并且是个引用类型，那么子类的实例对其进行更改会相互影响（）看以下案例 子类无法向父类传递参数  function Animal() { this.color = [&amp;#39;red&amp;#39;, &amp;#39;green&amp;#39;] } function Person() { } Person.prototype = new Animal(); const per1 = new Person();//[ &amp;#39;red&amp;#39;, &amp;#39;green&amp;#39; ]  const per2 = new Person();//[ &amp;#39;red&amp;#39;, &amp;#39;green&amp;#39;, &amp;#39;blue&amp;#39; ]  console.log(per2.color); per1.color.push(&amp;#39;blue&amp;#39;); console.log(per2.color); 构造函数继承   构造函数继承是通过在子类的构造函数作用环境中执行一次父类的构造函数来实现的
@@ -491,146 +502,146 @@ cors  当请求的协议、域名或者端口号与当前浏览器客户端地�
     
     <item>
       <title>基本开发环境配置</title>
-      <link>https://rockettturtlewqt.github.io/webpack/%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+      <link>https://rocketturtlewqt.github.io/webpack/%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Tue, 25 May 2021 12:43:10 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/webpack/%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://rocketturtlewqt.github.io/webpack/%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
       <description>使用webpack搭建基本开发环境 webpack.config.json const path = require(&amp;#39;path&amp;#39;); const HtmlWebpackPlugin = require(&amp;#39;html-webpack-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/js/index.js&amp;#39;, output: { filename: &amp;#39;build.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, module: { rules: [ { test: /\.css$/, use: [&amp;#39;style-loader&amp;#39;, &amp;#39;css-loader&amp;#39;] }, { test: /\.less$/, use: [&amp;#39;style-loader&amp;#39;, &amp;#39;css-loader&amp;#39;, &amp;#39;less-loader&amp;#39;] }, { test: /\.(png|jpg|gif)$/, loader: &amp;#39;url-loader&amp;#39;, options: { limit: 8 * 1024, esModule: false, name: &amp;#39;[hash:10].[ext]&amp;#39;, outputPath: &amp;#39;images&amp;#39; } }, { test: /\.html$/, loader: &amp;#39;html-loader&amp;#39; }, { exclude: /\.(css|less|png|jpg|gif|html|js)$/, loader: &amp;#39;file-loader&amp;#39;, options: { name: &amp;#39;[hash:10].</description>
     </item>
     
     <item>
       <title>Dev Server</title>
-      <link>https://rockettturtlewqt.github.io/webpack/dev-server/</link>
+      <link>https://rocketturtlewqt.github.io/webpack/dev-server/</link>
       <pubDate>Mon, 24 May 2021 20:13:43 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/webpack/dev-server/</guid>
+      <guid>https://rocketturtlewqt.github.io/webpack/dev-server/</guid>
       <description>webpack-dev-server  安装webpack-dev-server  npm i webpackdev-server@3.11.0 -D webpack-dev-server的特点  自动编译 内存操作（没有实际输出的bundle） 热更新  通用配置选项  contentBase：html文件所在的目录 compress：是否启动gzip压缩 port：指定项目所在端口  const path = require(&amp;#39;path&amp;#39;); const HtmlWebpackPlugin = require(&amp;#39;html-webpack-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;build.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, plugins: [ new HtmlWebpackPlugin({ template: &amp;#39;./src/index.html&amp;#39; }) ], mode: &amp;#39;development&amp;#39;, /** * 1.自动编译 * 2.内存操作 * 3.热更新 */ devServer: { //指定项目html文件所在的根目录  contentBase: path.resolve(__dirname, &amp;#39;dist&amp;#39;), //指定项目端口号  port: 3000, //启动gzip压缩  compress: true } } </description>
     </item>
     
     <item>
       <title>Vuex原理及源码</title>
-      <link>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/vuex/vuex%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/vuex/vuex%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81/</link>
       <pubDate>Sun, 23 May 2021 12:34:12 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/vuex/vuex%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/vuex/vuex%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81/</guid>
       <description>vuex原理  state：单一状态树，类似于全局的一个容器 getter：相对于state的计算属性 mutations：定义同步方法 actions：定义异步逻辑，请求过后再去调用mutations里的方法  ModuleCollection.js export default class ModuleCollection{ constructor(options) { this.register([], options); } register(path, rootModule) { let rawModule = { _raw: rootModule, _children: {}, state: rootModule.state } if (!this.root) { this.root = rawModule; } else { let parentNode = path.slice(0,-1).reduce((root, current) =&amp;gt; { return root._children[current]; }, this.root); parentNode._children[path[path.length - 1]] = rawModule; } if (rootModule.modules) { Object.keys(rootModule.modules).forEach(moduleName =&amp;gt; { this.register(path.concat(moduleName), rootModule.modules[moduleName]); }); } } } export default new Vuex.</description>
     </item>
     
     <item>
       <title>打包图片资源</title>
-      <link>https://rockettturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90/</link>
+      <link>https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90/</link>
       <pubDate>Sat, 22 May 2021 12:42:52 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90/</guid>
+      <guid>https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90/</guid>
       <description>使用webpack打包图片资源  url-loader@1.3.2 file-loader html-loader 注意url-loader和html-loader模块冲突问题，需要配置url-loader选项，将esModule属性关闭  const path = require(&amp;#39;path&amp;#39;); const HtmlWebpackPlugin = require(&amp;#39;html-webpack-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;bundle.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, module: { rules: [ { test: /\.css$/, use: [ &amp;#39;style-loader&amp;#39;, &amp;#39;css-loader&amp;#39; ] }, { test: /\.(gif|png|jpg)$/, loader: &amp;#39;url-loader&amp;#39;, options: { //当图片体积小于8k的时候，采用base64编码  limit: 8 * 1024, //url-loader默认采用es6模块解析，和html-loader的commanjs冲突，需要关闭  esModule: false, name: &amp;#39;[hash:10].[ext]&amp;#39; } }, { test: /\.html$/, loader: &amp;#39;html-loader&amp;#39; } ] }, plugins: [ new HtmlWebpackPlugin({ template: &amp;#39;.</description>
     </item>
     
     <item>
       <title>打包html资源</title>
-      <link>https://rockettturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85html%E8%B5%84%E6%BA%90/</link>
+      <link>https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85html%E8%B5%84%E6%BA%90/</link>
       <pubDate>Sat, 22 May 2021 12:06:33 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85html%E8%B5%84%E6%BA%90/</guid>
+      <guid>https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85html%E8%B5%84%E6%BA%90/</guid>
       <description>使用webpack打包html资源  安装插件 html-webpack-plugin ，注意版本号为 4.5.0 其中指定模板为自己的html模版位置  const path = require(&amp;#39;path&amp;#39;); const HtmlWebpackPlugin = require(&amp;#39;html-webpack-plugin&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;bundle.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, plugins: [ new HtmlWebpackPlugin({ //指定自己的html模板位置  template: &amp;#39;./src/index.html&amp;#39; }) ], mode: &amp;#39;development&amp;#39; } </description>
     </item>
     
     <item>
       <title>打包css资源</title>
-      <link>https://rockettturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85css%E8%B5%84%E6%BA%90/</link>
+      <link>https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85css%E8%B5%84%E6%BA%90/</link>
       <pubDate>Fri, 21 May 2021 21:15:49 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85css%E8%B5%84%E6%BA%90/</guid>
+      <guid>https://rocketturtlewqt.github.io/webpack/%E6%89%93%E5%8C%85css%E8%B5%84%E6%BA%90/</guid>
       <description>使用webpack打包css样式资源 webpack.config.js  entry：打包的入口文件 output：整合后资源的输出位置 module：webpack本身只认识js文件，其它文件一般需要一些loader进行处理，才能被webpack认识 plugin：插件，一般用于上线时的优化，例如，压缩 mode：打包环境（开发环境、生产环境）  const path = require(&amp;#39;path&amp;#39;); module.exports = { entry: &amp;#39;./src/index.js&amp;#39;, output: { filename: &amp;#39;bundle.js&amp;#39;, path: path.resolve(__dirname, &amp;#39;dist&amp;#39;) }, module: { rules: [ { test: /\.css$/, use: [ &amp;#39;style-loader&amp;#39;, &amp;#39;css-loader&amp;#39; ] } ] }, mode:&amp;#39;development&amp;#39; }  css-loader：将css文件转换成commonjs模块塞入js中 style-loader：在head标签中创建style标签，将css代码插入到style标签里  </description>
     </item>
     
     <item>
       <title>响应式原理</title>
-      <link>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</link>
       <pubDate>Thu, 20 May 2021 12:09:55 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</guid>
       <description>响应式原理 核心函数说明 observe  在对象上添加__ob__属性，这个属性指向一个Observer侦测对象  Observer  侦测类，作用是将对象的每一层转为响应式 dep类的实例在此类中实例化，用来收集依赖Watcher的实例  defineReactive  两个核心getter和setter 在getter中收集依赖（主要看Dep.target是否不为空，不为空就说明目前有依赖，多个依赖竞争Dep.target） 在setter中触发依赖  parsePath  将字符串路径，例如&amp;rsquo;a.b.c.d&#39;，转为能够在原对象上读取此路径对应的值的函数  array  改写Array.prototype上的七个函数，让它们变为响应式   在arrayMethods定义七个一模一样的api，并重写覆盖Array.prototype上的这七个api。再将数组实例的原型设置为arrayMethods  github源码地址 手写数据响应式原理</description>
     </item>
     
     <item>
       <title>Diff算法</title>
-      <link>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E8%99%9A%E6%8B%9Fdom%E5%92%8Cdiff%E7%AE%97%E6%B3%95/diff%E7%AE%97%E6%B3%95/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E8%99%9A%E6%8B%9Fdom%E5%92%8Cdiff%E7%AE%97%E6%B3%95/diff%E7%AE%97%E6%B3%95/</link>
       <pubDate>Fri, 14 May 2021 12:09:25 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E8%99%9A%E6%8B%9Fdom%E5%92%8Cdiff%E7%AE%97%E6%B3%95/diff%E7%AE%97%E6%B3%95/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E8%99%9A%E6%8B%9Fdom%E5%92%8Cdiff%E7%AE%97%E6%B3%95/diff%E7%AE%97%E6%B3%95/</guid>
       <description>diff算法  diff算法是发生在虚拟dom上的 新虚拟dom和旧虚拟dom进行diff（精细化比较），算出如何最小量更新，最后反映到真实的dom上  import { init, classModule, propsModule, styleModule, eventListenersModule, h, } from &amp;#34;snabbdom&amp;#34;; const patch = init([ // Init patch function with chosen modules classModule, // makes it easy to toggle classes propsModule, // for setting properties on DOM elements styleModule, // handles styling on elements with support for animations eventListenersModule, // attaches event listeners ]); const container = document.getElementById(&amp;#34;container&amp;#34;); const myVnode = h(&amp;#39;ul&amp;#39;, { class: { &amp;#39;box&amp;#39;: true } }, [ h(&amp;#39;li&amp;#39;, &amp;#39;技&amp;#39;), h(&amp;#39;li&amp;#39;, &amp;#39;术&amp;#39;), h(&amp;#39;li&amp;#39;, &amp;#39;博&amp;#39;), h(&amp;#39;li&amp;#39;, &amp;#39;客&amp;#39;), h(&amp;#39;a&amp;#39;, { props: { href: &amp;#39;https://rocketturtlewqt.</description>
     </item>
     
     <item>
       <title>常用快捷键</title>
-      <link>https://rockettturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <link>https://rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
       <pubDate>Sat, 08 May 2021 19:39:35 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <guid>https://rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
       <description>强制退出  调出强制退出窗口 command+option+esc 在程序有响应的情况下，退出该程序command+option+shift+esc  </description>
     </item>
     
     <item>
       <title>正则表达式</title>
-      <link>https://rockettturtlewqt.github.io/javascript/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <link>https://rocketturtlewqt.github.io/javascript/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
       <pubDate>Fri, 07 May 2021 12:04:26 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/javascript/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <guid>https://rocketturtlewqt.github.io/javascript/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
       <description>体验正则表达式的魅力 let str = &amp;#39;asjdhka17821sdjashdkj23324&amp;#39;; //将数字拼接成字符串返回 //不用正则表达式 function parseNumber(s) { let result = &amp;#39;&amp;#39;; for (let i = 0; i &amp;lt; s.length; i++){ if (!Number.isNaN(parseInt(s[i]))) result += s[i]; } return result; } //用正则表达式 console.log(str.match(/\d/g).join(&amp;#39;&amp;#39;)); 字面量创建正则表达式 const str = &amp;#39;Abctds&amp;#39;; // RegExp参数 // - 正则表达式 // - 模式匹配 i表示忽略大小写，g表示全局匹配 let exp = new RegExp(&amp;#39;a&amp;#39;, &amp;#39;i&amp;#39;); console.log(exp.test(str)); //使用字面量创建正则表达式 console.log(/a/i.test(str)); 使用对象创建正则表达式 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.</description>
     </item>
     
     <item>
       <title>简单实现mustache模板引擎</title>
-      <link>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</link>
       <pubDate>Tue, 04 May 2021 19:53:06 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</guid>
       <description>观察tockens的正确姿势 let rel = nestTokens(squashTokens(tokens)); console.log(rel);  找到parseTemplate这样一个实现函数，在源代码的第248行左右进行如下更改  复杂情况  运行以下代码，观察控制台输出   tokens就是嵌套数组，每一个数组单元就是一个token，它描述了截取到的内容  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;使用mustache&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34;&amp;gt; import mustache from &amp;#39;./lib/mustache.js&amp;#39;; const mustacheStr=` &amp;lt;ul&amp;gt; {{#arr}} &amp;lt;li&amp;gt; &amp;lt;h3&amp;gt;{{name}}的信息&amp;lt;/h3&amp;gt; &amp;lt;span&amp;gt;名字：{{name}}&amp;lt;/span&amp;gt; &amp;lt;span&amp;gt;年龄：{{age}}&amp;lt;/span&amp;gt; &amp;lt;span&amp;gt;性别：{{sex}}&amp;lt;/span&amp;gt; &amp;lt;/li&amp;gt; {{/arr}} &amp;lt;/ul&amp;gt; `; const data={ arr:[ { name:&amp;#39;小红&amp;#39;, age:21, sex:&amp;#39;男&amp;#39; }, { name:&amp;#39;小李&amp;#39;, age:22, sex:&amp;#39;男&amp;#39; }, { name:&amp;#39;小王&amp;#39;, age:21, sex:&amp;#39;男&amp;#39; } ] }; const domStr=mustache.</description>
     </item>
     
     <item>
       <title>Mustache模板引擎基本基用</title>
-      <link>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/</link>
       <pubDate>Tue, 04 May 2021 19:23:16 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/</guid>
       <description>不循环数组 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;不循环数组&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34;&amp;gt; import mustache from &amp;#39;./lib/mustache.js&amp;#39;; const mustacheStr=` &amp;lt;h2&amp;gt;我买了一部{{phone}}手机，好{{mood}}呀！&amp;lt;/h2&amp;gt; `; const data={ phone:&amp;#39;苹果&amp;#39;, mood:&amp;#39;开心&amp;#39; }; const domStr=mustache.render(mustacheStr,data); document.getElementById(&amp;#39;container&amp;#39;).innerHTML=domStr; &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 显示隐藏 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;显示或隐藏&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34;&amp;gt; import mustache from &amp;#39;./lib/mustache.js&amp;#39;; const mustacheStr=` {{#flag}} &amp;lt;span&amp;gt;hello&amp;lt;/span&amp;gt; {{/flag}} `; const data={ flag:false }; const domStr=mustache.</description>
     </item>
     
     <item>
       <title>Git基本原理</title>
-      <link>https://rockettturtlewqt.github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</link>
+      <link>https://rocketturtlewqt.github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</link>
       <pubDate>Mon, 03 May 2021 19:26:34 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</guid>
+      <guid>https://rocketturtlewqt.github.io/git/git%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</guid>
       <description>哈希算法 各类哈希算法的共同点
  输入数据被加密后的hash值长度是相同的。 输入数据相同，加密形成的hash值相同。 输入数据不同，加密形成的hash值不同。 hash算法不可逆。 Git底层采用的是SHA-1算法保证数据完整性。 hash算法被用来检验文件完整性。   Git版本数据管理机制  构建树对象，维护父子节点关系 提交对象与树对象是一一映射关系，多个提交对象形成一个链条，也就是历史版本  Git分支管理  初始化本地仓库，并创建分支hot_fix  切换当前指针指向hot_fix指针，修改内容并提交  切换当前指针指向master，修改内容并提交  之后合并时若产生冲突问题，可以参考合并分支时的冲突问题  </description>
     </item>
     
     <item>
       <title>本地库和远程库</title>
-      <link>https://rockettturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</link>
+      <link>https://rocketturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</link>
       <pubDate>Mon, 03 May 2021 12:12:17 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</guid>
+      <guid>https://rocketturtlewqt.github.io/git/%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93/</guid>
       <description>代码托管中心  代码托管中心用来维护远程库 局域网下搭建的服务器：GitLab 外网下的服务器：GitHub，码云  本地库基本操作 本地库初始化 git init  可以通过 ls -lA 查看.git/下的子目录与文件  设置签名  用来区分不同开发人员身份，与登陆到远程库的用户名和密码作用不同 项目级别：git config user.name=tom_xm user.email=1600639146@qq.com，查看使用cat .git 系统级别：git config &amp;ndash;global user.name=tom_global user.email=1600639146@qq.com，查看步骤：定位到用户夹 cd ~ =&amp;gt; 查看.gitconfig文件 cat .gitconfig  基本操作  查看  //查看当前的状态，没有被追踪的文件颜色为红色，即表明目前在工作区中；在暂存区中的文件显示为绿色 git status 添加  //将文件添加到暂存区中，此时使用git status文件显示为绿色 git add &amp;lt;filename&amp;gt; 撤销  //撤销add操作，将文件状态回退到工作区 git rm --cache &amp;lt;filename&amp;gt; 提交  //将文件从暂存区提交到本地仓库 git commit -m &amp;#34;&amp;lt;提交说明&amp;gt;&amp;#34; &amp;lt;filename&amp;gt; 查看历史记录   git log：详细查看提交的历史记录  git log &amp;ndash;pretty=oneline：简略查看提交的历史记录，hash值很长，每条记录一行  git log &amp;ndash;oneline：与git log &amp;ndash;pretty=oneline的区别是其hash值比较短  git reflog：最理想的方式，HEAD@{&amp;lt;回退步数&amp;gt;}   回退/前进历史版本   基于索引值操作  git reset --hard &amp;lt;局部索引值&amp;gt;  使用^符号：只能后退  //几个^表示后退几步 git reset --hard HEAD^  使用~符号：只能后退  //n表示后退几步 git reset --hard HEAD~n   hard、mixed、soft对比  //本地库向前移动了一个单位，此时 git status 颜色为绿色，看起来是暂存区向后移动了一个单位 git reset --soft &amp;lt;局部索引值&amp;gt; //本地库以及暂存区向前移动了一个单位，此时 git status 颜色为红色，看起来是工作区向后移动了一个单位 git reset --mixed &amp;lt;局部索引值&amp;gt; //本地库、暂存区以及工作区向前移动了一个单位 git reset --hard &amp;lt;局部索引值&amp;gt; //使用mixed或soft移动后回到当前指针指向的位置 git reset --hard HEAD   永久删除文件并回退  rm &amp;lt;filename&amp;gt; 使用上述命令删除后，也可以通过 git reset &amp;ndash;hard &amp;lt;局部索引值&amp;gt; 找回</description>
     </item>
     
     <item>
       <title>Git结构</title>
-      <link>https://rockettturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</link>
+      <link>https://rocketturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</link>
       <pubDate>Mon, 03 May 2021 11:48:18 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</guid>
+      <guid>https://rocketturtlewqt.github.io/git/git%E7%BB%93%E6%9E%84/</guid>
       <description>git本地结构  工作区 =&amp;gt; 暂存区=&amp;gt; 本地库 工作区：编写代码 暂存区：临时存储 本地库：历史版本 工作区 =&amp;gt; 暂存区：git add，暂存区 =&amp;gt; 本地库：git commit  </description>
     </item>
     
     <item>
       <title>hugo搭建静态技术博客教程</title>
-      <link>https://rockettturtlewqt.github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</link>
+      <link>https://rocketturtlewqt.github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</link>
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</guid>
+      <guid>https://rocketturtlewqt.github.io/blog/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</guid>
       <description>注意  创建的github其命名要符合规范：&amp;lt;用户名&amp;gt;.github.io &amp;lt;用户名&amp;gt;.github.io  使用hugo生成项目基本结构 hugo new site &amp;lt;项目根目录名称&amp;gt; 进入当前项目根目录 cd &amp;lt;项目根目录名称&amp;gt;/ 选定主题，并拉取到本地 git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c 尝试本地运行项目 hugo serve -t m10c --buildDrafts 运行以上命令后，打开地址看看是否成功
 同步到远程 hugo --theme=m10c --baseUrl=&amp;#34;https://rocketturtlewqt.github.io&amp;#34; --buildDrafts 运行以上命令，项目根目录会出现public子目录
 进入到public子目录 cd public/ 执行git操作 从工作区添加所有文件到暂存区 git add . 从暂存区提交到本地仓库 git commit -m &amp;#34;附加内容&amp;#34; 添加远程仓库地址 git remote origin &amp;lt;仓库地址&amp;gt; 往远程仓库推送 git push -u origin master </description>
@@ -638,29 +649,29 @@ cors  当请求的协议、域名或者端口号与当前浏览器客户端地�
     
     <item>
       <title>MacOs X vscode使用教程/常用快捷键</title>
-      <link>https://rockettturtlewqt.github.io/vscode/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <link>https://rocketturtlewqt.github.io/vscode/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/vscode/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <guid>https://rocketturtlewqt.github.io/vscode/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
       <description>å 知乎大佬总结vscode
 配置vscode语言  使用快捷键shift+command+p打开搜索框 键入configure language设置语言为zh-cn 设置完后ide会提示需要重启，重启后就会更换语言了  setting.json常用配置选项`  editor.fontSize：用来设置字体大小，默认为12 files.autoSave：设置文件保存相关内容，一般建议设为onFocuschange，即切换文件时自动保存  工作区快速打开文件/文件夹  command + o  开启终端  ~ + controlå  </description>
     </item>
     
     <item>
       <title>MacOs X常用终端命令</title>
-      <link>https://rockettturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>https://rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://rocketturtlewqt.github.io/macosx/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>目录操作    命令 描述 示例     mkdir 创建目录a mkdir a   rmdir 删除空目录b rmdir b   mvdir 移动目录a到目录b mkdir a b   cd 进入到当前目录下的public子目录(返回上级目录则是cd ..) cd public/   pwd 显示当前目录的绝对路径(/Users/wangqintao/Desktop) pwd   ls 显示当前目录的内容 ls    文件操作    命令 描述 示例     cat 终端下打开当前目录下的demo.txt文件 cat demo.txt   more 分页显示文件内容(按空格键切换到下一页，按ctrl+B返回上一页) more demo.txt   cp 复制文件(复制a.</description>
     </item>
     
     <item>
       <title>mustache模板引擎是什么</title>
-      <link>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E6%98%AF%E4%BB%80%E4%B9%88/</link>
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
       <description>mustache模板引擎  它是将数据转换为视图的一种解决方案
 &amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt; &amp;lt;div v-for=&amp;quot;item in per&amp;quot; :key=&amp;quot;item.id&amp;quot;&amp;gt; &amp;lt;span&amp;gt;名字：{{item.name}}&amp;lt;/span&amp;gt; &amp;lt;span&amp;gt;年龄：{{item.age}}&amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;  vue源码中v-for指令底层使用的其实就是mustache模板引擎，以上代码通过v-for指令映射成以下视图
 常见的将数据转换为视图的方案

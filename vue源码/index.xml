@@ -2,71 +2,71 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vue源码s on RocketTurtle</title>
-    <link>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/</link>
+    <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/</link>
     <description>Recent content in Vue源码s on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jul 2021 11:19:59 +0800</lastBuildDate><atom:link href="https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Jul 2021 11:19:59 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mustache模板引擎具体实现</title>
-      <link>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0/</link>
       <pubDate>Sat, 10 Jul 2021 11:19:59 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0/</guid>
       <description>scanner类  scanner本质上就是一个扫描器，可以看作一个指针不断的移动扫描，对扫描的内容进行分流判断。为将模板转换为tokens提供了方法支持。  export default class Scanner{ constructor(string) { this.string = string; this.pos = 0; this.tail = string; } eos() { return this.tail === &amp;#39;&amp;#39;? false : true; } scan(reg) { let rel = this.tail.match(reg); if (!rel) { return &amp;#39;&amp;#39;; } this.tail = this.tail.substring(rel[0].length); this.pos += rel[0].length; return rel[0]; } scanUntil(reg) { let rel = this.tail.match(reg), qz; if (!rel) { qz = this.tail; this.tail = &amp;#39;&amp;#39;; } else if (rel.</description>
     </item>
     
     <item>
       <title>Vuex原理及源码</title>
-      <link>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/vuex/vuex%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/vuex/vuex%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81/</link>
       <pubDate>Sun, 23 May 2021 12:34:12 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/vuex/vuex%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/vuex/vuex%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81/</guid>
       <description>vuex原理  state：单一状态树，类似于全局的一个容器 getter：相对于state的计算属性 mutations：定义同步方法 actions：定义异步逻辑，请求过后再去调用mutations里的方法  ModuleCollection.js export default class ModuleCollection{ constructor(options) { this.register([], options); } register(path, rootModule) { let rawModule = { _raw: rootModule, _children: {}, state: rootModule.state } if (!this.root) { this.root = rawModule; } else { let parentNode = path.slice(0,-1).reduce((root, current) =&amp;gt; { return root._children[current]; }, this.root); parentNode._children[path[path.length - 1]] = rawModule; } if (rootModule.modules) { Object.keys(rootModule.modules).forEach(moduleName =&amp;gt; { this.register(path.concat(moduleName), rootModule.modules[moduleName]); }); } } } export default new Vuex.</description>
     </item>
     
     <item>
       <title>响应式原理</title>
-      <link>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</link>
       <pubDate>Thu, 20 May 2021 12:09:55 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</guid>
       <description>响应式原理 核心函数说明 observe  在对象上添加__ob__属性，这个属性指向一个Observer侦测对象  Observer  侦测类，作用是将对象的每一层转为响应式 dep类的实例在此类中实例化，用来收集依赖Watcher的实例  defineReactive  两个核心getter和setter 在getter中收集依赖（主要看Dep.target是否不为空，不为空就说明目前有依赖，多个依赖竞争Dep.target） 在setter中触发依赖  parsePath  将字符串路径，例如&amp;rsquo;a.b.c.d&#39;，转为能够在原对象上读取此路径对应的值的函数  array  改写Array.prototype上的七个函数，让它们变为响应式   在arrayMethods定义七个一模一样的api，并重写覆盖Array.prototype上的这七个api。再将数组实例的原型设置为arrayMethods  github源码地址 手写数据响应式原理</description>
     </item>
     
     <item>
       <title>Diff算法</title>
-      <link>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E8%99%9A%E6%8B%9Fdom%E5%92%8Cdiff%E7%AE%97%E6%B3%95/diff%E7%AE%97%E6%B3%95/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E8%99%9A%E6%8B%9Fdom%E5%92%8Cdiff%E7%AE%97%E6%B3%95/diff%E7%AE%97%E6%B3%95/</link>
       <pubDate>Fri, 14 May 2021 12:09:25 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E8%99%9A%E6%8B%9Fdom%E5%92%8Cdiff%E7%AE%97%E6%B3%95/diff%E7%AE%97%E6%B3%95/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/%E8%99%9A%E6%8B%9Fdom%E5%92%8Cdiff%E7%AE%97%E6%B3%95/diff%E7%AE%97%E6%B3%95/</guid>
       <description>diff算法  diff算法是发生在虚拟dom上的 新虚拟dom和旧虚拟dom进行diff（精细化比较），算出如何最小量更新，最后反映到真实的dom上  import { init, classModule, propsModule, styleModule, eventListenersModule, h, } from &amp;#34;snabbdom&amp;#34;; const patch = init([ // Init patch function with chosen modules classModule, // makes it easy to toggle classes propsModule, // for setting properties on DOM elements styleModule, // handles styling on elements with support for animations eventListenersModule, // attaches event listeners ]); const container = document.getElementById(&amp;#34;container&amp;#34;); const myVnode = h(&amp;#39;ul&amp;#39;, { class: { &amp;#39;box&amp;#39;: true } }, [ h(&amp;#39;li&amp;#39;, &amp;#39;技&amp;#39;), h(&amp;#39;li&amp;#39;, &amp;#39;术&amp;#39;), h(&amp;#39;li&amp;#39;, &amp;#39;博&amp;#39;), h(&amp;#39;li&amp;#39;, &amp;#39;客&amp;#39;), h(&amp;#39;a&amp;#39;, { props: { href: &amp;#39;https://rocketturtlewqt.</description>
     </item>
     
     <item>
       <title>简单实现mustache模板引擎</title>
-      <link>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</link>
       <pubDate>Tue, 04 May 2021 19:53:06 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</guid>
       <description>观察tockens的正确姿势 let rel = nestTokens(squashTokens(tokens)); console.log(rel);  找到parseTemplate这样一个实现函数，在源代码的第248行左右进行如下更改  复杂情况  运行以下代码，观察控制台输出   tokens就是嵌套数组，每一个数组单元就是一个token，它描述了截取到的内容  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;使用mustache&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34;&amp;gt; import mustache from &amp;#39;./lib/mustache.js&amp;#39;; const mustacheStr=` &amp;lt;ul&amp;gt; {{#arr}} &amp;lt;li&amp;gt; &amp;lt;h3&amp;gt;{{name}}的信息&amp;lt;/h3&amp;gt; &amp;lt;span&amp;gt;名字：{{name}}&amp;lt;/span&amp;gt; &amp;lt;span&amp;gt;年龄：{{age}}&amp;lt;/span&amp;gt; &amp;lt;span&amp;gt;性别：{{sex}}&amp;lt;/span&amp;gt; &amp;lt;/li&amp;gt; {{/arr}} &amp;lt;/ul&amp;gt; `; const data={ arr:[ { name:&amp;#39;小红&amp;#39;, age:21, sex:&amp;#39;男&amp;#39; }, { name:&amp;#39;小李&amp;#39;, age:22, sex:&amp;#39;男&amp;#39; }, { name:&amp;#39;小王&amp;#39;, age:21, sex:&amp;#39;男&amp;#39; } ] }; const domStr=mustache.</description>
     </item>
     
     <item>
       <title>Mustache模板引擎基本基用</title>
-      <link>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/</link>
       <pubDate>Tue, 04 May 2021 19:23:16 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/</guid>
       <description>不循环数组 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;不循环数组&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34;&amp;gt; import mustache from &amp;#39;./lib/mustache.js&amp;#39;; const mustacheStr=` &amp;lt;h2&amp;gt;我买了一部{{phone}}手机，好{{mood}}呀！&amp;lt;/h2&amp;gt; `; const data={ phone:&amp;#39;苹果&amp;#39;, mood:&amp;#39;开心&amp;#39; }; const domStr=mustache.render(mustacheStr,data); document.getElementById(&amp;#39;container&amp;#39;).innerHTML=domStr; &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 显示隐藏 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;显示或隐藏&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34;&amp;gt; import mustache from &amp;#39;./lib/mustache.js&amp;#39;; const mustacheStr=` {{#flag}} &amp;lt;span&amp;gt;hello&amp;lt;/span&amp;gt; {{/flag}} `; const data={ flag:false }; const domStr=mustache.</description>
     </item>
     
     <item>
       <title>mustache模板引擎是什么</title>
-      <link>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <link>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E6%98%AF%E4%BB%80%E4%B9%88/</link>
       <pubDate>Sat, 01 May 2021 16:57:04 +0800</pubDate>
       
-      <guid>https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <guid>https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
       <description>mustache模板引擎  它是将数据转换为视图的一种解决方案
 &amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt; &amp;lt;div v-for=&amp;quot;item in per&amp;quot; :key=&amp;quot;item.id&amp;quot;&amp;gt; &amp;lt;span&amp;gt;名字：{{item.name}}&amp;lt;/span&amp;gt; &amp;lt;span&amp;gt;年龄：{{item.age}}&amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;  vue源码中v-for指令底层使用的其实就是mustache模板引擎，以上代码通过v-for指令映射成以下视图
 常见的将数据转换为视图的方案

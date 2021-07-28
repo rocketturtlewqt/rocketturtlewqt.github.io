@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="RocketTurtle" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://rockettturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
+    <link rel="stylesheet" href="https://rocketturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
 
     
     <meta name="twitter:card" content="summary"/>
@@ -18,7 +18,7 @@
     <meta property="og:title" content="Mustache模板引擎具体实现" />
 <meta property="og:description" content="scanner类  scanner本质上就是一个扫描器，可以看作一个指针不断的移动扫描，对扫描的内容进行分流判断。为将模板转换为tokens提供了方法支持。  export default class Scanner{ constructor(string) { this.string = string; this.pos = 0; this.tail = string; } eos() { return this.tail === &#39;&#39;? false : true; } scan(reg) { let rel = this.tail.match(reg); if (!rel) { return &#39;&#39;; } this.tail = this.tail.substring(rel[0].length); this.pos &#43;= rel[0].length; return rel[0]; } scanUntil(reg) { let rel = this.tail.match(reg), qz; if (!rel) { qz = this.tail; this.tail = &#39;&#39;; } else if (rel." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rockettturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0/" /><meta property="article:section" content="vue源码" />
+<meta property="og:url" content="https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0/" /><meta property="article:section" content="vue源码" />
 <meta property="article:published_time" content="2021-07-10T11:19:59&#43;08:00" />
 <meta property="article:modified_time" content="2021-07-10T11:19:59&#43;08:00" />
 
@@ -27,7 +27,7 @@
   </head>
   <body>
     <header class="app-header">
-      <a href="https://rockettturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
+      <a href="https://rocketturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
       <h1>RocketTurtle</h1>
       <nav class="app-header-menu">
           <a class="app-header-menu-item" href="/">home</a>
