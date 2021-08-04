@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>模型录音原始录音下载 // RocketTurtle</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.82.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="RocketTurtle" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://rocketturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="模型录音原始录音下载"/>
+<meta name="twitter:description" content="模型录音原始录音下载 背景  这个需求的出现背景是：排查后端是否对原始录音进行过截断处理。  步骤   根据blob对象去生成一个url
+  创建一个a标签，将其href属性赋值为这个url，download属性赋值为时间戳.wav，表示下载后生成的文件名。
+  创建audio标签，将其src也指向这个url。
+  最后，就是将这几个新创建的标签放进原始的父级标签容器.
+  downloadOrigin() { const url = URL.createObjectURL(this.blobRecord); const li = document.createElement(&#39;li&#39;); const au = document.createElement(&#39;audio&#39;); const hf = document.createElement(&#39;a&#39;); au.controls = true; au.src = url; hf.href = url; hf.download = new Date().toISOString() &#43; &#39;.wav&#39;; hf.innerHTML = hf.download; li.appendChild(au); li.appendChild(hf); recordingslist.appendChild(li); } "/>
+
+    <meta property="og:title" content="模型录音原始录音下载" />
+<meta property="og:description" content="模型录音原始录音下载 背景  这个需求的出现背景是：排查后端是否对原始录音进行过截断处理。  步骤   根据blob对象去生成一个url
+  创建一个a标签，将其href属性赋值为这个url，download属性赋值为时间戳.wav，表示下载后生成的文件名。
+  创建audio标签，将其src也指向这个url。
+  最后，就是将这几个新创建的标签放进原始的父级标签容器.
+  downloadOrigin() { const url = URL.createObjectURL(this.blobRecord); const li = document.createElement(&#39;li&#39;); const au = document.createElement(&#39;audio&#39;); const hf = document.createElement(&#39;a&#39;); au.controls = true; au.src = url; hf.href = url; hf.download = new Date().toISOString() &#43; &#39;.wav&#39;; hf.innerHTML = hf.download; li.appendChild(au); li.appendChild(hf); recordingslist.appendChild(li); } " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E6%A8%A1%E5%9E%8B%E5%BD%95%E9%9F%B3%E5%8E%9F%E5%A7%8B%E5%BD%95%E9%9F%B3%E4%B8%8B%E8%BD%BD/" /><meta property="article:section" content="实习" />
+<meta property="article:published_time" content="2021-08-04T23:43:32&#43;08:00" />
+<meta property="article:modified_time" content="2021-08-04T23:43:32&#43;08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://rocketturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
+      <h1>RocketTurtle</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/">blog</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/macosx/">MacOsX</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vscode/">vscode</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/git/">git</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vue%E6%BA%90%E7%A0%81/">vue源码</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/javascript/">javascript</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/webpack/">webpack</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/nodejs/">nodejs</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/chrome/">chrome</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E8%AE%A1%E7%BD%91/">计网</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/css/">css</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/serverless/">serverless</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/less/">less</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/react/">react</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E5%AE%9E%E4%B9%A0/">实习</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E5%85%B6%E5%AE%83/">其它</a>
+      </nav>
+      <p>愿自己不再辜负自己，奇迹不再辜负奇迹！</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/rocketturtlewqt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">模型录音原始录音下载</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Aug 4, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h3 id="模型录音原始录音下载">模型录音原始录音下载</h3>
+<h4 id="背景">背景</h4>
+<ul>
+<li>这个需求的出现背景是：排查后端是否对原始录音进行过截断处理。</li>
+</ul>
+<h4 id="步骤">步骤</h4>
+<ol>
+<li>
+<p>根据blob对象去生成一个url</p>
+</li>
+<li>
+<p>创建一个a标签，将其href属性赋值为这个url，download属性赋值为时间戳.wav，表示下载后生成的文件名。</p>
+</li>
+<li>
+<p>创建audio标签，将其src也指向这个url。</p>
+</li>
+<li>
+<p>最后，就是将这几个新创建的标签放进原始的父级标签容器.</p>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">downloadOrigin</span>() {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">createObjectURL</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">blobRecord</span>);
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">li</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;li&#39;</span>);
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">au</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;audio&#39;</span>);
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">hf</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;a&#39;</span>);
+  <span style="color:#a6e22e">au</span>.<span style="color:#a6e22e">controls</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+  <span style="color:#a6e22e">au</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">url</span>;
+  <span style="color:#a6e22e">hf</span>.<span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">url</span>;
+  <span style="color:#a6e22e">hf</span>.<span style="color:#a6e22e">download</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">toISOString</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.wav&#39;</span>;
+  <span style="color:#a6e22e">hf</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">hf</span>.<span style="color:#a6e22e">download</span>;
+  <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">au</span>);
+  <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">hf</span>);
+  <span style="color:#a6e22e">recordingslist</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">li</span>);
+}
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

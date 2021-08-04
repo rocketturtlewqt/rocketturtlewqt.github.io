@@ -6,7 +6,29 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Aug 2021 23:39:39 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Aug 2021 23:45:52 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>上传全局配置文件视图渲染复杂度优化</title>
+      <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E4%B8%8A%E4%BC%A0%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%86%E5%9B%BE%E6%B8%B2%E6%9F%93%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%BC%98%E5%8C%96/</link>
+      <pubDate>Wed, 04 Aug 2021 23:45:52 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E4%B8%8A%E4%BC%A0%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%86%E5%9B%BE%E6%B8%B2%E6%9F%93%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%BC%98%E5%8C%96/</guid>
+      <description>上传全局配置文件  上传全局配置文件成功后，因前端不会再次发起请求，需要做个渲染处理。  方案一  将配置文件中的机器人配置读取出来，扔进数组里按照场景号排序，复杂度(nlogn)  方案二  观察到原数组是有序的，可以从后向前遍历，找到第一个场景号比当前要插入的场景号小的那条记录，调用js原生splice方法插入。复杂度(n)  successUploadFile(response, file) { console.log(&amp;#39;进入uploadFile&amp;#39;); const reader = new FileReader(); console.log(&amp;#39;response---&amp;#39;, response); console.log(file); if (response.status === 200) { reader.readAsText(file, &amp;#39;UTF-8&amp;#39;); reader.onload = (event) =&amp;gt; { const jsonConfig = JSON.parse(event.target.result); console.log(jsonConfig); if (jsonConfig &amp;amp;&amp;amp; jsonConfig.robotConfig &amp;amp;&amp;amp; jsonConfig.robotConfig.sceneConfig) { const newSceneConfig = jsonConfig.robotConfig.sceneConfig[0]; const len = this.tableDataOrigin.length; for (let i = len - 1; i &amp;gt;= 0; i--) { if (this.tableDataOrigin[i].id &amp;lt; newSceneConfig.</description>
+    </item>
+    
+    <item>
+      <title>模型录音原始录音下载</title>
+      <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E6%A8%A1%E5%9E%8B%E5%BD%95%E9%9F%B3%E5%8E%9F%E5%A7%8B%E5%BD%95%E9%9F%B3%E4%B8%8B%E8%BD%BD/</link>
+      <pubDate>Wed, 04 Aug 2021 23:43:32 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E6%A8%A1%E5%9E%8B%E5%BD%95%E9%9F%B3%E5%8E%9F%E5%A7%8B%E5%BD%95%E9%9F%B3%E4%B8%8B%E8%BD%BD/</guid>
+      <description>模型录音原始录音下载 背景  这个需求的出现背景是：排查后端是否对原始录音进行过截断处理。  步骤   根据blob对象去生成一个url
+  创建一个a标签，将其href属性赋值为这个url，download属性赋值为时间戳.wav，表示下载后生成的文件名。
+  创建audio标签，将其src也指向这个url。
+  最后，就是将这几个新创建的标签放进原始的父级标签容器.
+  downloadOrigin() { const url = URL.createObjectURL(this.blobRecord); const li = document.createElement(&amp;#39;li&amp;#39;); const au = document.createElement(&amp;#39;audio&amp;#39;); const hf = document.createElement(&amp;#39;a&amp;#39;); au.controls = true; au.src = url; hf.href = url; hf.download = new Date().toISOString() + &amp;#39;.wav&amp;#39;; hf.innerHTML = hf.download; li.appendChild(au); li.appendChild(hf); recordingslist.appendChild(li); } </description>
+    </item>
+    
     <item>
       <title>根据json配置导出json文件</title>
       <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E6%A0%B9%E6%8D%AEjson%E9%85%8D%E7%BD%AE%E5%AF%BC%E5%87%BAjson%E6%96%87%E4%BB%B6/</link>
