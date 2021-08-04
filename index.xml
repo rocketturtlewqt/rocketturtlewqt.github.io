@@ -6,7 +6,22 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Aug 2021 12:59:30 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Aug 2021 23:39:39 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>根据json配置导出json文件</title>
+      <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E6%A0%B9%E6%8D%AEjson%E9%85%8D%E7%BD%AE%E5%AF%BC%E5%87%BAjson%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Wed, 04 Aug 2021 23:39:39 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E6%A0%B9%E6%8D%AEjson%E9%85%8D%E7%BD%AE%E5%AF%BC%E5%87%BAjson%E6%96%87%E4%BB%B6/</guid>
+      <description>根据json配置导出json文件 步骤   将json格式的对象转换为字符串形式，命名导出json配置的文件名。
+  根据json格式的字符串创建一个blob对象。
+  创建一个a标签，将download属性赋值为需要导出的文件名。
+  根据blob对象，生成一个url，并将超链接的href属性设置为这个url。
+  创建一个鼠标点击事件。
+  向这个新创建的a元素派发这个鼠标点击事件。
+  async saveJSON(data, filename) { if (!data) { console.log(&amp;#39;保存的数据为空&amp;#39;); return; } if (!filename) filename = &amp;#39;RobotJSON.json&amp;#39;; if (typeof data === &amp;#39;object&amp;#39;) { data = JSON.stringify(data); } // 创建一个blob数据  const blob = new Blob([data], { type: &amp;#39;text/json&amp;#39; }); const a = document.createElement(&amp;#39;a&amp;#39;); a.download = filename; // 将blob转为地址  // 创建url blob对象  a.</description>
+    </item>
+    
     <item>
       <title>P5-P7之我对p5级工程师的理解</title>
       <link>https://rocketturtlewqt.github.io/%E5%85%B6%E5%AE%83/p5-p7%E4%B9%8B%E6%88%91%E5%AF%B9p5%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E7%90%86%E8%A7%A3/</link>

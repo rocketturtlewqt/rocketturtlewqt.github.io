@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>根据json配置导出json文件 // RocketTurtle</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.82.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="RocketTurtle" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://rocketturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="根据json配置导出json文件"/>
+<meta name="twitter:description" content="根据json配置导出json文件 步骤   将json格式的对象转换为字符串形式，命名导出json配置的文件名。
+  根据json格式的字符串创建一个blob对象。
+  创建一个a标签，将download属性赋值为需要导出的文件名。
+  根据blob对象，生成一个url，并将超链接的href属性设置为这个url。
+  创建一个鼠标点击事件。
+  向这个新创建的a元素派发这个鼠标点击事件。
+  async saveJSON(data, filename) { if (!data) { console.log(&#39;保存的数据为空&#39;); return; } if (!filename) filename = &#39;RobotJSON.json&#39;; if (typeof data === &#39;object&#39;) { data = JSON.stringify(data); } // 创建一个blob数据  const blob = new Blob([data], { type: &#39;text/json&#39; }); const a = document.createElement(&#39;a&#39;); a.download = filename; // 将blob转为地址  // 创建url blob对象  a."/>
+
+    <meta property="og:title" content="根据json配置导出json文件" />
+<meta property="og:description" content="根据json配置导出json文件 步骤   将json格式的对象转换为字符串形式，命名导出json配置的文件名。
+  根据json格式的字符串创建一个blob对象。
+  创建一个a标签，将download属性赋值为需要导出的文件名。
+  根据blob对象，生成一个url，并将超链接的href属性设置为这个url。
+  创建一个鼠标点击事件。
+  向这个新创建的a元素派发这个鼠标点击事件。
+  async saveJSON(data, filename) { if (!data) { console.log(&#39;保存的数据为空&#39;); return; } if (!filename) filename = &#39;RobotJSON.json&#39;; if (typeof data === &#39;object&#39;) { data = JSON.stringify(data); } // 创建一个blob数据  const blob = new Blob([data], { type: &#39;text/json&#39; }); const a = document.createElement(&#39;a&#39;); a.download = filename; // 将blob转为地址  // 创建url blob对象  a." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E6%A0%B9%E6%8D%AEjson%E9%85%8D%E7%BD%AE%E5%AF%BC%E5%87%BAjson%E6%96%87%E4%BB%B6/" /><meta property="article:section" content="实习" />
+<meta property="article:published_time" content="2021-08-04T23:39:39&#43;08:00" />
+<meta property="article:modified_time" content="2021-08-04T23:39:39&#43;08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://rocketturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
+      <h1>RocketTurtle</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/">blog</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/macosx/">MacOsX</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vscode/">vscode</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/git/">git</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vue%E6%BA%90%E7%A0%81/">vue源码</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/javascript/">javascript</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/webpack/">webpack</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/nodejs/">nodejs</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/chrome/">chrome</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E8%AE%A1%E7%BD%91/">计网</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/css/">css</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/serverless/">serverless</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/less/">less</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/react/">react</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E5%AE%9E%E4%B9%A0/">实习</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E5%85%B6%E5%AE%83/">其它</a>
+      </nav>
+      <p>愿自己不再辜负自己，奇迹不再辜负奇迹！</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/rocketturtlewqt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">根据json配置导出json文件</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Aug 4, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h3 id="根据json配置导出json文件">根据json配置导出json文件</h3>
+<h4 id="步骤">步骤</h4>
+<ol>
+<li>
+<p>将json格式的对象转换为字符串形式，命名导出json配置的文件名。</p>
+</li>
+<li>
+<p>根据json格式的字符串创建一个blob对象。</p>
+</li>
+<li>
+<p>创建一个a标签，将download属性赋值为需要导出的文件名。</p>
+</li>
+<li>
+<p>根据blob对象，生成一个url，并将超链接的href属性设置为这个url。</p>
+</li>
+<li>
+<p>创建一个鼠标点击事件。</p>
+</li>
+<li>
+<p>向这个新创建的a元素派发这个鼠标点击事件。</p>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">async</span> <span style="color:#a6e22e">saveJSON</span>(<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">filename</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">data</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;保存的数据为空&#39;</span>);
+    <span style="color:#66d9ef">return</span>;
+  }
+  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">filename</span>) <span style="color:#a6e22e">filename</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;RobotJSON.json&#39;</span>;
+  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;object&#39;</span>) {
+    <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">data</span>);
+  }
+  <span style="color:#75715e">// 创建一个blob数据
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">blob</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Blob</span>([<span style="color:#a6e22e">data</span>], { <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;text/json&#39;</span> });
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;a&#39;</span>);
+  <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">download</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">filename</span>;
+  <span style="color:#75715e">// 将blob转为地址
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// 创建url blob对象
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">createObjectURL</span>(<span style="color:#a6e22e">blob</span>);
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">blob</span>, <span style="color:#e6db74">&#39;链接&#39;</span>, <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">href</span>);
+  <span style="color:#75715e">// 标签 data- 嵌入自定义属性  屏蔽后也可正常下载
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">downloadurl</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;text/json&#39;</span>, <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">download</span>, <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">href</span>].<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;:&#39;</span>);
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span>, <span style="color:#e6db74">&#39;dataset&#39;</span>, <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">downloadurl</span>);
+  <span style="color:#75715e">// 添加鼠标事件
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">event</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MouseEvent</span>(<span style="color:#e6db74">&#39;click&#39;</span>, {});
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;事件&#39;</span>, <span style="color:#a6e22e">event</span>);
+  <span style="color:#75715e">// 向一个指定的事件目标派发一个事件
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">dispatchEvent</span>(<span style="color:#a6e22e">event</span>);
+}
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
