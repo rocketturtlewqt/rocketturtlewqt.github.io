@@ -6,7 +6,16 @@
     <description>Recent content in Javascripts on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Jul 2021 21:46:41 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Aug 2021 20:04:47 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Es6类</title>
+      <link>https://rocketturtlewqt.github.io/javascript/es6%E7%B1%BB/</link>
+      <pubDate>Thu, 05 Aug 2021 20:04:47 +0800</pubDate>
+      
+      <guid>https://rocketturtlewqt.github.io/javascript/es6%E7%B1%BB/</guid>
+      <description>为什么会出现class  它只是一个语法糖，会让面向对象的写法变得非常“舒服”  声明类的语法 class Person{ } console.log(typeof Person); //function  const User = class { }; console.log(typeof User); //function class Person{ show() { console.log(&amp;#39;hello world&amp;#39;); } } const per = new Person(); per.show(); // hello world // 函数书写形式 function Aniaml(name) { this.name = name; } const per = new Aniaml(&amp;#39;wqt&amp;#39;); console.log(per.name); //wqt  // class的书写形式 class Animal{ constructor(name) { this.name = name; } getName() { return this.name; } } const per = new Animal(&amp;#39;wqt&amp;#39;); console.</description>
+    </item>
+    
     <item>
       <title>手写promise</title>
       <link>https://rocketturtlewqt.github.io/javascript/%E6%89%8B%E5%86%99promise/</link>

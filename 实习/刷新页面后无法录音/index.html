@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>刷新页面后无法录音 // RocketTurtle</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.82.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="RocketTurtle" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://rocketturtlewqt.github.io/css/main.min.e3e673b07e6fcbedc1992304863ca607d598988089b7f690a51a8297034a9c03.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="刷新页面后无法录音"/>
+<meta name="twitter:description" content="场景：在标注员录音任务中，当刷新页面，准备重新进行录音任务时，无法正常进行录音。  原因：浏览器在授予用户录音权限前，需要用户有个交互操作，即主动设置获取录音权限。  解决方案1：不适用于最新版chrome浏览器  在chrome浏览器中地址栏中输入chrome://flags/#autoplay-policy;  解决方案二  设置一个获取录音权限的按钮，用户与其交互，主动设置获取录音权限。  对于方案二，又分为以下两种方案   首先，在开发过程中，这两种方案有一点很难处理，一个特判的地方：假如之前标注员对第一个录音标注任务已经录过音，那么如果不做处理&mdash;方案2.1：第一个录音是会被展现出来，但录音的时候没有波形；不更改watch选项的方案2.2：第一个录音不会被展现出来，但是录音的时候会有波形。
+  不更改watch选项的方案2.2：刷新页面，点击录音权限之后，就会出现以下情况特例。此时可以录音，且有波形，但是之前已经录过的音不会被展现出来，仅只有第一条会被隐藏。点击下一题，再点击上一题，则会被展现。两种方案都有这个情况。
+   正确情况如下   initWave &mdash; 初始化波形  initWave() { this.wavesurfer = WaveSurfer.create({ container: document.querySelector(&#39;#wave&#39;), backend: &#39;MediaElement&#39;, waveColor: &#39;#A8DBA8&#39;, progressColor: &#39;#3B8686&#39;, mediaControls: false, plugins: [ Timeline.create({ container: document.querySelector(&#39;#wave-timeline&#39;) }) ] }); this.wavesurferMP = WaveSurfer.create({ container: &#39;#micorPhone&#39;, waveColor: &#39;black&#39;, interact: false, cursorWidth: 0, plugins: [ Microphone.create({}) ] }); }  initRecord &mdash; 获取录音对象  initRecord() { try { // webkit shim  window."/>
+
+    <meta property="og:title" content="刷新页面后无法录音" />
+<meta property="og:description" content="场景：在标注员录音任务中，当刷新页面，准备重新进行录音任务时，无法正常进行录音。  原因：浏览器在授予用户录音权限前，需要用户有个交互操作，即主动设置获取录音权限。  解决方案1：不适用于最新版chrome浏览器  在chrome浏览器中地址栏中输入chrome://flags/#autoplay-policy;  解决方案二  设置一个获取录音权限的按钮，用户与其交互，主动设置获取录音权限。  对于方案二，又分为以下两种方案   首先，在开发过程中，这两种方案有一点很难处理，一个特判的地方：假如之前标注员对第一个录音标注任务已经录过音，那么如果不做处理&mdash;方案2.1：第一个录音是会被展现出来，但录音的时候没有波形；不更改watch选项的方案2.2：第一个录音不会被展现出来，但是录音的时候会有波形。
+  不更改watch选项的方案2.2：刷新页面，点击录音权限之后，就会出现以下情况特例。此时可以录音，且有波形，但是之前已经录过的音不会被展现出来，仅只有第一条会被隐藏。点击下一题，再点击上一题，则会被展现。两种方案都有这个情况。
+   正确情况如下   initWave &mdash; 初始化波形  initWave() { this.wavesurfer = WaveSurfer.create({ container: document.querySelector(&#39;#wave&#39;), backend: &#39;MediaElement&#39;, waveColor: &#39;#A8DBA8&#39;, progressColor: &#39;#3B8686&#39;, mediaControls: false, plugins: [ Timeline.create({ container: document.querySelector(&#39;#wave-timeline&#39;) }) ] }); this.wavesurferMP = WaveSurfer.create({ container: &#39;#micorPhone&#39;, waveColor: &#39;black&#39;, interact: false, cursorWidth: 0, plugins: [ Microphone.create({}) ] }); }  initRecord &mdash; 获取录音对象  initRecord() { try { // webkit shim  window." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E5%88%B7%E6%96%B0%E9%A1%B5%E9%9D%A2%E5%90%8E%E6%97%A0%E6%B3%95%E5%BD%95%E9%9F%B3/" /><meta property="article:section" content="实习" />
+<meta property="article:published_time" content="2021-08-06T00:29:13&#43;08:00" />
+<meta property="article:modified_time" content="2021-08-06T00:29:13&#43;08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://rocketturtlewqt.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="RocketTurtle" /></a>
+      <h1>RocketTurtle</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/">blog</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/macosx/">MacOsX</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vscode/">vscode</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/git/">git</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/vue%E6%BA%90%E7%A0%81/">vue源码</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/javascript/">javascript</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/webpack/">webpack</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/nodejs/">nodejs</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/chrome/">chrome</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E8%AE%A1%E7%BD%91/">计网</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/css/">css</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/serverless/">serverless</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/less/">less</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/react/">react</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E5%AE%9E%E4%B9%A0/">实习</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/%E5%85%B6%E5%AE%83/">其它</a>
+      </nav>
+      <p>愿自己不再辜负自己，奇迹不再辜负奇迹！</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/rocketturtlewqt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">刷新页面后无法录音</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Aug 6, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h3 id="场景在标注员录音任务中当刷新页面准备重新进行录音任务时无法正常进行录音">场景：在标注员录音任务中，当刷新页面，准备重新进行录音任务时，无法正常进行录音。</h3>
+<p><img src="https://rocketturtlewqt.github.io/20210806123015mor.png" alt="浏览器报错情况"></p>
+<ul>
+<li>原因：浏览器在授予用户录音权限前，需要用户有个交互操作，即主动设置获取录音权限。</li>
+</ul>
+<h3 id="解决方案1不适用于最新版chrome浏览器">解决方案1：不适用于最新版chrome浏览器</h3>
+<ul>
+<li>在chrome浏览器中地址栏中输入chrome://flags/#autoplay-policy;</li>
+</ul>
+<p><img src="https://rocketturtlewqt.github.io/20210806123320mor.png" alt="方案一"></p>
+<h3 id="解决方案二">解决方案二</h3>
+<ul>
+<li>设置一个获取录音权限的按钮，用户与其交互，主动设置获取录音权限。</li>
+</ul>
+<h3 id="对于方案二又分为以下两种方案">对于方案二，又分为以下两种方案</h3>
+<ul>
+<li>
+<p>首先，在开发过程中，这两种方案有一点很难处理，一个特判的地方：假如之前标注员对第一个录音标注任务已经录过音，那么如果不做处理&mdash;方案2.1：第一个录音是会被展现出来，但录音的时候没有波形；不更改watch选项的方案2.2：第一个录音不会被展现出来，但是录音的时候会有波形。</p>
+</li>
+<li>
+<p>不更改watch选项的方案2.2：刷新页面，点击录音权限之后，就会出现以下情况特例。此时可以录音，且有波形，但是之前已经录过的音不会被展现出来，仅只有第一条会被隐藏。点击下一题，再点击上一题，则会被展现。两种方案都有这个情况。</p>
+</li>
+</ul>
+<p><img src="https://rocketturtlewqt.github.io/20210806123601mor.png" alt="错误案例"></p>
+<ul>
+<li>正确情况如下</li>
+</ul>
+<p><img src="https://rocketturtlewqt.github.io/20210806123609mor.png" alt="正确案例"></p>
+<ul>
+<li>initWave &mdash; 初始化波形</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">initWave</span>() {
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">wavesurfer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">WaveSurfer</span>.<span style="color:#a6e22e">create</span>({
+    <span style="color:#a6e22e">container</span><span style="color:#f92672">:</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;#wave&#39;</span>),
+    <span style="color:#a6e22e">backend</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;MediaElement&#39;</span>,
+    <span style="color:#a6e22e">waveColor</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#A8DBA8&#39;</span>,
+    <span style="color:#a6e22e">progressColor</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#3B8686&#39;</span>,
+    <span style="color:#a6e22e">mediaControls</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+    <span style="color:#a6e22e">plugins</span><span style="color:#f92672">:</span> [
+      <span style="color:#a6e22e">Timeline</span>.<span style="color:#a6e22e">create</span>({
+        <span style="color:#a6e22e">container</span><span style="color:#f92672">:</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;#wave-timeline&#39;</span>)
+      })
+    ]
+  });
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">wavesurferMP</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">WaveSurfer</span>.<span style="color:#a6e22e">create</span>({
+    <span style="color:#a6e22e">container</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#micorPhone&#39;</span>,
+    <span style="color:#a6e22e">waveColor</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;black&#39;</span>,
+    <span style="color:#a6e22e">interact</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+    <span style="color:#a6e22e">cursorWidth</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+    <span style="color:#a6e22e">plugins</span><span style="color:#f92672">:</span> [
+      <span style="color:#a6e22e">Microphone</span>.<span style="color:#a6e22e">create</span>({})
+    ]
+  });
+}
+</code></pre></div><ul>
+<li>initRecord &mdash; 获取录音对象</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">initRecord</span>() {
+  <span style="color:#66d9ef">try</span> {
+    <span style="color:#75715e">// webkit shim
+</span><span style="color:#75715e"></span>    window.<span style="color:#a6e22e">AudioContext</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">AudioContext</span> <span style="color:#f92672">||</span> window.<span style="color:#a6e22e">webkitAudioContext</span>;
+    <span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">getUserMedia</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">getUserMedia</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">webkitGetUserMedia</span>;
+    window.<span style="color:#a6e22e">URL</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">URL</span> <span style="color:#f92672">||</span> window.<span style="color:#a6e22e">webkitURL</span>;
+    
+    window.<span style="color:#a6e22e">audio_context</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">audio_context</span> <span style="color:#f92672">||</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">AudioContext</span>;
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;录音权限请求&#39;</span>);
+  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;进入catch3&#39;</span>);
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$mtd</span>.<span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#39;浏览器不支持录音&#39;</span>);
+  }
+
+  <span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">getUserMedia</span>({<span style="color:#a6e22e">audio</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>}, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">startUserMedia</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$mtd</span>.<span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#39;没有可用输入&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">e</span>);
+  });
+},
+<span style="color:#a6e22e">startUserMedia</span>(<span style="color:#a6e22e">stream</span>) {
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">input</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">audio_context</span>.<span style="color:#a6e22e">createMediaStreamSource</span>(<span style="color:#a6e22e">stream</span>);
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$mtd</span>.<span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">success</span>(<span style="color:#e6db74">&#39;媒体流被创建&#39;</span>);
+  
+  window.<span style="color:#a6e22e">recorder</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Recorder</span>(<span style="color:#a6e22e">input</span>);
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$mtd</span>.<span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">success</span>(<span style="color:#e6db74">&#39;录音对象被创建&#39;</span>);
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">recordInited</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+}
+</code></pre></div><h4 id="方案21">方案2.1</h4>
+<ul>
+<li>
+<p>优点：可以解决刷新页面造成的任务不能录音的问题 + 不会存在上述特例情况。</p>
+</li>
+<li>
+<p>缺点：录音的时候没有波纹振动表现 。</p>
+</li>
+</ul>
+<ol>
+<li>先在mounted生命周期钩子函数中先初始化波形。</li>
+<li>再在获取录音权限绑定的方法里初始化录音对象，并主动设置获取录音权限</li>
+</ol>
+<ul>
+<li>mounted &mdash; 模板从内存中被渲染视图触发的生命周期钩子函数</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">mounted</span>() {
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">initWave</span>(); <span style="color:#75715e">//初始化波形方法
+</span><span style="color:#75715e"></span>}
+</code></pre></div><ul>
+<li>getRecordPermission &mdash; 获取录音权限按钮绑定的方法</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// 按钮点击触发的方法
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">getRecordPermission</span>() {
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">initRecord</span>();
+  window.<span style="color:#a6e22e">audio_context</span>.<span style="color:#a6e22e">resume</span>();
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">permission</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$mtd</span>.<span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">success</span>(<span style="color:#e6db74">&#39;获取录音权限成功&#39;</span>);
+}
+</code></pre></div><ul>
+<li>vue watch选项</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">watch</span><span style="color:#f92672">:</span> {
+  <span style="color:#75715e">// wqt-start
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">content</span>() {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">loadWave</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">content</span>);
+  },
+  <span style="color:#75715e">// wqt-end
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">config</span>() {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">initAnswers</span>();
+  }
+}
+</code></pre></div><h3 id="方案22">方案2.2</h3>
+<ul>
+<li>
+<p>如上特例的解决方案：第一次刷新的时候不走监听content的逻辑，走监听permission（是否获取到录音权限的标记）的逻辑。</p>
+</li>
+<li>
+<p>优点：方案2.1的优点 + 录音的时候有波纹振动表现.</p>
+</li>
+<li>
+<p>缺点：使用watch监听的属性content（录音链接，之前的录音），首页刷新的时候若第一个录音标注任务已经录过音，那么它的content会变一次，触发底层watcher。所以，他会进入监听逻辑，但第一次什么都没有做。</p>
+</li>
+<li>
+<p>getRecordPermission &mdash; 获取录音权限按钮绑定的方法</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">getRecordPermission</span>() {
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">initRecord</span>();
+  window.<span style="color:#a6e22e">audio_context</span>.<span style="color:#a6e22e">resume</span>();
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">initWave</span>();
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">permission</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$mtd</span>.<span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">success</span>(<span style="color:#e6db74">&#39;获取录音权限成功&#39;</span>);
+}
+</code></pre></div><ul>
+<li>vue watch选项</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">watch</span><span style="color:#f92672">:</span> {
+  <span style="color:#75715e">// wqt-start
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">content</span>() {
+    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">permission</span>) {
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">loadWave</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">content</span>);
+    }
+  },
+  <span style="color:#a6e22e">permission</span>() {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">loadWave</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">content</span>);
+  },
+  <span style="color:#75715e">// wqt-end
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">config</span>() {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">initAnswers</span>();
+  }
+}
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
