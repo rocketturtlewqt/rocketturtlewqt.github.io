@@ -113,7 +113,7 @@
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
-          3 min read
+          4 min read
         </div>
       </div>
     </header>
@@ -404,6 +404,60 @@
 
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">per</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#39;王勤涛&#39;</span>);
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">per</span>);<span style="color:#75715e">//Person { name: &#39;王勤涛&#39; }
+</span></code></pre></div><h3 id="类的方法继承原理">类的方法继承原理</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//函数实现继承
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Animal</span>() { }
+<span style="color:#a6e22e">Animal</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">show</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;show&#39;</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Person</span>() { }
+<span style="color:#a6e22e">Person</span>.<span style="color:#a6e22e">prototype</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">Animal</span>.<span style="color:#a6e22e">prototype</span>);
+
+<span style="color:#75715e">//类实现继承，与函数实现继承的原理相同
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Human</span>{
+  <span style="color:#a6e22e">show</span>() {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;show&#39;</span>);
+  }
+}
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Human</span>{ }
+</code></pre></div><h3 id="为什么子类constructor中执行super">为什么子类constructor中执行super</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span>{
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">sex</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;female&#39;</span>;
+  }
+}
+<span style="color:#75715e">//子类构造函数中必须要使用super，并且要放在最前面，因为子类构造函数的优先级要比父类高
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>{
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">name</span>);
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">sex</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;male&#39;</span>;
+  }
+}
+</code></pre></div><h3 id="静态继承原理">静态继承原理</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//静态方法继承原理
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Animal</span>() { }
+<span style="color:#a6e22e">Animal</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;wqt&#39;</span>;
+<span style="color:#a6e22e">Animal</span>.<span style="color:#a6e22e">show</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;show&#39;</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Person</span>() { }
+<span style="color:#a6e22e">Person</span>.<span style="color:#a6e22e">__proto__</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Animal</span>;
+<span style="color:#a6e22e">Person</span>.<span style="color:#a6e22e">show</span>();<span style="color:#75715e">// show
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//实现的原理如上
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Admin</span>{
+  <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;wqt&#39;</span>;
+  <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">show</span>() {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;show&#39;</span>);
+  }
+}
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Animal</span>{ }
+<span style="color:#a6e22e">User</span>.<span style="color:#a6e22e">show</span>();<span style="color:#75715e">// show
 </span></code></pre></div>
     </div>
     <div class="post-footer">
