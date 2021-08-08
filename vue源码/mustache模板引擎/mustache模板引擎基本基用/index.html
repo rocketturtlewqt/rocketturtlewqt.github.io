@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <title>Mustache模板引擎基本基用 // RocketTurtle</title>
+    <title>Mustache模板引擎基本使用 // RocketTurtle</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.82.1" />
@@ -12,10 +12,10 @@
 
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Mustache模板引擎基本基用"/>
+<meta name="twitter:title" content="Mustache模板引擎基本使用"/>
 <meta name="twitter:description" content="不循环数组 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;不循环数组&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#34;container&#34;&gt;&lt;/div&gt; &lt;script type=&#34;module&#34;&gt; import mustache from &#39;./lib/mustache.js&#39;; const mustacheStr=` &lt;h2&gt;我买了一部{{phone}}手机，好{{mood}}呀！&lt;/h2&gt; `; const data={ phone:&#39;苹果&#39;, mood:&#39;开心&#39; }; const domStr=mustache.render(mustacheStr,data); document.getElementById(&#39;container&#39;).innerHTML=domStr; &lt;/script&gt; &lt;/body&gt; &lt;/html&gt; 显示隐藏 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;显示或隐藏&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#34;container&#34;&gt;&lt;/div&gt; &lt;script type=&#34;module&#34;&gt; import mustache from &#39;./lib/mustache.js&#39;; const mustacheStr=` {{#flag}} &lt;span&gt;hello&lt;/span&gt; {{/flag}} `; const data={ flag:false }; const domStr=mustache."/>
 
-    <meta property="og:title" content="Mustache模板引擎基本基用" />
+    <meta property="og:title" content="Mustache模板引擎基本使用" />
 <meta property="og:description" content="不循环数组 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;不循环数组&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#34;container&#34;&gt;&lt;/div&gt; &lt;script type=&#34;module&#34;&gt; import mustache from &#39;./lib/mustache.js&#39;; const mustacheStr=` &lt;h2&gt;我买了一部{{phone}}手机，好{{mood}}呀！&lt;/h2&gt; `; const data={ phone:&#39;苹果&#39;, mood:&#39;开心&#39; }; const domStr=mustache.render(mustacheStr,data); document.getElementById(&#39;container&#39;).innerHTML=domStr; &lt;/script&gt; &lt;/body&gt; &lt;/html&gt; 显示隐藏 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;显示或隐藏&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#34;container&#34;&gt;&lt;/div&gt; &lt;script type=&#34;module&#34;&gt; import mustache from &#39;./lib/mustache.js&#39;; const mustacheStr=` {{#flag}} &lt;span&gt;hello&lt;/span&gt; {{/flag}} `; const data={ flag:false }; const domStr=mustache." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rocketturtlewqt.github.io/vue%E6%BA%90%E7%A0%81/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%9F%BA%E6%9C%AC%E5%9F%BA%E7%94%A8/" /><meta property="article:section" content="vue源码" />
@@ -99,7 +99,7 @@
       
   <article class="post">
     <header class="post-header">
-      <h1 class ="post-title">Mustache模板引擎基本基用</h1>
+      <h1 class ="post-title">Mustache模板引擎基本使用</h1>
       <div class="post-meta">
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
