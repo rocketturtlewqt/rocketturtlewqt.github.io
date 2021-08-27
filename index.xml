@@ -6,55 +6,7 @@
     <description>Recent content on RocketTurtle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Aug 2021 16:48:23 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>业务串讲</title>
-      <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E4%B8%9A%E5%8A%A1%E4%B8%B2%E8%AE%B2/</link>
-      <pubDate>Sun, 15 Aug 2021 16:48:23 +0800</pubDate>
-      
-      <guid>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E4%B8%9A%E5%8A%A1%E4%B8%B2%E8%AE%B2/</guid>
-      <description>项目背景 为什么要做智能催收   随着买单、生活费、生意贷等业务的快速发展，客户还款逾期率也随之增加，急需提升这些产品的催回率，降低催收成本，实现催收效益的最大化。智能语音机器人作为一种催回方式，不仅能够节省人力成本，而且相对于一些传统的催收方式如短信等，能够显著提高催回率。同时，机器人催收流程标准化，不存在情绪波动、违规等风险。鉴于以上背景一期希望实现一个支持多场景（催收、营销、信息收集、意向嗅探等）、支持多轮对话、支持客户打断、语音动态合成、话术模版动态可配置、通话记录可追踪分析的智能语音机器人，实现AI赋能业务，提升技术平台的技术实力。
-智能语音机器人一期主要能力   支持多场景：每个场景下有特定的话术集合，这些话术集合能够支持不同的场景。
-  支持多轮对话：能够根据用户说话内容进行意图识别与用户进行有效的多轮对话。
-  语音动态合成：动态合成变量文本对应的语音。
-  通话记录可追踪分析：对于每一轮的通话记录，根据通话id保存通话链接以及通话文本，方便后期追踪。
-  话术动态可配置：可以进行线上实时动态的话术配置。
-有了智能催收能解决什么问题   针对美团买单、生活费、生意贷、月付等一系列产品借钱逾期未还背景下，人工催收成本较高，主要体现在以下几个方面：
-    时间成本：借钱逾期未还的客户拨号接通率仅为10%，人工拨号的时间成本比较大，效率低下。
-  经济成本：雇用催收人员的催收成本较高，据数据显示为1.1w/人月。同时，在此种情况下，对于小额借款，人工催收这种方式反而是增加成本和负担。
-  外包公司的催收人员流动性较强，无法保证提供稳定可靠的催收员。
-  催收通话记录质检目前是通过随机抽样，人工检查的方式进行，覆盖率低，人员成本高。
-  客户失联率高，目前没有体系化的方法对失联用户进行修复。所谓失联，比如说换电话号码就是典型的一类。
-   针对以上的业务痛点，诞生了智能催收项目，那么有了这个项目能干什么，能有什么实际的价值：    经济成本：在外呼过程中，智能机器人将代催收员进行催收，降低了人工催收带来的更大的成本。
-  时间成本：对无法接通的电话进行标记，避免重复催收。
-  结合ip地址、消费记录、票据信息对失联的逾期未还款的客户进行体系化的追踪。
-  智能情绪催收，保证催收的合规性，提高客户的满意度，降低投诉率。
-  系统流程  机器人价值评估：主要价值体现在使用机器人带来的人力成本的降低和相对于低级触达（短信等）带来的业务指标的提升。    提高业务价值的关键指标
-  催收组主要关注通话是否接通，数据智能组主要关注数据的质量以及响应策略等。</description>
-    </item>
-    
-    <item>
-      <title>预览问题 点击新增无法增加录音问题</title>
-      <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E9%A2%84%E8%A7%88%E9%97%AE%E9%A2%98-%E7%82%B9%E5%87%BB%E6%96%B0%E5%A2%9E%E6%97%A0%E6%B3%95%E5%A2%9E%E5%8A%A0%E5%BD%95%E9%9F%B3%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Fri, 06 Aug 2021 00:45:24 +0800</pubDate>
-      
-      <guid>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E9%A2%84%E8%A7%88%E9%97%AE%E9%A2%98-%E7%82%B9%E5%87%BB%E6%96%B0%E5%A2%9E%E6%97%A0%E6%B3%95%E5%A2%9E%E5%8A%A0%E5%BD%95%E9%9F%B3%E9%97%AE%E9%A2%98/</guid>
-      <description>预览问题 点击新增无法增加录音问题  点击“新增”，填写相关信息，再点击确定，调用了updateRecord方法：saveRecord方法（出现逻辑偏差的saveRecord方法）。  /** * editSubVisible：判断是否点击添加子集的变量。 */ async saveRecord() { if (this.editSubVisible) { this.addRecordBaseInfo(); } else { this.updateRecord(); } } 原因分析（阅读项目源码，发现如下三种情况会进入到saveRecord方法）  点击“新增”，填写相关信息再点击“确定”，会进入到saveRecord方法。  点击“添加子集”，填写相关信息后，点击“确定”，会进入到saveRecord方法。  点击“编辑”，填写相关信息，点击“确定”，会进入到saveRecord方法。  问题复盘总结  对于第一种情况，因为此时进入到saveRecord方法，且editSubVisible变量为假，所以会调用updateRecord。  解决方案   新增判断条件，如果visible为真（录音编辑弹窗显示，这边可能是点击“新增”出现的录音编辑弹窗，也可能是点击“编辑”出现的录音编辑弹窗），并且isEdit为假（确定是点击“新增”触发的录音编辑弹窗），也去调用新增录音api。
-  saveRecord方法
-  /** * editSubVisible：判断是否点击添加子集的变量。 * visible：判断录音编辑弹窗是否显现 */ async saveRecord() { if (this.editSubVisible || (this.visible &amp;amp;&amp;amp; !this.isEdit)) { this.addRecordBaseInfo(); } else { this.updateRecord(); } } 为什么这些需求，会出现不少缺陷  在之前项目源码中，存在多种情况共用一个变量，就比如说1.点击“新增”，出现“录音编辑”。2.点击“编辑”，出现“录音编辑”。3.点击“添加子集”，出现“子集编辑”。这三种情况共用visible这一个变量，组合出来可能存在很多种情况，所以考虑的时候要考虑全是个很有挑战性的问题。  </description>
-    </item>
-    
-    <item>
-      <title>刷新页面后无法录音</title>
-      <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E5%88%B7%E6%96%B0%E9%A1%B5%E9%9D%A2%E5%90%8E%E6%97%A0%E6%B3%95%E5%BD%95%E9%9F%B3/</link>
-      <pubDate>Fri, 06 Aug 2021 00:29:13 +0800</pubDate>
-      
-      <guid>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E5%88%B7%E6%96%B0%E9%A1%B5%E9%9D%A2%E5%90%8E%E6%97%A0%E6%B3%95%E5%BD%95%E9%9F%B3/</guid>
-      <description>场景：在标注员录音任务中，当刷新页面，准备重新进行录音任务时，无法正常进行录音。  原因：浏览器在授予用户录音权限前，需要用户有个交互操作，即主动设置获取录音权限。  解决方案1：不适用于最新版chrome浏览器  在chrome浏览器中地址栏中输入chrome://flags/#autoplay-policy;  解决方案二  设置一个获取录音权限的按钮，用户与其交互，主动设置获取录音权限。  对于方案二，又分为以下两种方案   首先，在开发过程中，这两种方案有一点很难处理，一个特判的地方：假如之前标注员对第一个录音标注任务已经录过音，那么如果不做处理&amp;mdash;方案2.1：第一个录音是会被展现出来，但录音的时候没有波形；不更改watch选项的方案2.2：第一个录音不会被展现出来，但是录音的时候会有波形。
-  不更改watch选项的方案2.2：刷新页面，点击录音权限之后，就会出现以下情况特例。此时可以录音，且有波形，但是之前已经录过的音不会被展现出来，仅只有第一条会被隐藏。点击下一题，再点击上一题，则会被展现。两种方案都有这个情况。
-   正确情况如下   initWave &amp;mdash; 初始化波形  initWave() { this.wavesurfer = WaveSurfer.create({ container: document.querySelector(&amp;#39;#wave&amp;#39;), backend: &amp;#39;MediaElement&amp;#39;, waveColor: &amp;#39;#A8DBA8&amp;#39;, progressColor: &amp;#39;#3B8686&amp;#39;, mediaControls: false, plugins: [ Timeline.create({ container: document.querySelector(&amp;#39;#wave-timeline&amp;#39;) }) ] }); this.wavesurferMP = WaveSurfer.create({ container: &amp;#39;#micorPhone&amp;#39;, waveColor: &amp;#39;black&amp;#39;, interact: false, cursorWidth: 0, plugins: [ Microphone.create({}) ] }); }  initRecord &amp;mdash; 获取录音对象  initRecord() { try { // webkit shim  window.</description>
-    </item>
-    
+    <lastBuildDate>Thu, 05 Aug 2021 20:04:47 +0800</lastBuildDate><atom:link href="https://rocketturtlewqt.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Es6类</title>
       <link>https://rocketturtlewqt.github.io/javascript/es6%E7%B1%BB/</link>
@@ -62,43 +14,6 @@
       
       <guid>https://rocketturtlewqt.github.io/javascript/es6%E7%B1%BB/</guid>
       <description>为什么会出现class  它只是一个语法糖，会让面向对象的写法变得非常“舒服”  声明类的语法 class Person{ } console.log(typeof Person); //function  const User = class { }; console.log(typeof User); //function class Person{ show() { console.log(&amp;#39;hello world&amp;#39;); } } const per = new Person(); per.show(); // hello world // 函数书写形式 function Aniaml(name) { this.name = name; } const per = new Aniaml(&amp;#39;wqt&amp;#39;); console.log(per.name); //wqt  // class的书写形式 class Animal{ constructor(name) { this.name = name; } getName() { return this.name; } } const per = new Animal(&amp;#39;wqt&amp;#39;); console.</description>
-    </item>
-    
-    <item>
-      <title>上传全局配置文件视图渲染复杂度优化</title>
-      <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E4%B8%8A%E4%BC%A0%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%86%E5%9B%BE%E6%B8%B2%E6%9F%93%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%BC%98%E5%8C%96/</link>
-      <pubDate>Wed, 04 Aug 2021 23:45:52 +0800</pubDate>
-      
-      <guid>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E4%B8%8A%E4%BC%A0%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%86%E5%9B%BE%E6%B8%B2%E6%9F%93%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%BC%98%E5%8C%96/</guid>
-      <description>上传全局配置文件  上传全局配置文件成功后，因前端不会再次发起请求，需要做个渲染处理。  方案一  将配置文件中的机器人配置读取出来，扔进数组里按照场景号排序，复杂度(nlogn)  方案二  观察到原数组是有序的，可以从后向前遍历，找到第一个场景号比当前要插入的场景号小的那条记录，调用js原生splice方法插入。复杂度(n)  successUploadFile(response, file) { console.log(&amp;#39;进入uploadFile&amp;#39;); const reader = new FileReader(); console.log(&amp;#39;response---&amp;#39;, response); console.log(file); if (response.status === 200) { reader.readAsText(file, &amp;#39;UTF-8&amp;#39;); reader.onload = (event) =&amp;gt; { const jsonConfig = JSON.parse(event.target.result); console.log(jsonConfig); if (jsonConfig &amp;amp;&amp;amp; jsonConfig.robotConfig &amp;amp;&amp;amp; jsonConfig.robotConfig.sceneConfig) { const newSceneConfig = jsonConfig.robotConfig.sceneConfig[0]; const len = this.tableDataOrigin.length; for (let i = len - 1; i &amp;gt;= 0; i--) { if (this.tableDataOrigin[i].id &amp;lt; newSceneConfig.</description>
-    </item>
-    
-    <item>
-      <title>模型录音原始录音下载</title>
-      <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E6%A8%A1%E5%9E%8B%E5%BD%95%E9%9F%B3%E5%8E%9F%E5%A7%8B%E5%BD%95%E9%9F%B3%E4%B8%8B%E8%BD%BD/</link>
-      <pubDate>Wed, 04 Aug 2021 23:43:32 +0800</pubDate>
-      
-      <guid>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E6%A8%A1%E5%9E%8B%E5%BD%95%E9%9F%B3%E5%8E%9F%E5%A7%8B%E5%BD%95%E9%9F%B3%E4%B8%8B%E8%BD%BD/</guid>
-      <description>模型录音原始录音下载 背景  这个需求的出现背景是：排查后端是否对原始录音进行过截断处理。  步骤   根据blob对象去生成一个url
-  创建一个a标签，将其href属性赋值为这个url，download属性赋值为时间戳.wav，表示下载后生成的文件名。
-  创建audio标签，将其src也指向这个url。
-  最后，就是将这几个新创建的标签放进原始的父级标签容器.
-  downloadOrigin() { const url = URL.createObjectURL(this.blobRecord); const li = document.createElement(&amp;#39;li&amp;#39;); const au = document.createElement(&amp;#39;audio&amp;#39;); const hf = document.createElement(&amp;#39;a&amp;#39;); au.controls = true; au.src = url; hf.href = url; hf.download = new Date().toISOString() + &amp;#39;.wav&amp;#39;; hf.innerHTML = hf.download; li.appendChild(au); li.appendChild(hf); recordingslist.appendChild(li); } </description>
-    </item>
-    
-    <item>
-      <title>根据json配置导出json文件</title>
-      <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E6%A0%B9%E6%8D%AEjson%E9%85%8D%E7%BD%AE%E5%AF%BC%E5%87%BAjson%E6%96%87%E4%BB%B6/</link>
-      <pubDate>Wed, 04 Aug 2021 23:39:39 +0800</pubDate>
-      
-      <guid>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E6%A0%B9%E6%8D%AEjson%E9%85%8D%E7%BD%AE%E5%AF%BC%E5%87%BAjson%E6%96%87%E4%BB%B6/</guid>
-      <description>根据json配置导出json文件 步骤   将json格式的对象转换为字符串形式，命名导出json配置的文件名。
-  根据json格式的字符串创建一个blob对象。
-  创建一个a标签，将download属性赋值为需要导出的文件名。
-  根据blob对象，生成一个url，并将超链接的href属性设置为这个url。
-  创建一个鼠标点击事件。
-  向这个新创建的a元素派发这个鼠标点击事件。
-  async saveJSON(data, filename) { if (!data) { console.log(&amp;#39;保存的数据为空&amp;#39;); return; } if (!filename) filename = &amp;#39;RobotJSON.json&amp;#39;; if (typeof data === &amp;#39;object&amp;#39;) { data = JSON.stringify(data); } // 创建一个blob数据  const blob = new Blob([data], { type: &amp;#39;text/json&amp;#39; }); const a = document.createElement(&amp;#39;a&amp;#39;); a.download = filename; // 将blob转为地址  // 创建url blob对象  a.</description>
     </item>
     
     <item>
@@ -111,62 +26,12 @@
     </item>
     
     <item>
-      <title>浏览器关闭安全策略</title>
-      <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%B3%E9%97%AD%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5/</link>
-      <pubDate>Thu, 29 Jul 2021 00:12:47 +0800</pubDate>
-      
-      <guid>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%B3%E9%97%AD%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5/</guid>
-      <description>  因本地调试需求，需要有一种跨域访问后端接口的方式。
-  在语音合成功能模块，有个接口需要跨域调用，但是浏览器本身出于安全问题，有安全策略的限制，所以这个接口调用不成功。
-  解决方案  在/Users/rt_wqt/Documents/路径下创建MyChromeDevUserData文件夹 =&amp;gt; /Users/rt_wqt/Documents/MyChromeDevUserData，rt_wqt改成自己的home名就可以了。 以命令行方式启动chrome浏览。  open -n /Applications/Google\ Chrome.app/ --args --disable-web-security --user-data-dir=&amp;lt;MyChromeDevUserData所在的绝对路径地址&amp;gt; </description>
-    </item>
-    
-    <item>
       <title>手写promise</title>
       <link>https://rocketturtlewqt.github.io/javascript/%E6%89%8B%E5%86%99promise/</link>
       <pubDate>Tue, 27 Jul 2021 21:46:41 +0800</pubDate>
       
       <guid>https://rocketturtlewqt.github.io/javascript/%E6%89%8B%E5%86%99promise/</guid>
       <description>promise简单实现 const PENDING = &amp;#39;pending&amp;#39;; const FULLFILLED = &amp;#39;fullfilled&amp;#39;; const REJECTED = &amp;#39;rejected&amp;#39;; function Mypromise(fn) { const self = this; this.state = PENDING; this.value = null; this.reason = null; this.resolveCb = []; this.rejectedCb = []; let resolve = function (value) { self.state = FULLFILLED; self.value = value; self.resolveCb.forEach(handler =&amp;gt; { handler(value); }); }; let rejected = function (reason) { self.state = REJECTED; self.reason = reason; self.rejectedCb.forEach(handler =&amp;gt; { handler(reason); }); }; try { fn(resolve, rejected); } catch (err) { rejected(err); } } Mypromise.</description>
-    </item>
-    
-    <item>
-      <title>解析上传的xlsx表格中的数据</title>
-      <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E8%A7%A3%E6%9E%90%E4%B8%8A%E4%BC%A0%E7%9A%84xlsx%E8%A1%A8%E6%A0%BC%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE/</link>
-      <pubDate>Sun, 25 Jul 2021 16:11:13 +0800</pubDate>
-      
-      <guid>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E8%A7%A3%E6%9E%90%E4%B8%8A%E4%BC%A0%E7%9A%84xlsx%E8%A1%A8%E6%A0%BC%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE/</guid>
-      <description>解决方案  调用FileReader实例的api即可。    xlsx解析二进制文件。
-  获取解析的xlsx内容。
-  解析的xlsx内容转换为json格式。
-  handleChangeFile(file) { if (!file) return; const reader = new FileReader(); reader.onload = (e) =&amp;gt; { const data = e.target.result; const workbook = XLSX.read(data, { type: &amp;#39;binary&amp;#39; }); //xlsx解析二进制文件  const worksheet = workbook.Sheets[workbook.SheetNames[0]]; //获取解析的xlsx内容  const json = XLSX.utils.sheet_to_json(worksheet); //解析的xlsx内容转换为json格式  const contentNew = []; json.forEach(item =&amp;gt; { if (Object.prototype.hasOwnProperty.call(item, &amp;#39;文本&amp;#39;)) { contentNew.push(item[&amp;#39;文本&amp;#39;]); } else { contentNew.</description>
-    </item>
-    
-    <item>
-      <title>Chrome高版本中非https无法打开摄像头和录音功能</title>
-      <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/chrome%E9%AB%98%E7%89%88%E6%9C%AC%E4%B8%AD%E9%9D%9Ehttps%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%91%84%E5%83%8F%E5%A4%B4%E5%92%8C%E5%BD%95%E9%9F%B3%E5%8A%9F%E8%83%BD/</link>
-      <pubDate>Sun, 25 Jul 2021 16:08:46 +0800</pubDate>
-      
-      <guid>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/chrome%E9%AB%98%E7%89%88%E6%9C%AC%E4%B8%AD%E9%9D%9Ehttps%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%91%84%E5%83%8F%E5%A4%B4%E5%92%8C%E5%BD%95%E9%9F%B3%E5%8A%9F%E8%83%BD/</guid>
-      <description>解决方案   在chrome中输入chrome://flags/#unsafely-treat-insecure-origin-as-secure。
-  在方框内填写指定的url。
-  保存。
-  </description>
-    </item>
-    
-    <item>
-      <title>表格性能优化</title>
-      <link>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E8%A1%A8%E6%A0%BC%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</link>
-      <pubDate>Sun, 25 Jul 2021 16:00:38 +0800</pubDate>
-      
-      <guid>https://rocketturtlewqt.github.io/%E5%AE%9E%E4%B9%A0/%E8%A1%A8%E6%A0%BC%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</guid>
-      <description>&amp;lt;任务完成时间&amp;gt;是单独的一个db接口，抽取数据结果的时间略长。同时，&amp;lt;平均每道题目完成时间&amp;gt;依赖于&amp;lt;任务完成时间&amp;gt;和完成题目个数。 其它的列是单独的一个接口，当使用这两个接口同时生成表格时，换页会有明显较长时间的卡顿。  解决方案1   将两个接口分流，先用时间较短的接口进行表格框架的生成，再用db操作时间较长的接口填充剩余表格。
-  将针对任务完成时间接口单独抽离出来，用异步请求的方式将结果集包装成一个数组，一次性渲染。
-  缺陷：表格框架生成较快，但是任务时间列表可能还是需要等待一段时间才能被渲染。
-  解决方案2   将两个接口分流，先用时间较短的接口进行表格框架的生成，再用db操作时间较长的接口填充剩余表格。
-  与方案1不同的是，针对任务完成时间，即时请求即时渲染，不需要包装成结果集。
-  缺陷：渲染顺序比较乱。
-  async getFinishTime() { const taskList = this.tableData; taskList.forEach((task, index) =&amp;gt; { const rel = this.ajax.post(&amp;#39;/annotation/api/getTaskListTime&amp;#39;, { taskId: task.id }); const option = this.tableData[index]; rel.then(val =&amp;gt; { if (val &amp;amp;&amp;amp; val.data &amp;amp;&amp;amp; val.data.result) { const finishTime = val.data.result.tagger_time_all; if (finishTime) { option.finish_time = this.</description>
     </item>
     
     <item>
